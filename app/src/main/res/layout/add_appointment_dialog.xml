@@ -1,0 +1,163 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ScrollView
+        android:layout_width="@dimen/addAppointmentDialogWidth"
+        android:layout_height="@dimen/addAppointmentDialogHeight"
+        android:layout_centerInParent="true"
+        android:background="#f1f1f1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="450dp"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/aggiungiAppuntamento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/logoutTextTitleMarginBottom"
+                android:text="@string/addAppointment"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/titleDimensionOfCreateAppointment"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/marginTopBetweenCreateAppointmentSections"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:gravity="center_horizontal"
+                    android:text="@string/patient"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textDimensionOfCreateAppointment"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/patientNameSpinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_horizontal"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/marginTopBetweenCreateAppointmentSections"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/dateLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/quicksand_medium"
+                        android:text="@string/date"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textDimensionOfCreateAppointment"
+                        android:textStyle="bold" />
+
+                    <DatePicker
+                        android:id="@+id/datePicker"
+                        style="@style/MyDatePicker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/marginTopOfSingleElement"
+                        android:background="@color/primary"
+                        android:theme="@style/MyDatePicker" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginTopBetweenCreateAppointmentSections"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/dateLabel2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:text="@string/time"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textDimensionOfCreateAppointment"
+                    android:textStyle="bold" />
+
+                <TimePicker
+                    android:id="@+id/timePicker"
+                    style="@style/MyTimePicker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/marginTopOfSingleElement"
+                    android:background="@color/primary"
+                    android:descendantFocusability="blocksDescendants"
+                    android:gravity="center_vertical"
+                    android:theme="@style/MyTimePicker"
+                    android:timePickerMode="spinner" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginTopBetweenCreateAppointmentSections">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnAdd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginEnd="@dimen/logoutButtonDimension"
+                    android:backgroundTint="@color/greenCompleted"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:text="@string/save"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/closeButtonOrContinueButtonMarginTop"
+                    app:cornerRadius="8dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/btnAdd"
+                    android:layout_centerHorizontal="true"
+                    android:backgroundTint="@color/red"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:text="@string/cancel"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/closeButtonOrContinueButtonMarginTop"
+                    app:cornerRadius="8dp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

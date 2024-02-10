@@ -1,0 +1,20 @@
+<!-- res/drawable/border_with_shadow.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Border -->
+    <item>
+        <shape>
+            <solid android:color="@color/childAccent" /> <!-- Colore di sfondo -->
+            <corners android:radius="8dp" /> <!-- Raggio degli angoli -->
+            <stroke
+                android:width="1dp"
+            android:color="#000000" /> <!-- Colore del bordo -->
+        </shape>
+    </item>
+    <!-- Shadow -->
+    <item android:right="1dp" android:left="1dp" android:top="1dp" android:bottom="1dp">
+        <shape>
+            <solid android:color="#66000000" /> <!-- Colore dell'ombra -->
+            <corners android:radius="8dp" /> <!-- Raggio degli angoli -->
+        </shape>
+    </item>
+</layer-list>

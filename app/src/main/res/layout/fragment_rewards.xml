@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/childAccent"
+    tools:context=".patient.child.RewardsFragment">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/treasure"
+            android:layout_width="@dimen/treasureDimension"
+            android:layout_height="@dimen/treasureDimension"
+            android:src="@drawable/treasure"
+            android:scaleType="centerInside"
+            android:background="@color/transparent"
+            android:layout_gravity="center"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:layout_width="@dimen/treasureDimension"
+            android:layout_height="@dimen/treasureDimension"
+            android:id="@+id/openTreasure"
+            android:visibility="gone"
+            android:src="@drawable/open_treasure"
+            android:scaleType="centerInside"
+            android:background="@color/transparent"
+            android:layout_gravity="center"></ImageView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginTopCoin"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/coin"
+                android:visibility="gone"
+                android:singleLine="true"
+                android:textStyle="bold"
+                android:textSize="@dimen/coinDimension"
+                android:textColor="@color/white"
+                android:fontFamily="@font/quicksand_medium"></TextView>
+
+            <ImageView
+                android:layout_width="@dimen/coinTextDimension"
+                android:layout_height="@dimen/coinTextDimension"
+                android:src="@drawable/coin_removebg_preview"
+                android:id="@+id/coinImage"
+                android:visibility="gone"></ImageView>
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginTopCloseButtonRewardsFragment"
+            android:textAlignment="center"
+            app:cornerRadius="8dp"
+            android:text="@string/closePopupButton"
+            android:fontFamily="@font/quicksand_medium"
+            android:id="@+id/closeButton"
+            android:visibility="gone"
+            android:textStyle="bold"
+            android:backgroundTint="@color/colorBackground_primary"
+            android:textSize="@dimen/text_dimen"></com.google.android.material.button.MaterialButton>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rewardsDescription"
+            android:fontFamily="@font/quicksand_medium"
+            android:layout_marginStart="@dimen/speechBubbleMarginStartAndEnd"
+            android:layout_marginEnd="@dimen/speechBubbleMarginStartAndEnd"
+            android:layout_marginBottom="@dimen/speechBubbleMarginBottom"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_dimen"
+            android:textAlignment="center"
+            android:text="@string/rewardsDescription"></TextView>
+
+        <ImageView
+            android:layout_width="@dimen/charactersRewardsFragmentDimension"
+            android:layout_height="@dimen/charactersRewardsFragmentDimension"
+            android:id="@+id/characters"
+            android:src="@drawable/pirate"
+            android:layout_marginStart="@dimen/charactersMarginStart"
+            android:layout_gravity="bottom|start" />
+    </LinearLayout>
+
+
+
+
+</FrameLayout>

@@ -1,0 +1,56 @@
+<!-- custom_chooser_dialog.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/dialog_rounded_corner_gray"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/chooseAnOption"
+        android:fontFamily="@font/quicksand_medium"
+        android:textSize="@dimen/chooserTitleDimension"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:paddingBottom="16dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/uploadButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/quicksand_medium"
+        android:backgroundTint="@color/colorAccent"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/marginTopBetweenButton"
+        android:textSize="@dimen/chooserTextButtonDimension"
+        app:cornerRadius="8dp"
+        android:text="@string/uploadAudio" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/registerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/quicksand_medium"
+        android:layout_gravity="center_horizontal"
+        android:backgroundTint="@color/colorAccent"
+        android:layout_marginTop="@dimen/marginTopBetweenButton"
+        android:textSize="@dimen/chooserTextButtonDimension"
+        app:cornerRadius="8dp"
+        android:text="@string/registerAudio" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/cancelButton"
+        android:layout_marginTop="@dimen/marginTopBetweenButton"
+        app:cornerRadius="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/quicksand_medium"
+        android:layout_gravity="center_horizontal"
+        android:backgroundTint="@color/red"
+        android:textSize="@dimen/chooserTextButtonDimension"
+        android:text="@string/cancel" />
+
+</LinearLayout>

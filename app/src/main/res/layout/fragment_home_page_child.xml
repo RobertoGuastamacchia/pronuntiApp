@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground_primary"
+    app:theme="@style/Theme.AppCompat.Light.NoActionBar"
+    android:id="@+id/principalLayout"
+    tools:context=".patient.child.ChildActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/childAccent"
+        app:menu="@menu/menu_toolbar_child"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/colorBackground_primary"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/gameFrameLayout"
+            android:background="@color/colorBackground_primary"
+            android:layout_gravity="center_horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/marginTopCoin"
+                android:id="@+id/linearLayoutCoin"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="@dimen/coin_image_dimension"
+                    android:layout_height="@dimen/coin_image_dimension"
+                    app:srcCompat="@drawable/coin_removebg_preview"/>
+
+                <TextView
+                    android:id="@+id/coin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_dimen"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/margin_start_coin_symbol"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_below="@id/linearLayoutCoin"
+                android:id="@+id/principalLinearLayout">
+
+
+                <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                    android:id="@+id/swipeRefreshLayout"
+                    android:layout_marginTop="@dimen/home_page_child_margin_top_of_layout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:id="@+id/scrollView"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:scrollbars="none"
+                        tools:ignore="MissingConstraints">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:id="@+id/gameMap"
+                            android:orientation="vertical"></LinearLayout>
+                    </ScrollView>
+                </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="@color/transparent"
+        android:gravity="end|center_vertical">
+
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/weekly_goals_background"
+            android:id="@+id/goals"
+            android:scaleType="centerInside"
+            android:padding="5dp"
+            android:src="@drawable/goals_icon"
+            ></ImageButton>
+    </LinearLayout>
+
+</RelativeLayout>

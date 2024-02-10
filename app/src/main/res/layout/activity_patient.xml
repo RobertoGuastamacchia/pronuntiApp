@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground_primary">
+
+    <LinearLayout
+        android:id="@+id/buttonGenitoreLayout"
+        android:animateLayoutChanges="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/buttonBambinoLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/buttonGenitore"
+            android:layout_width="@dimen/big_image_width"
+            android:layout_height="@dimen/big_image_height"
+            android:layout_marginStart="@dimen/margin_image"
+            android:background="@drawable/circle_background"
+            android:contentDescription="@string/labelGenitore"
+            android:elevation="@dimen/elevation"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="centerInside"
+            android:src="@drawable/avatargenitore" />
+
+
+        <TextView
+            android:id="@+id/textGenitore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_text"
+            android:fontFamily="@font/quicksand_medium"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_dimen" />
+
+        <LinearLayout
+            android:id="@+id/passwordLayout"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/buttonGenitoreLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:id="@+id/textPassword"
+                android:textAlignment="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_text"
+                android:text="@string/InsertPassword"
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="@font/quicksand_medium"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_dimen"
+                android:layout_marginBottom="@dimen/text_dimen"/>
+
+            <EditText
+                android:id="@+id/passwordInputText"
+                android:inputType="textPassword"
+                android:gravity="center"
+                android:layout_width="@dimen/login_text_field_width_dimension"
+                android:layout_height="@dimen/login_text_field_height_dimension"
+                android:hint="@string/password"
+                android:textAlignment="center"
+                android:fontFamily="@font/quicksand_medium"
+                android:textColor="@color/colorPrimary"
+                android:textColorHint="@color/colorHintText"
+                android:textSize="@dimen/text_dimen"
+                android:maxLines="1"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/AccessButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:fontFamily="@font/quicksand_medium"
+                android:layout_marginVertical="@dimen/margin_top_title"
+                android:text="@string/TitoloAccesso"
+                android:textSize="@dimen/text_dimen"
+                app:cornerRadius="8dp"
+                app:backgroundTint="@color/colorAccent"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonSkip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:fontFamily="@font/quicksand_medium"
+                android:layout_marginVertical="@dimen/margin_top_title"
+                android:text="@string/defaultProfileAccess"
+                android:textSize="@dimen/text_dimen"
+                app:cornerRadius="8dp"
+                app:backgroundTint="@color/colorAccent"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/passwordRecovery"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:text="@string/forgotYourPassword"
+                android:textAlignment="center"
+                android:textSize="@dimen/forgotPasswordTextDimension"
+                android:fontFamily="@font/quicksand_medium"
+                app:backgroundTint="@color/transparent"
+                app:cornerRadius="8dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="visible"
+        android:id="@+id/buttonBambinoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/buttonGenitoreLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageButton
+            android:id="@+id/buttonBambino"
+            android:layout_width="@dimen/big_image_width"
+            android:layout_height="@dimen/big_image_height"
+            android:layout_marginStart="@dimen/margin_image"
+            android:background="@drawable/circle_background"
+            android:contentDescription="@string/labelBambino"
+            android:elevation="@dimen/elevation"
+            android:scaleType="centerInside"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/avatarbambino" />
+
+        <TextView
+            android:id="@+id/textBambino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin_text"
+            android:fontFamily="@font/quicksand_medium"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_dimen"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

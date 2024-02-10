@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/marginStartAndEndAppointmendAndExercise"
+        android:layout_marginEnd="@dimen/marginStartAndEndAppointmendAndExercise"
+        android:layout_marginTop="@dimen/marginTopAndBottomAppointmentAndExercise"
+        android:layout_marginBottom="@dimen/marginTopAndBottomAppointmentAndExercise"
+        android:background="@drawable/dialog_rounded_corner_gray">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/chapter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/appointmentAndExerciseDetails"
+                    android:textStyle="bold"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:text=" - "
+                    android:textColor="@color/white"
+                    android:textStyle="bold"></TextView>
+
+                <TextView
+                    android:id="@+id/numOfExercise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/appointmentAndExerciseDetails"
+                    android:textStyle="bold"></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/marginStartAndEndDescription"
+                android:layout_marginEnd="@dimen/marginStartAndEndDescription"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/exerciseType"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/appointmentAndExerciseDetails"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:textColor="@color/white"></TextView>
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cornerRadius="8dp"
+                android:id="@+id/correct"
+                android:layout_marginTop="@dimen/marginTopCorrectButton"
+                android:textColor="@color/white"
+                android:fontFamily="@font/quicksand_medium"
+                android:backgroundTint="@color/colorAccent"
+                android:text="@string/correct"
+                android:textAlignment="center"
+                android:textSize="@dimen/correctTextSize"></com.google.android.material.button.MaterialButton>
+        </LinearLayout>
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

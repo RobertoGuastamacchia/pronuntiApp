@@ -1,0 +1,104 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:background="@drawable/dialog_rounded_corner_gray">
+
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="@dimen/infoDialogHeight"
+    android:scrollbars="none">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/logoutWindowPadding">
+
+        <TextView
+            android:id="@+id/passRecoveryTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/logoutTextTitleMarginBottom"
+            android:fontFamily="@font/quicksand_medium"
+            android:text="@string/infoDialogTitle"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/titleDimensionOfCreateAppointment"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginTopBetweenDataAndCoinDialog"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/passRecoveryDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/quicksand_medium"
+                android:gravity="center_horizontal"
+                android:text="@string/infoDialogDescription"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/textDimensionOfCreateAppointment"
+                android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/infoDescriptionMarginTop">
+
+            <TextView
+                android:id="@+id/doc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/quicksand_medium"
+                android:gravity="center_horizontal"
+                android:text="@string/docIdentity"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/textDimensionOfCreateAppointment" />
+
+            <TextView
+            android:id="@+id/certification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/quicksand_medium"
+            android:gravity="center_horizontal"
+            android:text="@string/certification"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/textDimensionOfCreateAppointment" />
+
+        </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/marginTopBetweenCreateAppointmentSections">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/red"
+                android:fontFamily="@font/quicksand_medium"
+                android:text="@string/closePopupButton"
+                android:textColor="@color/white"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/closeButtonOrContinueButtonMarginTop"
+                app:cornerRadius="8dp" />
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>
+    </RelativeLayout>

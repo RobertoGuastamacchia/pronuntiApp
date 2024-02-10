@@ -1,0 +1,64 @@
+<resources>
+    <!-- Base application theme -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    </style>
+
+    <!-- Style for SplashActivity -->
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- styles.xml -->
+    <style name="RoundedTopLeftBottomLeft">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeTopLeft">16dp</item>
+        <item name="cornerSizeBottomLeft">16dp</item>
+        <item name="strokeColor">@android:color/white</item>
+        <item name="strokeWidth">2dp</item>
+    </style>
+
+    <style name="RoundedTopRightBottomRight">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">16dp</item>
+        <item name="cornerSizeBottomRight">16dp</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="strokeColor">@android:color/white</item>
+        <item name="strokeWidth">2dp</item>
+    </style>
+
+    <style name="radioButton" parent="AppTheme">
+        <item name="colorControlNormal">@color/white</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <style name="MyDatePicker" parent="android:Widget.DatePicker">
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:textColorSecondary">@android:color/white</item>
+        <item name="android:fontFamily">@font/quicksand_medium</item>
+    </style>
+
+    <style name="MyTimePicker" parent="android:Widget.Material.TimePicker">
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:textColorSecondary">@android:color/white</item>
+        <item name="android:fontFamily">@font/quicksand_medium</item>
+    </style>
+
+    <!-- Stile del testo per gli elementi non selezionati -->
+    <style name="BottomNavigationTextInactive">
+        <item name="android:textSize">@dimen/textBottomNavNotChecked</item>
+        <item name="android:fontFamily">@font/quicksand_medium</item>
+    </style>
+
+    <!-- Stile del testo per gli elementi selezionati -->
+    <style name="BottomNavigationTextActive">
+        <item name="android:textSize">@dimen/textBottomNavChecked</item>
+    </style>
+
+
+</resources>
+

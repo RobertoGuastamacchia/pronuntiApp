@@ -1,0 +1,28 @@
+<resources>
+    <!-- Palette principale -->
+    <color name="colorBackground_primary">#141f25</color>
+    <color name="colorBottomBar_complementary">#f4f4f4</color>
+    <color name="primary">#5212BF</color>
+    <!-- Palette child -->
+    <color name="childAccent">#D27D00</color>
+
+    <color name="colorPrimary">#000000</color>
+    <color name="colorAccent">#0077cc</color>
+    <color name="colorHintText">#000000</color>
+    <color name="accentWithAlpha">#800077cc</color>
+    <color name="switchOffColor">#30606160</color>
+    <color name="red">#FF4444</color>
+    <color name="characterLockedColorImage">#5f5f5f</color>
+    <color name="characterLockedColorTextAndBackground">#9c9c9c</color>
+    <color name="greenCompleted">#4fc123</color>
+    <color name="therapistRounded">#2b3644</color>
+    <!-- Definizione dei colori standard di Android -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="customSpinnerBackground">@color/primary</color>
+    <color name="customSpinnerBorder">#FFFFFF</color>
+    <color name="colorBackground">#f4f4f4</color>
+
+</resources>

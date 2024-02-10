@@ -1,0 +1,116 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:background="@drawable/dialog_rounded_corner_gray">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sendEmailHeight"
+        android:scrollbars="none">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/logoutWindowPadding">
+
+        <TextView
+            android:id="@+id/passRecoveryTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/logoutTextTitleMarginBottom"
+            android:fontFamily="@font/quicksand_medium"
+            android:text="@string/sendEmailTitle"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/titleDimensionOfCreateAppointment"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginTopBetweenDataAndCoinDialog"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/passRecoveryDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/quicksand_medium"
+                android:gravity="center_horizontal"
+                android:text="@string/sendEmailDescription"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/textDimensionOfCreateAppointment"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="@dimen/editTextEmailDimension"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/marginTopOfEmailSendBox"
+                android:background="@drawable/roundend_background"
+                android:backgroundTint="@color/black"
+                android:fontFamily="@font/quicksand_medium"
+                android:inputType="textMultiLine"
+                android:maxLength="5000"
+                android:padding="8dp"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/characterCountTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0/3000"
+                android:textSize="@dimen/charactersCounterSize"
+                android:layout_gravity="end"
+                android:textColor="@color/white"
+                android:fontFamily="@font/quicksand_medium"
+                android:layout_marginTop="@dimen/marginTopOfCharactersCounter"/>
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/marginTopBetweenCreateAppointmentSections">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginEnd="@dimen/logoutButtonDimension"
+                android:backgroundTint="@color/greenCompleted"
+                android:fontFamily="@font/quicksand_medium"
+                android:text="@string/send"
+                android:textColor="@color/white"
+                android:textSize="@dimen/closeButtonOrContinueButtonMarginTop"
+                app:cornerRadius="8dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/red"
+                android:fontFamily="@font/quicksand_medium"
+                android:text="@string/cancel"
+                android:textColor="@color/white"
+                android:layout_below="@id/send"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/closeButtonOrContinueButtonMarginTop"
+                app:cornerRadius="8dp" />
+        </RelativeLayout>
+    </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

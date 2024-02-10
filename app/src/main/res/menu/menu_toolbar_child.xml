@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/profileItem"
+        android:icon="@drawable/child_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:showAsAction="ifRoom"
+        android:title="@string/profileTitle" />
+
+    <item
+        android:id="@+id/logoutItem"
+        android:icon="@drawable/logout"
+        app:showAsAction="ifRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="@string/logout" />
+
+</menu>

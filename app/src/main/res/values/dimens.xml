@@ -1,0 +1,263 @@
+<resources>
+    <!--Dimensioni generali per l'app-->
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="title_dimen">40sp</dimen>
+    <dimen name="text_dimen">25sp</dimen>
+    <dimen name="text_dimen_ranking">30sp</dimen>
+    <dimen name="image_width">129dp</dimen>
+    <dimen name="image_height">119dp</dimen>
+    <dimen name="big_image_width">179dp</dimen>
+    <dimen name="big_image_height">169dp</dimen>
+    <dimen name="margin_image">10dp</dimen>
+    <dimen name="margin_top_title">20dp</dimen>
+
+    <!--Splash Activity-->
+    <dimen name="splashTextSize">40sp</dimen>
+    <dimen name="appNameSplashMarginBottom">10dp</dimen>
+
+    <!--Sezione login-->
+    <dimen name="margin_top_login_button">30dp</dimen>
+    <dimen name="login_text_field_height_dimension">60dp</dimen>
+    <dimen name="login_text_field_width_dimension">300dp</dimen>
+    <dimen name="margin_top_login_switch">80dp</dimen>
+    <dimen name="margin_bottom_login_switch">20dp</dimen>
+    <dimen name="title_login_width">270dp</dimen>
+    <dimen name="title_login_height">177dp</dimen>
+
+    <!--Sezione home page-->
+    <dimen name="margin_start_coin_symbol">10dp</dimen>
+    <dimen name="home_page_child_margin_top_of_layout">8dp</dimen>
+    <dimen name="home_page_child_margin_top_of_layout2">15dp</dimen>
+    <dimen name="home_page_child_margin_top_of_scrollView">50dp</dimen>
+    <dimen name="logout_image">50dp</dimen>
+    <dimen name="logoutWindowTextDimension">18sp</dimen>
+    <dimen name="logoutWindowPadding">16dp</dimen>
+    <dimen name="logoutTextTitleMarginBottom">8dp</dimen>
+    <dimen name="logoutQuestionDimension">16sp</dimen>
+    <dimen name="logoutQuestionMarginBottom">24dp</dimen>
+    <dimen name="logoutButtonDimension">8dp</dimen>
+    <dimen name="separator_height">4dp</dimen>
+
+    <!--Rewards fragment-->
+    <dimen name="treasureDimension">200dp</dimen>
+    <dimen name="charactersRewardsFragmentDimension">120dp</dimen>
+    <dimen name="charactersMarginStart">10dp</dimen>
+    <dimen name="speechBubbleMarginStartAndEnd">10dp</dimen>
+    <dimen name="speechBubbleMarginBottom">10dp</dimen>
+    <dimen name="coinDimension">50dp</dimen>
+    <dimen name="coinTextDimension">70dp</dimen>
+    <dimen name="marginTopCoin">20dp</dimen>
+    <dimen name="marginTopCloseButtonRewardsFragment">80dp</dimen>
+    <dimen name="newCharacterNameSize">35dp</dimen>
+    <dimen name="newCharacterTitleSize">40dp</dimen>
+    <dimen name="marginBetweenNewCharacterAndItsName">50dp</dimen>
+
+    <!--Sezione Characters del bambino-->
+    <dimen name="margin_top_linearLayout_of_characters">50dp</dimen>
+    <dimen name="image_distance">20dp</dimen>
+    <dimen name="margin_text">30dp</dimen>
+    <dimen name="elevation">10dp</dimen>
+    <dimen name="padding">12dp</dimen>
+    <dimen name="button_width">150dp</dimen>
+    <dimen name="characters_image">70dp</dimen>
+    <dimen name="margin_top_list_of_characters">140dp</dimen>
+    <dimen name="margin_bottom_list_of_characters">50dp</dimen>
+    <dimen name="image_characters_not_found">200dp</dimen>
+    <dimen name="margin_bottom_text_characters_not_found">100dp</dimen>
+    <dimen name="marginBetweenCharacters">20dp</dimen>
+
+    <!--Sezione Ranking del bambino-->
+    <dimen name="symbol_dimension_for_ranking">40dp</dimen>
+    <dimen name="coin_image_dimension">40dp</dimen>
+    <dimen name="margin_ranking">5dp</dimen>
+    <dimen name="rankingFrameLayoutHeight">150dp</dimen>
+    <dimen name="rankingAndCharactersImageDimension">75dp</dimen>
+    <dimen name="rankingImageDimensionTwo">100dp</dimen><dimen name="marginTextRanking">20dp</dimen>
+    <dimen name="marginMedalRanking">10dp</dimen>
+    <dimen name="marginNameRanking">60dp</dimen>
+    <dimen name="marginCoinRanking">15dp</dimen>
+    <dimen name="emptyLine">15dp</dimen>
+    <dimen name="marginTopCoinInLockedCharacterPopup">5dp</dimen>
+
+    <!--Sezione esercizi genitore-->
+    <dimen name="exerciseParentFrameLayoutHeight">150dp</dimen>
+    <dimen name="exerciseSymbolDimension">70dp</dimen>
+
+    <!--Sezione degli esercizi del bambino-->
+    <dimen name="playAudioButtonDimension">80dp</dimen>
+    <dimen name="marginTopExerciseTitle">15dp</dimen>
+    <dimen name="marginTopPlayAudioButton">60dp</dimen>
+    <dimen name="marginTopExerciseDescription">10dp</dimen>
+    <dimen name="exerciseTitleSize">45dp</dimen>
+    <dimen name="exerciseDescriptionSize">30dp</dimen>
+    <dimen name="playButtonLabelDimension">20dp</dimen>
+    <dimen name="finishButtonMarginTop">90dp</dimen>
+    <dimen name="topButtonExercisesDimension">50dp</dimen>
+    <dimen name="marginTopTopButtonExercises">15dp</dimen>
+    <dimen name="marginEndExitButton">10dp</dimen>
+    <dimen name="marginTopDoneAndSoundWave">20dp</dimen>
+    <dimen name="centralTopIconExercisesDimension">80dp</dimen>
+    <dimen name="wellDoneIconDimension">100dp</dimen>
+    <dimen name="recognitionImageViewDimension">150dp</dimen>
+    <dimen name="twoRecognitionImageMargin">50dp</dimen>
+    <dimen name="layoutTwoImageRecognitionMarginTop">40dp</dimen>
+    <dimen name="imageSelectorBorderDimension">180dp</dimen>
+    <dimen name="marginTopDone">30dp</dimen>
+    <dimen name="marginStartHelpIcon">10dp</dimen>
+    <dimen name="marginStartRefreshIcon">10dp</dimen>
+    <dimen name="imageDenominationMarginTop">20dp</dimen>
+    <dimen name="soundDimension">80dp</dimen>
+    <dimen name="marginTopDone2">20dp</dimen>
+    <dimen name="imageDenominationDimension">150dp</dimen>
+    <dimen name="recordAudioButtonDimension">80dp</dimen>
+    <dimen name="recordButtonLabelDimension">20dp</dimen>
+    <dimen name="stopAudioButtonDimension">80dp</dimen>
+    <dimen name="stopButtonLabelDimension">20dp</dimen>
+    <dimen name="marginTopRecordAudioButton">60dp</dimen>
+    <dimen name="audioDoneImageDimension">80dp</dimen>
+    <dimen name="marginTopDoneImage">60dp</dimen>
+    <dimen name="doneLabelDimension">20dp</dimen>
+    <dimen name="imageDescriptionPostExercise">25dp</dimen>
+    <dimen name="imagePostExerciseDimension">150dp</dimen>
+    <dimen name="imageDescriptionPostExerciseMarginStartAndEnd">10dp</dimen>
+    <dimen name="marginStartEndOfAudioDoneDescription">10dp</dimen>
+    <dimen name="marginTopButtonPopUpPermission">10dp</dimen>
+
+    <!--sezione Weekly Goals-->
+    <dimen name="textDimenWeeklyGoals">22sp</dimen>
+    <dimen name="marginTextWeeklyGoals">5dp</dimen>
+    <dimen name="marginCoinWeeklyGoals">5dp</dimen>
+    <dimen name="weeklyGoalsDescriptionSize">10dp</dimen>
+    <dimen name="weeklyTitleSize">28dp</dimen>
+    <dimen name="closeButtonWeeklyGoalsMarginTop">25dp</dimen>
+    <dimen name="titleWeeklyGoalsMarginBottom">20dp</dimen>
+    <dimen name="symbolCoinWeeklyGoals">35dp</dimen>
+
+    <!--sezione Parent-->
+    <dimen name="titleParent">35sp</dimen>
+
+    <!--popup-->
+    <dimen name="popupTextDimension">20dp</dimen>
+    <dimen name="closeButtonOrContinueButtonMarginTop">15dp</dimen>
+    <dimen name="marginTopBetweenGoals">25dp</dimen>
+
+
+    <!--Genitore-->
+    <dimen name="appointmentAndExerciseTitle">25dp</dimen>
+    <dimen name="appointmentAndExerciseDetails">20dp</dimen>
+    <dimen name="marginStartAndEndAppointmendAndExercise">30dp</dimen>
+    <dimen name="marginStartAndEndDescription">10dp</dimen>
+    <dimen name="marginTopAndBottomAppointmentAndExercise">20dp</dimen>
+    <dimen name="appointmentChooseMarginTop">20dp</dimen>
+    <dimen name="appointmentChooseMargniBottom">10dp</dimen>
+    <dimen name="correctTextSize">15dp</dimen>
+    <dimen name="marginTopCorrectButton">22dp</dimen>
+    <dimen name="WidthSwipeRefresh">370dp</dimen>
+
+    <dimen name="marginTopAndBottomOfSettings">20dp</dimen>
+    <dimen name="marginStartAndEndSettings">10dp</dimen>
+    <dimen name="firstMarginTopSetting">10dp</dimen>
+    <dimen name="settingsSize">20dp</dimen>
+    <dimen name="marginStartButtonSetting">70dp</dimen>
+    <dimen name="marginEndButtonSetting">10dp</dimen>
+    <dimen name="textInTheButton">20dp</dimen>
+    <dimen name="editTextDimension">150dp</dimen>
+    <dimen name="editSymbolMarginStart">10dp</dimen>
+    <dimen name="editSymbolMarginTop">10dp</dimen>
+    <dimen name="editSymbolDimension">30dp</dimen>
+    <dimen name="marginTopSaveButton">20dp</dimen>
+    <dimen name="marginTopRadioGroup">10dp</dimen>
+    <dimen name="marginTopOfThemeSettings">20dp</dimen>
+    <dimen name="sendEmailForPasswordRecovery">20dp</dimen>
+    <dimen name="marginBottomOfSendEmailButton">10dp</dimen>
+    <dimen name="marginTopBetweenElementInASection">40dp</dimen>
+    <dimen name="iconProfileDimension">50dp</dimen>
+    <dimen name="marginTopFirstElementOfASection">10dp</dimen>
+    <dimen name="editTextEmailDimension">300dp</dimen>
+    <dimen name="firstMarginTop">30dp</dimen>
+    <dimen name="themeButtonDimension">20dp</dimen>
+    <dimen name="uploadAndSaveButtonOfThemeSectionMarginEnd">20dp</dimen>
+    <dimen name="settingsTitle">35dp</dimen>
+    <dimen name="marginTopBetweenAddressOfTherapist">30dp</dimen>
+    <dimen name="marginTopCorrectWrongButton">40dp</dimen>
+    <dimen name="marginBetweenCorrectWrongButton">10dp</dimen>
+    <dimen name="marginTopSettingsTitle">10dp</dimen>
+    <dimen name="descriptionOfCreateThemeDialogMarginTop">20dp</dimen>
+
+    <dimen name="screenOrientationImageSize">200dp</dimen>
+    <dimen name="screenOrientationTextSize">25sp</dimen>
+
+    <dimen name="bigSettingsImage">100dp</dimen>
+    <dimen name="marginStartSettingsBigImage">10dp</dimen>
+
+    <dimen name="chooserTextButtonDimension">20dp</dimen>
+    <dimen name="chooserTitleDimension">30dp</dimen>
+    <dimen name="marginTopBetweenButton">10dp</dimen>
+
+    <dimen name="marginBottomOfTherapistScrollView">350dp</dimen>
+    <dimen name="marginTopOfHomePageButton">15dp</dimen>
+    <dimen name="textDimensionOfCreateAppointment">20dp</dimen>
+    <dimen name="titleDimensionOfCreateAppointment">30dp</dimen>
+    <dimen name="marginTopBetweenCreateAppointmentSections">40dp</dimen>
+    <dimen name="textDimension">20dp</dimen>
+    <dimen name="marginTopOfSingleElement">10dp</dimen>
+    <dimen name="spinnerTextDimension">15dp</dimen>
+
+    <dimen name="textBottomNavNotChecked">12sp</dimen>
+    <dimen name="textBottomNavChecked">16sp</dimen>
+
+    <dimen name="patientsListMarginTop">15dp</dimen>
+
+    <dimen name="addPatientButtonDimension">40dp</dimen>
+    <dimen name="marginAddPatient">10dp</dimen>
+    <dimen name="patientNameInTheListSize">20dp</dimen>
+    <dimen name="exerciseButtonSize">15dp</dimen>
+    <dimen name="patientInTheListMarginStart">10dp</dimen>
+
+    <dimen name="marginBottomSettingsBigImage">5dp</dimen>
+
+    <dimen name="textDimensionOfCreatePatient">20dp</dimen>
+    <dimen name="titleDimensionOfCreatePatient">30dp</dimen>
+    <dimen name="marginTopOfCreatePatientLayout">50dp</dimen>
+    <dimen name="editTextDimensionOfNewPatient">250dp</dimen>
+    <dimen name="marginTopEachSectionOfNewPatient">20dp</dimen>
+    <dimen name="marginTopSaveNewPatientButtons">50dp</dimen>
+
+    <dimen name="marginTopExerciseTitleInTherapist">15dp</dimen>
+    <dimen name="uploadImageTherapist">100dp</dimen>
+    <dimen name="imageDenominationImageTherapistMarginTop">50dp</dimen>
+    <dimen name="marginOfHelpSectionTherapist">50dp</dimen>
+
+    <dimen name="marginBottomHelpSectionTherapist">20dp</dimen>
+    <dimen name="marginBottomOfFinishButtonInHelpTherapist">10dp</dimen>
+    <dimen name="marginTopOfFirstPatientInTheList">10dp</dimen>
+
+    <dimen name="marginTopOfElementInMinimalPairsTherapistSections">40dp</dimen>
+    <dimen name="marginStartAndEndOfElementInMinimalPairsTherapistSections">50dp</dimen>
+    <dimen name="marginBottomTextInMinimalPairsTherapistSections">15dp</dimen>
+    <dimen name="marginBottomButtonDoneMinimalPairsTherapist">30dp</dimen>
+
+    <dimen name="marginTopBetweenDataAndCoinDialog">30dp</dimen>
+    <dimen name="editTextDimensionOfCoin">100dp</dimen>
+
+    <dimen name="addAppointmentDialogHeight">500dp</dimen>
+    <dimen name="addAppointmentDialogWidth">250dp</dimen>
+    <dimen name="forgotPasswordTextDimension">20dp</dimen>
+
+    <dimen name="deleteDimension">35dp</dimen>
+    <dimen name="marginEndAppointmentsDeleteAndAdd">5dp</dimen>
+
+    <dimen name="marginTopDeleteAppointment">10dp</dimen>
+
+    <dimen name="marginStartSendEmail">5dp</dimen>
+
+    <dimen name="marginTopOfEmailSendBox">30dp</dimen>
+    <dimen name="sendEmailHeight">550dp</dimen>
+    <dimen name="marginTopOfCharactersCounter">10dp</dimen>
+    <dimen name="charactersCounterSize">15dp</dimen>
+
+    <dimen name="informationButtonDimension">40dp</dimen>
+
+    <dimen name="infoDescriptionMarginTop">30dp</dimen>
+    <dimen name="infoDialogHeight">450dp</dimen>
+</resources>

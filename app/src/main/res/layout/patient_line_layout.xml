@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/marginStartAndEndAppointmendAndExercise"
+    android:layout_marginTop="@dimen/marginTopAndBottomAppointmentAndExercise"
+    android:layout_marginEnd="@dimen/marginStartAndEndAppointmendAndExercise"
+    android:layout_marginBottom="@dimen/marginTopAndBottomAppointmentAndExercise"
+    android:background="@color/colorBackground">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/nomePaziente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/patientInTheListMarginStart"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/quicksand_medium"
+                android:textColor="@color/black"
+                android:textSize="@dimen/patientNameInTheListSize"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/marginEndAppointmentsDeleteAndAdd"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/aggiungiEsercizio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/patientInTheListMarginStart"
+                    android:backgroundTint="@color/primary"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:text="@string/addExercise"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/exerciseButtonSize"
+                    app:cornerRadius="8dp" />
+
+                <ImageButton
+                    android:id="@+id/delete"
+                    android:layout_width="@dimen/deleteDimension"
+                    android:layout_height="@dimen/deleteDimension"
+                    android:background="@color/transparent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/delete"></ImageButton>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

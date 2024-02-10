@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground_primary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/home_page_child_margin_top_of_layout"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/exit"
+                    android:layout_width="@dimen/topButtonExercisesDimension"
+                    android:layout_height="@dimen/topButtonExercisesDimension"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/marginTopTopButtonExercises"
+                    android:layout_marginEnd="@dimen/marginEndExitButton"
+                    android:background="@color/transparent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/exit" />
+
+                <ImageButton
+                    android:id="@+id/help"
+                    android:layout_width="@dimen/topButtonExercisesDimension"
+                    android:layout_height="@dimen/topButtonExercisesDimension"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="@dimen/marginStartHelpIcon"
+                    android:layout_marginTop="@dimen/marginTopTopButtonExercises"
+                    android:background="@color/transparent"
+                    android:checkable="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/help_icon" />
+
+                <ImageButton
+                    android:id="@+id/refresh"
+                    android:layout_width="@dimen/topButtonExercisesDimension"
+                    android:layout_height="@dimen/topButtonExercisesDimension"
+                    android:layout_marginStart="@dimen/marginStartRefreshIcon"
+                    android:src="@drawable/refresh"
+                    android:scaleType="centerInside"
+                    android:layout_marginTop="@dimen/marginTopTopButtonExercises"
+                    android:background="@color/transparent"
+                    android:visibility="gone"
+                    android:layout_alignParentStart="true"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/exit"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/marginTopExerciseTitleInTherapist"
+                android:ellipsize="none"
+                android:fontFamily="@font/quicksand_medium"
+                android:singleLine="false"
+                android:text="@string/excerciseTwo"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/exerciseDescriptionSize"
+                android:textStyle="bold">
+
+            </TextView>
+
+
+            <ImageButton
+                android:id="@+id/startAudio"
+                android:layout_width="@dimen/playAudioButtonDimension"
+                android:layout_height="@dimen/playAudioButtonDimension"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/marginTopPlayAudioButton"
+                android:background="@color/transparent"
+                android:scaleType="centerInside"
+                android:src="@drawable/microphone" />
+
+            <TextView
+                android:id="@+id/startAudioButtonDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/quicksand_medium"
+                android:labelFor="@+id/startAudio"
+                android:text="@string/record_audio"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/playButtonLabelDimension"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/listenYour_Audio"
+                android:layout_width="@dimen/audioDoneImageDimension"
+                android:layout_height="@dimen/audioDoneImageDimension"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/marginTopDoneImage"
+                android:background="@color/transparent"
+                android:scaleType="centerInside"
+                android:src="@drawable/listen_your_audio"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/stopYour_Audio"
+                android:layout_width="@dimen/stopAudioButtonDimension"
+                android:layout_height="@dimen/stopAudioButtonDimension"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/marginTopDoneImage"
+                android:background="@color/transparent"
+                android:scaleType="centerInside"
+                android:src="@drawable/stop_audio"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:id="@+id/audioDoneDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="@dimen/marginStartEndOfAudioDoneDescription"
+                android:layout_marginEnd="@dimen/marginStartEndOfAudioDoneDescription"
+                android:fontFamily="@font/quicksand_medium"
+                android:labelFor="@+id/audioDone"
+                android:text="@string/audio_done"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/playButtonLabelDimension"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/sound_wave"
+                android:layout_width="@dimen/soundDimension"
+                android:layout_height="@dimen/soundDimension"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/marginTopDoneAndSoundWave"
+                android:background="@color/transparent"
+                android:src="@drawable/sound_wave"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/upload_audio"
+                android:layout_width="@dimen/stopAudioButtonDimension"
+                android:layout_height="@dimen/stopAudioButtonDimension"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/marginTopDoneImage"
+                android:background="@color/transparent"
+                android:scaleType="centerInside"
+                android:src="@drawable/upload_audio"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/upload_audio_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/quicksand_medium"
+                android:labelFor="@+id/upload_audio"
+                android:text="@string/uploadAudioDescription"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/stopButtonLabelDimension"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/finish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/marginTopDone2"
+                android:fontFamily="@font/quicksand_medium"
+                android:gravity="center"
+                android:text="@string/finishExercises"
+                android:textAlignment="center"
+                android:textSize="@dimen/text_dimen"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:backgroundTint="@color/colorAccent"
+                app:cornerRadius="8dp" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".patient.parent.ParentActivity">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/primary">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_marginLeft="100dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin_top_title"
+            android:gravity="center_horizontal"
+            android:text="@string/settingsMenu"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_dimen"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="@dimen/exerciseSymbolDimension"
+            android:layout_height="@dimen/exerciseSymbolDimension"
+            android:layout_gravity="bottom|start"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:scaleType="fitEnd"
+            android:src="@drawable/settings" />
+    </RelativeLayout>
+    </FrameLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeSettingsTherapist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/frameLayout"
+        android:layout_marginTop="1dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/firstMarginTop"
+                    android:text="@string/credentials"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/settingsTitle"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/marginStartAndEndSettings"
+                    android:layout_marginTop="@dimen/firstMarginTopSetting"
+                    android:layout_marginEnd="@dimen/marginStartAndEndSettings"
+                    android:layout_marginBottom="@dimen/marginTopAndBottomOfSettings"
+                    android:backgroundTint="@color/black"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/marginTopFirstElementOfASection"
+
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/password"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/marginStartAndEndSettings"
+                            android:gravity="start"
+                            android:text="Email"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/settingsSize"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/emailEditTextTherapist"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/marginStartAndEndSettings"
+                            android:backgroundTint="@color/black"
+                            android:enabled="false"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/settingsSize" />
+
+                    </LinearLayout>
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/resetPasswordTherapist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/marginTopSaveButton"
+                        android:layout_marginBottom="@dimen/marginBottomOfSendEmailButton"
+                        android:backgroundTint="@color/primary"
+                        android:text="@string/resetPassword"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sendEmailForPasswordRecovery"
+                        android:visibility="visible"
+                        app:cornerRadius="8dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/marginTopOfThemeSettings"
+                    android:text="@string/addressTherapist"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/settingsTitle"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/marginStartAndEndSettings"
+                    android:layout_marginTop="@dimen/firstMarginTopSetting"
+                    android:layout_marginEnd="@dimen/marginStartAndEndSettings"
+                    android:layout_marginBottom="@dimen/marginTopAndBottomOfSettings"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginStart="@dimen/marginStartAndEndSettings"
+                        android:layout_marginTop="@dimen/marginTopFirstElementOfASection"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/AddressTherapistTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/marginStartAndEndSettings"
+                            android:enabled="false"
+                            android:singleLine="true"
+                            android:text="@string/Address"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/settingsSize"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/AddressTherapist"
+                                android:layout_width="300dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/marginStartAndEndSettings"
+                                android:enabled="false"
+                                android:singleLine="true"
+                                android:text="@string/Address"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/settingsSize" />
+
+                            <ImageButton
+                                android:id="@+id/EditAddress"
+                                android:layout_width="@dimen/editSymbolDimension"
+                                android:layout_height="@dimen/editSymbolDimension"
+                                android:layout_marginStart="@dimen/editSymbolMarginStart"
+                                android:layout_marginTop="@dimen/editSymbolMarginTop"
+                                android:background="@color/transparent"
+                                android:contentDescription="@string/labelGenitore"
+                                android:elevation="@dimen/elevation"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/edit" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="start"
+                        android:layout_marginStart="@dimen/marginStartAndEndSettings"
+                        android:layout_marginTop="@dimen/marginTopBetweenAddressOfTherapist"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/CityTherapistTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/marginStartAndEndSettings"
+                            android:enabled="false"
+                            android:singleLine="true"
+                            android:text="@string/City"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/settingsSize"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/CityTherapist"
+                                android:layout_width="300dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/marginStartAndEndSettings"
+                                android:enabled="false"
+                                android:singleLine="true"
+                                android:text="@string/City"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/settingsSize" />
+
+                            <ImageButton
+                                android:id="@+id/EditCity"
+                                android:layout_width="@dimen/editSymbolDimension"
+                                android:layout_height="@dimen/editSymbolDimension"
+                                android:layout_marginStart="@dimen/editSymbolMarginStart"
+                                android:layout_marginTop="@dimen/editSymbolMarginTop"
+                                android:background="@color/transparent"
+                                android:contentDescription="@string/labelGenitore"
+                                android:elevation="@dimen/elevation"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/edit" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/saveProfileTherapist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/marginTopSaveButton"
+                        android:layout_marginBottom="@dimen/marginBottomOfSendEmailButton"
+                        android:backgroundTint="@color/greenCompleted"
+                        android:text="@string/save"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sendEmailForPasswordRecovery"
+                        android:visibility="invisible"
+                        app:cornerRadius="8dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

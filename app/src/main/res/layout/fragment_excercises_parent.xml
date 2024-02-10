@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".patient.parent.ParentActivity"
+    android:background="@color/colorBackground_primary">
+
+    <FrameLayout
+        android:id="@+id/firstFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/exerciseParentFrameLayoutHeight"
+        android:background="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="@dimen/exerciseSymbolDimension"
+            android:layout_height="@dimen/exerciseSymbolDimension"
+            android:layout_gravity="bottom|start"
+            android:layout_marginBottom="@dimen/marginBottomSettingsBigImage"
+            android:scaleType="fitEnd"
+            android:layout_marginStart="@dimen/margin_text"
+            android:src="@drawable/exercises_menu" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin_top_title"
+            android:fontFamily="@font/quicksand_medium"
+            android:gravity="center_horizontal"
+            android:text="@string/TitleExerciseParent"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/titleParent"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_below="@id/firstFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            tools:ignore="MissingConstraints,SpeakableTextPresentCheck">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:id="@+id/exerciseParentLinearLayout"
+                    tools:ignore="MissingConstraints">
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+</RelativeLayout>

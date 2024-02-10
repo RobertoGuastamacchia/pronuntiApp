@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/marginStartAndEndAppointmendAndExercise"
+        android:layout_marginEnd="@dimen/marginStartAndEndAppointmendAndExercise"
+        android:layout_marginBottom="@dimen/marginTopAndBottomAppointmentAndExercise"
+        android:layout_marginTop="@dimen/marginTopAndBottomAppointmentAndExercise"
+        android:background="#f1f1f1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/appointmentDate"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/appointmentAndExerciseDetails"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" , "
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/appointmentHour"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/appointmentAndExerciseDetails"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/marginStartAndEndDescription"
+                android:layout_marginEnd="@dimen/marginStartAndEndDescription"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/appointmentCity"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/appointmentAndExerciseDetails"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/appointmentAddress"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/appointmentAndExerciseDetails"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/name"
+                android:textAlignment="center"
+                android:textSize="@dimen/appointmentAndExerciseDetails"
+                android:textColor="@color/black"/>
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="@dimen/marginTopDeleteAppointment"
+                android:text="@string/delete"
+                android:id="@+id/delete"
+                android:backgroundTint="@color/red"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="centerInside"></com.google.android.material.button.MaterialButton>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

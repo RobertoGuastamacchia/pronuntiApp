@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/childAccent"
+    tools:context=".patient.child.RewardsFragment">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/egg"
+            android:layout_width="@dimen/treasureDimension"
+            android:layout_height="@dimen/treasureDimension"
+            android:src="@drawable/egg"
+            android:scaleType="centerInside"
+            android:background="@color/transparent"
+            android:layout_gravity="center" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/linearLayout"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/newCharacterTitle"
+                android:visibility="gone"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:text="@string/newCharacterTitle"
+                android:textSize="@dimen/newCharacterTitleSize"
+                android:textColor="@color/white"
+                android:fontFamily="@font/quicksand_medium"></TextView>
+
+            <ImageView
+            android:layout_width="@dimen/treasureDimension"
+            android:layout_height="@dimen/treasureDimension"
+            android:id="@+id/newCharacter"
+            android:layout_marginTop="@dimen/marginBetweenNewCharacterAndItsName"
+            android:visibility="gone"
+            android:scaleType="centerInside"
+            android:background="@color/transparent"
+            android:layout_gravity="center_horizontal"></ImageView>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/newCharacterName"
+                android:layout_gravity="center_horizontal"
+                android:visibility="gone"
+                android:singleLine="true"
+                android:textStyle="bold"
+                android:textSize="@dimen/newCharacterNameSize"
+                android:textColor="@color/white"
+                android:fontFamily="@font/quicksand_medium"></TextView>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginTopCloseButtonRewardsFragment"
+                android:textAlignment="center"
+                app:cornerRadius="8dp"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/closePopupButton"
+                android:fontFamily="@font/quicksand_medium"
+                android:id="@+id/closeButton"
+                android:visibility="gone"
+                android:textStyle="bold"
+                android:backgroundTint="@color/colorBackground_primary"
+                android:textSize="@dimen/text_dimen"></com.google.android.material.button.MaterialButton>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/newCharacterDescription"
+            android:fontFamily="@font/quicksand_medium"
+            android:layout_marginStart="@dimen/speechBubbleMarginStartAndEnd"
+            android:layout_marginEnd="@dimen/speechBubbleMarginStartAndEnd"
+            android:layout_marginBottom="@dimen/speechBubbleMarginBottom"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_dimen"
+            android:textAlignment="center"
+            android:text="@string/newCharacterDescription"></TextView>
+
+    </LinearLayout>
+
+
+
+
+</FrameLayout>

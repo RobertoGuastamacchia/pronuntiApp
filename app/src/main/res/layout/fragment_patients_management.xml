@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <FrameLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/primary">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin_top_title"
+            android:layout_marginLeft="95dp"
+            android:gravity="center_horizontal"
+            android:text="@string/patientsList"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_dimen"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="@dimen/exerciseSymbolDimension"
+            android:layout_height="@dimen/exerciseSymbolDimension"
+            android:layout_gravity="bottom|start"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitEnd"
+            android:src="@drawable/patients_menu" />
+
+    </RelativeLayout>
+
+    </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/header">
+
+            <ImageButton
+                android:id="@+id/btnRegisterPatient"
+                android:layout_width="@dimen/addPatientButtonDimension"
+                android:layout_height="@dimen/addPatientButtonDimension"
+                android:background="@color/transparent"
+                android:scaleType="centerInside"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/marginAddPatient"
+                android:layout_marginEnd="@dimen/marginAddPatient"
+                android:src="@drawable/add_patient"></ImageButton>
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swipeRefreshLayout"
+                android:layout_below="@id/btnRegisterPatient"
+                android:layout_marginTop="@dimen/marginTopOfFirstPatientInTheList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <ScrollView
+                android:id="@+id/patientsListScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/btnRegisterPatient"
+                android:layout_marginTop="@dimen/patientsListMarginTop"
+                android:scrollbars="none"
+                tools:ignore="MissingConstraints,SpeakableTextPresentCheck">
+
+                <LinearLayout
+                    android:id="@+id/patientsList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    tools:ignore="MissingConstraints"></LinearLayout>
+            </ScrollView>
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+            </RelativeLayout>
+
+</RelativeLayout>

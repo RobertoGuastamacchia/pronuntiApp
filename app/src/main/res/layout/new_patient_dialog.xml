@@ -1,0 +1,123 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_rounded_corner_gray"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/logoutWindowPadding">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/logoutTextTitleMarginBottom"
+        android:text="@string/register"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/titleDimensionOfCreatePatient"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/marginTopOfCreatePatientLayout"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/parentNameText"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/textDimensionOfCreatePatient" />
+
+        <EditText
+            android:id="@+id/parentRegister"
+            android:layout_width="@dimen/editTextDimensionOfNewPatient"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/black"
+            android:inputType="text"
+            android:singleLine="true"
+            android:textAlignment="center"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/dateLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginTopEachSectionOfNewPatient"
+            android:text="@string/kidNameText"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/textDimensionOfCreatePatient" />
+
+
+        <EditText
+            android:id="@+id/kidRegister"
+            android:layout_width="@dimen/editTextDimensionOfNewPatient"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/black"
+            android:inputType="text"
+            android:singleLine="true"
+            android:textAlignment="center"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/dateLabel2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginTopEachSectionOfNewPatient"
+            android:text="@string/email"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/textDimensionOfCreatePatient" />
+
+        <EditText
+            android:id="@+id/emailRegister"
+            android:layout_width="@dimen/editTextDimensionOfNewPatient"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/black"
+            android:inputType="textEmailAddress"
+            android:singleLine="true"
+            android:textAlignment="center"
+            android:textColor="@color/black" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginTopSaveNewPatientButtons"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnRegister"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/logoutButtonDimension"
+                android:layout_weight="1"
+                android:backgroundTint="@color/greenCompleted"
+                android:text="@string/register"
+                android:textColor="@color/white"
+                android:textSize="@dimen/closeButtonOrContinueButtonMarginTop"
+                app:cornerRadius="8dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/red"
+                android:text="@string/cancel"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/white"
+                android:textSize="@dimen/closeButtonOrContinueButtonMarginTop"
+                app:cornerRadius="8dp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

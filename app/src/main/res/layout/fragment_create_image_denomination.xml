@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".patient.child.homepage.exercises.WordsSequencesRepetitionFragment"
+    android:background="@color/colorBackground_primary">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/home_page_child_margin_top_of_layout"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/help"
+                    android:layout_width="@dimen/topButtonExercisesDimension"
+                    android:layout_height="@dimen/topButtonExercisesDimension"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="@dimen/marginStartHelpIcon"
+                    android:layout_marginTop="@dimen/marginTopTopButtonExercises"
+                    android:background="@color/transparent"
+                    android:checkable="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/help_icon" />
+
+                <ImageButton
+                    android:id="@+id/exit"
+                    android:layout_width="@dimen/topButtonExercisesDimension"
+                    android:layout_height="@dimen/topButtonExercisesDimension"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/marginTopTopButtonExercises"
+                    android:layout_marginEnd="@dimen/marginEndExitButton"
+                    android:background="@color/transparent"
+                    android:checkable="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/exit" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_below="@+id/exit"
+                    android:ellipsize="none"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:singleLine="false"
+                    android:layout_marginTop="@dimen/marginTopExerciseTitleInTherapist"
+                    android:text="@string/ImageDenomination"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/exerciseDescriptionSize"
+                    android:textStyle="bold"/>
+
+
+                <ImageButton
+                    android:id="@+id/refresh"
+                    android:layout_width="@dimen/topButtonExercisesDimension"
+                    android:layout_height="@dimen/topButtonExercisesDimension"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="@dimen/marginStartRefreshIcon"
+                    android:layout_marginTop="@dimen/marginTopTopButtonExercises"
+                    android:background="@color/transparent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/refresh"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <ImageButton
+            android:id="@+id/image_upload"
+            android:layout_width="@dimen/uploadImageTherapist"
+            android:layout_height="@dimen/uploadImageTherapist"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/imageDenominationImageTherapistMarginTop"
+            android:src="@drawable/upload_image_therapist"
+            android:background="@color/transparent"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/upload_image_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/quicksand_medium"
+            android:labelFor="@+id/startAudio"
+            android:text="@string/uploadImageTherapist"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/recordButtonLabelDimension"
+            android:textStyle="bold"/>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/continueButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/marginTopDone"
+            android:fontFamily="@font/quicksand_medium"
+            android:gravity="center"
+            android:text="@string/continueEs"
+            android:textAlignment="center"
+            android:textSize="@dimen/text_dimen"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:backgroundTint="@color/colorAccent"
+            app:cornerRadius="8dp" />
+        <ImageView
+            android:id="@+id/imageChosen"
+            android:layout_width="@dimen/image_characters_not_found"
+            android:layout_height="@dimen/image_characters_not_found"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/coinTextDimension"
+            android:visibility="invisible"/>
+
+    </LinearLayout>
+
+</ScrollView>

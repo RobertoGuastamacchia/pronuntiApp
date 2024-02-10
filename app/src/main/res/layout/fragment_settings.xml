@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".patient.parent.ParentActivity"
+    android:background="@color/colorBackground_primary">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/rankingFrameLayoutHeight"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/colorAccent">
+        <TextView
+            android:id="@+id/title"
+            android:gravity="center_horizontal"
+            android:textAlignment="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/quicksand_medium"
+            android:text="@string/settingsMenu"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin_top_title"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/title_dimen"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="@dimen/exerciseSymbolDimension"
+            android:layout_height="@dimen/exerciseSymbolDimension"
+            android:layout_gravity="bottom|start"
+            android:scaleType="fitEnd"
+            android:layout_marginStart="@dimen/marginStartSettingsBigImage"
+            android:layout_marginBottom="@dimen/marginBottomSettingsBigImage"
+            android:src="@drawable/settings"/>
+
+    </FrameLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/frameLayout"
+        android:layout_marginTop="1dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/firstMarginTop"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:text="@string/credentials"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/settingsTitle"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/marginStartAndEndSettings"
+                    android:layout_marginTop="@dimen/firstMarginTopSetting"
+                    android:layout_marginEnd="@dimen/marginStartAndEndSettings"
+                    android:layout_marginBottom="@dimen/marginTopAndBottomOfSettings"
+                    android:background="@drawable/roundend_background"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/marginTopFirstElementOfASection"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/password"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/marginStartAndEndSettings"
+                            android:fontFamily="@font/quicksand_medium"
+                            android:gravity="start"
+                            android:text="Email"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/settingsSize"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/emailEditText"
+                            android:layout_width="@dimen/editTextEmailDimension"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/marginStartAndEndSettings"
+                            android:backgroundTint="@color/white"
+                            android:enabled="false"
+                            android:fontFamily="@font/quicksand_medium"
+                            android:singleLine="true"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/settingsSize" />
+
+                    </LinearLayout>
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/resetPassword"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/marginTopSaveButton"
+                        android:layout_marginBottom="@dimen/marginBottomOfSendEmailButton"
+                        android:backgroundTint="@color/colorAccent"
+                        android:fontFamily="@font/quicksand_medium"
+                        android:text="@string/resetPassword"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sendEmailForPasswordRecovery"
+                        android:visibility="visible"
+                        app:cornerRadius="8dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/marginTopOfThemeSettings"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:text="@string/profileTitle"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/settingsTitle"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/marginStartAndEndSettings"
+                    android:layout_marginTop="@dimen/firstMarginTopSetting"
+                    android:layout_marginEnd="@dimen/marginStartAndEndSettings"
+                    android:layout_marginBottom="@dimen/marginTopAndBottomOfSettings"
+                    android:background="@drawable/roundend_background"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginStart="@dimen/marginStartAndEndSettings"
+                        android:layout_marginTop="@dimen/marginTopFirstElementOfASection"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/childIcon"
+                            android:layout_width="@dimen/iconProfileDimension"
+                            android:layout_height="@dimen/iconProfileDimension"
+                            android:layout_marginStart="@dimen/margin_image"
+                            android:background="@drawable/circle_background"
+                            android:contentDescription="@string/labelGenitore"
+                            android:elevation="@dimen/elevation"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/avatarbambino" />
+
+                        <EditText
+                            android:id="@+id/childName"
+                            android:layout_width="@dimen/editTextDimension"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/marginStartAndEndSettings"
+                            android:enabled="false"
+                            android:fontFamily="@font/quicksand_medium"
+                            android:singleLine="true"
+                            android:text="@string/childName"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/settingsSize" />
+
+                        <ImageButton
+                            android:id="@+id/childNameEditSymbol"
+                            android:layout_width="@dimen/editSymbolDimension"
+                            android:layout_height="@dimen/editSymbolDimension"
+                            android:layout_marginStart="@dimen/editSymbolMarginStart"
+                            android:layout_marginTop="@dimen/editSymbolMarginTop"
+                            android:background="@color/transparent"
+                            android:contentDescription="@string/labelGenitore"
+                            android:elevation="@dimen/elevation"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/edit" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginStart="@dimen/marginStartAndEndSettings"
+                        android:layout_marginTop="@dimen/marginTopBetweenElementInASection"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/parentIcon"
+                            android:layout_width="@dimen/iconProfileDimension"
+                            android:layout_height="@dimen/iconProfileDimension"
+                            android:layout_marginStart="@dimen/margin_image"
+                            android:background="@drawable/circle_background"
+                            android:contentDescription="@string/labelGenitore"
+                            android:elevation="@dimen/elevation"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/avatargenitore" />
+
+                        <EditText
+                            android:id="@+id/parentName"
+                            android:layout_width="@dimen/editTextDimension"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/marginStartAndEndSettings"
+                            android:enabled="false"
+                            android:fontFamily="@font/quicksand_medium"
+                            android:singleLine="true"
+                            android:text="@string/childName"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/settingsSize" />
+
+                        <ImageButton
+                            android:id="@+id/parentNameEditSymbol"
+                            android:layout_width="@dimen/editSymbolDimension"
+                            android:layout_height="@dimen/editSymbolDimension"
+                            android:layout_marginStart="@dimen/editSymbolMarginStart"
+                            android:layout_marginTop="@dimen/editSymbolMarginTop"
+                            android:background="@color/transparent"
+                            android:contentDescription="@string/labelGenitore"
+                            android:elevation="@dimen/elevation"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/edit" />
+
+                    </LinearLayout>
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/saveProfile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/marginTopSaveButton"
+                        android:layout_marginBottom="@dimen/marginBottomOfSendEmailButton"
+                        android:backgroundTint="@color/greenCompleted"
+                        android:fontFamily="@font/quicksand_medium"
+                        android:text="@string/save"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sendEmailForPasswordRecovery"
+                        android:visibility="invisible"
+                        app:cornerRadius="8dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/marginTopOfThemeSettings"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:text="@string/settings"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/settingsTitle"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/firstMarginTopSetting"
+                    android:layout_marginTop="@dimen/firstMarginTopSetting"
+                    android:layout_marginEnd="@dimen/marginStartAndEndSettings"
+                    android:layout_marginBottom="@dimen/marginTopAndBottomOfSettings"
+                    android:background="@drawable/roundend_background"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/marginStartAndEndSettings"
+                        android:layout_marginTop="@dimen/firstMarginTopSetting"
+                        android:layout_marginEnd="@dimen/marginStartAndEndSettings"
+                        android:layout_marginBottom="@dimen/marginTopAndBottomOfSettings"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/theme"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/quicksand_medium"
+                            android:text="@string/theme"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/settingsSize"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/marginTopRadioGroup"
+                            android:orientation="vertical">
+
+                            <RadioGroup
+                                android:id="@+id/themeGroup"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <RadioButton
+                                    android:id="@+id/jungle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/quicksand_medium"
+                                    android:text="@string/jungle"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/settingsSize"
+                                    android:theme="@style/radioButton"
+                                    app:useMaterialThemeColors="false" />
+
+                                <RadioButton
+                                    android:id="@+id/sea"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/quicksand_medium"
+                                    android:text="@string/sea"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/settingsSize"
+                                    android:theme="@style/radioButton"
+                                    app:useMaterialThemeColors="false" />
+
+                                <RadioButton
+                                    android:id="@+id/space"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/quicksand_medium"
+                                    android:text="@string/space"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/settingsSize"
+                                    android:theme="@style/radioButton"
+                                    app:useMaterialThemeColors="false" />
+                            </RadioGroup>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/createTheme"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="80dp"
+                            android:layout_marginEnd="@dimen/uploadAndSaveButtonOfThemeSectionMarginEnd"
+                            android:backgroundTint="@color/colorAccent"
+                            android:fontFamily="@font/quicksand_medium"
+                            android:text="@string/createTheme"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/themeButtonDimension"
+                            app:cornerRadius="8dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/save"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="80dp"
+                            android:layout_marginEnd="@dimen/uploadAndSaveButtonOfThemeSectionMarginEnd"
+                            android:backgroundTint="@color/greenCompleted"
+                            android:fontFamily="@font/quicksand_medium"
+                            android:text="@string/save"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/themeButtonDimension"
+                            android:visibility="invisible"
+                            app:cornerRadius="8dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</RelativeLayout>
