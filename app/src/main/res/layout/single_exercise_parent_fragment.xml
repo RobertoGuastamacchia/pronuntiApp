@@ -31,7 +31,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/quicksand_medium"
                     android:textAlignment="center"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="@dimen/appointmentAndExerciseDetails"
                     android:textStyle="bold"></TextView>
 
@@ -40,7 +40,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/quicksand_medium"
                     android:text=" - "
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textStyle="bold"></TextView>
 
                 <TextView
@@ -49,7 +49,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/quicksand_medium"
                     android:textAlignment="center"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="@dimen/appointmentAndExerciseDetails"
                     android:textStyle="bold"></TextView>
             </LinearLayout>
@@ -68,8 +68,7 @@
                     android:id="@+id/exerciseType"
                     android:textAlignment="center"
                     android:textSize="@dimen/appointmentAndExerciseDetails"
-                    android:fontFamily="@font/quicksand_medium"
-                    android:textColor="@color/white"></TextView>
+                    android:textColor="@color/black"></TextView>
             </LinearLayout>
 
             <com.google.android.material.button.MaterialButton
@@ -79,8 +78,7 @@
                 android:id="@+id/correct"
                 android:layout_marginTop="@dimen/marginTopCorrectButton"
                 android:textColor="@color/white"
-                android:fontFamily="@font/quicksand_medium"
-                android:backgroundTint="@color/colorAccent"
+                android:backgroundTint="@color/primary"
                 android:text="@string/correct"
                 android:textAlignment="center"
                 android:textSize="@dimen/correctTextSize"></com.google.android.material.button.MaterialButton>

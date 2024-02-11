@@ -24,7 +24,7 @@
             android:layout_marginTop="@dimen/margin_top_title"
             android:layout_marginLeft="95dp"
             android:gravity="center_horizontal"
-            android:text="@string/patientsList"
+            android:text="@string/patientsViewer"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="@dimen/title_dimen"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBackground_primary"
+    android:background="@color/colorBackground"
     app:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
     <FrameLayout
@@ -22,14 +22,14 @@
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorBottomBar_complementary"
+        android:background="@color/primary"
+        app:itemTextAppearanceActive="@style/BottomNavigationTextActive"
+        app:itemTextAppearanceInactive="@style/BottomNavigationTextInactive"
         app:itemTextColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:itemTextAppearanceInactive="@style/BottomNavigationTextInactive"
-        app:itemTextAppearanceActive="@style/BottomNavigationTextActive"
         app:layout_constraintTop_toBottomOf="@+id/frameLayout"
         app:menu="@menu/bottom_bar_menu_parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

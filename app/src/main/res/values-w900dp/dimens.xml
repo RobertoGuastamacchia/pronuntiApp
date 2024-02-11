@@ -10,6 +10,7 @@
     <dimen name="big_image_height">270.40000000000003dp</dimen>
     <dimen name="margin_image">16.0dp</dimen>
     <dimen name="margin_top_title">32.0dp</dimen>
+    <dimen name="design_navigation_icon_size">40dp</dimen>
 
     <!--Splash Activity-->
     <dimen name="splashTextSize">64.0sp</dimen>
@@ -103,8 +104,8 @@
     <dimen name="layoutTwoImageRecognitionMarginTop">64.0dp</dimen>
     <dimen name="imageSelectorBorderDimension">288.0dp</dimen>
     <dimen name="marginTopDone">48.0dp</dimen>
-    <dimen name="marginStartHelpIcon">16.0dp</dimen>
-    <dimen name="marginStartRefreshIcon">16.0dp</dimen>
+    <dimen name="marginStartHelpIcon">0dp</dimen>
+    <dimen name="marginStartRefreshIcon">0dp</dimen>
     <dimen name="imageDenominationMarginTop">32.0dp</dimen>
     <dimen name="soundDimension">128.0dp</dimen>
     <dimen name="marginTopDone2">32.0dp</dimen>

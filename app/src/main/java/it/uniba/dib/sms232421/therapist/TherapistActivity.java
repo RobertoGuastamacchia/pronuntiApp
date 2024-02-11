@@ -195,7 +195,7 @@ public class TherapistActivity extends AppCompatActivity implements
                     getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new PatientsManagementFragment(true, patients, patientsId)).commit();
                     isFirstTimeUsed = false;
                     lastUsedItem = item;
-                } else if (item.getItemId() == R.id.profile && !isFirstTimeUsed && lastUsedItem != item) {
+                } else if (item.getItemId() == R.id.settings && !isFirstTimeUsed && lastUsedItem != item) {
                     getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new SettingsTherapist(true)).commit();
                     isFirstTimeUsed = false;
                     lastUsedItem = item;

@@ -63,7 +63,6 @@
     <string name="time">Ora</string>
     <string name="Address">Indirizzo</string>
     <string name="City">Città</string>
-    <string name="patientsList">Lista Pazienti</string>
     <string name="addExercise">Aggiungi esercizio</string>
     <string name="descriptionImage">Data una immagine, il bambino deve riconoscere la parola associata all’immagine.</string>
     <string name="helpsForTherapist">Registra tre audio d\'aiuto per il bambino.</string>

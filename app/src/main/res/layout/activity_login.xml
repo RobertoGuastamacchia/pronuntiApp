@@ -23,7 +23,7 @@
         <ImageView
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/baseline_emoji_emotions_24" />
+            android:src="@drawable/logo_app" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -101,8 +101,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:elevation="10dp"
-                        android:fontFamily="@font/quicksand_medium"
                         android:text="@string/loginDoctor"
+                        android:backgroundTint="@color/primary"
                         android:textColor="@android:color/white"
                         android:textStyle="bold"
                         app:shapeAppearanceOverlay="@style/RoundedTopLeftBottomLeft" />
@@ -112,8 +112,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:elevation="10dp"
-                        android:fontFamily="@font/quicksand_medium"
                         android:text="@string/loginPatient"
+                        android:backgroundTint="@color/primary"
                         android:textColor="@android:color/white"
                         android:textStyle="bold"
                         app:shapeAppearanceOverlay="@style/RoundedTopRightBottomRight" />
@@ -171,6 +171,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:text="Login"
+                android:backgroundTint="@color/primary"
                 android:textSize="30dp"
                 android:textStyle="bold" />
 
@@ -185,7 +186,7 @@
                 android:gravity="center"
                 android:textAlignment="center"
                 android:textStyle="bold"
-                android:fontFamily="@font/quicksand_medium"
+                android:backgroundTint="@color/primary"
                 android:layout_marginVertical="@dimen/margin_top_title"
                 android:text="Profilo Default"
                 android:textSize="20dp"></com.google.android.material.button.MaterialButton>

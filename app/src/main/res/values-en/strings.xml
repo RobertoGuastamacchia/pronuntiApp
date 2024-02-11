@@ -61,7 +61,6 @@
     <string name="address">Address</string>
     <string name="Address">Address</string>
     <string name="City">City</string>
-    <string name="patientsList">Patients List</string>
     <string name="addExercise">Add Exercise</string>
     <string name="date">Date</string>
     <string name="time">Time</string>
@@ -166,7 +165,7 @@
 
     <string name="helpWindowDialogTitle">Help #</string>
     <string name="helpWindowDialogMessage">Listen to the help audio</string>
-    <string name="TitleExerciseParent">Exercise to be corrected</string>
+    <string name="TitleExerciseParent">Exercise not verified</string>
     <string name="firstGoal">Complete 1 exercise</string>
     <string name="secondGoal">Do 1 exercise correctly</string>
     <string name="thirdGoal">Do 3 exercise correctly</string>

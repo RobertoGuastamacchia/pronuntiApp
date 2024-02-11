@@ -9,27 +9,27 @@
     <TextView
         android:id="@+id/custom_title"
         android:layout_width="wrap_content"
-        android:textAlignment="center"
         android:layout_height="wrap_content"
-        android:text="@string/helpWindowDialogTitle"
-        android:fontFamily="@font/quicksand_medium"
-        android:textSize="@dimen/popupTextDimension"
-        android:textStyle="bold"
-        android:textColor="@color/white"
         android:layout_gravity="center"
-        android:layout_marginBottom="@dimen/logoutTextTitleMarginBottom"/>
+        android:layout_marginBottom="@dimen/logoutTextTitleMarginBottom"
+        android:fontFamily="@font/quicksand_medium"
+        android:text="@string/helpWindowDialogTitle"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/popupTextDimension"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/custom_message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/helpWindowDialogMessage"
-        android:fontFamily="@font/quicksand_medium"
-        android:textAlignment="center"
-        android:textSize="@dimen/popupTextDimension"
-        android:textColor="#FFFFFF"
         android:layout_gravity="center"
-        android:layout_marginBottom="@dimen/logoutQuestionMarginBottom"/>
+        android:layout_marginBottom="@dimen/logoutQuestionMarginBottom"
+        android:fontFamily="@font/quicksand_medium"
+        android:text="@string/helpWindowDialogMessage"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/popupTextDimension" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -57,19 +57,19 @@
             android:visibility="gone"/>
 
         <com.google.android.material.button.MaterialButton
-            android:layout_width="wrap_content"
             android:id="@+id/closeButton"
-            android:fontFamily="@font/quicksand_medium"
-            app:cornerRadius="8dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/colorBackground_primary"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="@dimen/closeButtonOrContinueButtonMarginTop"
+            android:backgroundTint="@color/red"
             android:elevation="10dp"
-            android:textSize="@dimen/closeButtonOrContinueButtonMarginTop"
+            android:fontFamily="@font/quicksand_medium"
+            android:text="@string/closePopupButton"
             android:textAlignment="center"
+            android:textSize="@dimen/closeButtonOrContinueButtonMarginTop"
             android:textStyle="bold"
-            android:text="@string/closePopupButton"/>
+            app:cornerRadius="8dp" />
 
     </LinearLayout>
 

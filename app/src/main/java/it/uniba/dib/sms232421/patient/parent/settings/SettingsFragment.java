@@ -358,7 +358,6 @@ public class SettingsFragment extends Fragment {
                 if (radioButton != null) {
                     // Ottieni il nuovo tema selezionato
                     newTheme = radioButton.getText().toString().toLowerCase();
-                    radioButton.setTextColor(getActivity().getColor(R.color.white));
                     saveTheme.setVisibility(View.VISIBLE);
 
                 }

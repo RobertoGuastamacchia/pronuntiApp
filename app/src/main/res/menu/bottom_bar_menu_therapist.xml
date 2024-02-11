@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu  xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/patients"
-        android:icon="@drawable/patients_menu_black"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:icon="@drawable/patients_menu"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:title="@string/patientsViewer" />
 
     <item
         android:id="@+id/home"
         android:icon="@drawable/home_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:title="@string/titleHome" />
 
     <item
-        android:id="@+id/profile"
-        android:icon="@drawable/avatarlogopedista"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:title="@string/profileTitle" />
+        android:id="@+id/settings"
+        android:icon="@drawable/settings"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:title="@string/settingsMenu" />
 </menu>

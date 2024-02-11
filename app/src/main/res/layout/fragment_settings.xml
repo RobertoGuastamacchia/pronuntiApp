@@ -5,38 +5,43 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".patient.parent.ParentActivity"
-    android:background="@color/colorBackground_primary">
+    android:background="@color/white">
 
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/rankingFrameLayoutHeight"
+        android:layout_height="90dp"
         android:layout_gravity="center_horizontal"
-        android:background="@color/colorAccent">
-        <TextView
-            android:id="@+id/title"
-            android:gravity="center_horizontal"
-            android:textAlignment="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/quicksand_medium"
-            android:text="@string/settingsMenu"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="@dimen/margin_top_title"
-            android:textColor="@color/colorPrimary"
-            android:textSize="@dimen/title_dimen"
-            android:textStyle="bold"/>
+        android:background="@color/primary">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/title"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="@dimen/margin_top_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:text="@string/settingsMenu"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/title_dimen"
+                android:textStyle="bold" />
 
-        <ImageView
-            android:id="@+id/imageView7"
-            android:layout_width="@dimen/exerciseSymbolDimension"
-            android:layout_height="@dimen/exerciseSymbolDimension"
-            android:layout_gravity="bottom|start"
-            android:scaleType="fitEnd"
-            android:layout_marginStart="@dimen/marginStartSettingsBigImage"
-            android:layout_marginBottom="@dimen/marginBottomSettingsBigImage"
-            android:src="@drawable/settings"/>
-
+                <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="@dimen/exerciseSymbolDimension"
+                android:layout_height="@dimen/exerciseSymbolDimension"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="bottom|start"
+                android:layout_marginStart="@dimen/marginStartSettingsBigImage"
+                android:layout_marginBottom="@dimen/marginBottomSettingsBigImage"
+                android:scaleType="fitEnd"
+                android:src="@drawable/settings" />
+        </RelativeLayout>
     </FrameLayout>
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
@@ -61,10 +66,9 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="@dimen/firstMarginTop"
-                    android:fontFamily="@font/quicksand_medium"
                     android:text="@string/credentials"
                     android:textAlignment="center"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="@dimen/settingsTitle"
                     android:textStyle="bold" />
 
@@ -75,7 +79,6 @@
                     android:layout_marginTop="@dimen/firstMarginTopSetting"
                     android:layout_marginEnd="@dimen/marginStartAndEndSettings"
                     android:layout_marginBottom="@dimen/marginTopAndBottomOfSettings"
-                    android:background="@drawable/roundend_background"
                     android:gravity="center"
                     android:orientation="vertical">
 
@@ -90,10 +93,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/marginStartAndEndSettings"
-                            android:fontFamily="@font/quicksand_medium"
                             android:gravity="start"
                             android:text="Email"
-                            android:textColor="@color/white"
+                            android:textColor="@color/black"
                             android:textSize="@dimen/settingsSize"
                             android:textStyle="bold" />
 
@@ -102,11 +104,10 @@
                             android:layout_width="@dimen/editTextEmailDimension"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/marginStartAndEndSettings"
-                            android:backgroundTint="@color/white"
+                            android:backgroundTint="@color/black"
                             android:enabled="false"
-                            android:fontFamily="@font/quicksand_medium"
                             android:singleLine="true"
-                            android:textColor="@color/white"
+                            android:textColor="@color/black"
                             android:textSize="@dimen/settingsSize" />
 
                     </LinearLayout>
@@ -119,11 +120,10 @@
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="@dimen/marginTopSaveButton"
                         android:layout_marginBottom="@dimen/marginBottomOfSendEmailButton"
-                        android:backgroundTint="@color/colorAccent"
-                        android:fontFamily="@font/quicksand_medium"
+                        android:backgroundTint="@color/primary"
                         android:text="@string/resetPassword"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/sendEmailForPasswordRecovery"
+                        android:textSize="18dp"
                         android:visibility="visible"
                         app:cornerRadius="8dp" />
                 </LinearLayout>
@@ -133,10 +133,9 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="@dimen/marginTopOfThemeSettings"
-                    android:fontFamily="@font/quicksand_medium"
                     android:text="@string/profileTitle"
                     android:textAlignment="center"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="@dimen/settingsTitle"
                     android:textStyle="bold" />
 
@@ -147,7 +146,6 @@
                     android:layout_marginTop="@dimen/firstMarginTopSetting"
                     android:layout_marginEnd="@dimen/marginStartAndEndSettings"
                     android:layout_marginBottom="@dimen/marginTopAndBottomOfSettings"
-                    android:background="@drawable/roundend_background"
                     android:gravity="center"
                     android:orientation="vertical">
 
@@ -177,10 +175,9 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/marginStartAndEndSettings"
                             android:enabled="false"
-                            android:fontFamily="@font/quicksand_medium"
                             android:singleLine="true"
                             android:text="@string/childName"
-                            android:textColor="@color/white"
+                            android:textColor="@color/black"
                             android:textSize="@dimen/settingsSize" />
 
                         <ImageButton
@@ -223,10 +220,9 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/marginStartAndEndSettings"
                             android:enabled="false"
-                            android:fontFamily="@font/quicksand_medium"
                             android:singleLine="true"
                             android:text="@string/childName"
-                            android:textColor="@color/white"
+                            android:textColor="@color/black"
                             android:textSize="@dimen/settingsSize" />
 
                         <ImageButton
@@ -252,7 +248,6 @@
                         android:layout_marginTop="@dimen/marginTopSaveButton"
                         android:layout_marginBottom="@dimen/marginBottomOfSendEmailButton"
                         android:backgroundTint="@color/greenCompleted"
-                        android:fontFamily="@font/quicksand_medium"
                         android:text="@string/save"
                         android:textColor="@color/white"
                         android:textSize="@dimen/sendEmailForPasswordRecovery"
@@ -265,10 +260,9 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="@dimen/marginTopOfThemeSettings"
-                    android:fontFamily="@font/quicksand_medium"
                     android:text="@string/settings"
                     android:textAlignment="center"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="@dimen/settingsTitle"
                     android:textStyle="bold" />
 
@@ -279,7 +273,6 @@
                     android:layout_marginTop="@dimen/firstMarginTopSetting"
                     android:layout_marginEnd="@dimen/marginStartAndEndSettings"
                     android:layout_marginBottom="@dimen/marginTopAndBottomOfSettings"
-                    android:background="@drawable/roundend_background"
                     android:gravity="center"
                     android:orientation="horizontal">
 
@@ -296,10 +289,9 @@
                             android:id="@+id/theme"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/quicksand_medium"
                             android:text="@string/theme"
                             android:textAlignment="center"
-                            android:textColor="@color/white"
+                            android:textColor="@color/black"
                             android:textSize="@dimen/settingsSize"
                             android:textStyle="bold" />
 
@@ -318,9 +310,8 @@
                                     android:id="@+id/jungle"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:fontFamily="@font/quicksand_medium"
                                     android:text="@string/jungle"
-                                    android:textColor="@color/white"
+                                    android:textColor="@color/black"
                                     android:textSize="@dimen/settingsSize"
                                     android:theme="@style/radioButton"
                                     app:useMaterialThemeColors="false" />
@@ -329,9 +320,8 @@
                                     android:id="@+id/sea"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:fontFamily="@font/quicksand_medium"
                                     android:text="@string/sea"
-                                    android:textColor="@color/white"
+                                    android:textColor="@color/black"
                                     android:textSize="@dimen/settingsSize"
                                     android:theme="@style/radioButton"
                                     app:useMaterialThemeColors="false" />
@@ -340,9 +330,8 @@
                                     android:id="@+id/space"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:fontFamily="@font/quicksand_medium"
                                     android:text="@string/space"
-                                    android:textColor="@color/white"
+                                    android:textColor="@color/black"
                                     android:textSize="@dimen/settingsSize"
                                     android:theme="@style/radioButton"
                                     app:useMaterialThemeColors="false" />
@@ -361,8 +350,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="80dp"
                             android:layout_marginEnd="@dimen/uploadAndSaveButtonOfThemeSectionMarginEnd"
-                            android:backgroundTint="@color/colorAccent"
-                            android:fontFamily="@font/quicksand_medium"
+                            android:backgroundTint="@color/primary"
                             android:text="@string/createTheme"
                             android:textColor="@color/white"
                             android:textSize="@dimen/themeButtonDimension"
@@ -375,7 +363,6 @@
                             android:layout_marginStart="80dp"
                             android:layout_marginEnd="@dimen/uploadAndSaveButtonOfThemeSectionMarginEnd"
                             android:backgroundTint="@color/greenCompleted"
-                            android:fontFamily="@font/quicksand_medium"
                             android:text="@string/save"
                             android:textColor="@color/white"
                             android:textSize="@dimen/themeButtonDimension"

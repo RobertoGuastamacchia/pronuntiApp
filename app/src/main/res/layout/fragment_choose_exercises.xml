@@ -2,35 +2,35 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:background="@color/colorBackground_primary"
-             android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white">
 
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:gravity="center"
-            android:layout_marginTop="@dimen/closeButtonOrContinueButtonMarginTop"
-            android:text="@string/excerciseType"
-            android:textColor="@color/colorPrimary"
-            android:textSize="@dimen/title_dimen" />
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/closeButtonOrContinueButtonMarginTop"
+        android:gravity="center"
+        android:text="@string/excerciseType"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/title_dimen" />
 
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView6"
-        android:scrollbars="none"
         android:layout_marginStart="@dimen/margin_text"
-        android:layout_marginEnd="@dimen/margin_text">
+        android:layout_marginEnd="@dimen/margin_text"
+        android:scrollbars="none">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorBackground_primary"
+            android:background="@color/white"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent">
 
@@ -72,7 +72,7 @@
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
                         android:layout_marginTop="@dimen/margin_text"
-                        android:backgroundTint="@color/colorAccent"
+                        android:backgroundTint="@color/primary"
                         android:text="@string/createExcercise1"
                         android:textSize="@dimen/text_dimen" />
 
@@ -117,7 +117,7 @@
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
                         android:layout_marginTop="@dimen/closeButtonOrContinueButtonMarginTop"
-                        android:backgroundTint="@color/colorAccent"
+                        android:backgroundTint="@color/primary"
                         android:text="@string/createExcercise2"
                         android:textSize="@dimen/text_dimen" />
 
@@ -161,7 +161,7 @@
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
                         android:layout_marginTop="@dimen/closeButtonOrContinueButtonMarginTop"
-                        android:backgroundTint="@color/colorAccent"
+                        android:backgroundTint="@color/primary"
                         android:text="@string/createExcercise3"
                         android:textSize="@dimen/text_dimen" />
                 </LinearLayout>

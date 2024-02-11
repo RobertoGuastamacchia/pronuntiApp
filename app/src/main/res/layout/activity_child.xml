@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBackground_primary"
+    android:background="@color/colorBackground"
     app:theme="@style/Theme.AppCompat.Light.NoActionBar"
     tools:context=".patient.child.ChildActivity">
 
@@ -20,17 +20,17 @@
 
     </FrameLayout>
 
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottomNavigationView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorBottomBar_complementary"
-            app:itemTextColor="@color/white"
-            app:menu="@menu/bottom_bar_menu_child"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:itemTextAppearanceInactive="@style/BottomNavigationTextInactive"
-            app:itemTextAppearanceActive="@style/BottomNavigationTextActive"
-            app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        app:itemTextAppearanceActive="@style/BottomNavigationTextActive"
+        app:itemTextAppearanceInactive="@style/BottomNavigationTextInactive"
+        app:itemTextColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout"
+        app:menu="@menu/bottom_bar_menu_child" />
 </androidx.constraintlayout.widget.ConstraintLayout>

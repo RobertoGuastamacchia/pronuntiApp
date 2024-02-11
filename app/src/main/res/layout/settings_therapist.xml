@@ -20,10 +20,10 @@
         <TextView
             android:id="@+id/title"
             android:layout_marginLeft="100dp"
+            android:layout_marginTop="@dimen/margin_top_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="@dimen/margin_top_title"
             android:gravity="center_horizontal"
             android:text="@string/settingsMenu"
             android:textAlignment="center"
@@ -35,9 +35,9 @@
             android:id="@+id/imageView7"
             android:layout_width="@dimen/exerciseSymbolDimension"
             android:layout_height="@dimen/exerciseSymbolDimension"
-            android:layout_gravity="bottom|start"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="20dp"
+            android:layout_gravity="bottom|start"
             android:scaleType="fitEnd"
             android:src="@drawable/settings" />
     </RelativeLayout>

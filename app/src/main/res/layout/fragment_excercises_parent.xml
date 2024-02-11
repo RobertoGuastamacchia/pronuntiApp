@@ -5,13 +5,14 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".patient.parent.ParentActivity"
-    android:background="@color/colorBackground_primary">
+    android:background="@color/white">
 
     <FrameLayout
         android:id="@+id/firstFrameLayout"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/exerciseParentFrameLayoutHeight"
-        android:background="@color/colorAccent"
+        android:layout_height="90dp"
+        android:background="@color/primary"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -28,16 +29,15 @@
 
         <TextView
             android:id="@+id/title"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
             android:layout_marginTop="@dimen/margin_top_title"
             android:fontFamily="@font/quicksand_medium"
-            android:gravity="center_horizontal"
             android:text="@string/TitleExerciseParent"
-            android:textAlignment="center"
+            android:textAlignment="textEnd"
+            android:layout_marginEnd="10dp"
             android:textColor="@color/white"
-            android:textSize="@dimen/titleParent"
+            android:textSize="29dp"
             android:textStyle="bold" />
     </FrameLayout>
 
