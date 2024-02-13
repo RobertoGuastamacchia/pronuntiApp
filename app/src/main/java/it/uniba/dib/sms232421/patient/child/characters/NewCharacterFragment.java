@@ -141,9 +141,6 @@ public class NewCharacterFragment extends Fragment {
                         case "Kaida":
                             newCharacterImage.setImageResource(R.drawable.jungle_kaida);
                             break;
-                        case "Rhinox":
-                            newCharacterImage.setImageResource(R.drawable.jungle_rhinox);
-                            break;
                         case "Regaleon":
                             newCharacterImage.setImageResource(R.drawable.jungle_regaleon);
                             break;

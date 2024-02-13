@@ -125,7 +125,6 @@ public class CharactersFragment extends Fragment {
                 case "jungle":
                     idsimg.add(R.id.jungle_Jumbojango_img);
                     idsimg.add(R.id.t2_img);
-                    idsimg.add(R.id.t3_img);
                     idsimg.add(R.id.t4_img);
                     idsimg.add(R.id.t5_img);
                     idsimg.add(R.id.t6_img);
@@ -133,7 +132,6 @@ public class CharactersFragment extends Fragment {
 
                     idstext.add(R.id.jungle_Jumbojango_name);
                     idstext.add(R.id.t2_name);
-                    idstext.add(R.id.t3_name);
                     idstext.add(R.id.t4_name);
                     idstext.add(R.id.t5_name);
                     idstext.add(R.id.t6_name);
@@ -183,9 +181,6 @@ public class CharactersFragment extends Fragment {
                         break;
                     case "Kaida":
                         setCharacterAppearance(R.id.t2_img, R.id.t2_name, view);
-                        break;
-                    case "Rhinox":
-                        setCharacterAppearance(R.id.t3_img, R.id.t3_name, view);
                         break;
                     case "Regaleon":
                         setCharacterAppearance(R.id.t4_img, R.id.t4_name, view);

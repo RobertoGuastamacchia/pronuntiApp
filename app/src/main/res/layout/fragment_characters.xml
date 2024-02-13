@@ -134,30 +134,7 @@
             android:textAlignment="center"
             android:textColor="@color/characterLockedColorTextAndBackground"
             android:textSize="@dimen/text_dimen" />
-        <ImageButton
-            android:id="@+id/t3_img"
-            app:tint="@color/characterLockedColorImage"
-            android:backgroundTint="@color/characterLockedColorTextAndBackground"
-            android:layout_width="@dimen/characters_image"
-            android:layout_height="@dimen/characters_image"
-            android:scaleType="centerInside"
-            android:visibility="gone"
-            android:background="@drawable/circle_background"
-            android:src="@drawable/jungle_rhinox"
-            android:contentDescription="@string/imageDescriptionCharacters"
-            android:layout_marginVertical="@dimen/margin_image"/>
 
-        <TextView
-            android:id="@+id/t3_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin_text"
-            android:fontFamily="@font/quicksand_medium"
-            android:text="@string/t3"
-            android:visibility="gone"
-            android:textAlignment="center"
-            android:textColor="@color/characterLockedColorTextAndBackground"
-            android:textSize="@dimen/text_dimen" />
         <ImageButton
             android:id="@+id/t4_img"
             app:tint="@color/characterLockedColorImage"

@@ -53,7 +53,7 @@
     <string name="exTwoWordTwo">Seconda Parola:</string>
     <string name="exTwoWordThree">Terza Parola:</string>
     <string name="register">Registra</string>
-    <string name="addAppointment">Aggiungi Appuntamento</string>
+    <string name="addAppointment">Nuovo Appuntamento</string>
     <string name="parentNameText">Genitore</string>
     <string name="kidNameText">Bambino</string>
     <string name="cancel">Annulla</string>
@@ -63,7 +63,7 @@
     <string name="time">Ora</string>
     <string name="Address">Indirizzo</string>
     <string name="City">Città</string>
-    <string name="addExercise">Aggiungi esercizio</string>
+    <string name="addExercise">Nuovo esercizio</string>
     <string name="descriptionImage">Data una immagine, il bambino deve riconoscere la parola associata all’immagine.</string>
     <string name="helpsForTherapist">Registra tre audio d\'aiuto per il bambino.</string>
     <string name="descriptionWordsInSequence">Dato un audio che riproduce 3 parole in sequenza, il bambino dovrà registrare un audio ripetendo le parole nella sequenza corretta.</string>
@@ -82,7 +82,6 @@
     <string name="yes">Si</string>
     <string name="t1">Jumbojango</string>
     <string name="t2">Kaida</string>
-    <string name="t3">Rhinox</string>
     <string name="t4">Regaleon</string>
     <string name="t5">Doratall</string>
     <string name="t6">Monkin</string>
