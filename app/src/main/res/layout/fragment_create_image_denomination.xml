@@ -126,7 +126,7 @@
             android:textSize="@dimen/text_dimen"
             android:textStyle="bold"
             android:visibility="gone"
-            app:backgroundTint="@color/colorAccent"
+            app:backgroundTint="@color/primary"
             app:cornerRadius="8dp" />
         <ImageView
             android:id="@+id/imageChosen"

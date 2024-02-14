@@ -89,7 +89,7 @@
                 android:textAlignment="center"
                 android:textSize="@dimen/text_dimen"
                 android:textStyle="bold"
-                app:backgroundTint="@color/colorAccent"
+                app:backgroundTint="@color/primary"
                 app:cornerRadius="8dp" />
 
             <com.google.android.material.button.MaterialButton
@@ -102,7 +102,7 @@
                 android:textAlignment="center"
                 android:textSize="@dimen/text_dimen"
                 android:textStyle="bold"
-                app:backgroundTint="@color/colorAccent"
+                app:backgroundTint="@color/primary"
                 app:cornerRadius="8dp" />
 
             <com.google.android.material.button.MaterialButton

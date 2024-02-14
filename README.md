@@ -1,1 +1,7 @@
-L'applicazione Android "PronuntiApp" è il risultato del progetto sviluppato per l'esame "Sviluppo di Mobile Software" (ITPS) durante l'anno accademico 2023/24, presso il Dipartimento di Informatica dell'Università degli Studi di Bari Aldo Moro. Questo progetto è stato realizzato con successo dal team Code Crafters, composto da : Michele Patella, Giuseppe D'Addario, Christian Iacovelli e Davide Visci.
+Sviluppato da:
+
+Roberto Guastamacchia 754710
+Maria Creanza 758187
+Lorenzo Abatescianni 759521
+Vito Angione
+Federico Basile 759524

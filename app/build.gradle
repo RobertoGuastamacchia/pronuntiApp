@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'it.uniba.dib.sms232421'
+    namespace 'it.uniba.dib.sms2324FF2'
     compileSdk 34
 
     defaultConfig {
-        applicationId "it.uniba.dib.sms232421"
+        applicationId "it.uniba.dib.sms2324FF2"
         minSdk 29
         targetSdk 34
         versionCode 1

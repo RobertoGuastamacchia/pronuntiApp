@@ -22,9 +22,9 @@
             android:layout_width="@dimen/exerciseSymbolDimension"
             android:layout_height="@dimen/exerciseSymbolDimension"
             android:layout_gravity="bottom|start"
+            android:layout_marginStart="5dp"
             android:layout_marginBottom="@dimen/marginBottomSettingsBigImage"
             android:scaleType="fitEnd"
-            android:layout_marginStart="@dimen/margin_text"
             android:src="@drawable/exercises_menu" />
 
         <TextView
@@ -32,10 +32,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_top_title"
+            android:layout_marginEnd="10dp"
             android:fontFamily="@font/quicksand_medium"
             android:text="@string/TitleExerciseParent"
             android:textAlignment="textEnd"
-            android:layout_marginEnd="10dp"
             android:textColor="@color/white"
             android:textSize="29dp"
             android:textStyle="bold" />

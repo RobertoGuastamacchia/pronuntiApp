@@ -197,7 +197,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:indeterminateTint="@color/colorAccent"
+            android:indeterminateTint="@color/primary"
             android:visibility="gone" />
     </androidx.cardview.widget.CardView>
 

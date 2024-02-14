@@ -4,7 +4,7 @@
 
         <item
             android:id="@+id/profileItem"
-            android:icon="@drawable/parent_profile"
+            android:icon="@drawable/baseline_characters_24"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:title="@string/profileTitle"

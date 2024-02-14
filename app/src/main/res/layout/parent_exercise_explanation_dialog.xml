@@ -17,18 +17,18 @@
         android:textAlignment="center"/>
 
     <com.google.android.material.button.MaterialButton
-        android:layout_width="wrap_content"
         android:id="@+id/continueButton"
-        android:fontFamily="@font/quicksand_medium"
-        app:cornerRadius="8dp"
-        android:backgroundTint="@color/colorAccent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/closeButtonOrContinueButtonMarginTop"
+        android:backgroundTint="@color/red"
         android:elevation="10dp"
-        android:textSize="@dimen/closeButtonOrContinueButtonMarginTop"
+        android:fontFamily="@font/quicksand_medium"
+        android:text="@string/closePopupButton"
         android:textAlignment="center"
+        android:textSize="@dimen/closeButtonOrContinueButtonMarginTop"
         android:textStyle="bold"
-        android:text="@string/closePopupButton"/>
+        app:cornerRadius="8dp" />
 
 </LinearLayout>
