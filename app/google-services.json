@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "1007485967339",
-    "project_id": "pronuntiapp-f979e",
-    "storage_bucket": "pronuntiapp-f979e.appspot.com"
+    "project_number": "891814917839",
+    "project_id": "pronuntiapp-4feb24",
+    "storage_bucket": "pronuntiapp-4feb24.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1007485967339:android:a107e2e3dbeb53b9d1d7ae",
+        "mobilesdk_app_id": "1:891814917839:android:428aae99c7459477b0a9ba",
         "android_client_info": {
           "package_name": "it.uniba.dib.sms2324FF2"
         }
@@ -15,26 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCitKYa4N8JrxcaWOh1_m2LM6sl37_4QKw"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:1007485967339:android:babb330de8458472d1d7ae",
-        "android_client_info": {
-          "package_name": "it.uniba.dib.sms2324FFx"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyCitKYa4N8JrxcaWOh1_m2LM6sl37_4QKw"
+          "current_key": "AIzaSyD6VF53ZZq8fzSe5S9sdFC5Q3dmYK5rOW8"
         }
       ],
       "services": {

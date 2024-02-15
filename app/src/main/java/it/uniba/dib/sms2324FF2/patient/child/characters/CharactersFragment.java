@@ -23,7 +23,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import it.uniba.dib.sms2324FF2.R;
-import it.uniba.dib.sms2324FF2.patient.FirebasePatientModel;
+import it.uniba.dib.sms2324FF2.patient.PatientFirebaseModel;
 import it.uniba.dib.sms2324FF2.patient.Patient;
 
 public class CharactersFragment extends Fragment {
@@ -120,15 +120,15 @@ public class CharactersFragment extends Fragment {
             theme = theme.replace("_personalized", "");
 
         switch (theme) {
-                case "jungle":
-                    idsimg.add(R.id.jungle_Jumbojango_img);
+                case "mountain":
+                    idsimg.add(R.id.mountain_Ember_img);
                     idsimg.add(R.id.t2_img);
                     idsimg.add(R.id.t4_img);
                     idsimg.add(R.id.t5_img);
                     idsimg.add(R.id.t6_img);
                     idsimg.add(R.id.t7_img);
 
-                    idstext.add(R.id.jungle_Jumbojango_name);
+                    idstext.add(R.id.mountain_Ember_name);
                     idstext.add(R.id.t2_name);
                     idstext.add(R.id.t4_name);
                     idstext.add(R.id.t5_name);
@@ -151,7 +151,7 @@ public class CharactersFragment extends Fragment {
                     idstext.add(R.id.a5_name);
                     selectCharactersFromTheme(idsimg, idstext, view);
                     break;
-                case "space":
+                case "polar":
                     idsimg.add(R.id.p1_img);
                     idsimg.add(R.id.p2_img);
                     idsimg.add(R.id.p3_img);
@@ -174,58 +174,58 @@ public class CharactersFragment extends Fragment {
         if(charactersUnlocked != null) {
             for (String character : charactersUnlocked) {
                 switch (character) {
-                    case "Jumbojango":
-                        setCharacterAppearance(R.id.jungle_Jumbojango_img, R.id.jungle_Jumbojango_name, view);
+                    case "Ember":
+                        setCharacterAppearance(R.id.mountain_Ember_img, R.id.mountain_Ember_name, view);
                         break;
-                    case "Kaida":
+                    case "Edvige":
                         setCharacterAppearance(R.id.t2_img, R.id.t2_name, view);
                         break;
-                    case "Regaleon":
+                    case "Nutmeg":
                         setCharacterAppearance(R.id.t4_img, R.id.t4_name, view);
                         break;
-                    case "Doratall":
+                    case "Bambi":
                         setCharacterAppearance(R.id.t5_img, R.id.t5_name, view);
                         break;
-                    case "Monkin":
+                    case "Munin":
                         setCharacterAppearance(R.id.t6_img, R.id.t6_name, view);
                         break;
-                    case "Koalinda":
+                    case "Bruno":
                         setCharacterAppearance(R.id.t7_img, R.id.t7_name, view);
                         break;
-                    case "Delphy":
+                    case "Nagini":
                         setCharacterAppearance(R.id.a1_img, R.id.a1_name, view);
                         break;
-                    case "Splashes":
+                    case "BeepBeep":
                         setCharacterAppearance(R.id.a2_img, R.id.a2_name, view);
                         break;
-                    case "Chelonide":
+                    case "Aragog":
                         setCharacterAppearance(R.id.a3_img, R.id.a3_name, view);
                         break;
-                    case "Inktonio":
+                    case "Zephir":
                         setCharacterAppearance(R.id.a4_img, R.id.a4_name, view);
                         break;
-                    case "Pinchington":
+                    case "Harum":
                         setCharacterAppearance(R.id.a5_img, R.id.a5_name, view);
                         break;
-                    case "Zorgon":
+                    case "Rost":
                         setCharacterAppearance(R.id.p1_img, R.id.p1_name, view);
                         break;
-                    case "Nebulox":
+                    case "Wally":
                         setCharacterAppearance(R.id.p2_img, R.id.p2_name, view);
                         break;
-                    case "Xytron":
+                    case "Splash":
                         setCharacterAppearance(R.id.p3_img, R.id.p3_name, view);
                         break;
-                    case "Quasarix":
+                    case "Sigma":
                         setCharacterAppearance(R.id.p4_img, R.id.p4_name, view);
                         break;
-                    case "Galactron":
+                    case "Linux":
                         setCharacterAppearance(R.id.p5_img, R.id.p5_name, view);
                         break;
-                    case "Vortexar":
+                    case "Sirius":
                         setCharacterAppearance(R.id.p6_img, R.id.p6_name, view);
                         break;
-                    case "Lunarisia":
+                    case "Flippy":
                         setCharacterAppearance(R.id.p7_img, R.id.p7_name, view);
                         break;
                 }
@@ -288,7 +288,7 @@ public class CharactersFragment extends Fragment {
                                 }
                             });
                         }else{
-                            FirebasePatientModel.getPatientPrincipalCharacters(new FirebasePatientModel.OnCharactersListener<HashMap<String, String>>() {
+                            PatientFirebaseModel.getPatientPrincipalCharacters(new PatientFirebaseModel.OnCharactersListener<HashMap<String, String>>() {
                                 @Override
                                 public void onCharactersRead(HashMap<String, String> charactersRead) {
                                     for(Map.Entry<String,String>  entry : charactersRead.entrySet()) {
@@ -344,7 +344,7 @@ public class CharactersFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                FirebasePatientModel.setPrincipalCharacter(character, new FirebasePatientModel.OnCharactersListener<Boolean>() {
+                PatientFirebaseModel.setPrincipalCharacter(character, new PatientFirebaseModel.OnCharactersListener<Boolean>() {
                     @Override
                     public void onCharactersRead(Boolean charactersRead) {
                         //chiudo il popup

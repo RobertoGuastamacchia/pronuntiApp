@@ -42,7 +42,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/quicksand_medium"
-                android:text="@string/appointment"
+                android:text="@string/therapistAppointment"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="@dimen/title_dimen"

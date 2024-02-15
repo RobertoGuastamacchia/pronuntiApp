@@ -65,7 +65,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
             snackbarView.setLayoutParams(params);
 
             // Personalizzo snackbar
-             View customView = snackbar.getView();
+            View customView = snackbar.getView();
             TextView textView = customView.findViewById(com.google.android.material.R.id.snackbar_text);
             textView.setMaxLines(5); // Imposta il numero massimo di linee desiderato
             textView.setTextColor(getColor(R.color.white));

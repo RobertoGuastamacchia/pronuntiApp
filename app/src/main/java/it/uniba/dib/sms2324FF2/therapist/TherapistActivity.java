@@ -48,18 +48,18 @@ import com.google.android.material.button.MaterialButton;
 import java.util.ArrayList;
 
 import it.uniba.dib.sms2324FF2.R;
-import it.uniba.dib.sms2324FF2.appointments.Appointment;
-import it.uniba.dib.sms2324FF2.appointments.FirebaseAppointmentsModel;
+import it.uniba.dib.sms2324FF2.therapist.appointments.TherapistAppointment;
+import it.uniba.dib.sms2324FF2.therapist.appointments.TherapistFirebaseAppointmentsModel;
 import it.uniba.dib.sms2324FF2.login.FirebaseAuthenticationModel;
 import it.uniba.dib.sms2324FF2.login.LoginActivity;
-import it.uniba.dib.sms2324FF2.therapist.patients.exercises.ImageDenominationFragment;
-import it.uniba.dib.sms2324FF2.therapist.patients.exercises.ImageDenominationHelpsFragment;
-import it.uniba.dib.sms2324FF2.therapist.patients.exercises.AddAudioToExerciseFragment;
-import it.uniba.dib.sms2324FF2.therapist.patients.exercises.MinimalPairsRecognitionFragment;
+import it.uniba.dib.sms2324FF2.therapist.management_patients.exercises.ImageDenominationFragment;
+import it.uniba.dib.sms2324FF2.therapist.management_patients.exercises.ImageDenominationHelpsFragment;
+import it.uniba.dib.sms2324FF2.therapist.management_patients.exercises.AddAudioToExerciseFragment;
+import it.uniba.dib.sms2324FF2.therapist.management_patients.exercises.MinimalPairsRecognitionFragment;
 import it.uniba.dib.sms2324FF2.user.FirebaseUserModel;
-import it.uniba.dib.sms2324FF2.therapist.patients.PatientsManagementFragment;
-import it.uniba.dib.sms2324FF2.therapist.homepage.HomePageTherapistFragment;
-import it.uniba.dib.sms2324FF2.therapist.settings.SettingsTherapist;
+import it.uniba.dib.sms2324FF2.therapist.management_patients.TherapistPatientsManagementFragment;
+import it.uniba.dib.sms2324FF2.therapist.homepage.TherapistHomePageFragment;
+import it.uniba.dib.sms2324FF2.therapist.settings.TherapistSettings;
 import it.uniba.dib.sms2324FF2.network.NetworkError;
 import it.uniba.dib.sms2324FF2.network.NetworkUtils;
 import it.uniba.dib.sms2324FF2.user.User;
@@ -67,9 +67,9 @@ import it.uniba.dib.sms2324FF2.utility.SharedViewModel;
 
 
 public class TherapistActivity extends AppCompatActivity implements
-        HomePageTherapistFragment.onHomePageListener,
-        PatientsManagementFragment.onPatientsListener,
-        SettingsTherapist.onSettingsListener,
+        TherapistHomePageFragment.onHomePageListener,
+        TherapistPatientsManagementFragment.onPatientsListener,
+        TherapistSettings.onSettingsListener,
         ImageDenominationFragment.onImageDenominationListener,
         ImageDenominationHelpsFragment.onImageDenominationListener,
         MinimalPairsRecognitionFragment.onMinimalPairsRecognition,
@@ -78,7 +78,7 @@ public class TherapistActivity extends AppCompatActivity implements
     private MenuItem lastUsedItem; //ultimo item usato che va disattivato
     private boolean isFirstTimeUsed = true; //booleana che mi serve per capire se è la prima volta che viene usata la bottom bar
     private ActivityResultLauncher<Intent> emailLauncher;
-    private ArrayList<Appointment> appointments;
+    private ArrayList<TherapistAppointment> therapistAppointments;
     private ArrayList<String> patients, patientsId;
     private NetworkUtils networkUtils;
     private IntentFilter intentFilter;
@@ -164,7 +164,7 @@ public class TherapistActivity extends AppCompatActivity implements
     //caso di presenza di connessione
     private void isConnectedIsTrue() {
 
-        appointments = SharedViewModel.getInstance().getAppointments();
+        therapistAppointments = SharedViewModel.getInstance().getAppointments();
         patients = SharedViewModel.getInstance().getPatients();
         patientsId = SharedViewModel.getInstance().getPatientsId();
 
@@ -181,15 +181,15 @@ public class TherapistActivity extends AppCompatActivity implements
 
                 //gestisco la navigazione con la bottom bar
                 if (item.getItemId() == R.id.home && !isFirstTimeUsed && lastUsedItem != item) {
-                    getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new HomePageTherapistFragment(true, appointments, patients, patientsId)).commit();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new TherapistHomePageFragment(true, therapistAppointments, patients, patientsId)).commit();
                     isFirstTimeUsed = false;
                     lastUsedItem = item;
                 } else if (item.getItemId() == R.id.patients && !isFirstTimeUsed && lastUsedItem != item) {
-                    getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new PatientsManagementFragment(true, patients, patientsId)).commit();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new TherapistPatientsManagementFragment(true, patients, patientsId)).commit();
                     isFirstTimeUsed = false;
                     lastUsedItem = item;
                 } else if (item.getItemId() == R.id.settings && !isFirstTimeUsed && lastUsedItem != item) {
-                    getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new SettingsTherapist(true)).commit();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new TherapistSettings(true)).commit();
                     isFirstTimeUsed = false;
                     lastUsedItem = item;
                 }
@@ -199,7 +199,7 @@ public class TherapistActivity extends AppCompatActivity implements
 
         //aggiungo il fragment dell'home page del logopedista
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        ft.add(R.id.frameLayout, new HomePageTherapistFragment(true, appointments, patients, patientsId));
+        ft.add(R.id.frameLayout, new TherapistHomePageFragment(true, therapistAppointments, patients, patientsId));
         ft.commit();
         isFirstTimeUsed=false;
 
@@ -214,13 +214,13 @@ public class TherapistActivity extends AppCompatActivity implements
 
     @Override
     public void refreshHomePageData() {
-        FirebaseAppointmentsModel.getDoctorAppointments(new FirebaseAppointmentsModel.OnReadAppointmentsListener() {
+        TherapistFirebaseAppointmentsModel.getDoctorAppointments(new TherapistFirebaseAppointmentsModel.OnReadAppointmentsListener() {
             @Override
-            public void onAppointmentsRead(ArrayList<Appointment> appointments) {
+            public void onAppointmentsRead(ArrayList<TherapistAppointment> therapistAppointments) {
                 FirebaseUserModel.getPatientsListforDoctor(new FirebaseUserModel.OnPatientsListListener() {
                     @Override
                     public void onPatientsListRead(ArrayList<String> patients, ArrayList<String> patientsId, ArrayList<String> emailList) {
-                        getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new HomePageTherapistFragment(true, appointments, patients, patientsId)).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new TherapistHomePageFragment(true, therapistAppointments, patients, patientsId)).commit();
 
                     }
 
@@ -243,7 +243,7 @@ public class TherapistActivity extends AppCompatActivity implements
         FirebaseUserModel.getPatientsListforDoctor(new FirebaseUserModel.OnPatientsListListener() {
             @Override
             public void onPatientsListRead(ArrayList<String> patients, ArrayList<String> patientsId, ArrayList<String> emailList) {
-                getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new PatientsManagementFragment(true, patients, patientsId)).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new TherapistPatientsManagementFragment(true, patients, patientsId)).commit();
 
             }
 
@@ -271,7 +271,7 @@ public class TherapistActivity extends AppCompatActivity implements
         FirebaseUserModel.refreshUser(new FirebaseUserModel.OnRefreshListener() {
             @Override
             public void onRefreshSuccess() {
-                getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new SettingsTherapist()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new TherapistSettings()).commit();
             }
 
             @Override

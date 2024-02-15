@@ -25,7 +25,7 @@ import com.google.android.material.button.MaterialButton;
 import java.util.ArrayList;
 
 import it.uniba.dib.sms2324FF2.R;
-import it.uniba.dib.sms2324FF2.patient.FirebasePatientModel;
+import it.uniba.dib.sms2324FF2.patient.PatientFirebaseModel;
 import it.uniba.dib.sms2324FF2.patient.Patient;
 
 public class NewCharacterFragment extends Fragment {
@@ -130,59 +130,59 @@ public class NewCharacterFragment extends Fragment {
                     //imposto immagine e nome del personaggio sbloccato
                     newCharacterName.setText(character);
                     switch (character) {
-                        case "Jumbojango":
-                            newCharacterImage.setImageResource(R.drawable.jungle_jumbojango);
+                        case "Ember":
+                            newCharacterImage.setImageResource(R.drawable.mountain_ember);
                             break;
-                        case "Kaida":
-                            newCharacterImage.setImageResource(R.drawable.jungle_kaida);
+                        case "Edvige":
+                            newCharacterImage.setImageResource(R.drawable.mountain_edvige);
                             break;
-                        case "Regaleon":
-                            newCharacterImage.setImageResource(R.drawable.jungle_regaleon);
+                        case "Nutmeg":
+                            newCharacterImage.setImageResource(R.drawable.mountain_nutmeg);
                             break;
-                        case "Doratall":
-                            newCharacterImage.setImageResource(R.drawable.jungle_doratall);
+                        case "Bambi":
+                            newCharacterImage.setImageResource(R.drawable.mountain_bambi);
                             break;
-                        case "Monkin":
-                            newCharacterImage.setImageResource(R.drawable.jungle_monkin);
+                        case "Munin":
+                            newCharacterImage.setImageResource(R.drawable.mountain_munin);
                             break;
-                        case "Koalinda":
-                            newCharacterImage.setImageResource(R.drawable.jungle_kodalinda);
+                        case "Bruno":
+                            newCharacterImage.setImageResource(R.drawable.mountain_bruno);
                             break;
-                        case "Delphy":
-                            newCharacterImage.setImageResource(R.drawable.sea_delphy);
+                        case "Nagini":
+                            newCharacterImage.setImageResource(R.drawable.sea_nagini);
                             break;
-                        case "Splashes":
-                            newCharacterImage.setImageResource(R.drawable.sea_splashes);
+                        case "BeepBeep":
+                            newCharacterImage.setImageResource(R.drawable.sea_beepbeep);
                             break;
-                        case "Chelonide":
-                            newCharacterImage.setImageResource(R.drawable.sea_chelonide);
+                        case "Aragog":
+                            newCharacterImage.setImageResource(R.drawable.sea_aragog);
                             break;
-                        case "Inktonio":
-                            newCharacterImage.setImageResource(R.drawable.sea_inktonio);
+                        case "Zephir":
+                            newCharacterImage.setImageResource(R.drawable.sea_zephir);
                             break;
-                        case "Pinchington":
-                            newCharacterImage.setImageResource(R.drawable.sea_pinchington);
+                        case "Harum":
+                            newCharacterImage.setImageResource(R.drawable.sea_harum);
                             break;
-                        case "Zorgon":
-                            newCharacterImage.setImageResource(R.drawable.space_zorgon);
+                        case "Rost":
+                            newCharacterImage.setImageResource(R.drawable.polar_rost);
                             break;
-                        case "Nebulox":
-                            newCharacterImage.setImageResource(R.drawable.space_nebulox);
+                        case "Wally":
+                            newCharacterImage.setImageResource(R.drawable.polar_wally);
                             break;
-                        case "Xytron":
-                            newCharacterImage.setImageResource(R.drawable.space_xytron);
+                        case "Splash":
+                            newCharacterImage.setImageResource(R.drawable.polar_splash);
                             break;
-                        case "Quasarix":
-                            newCharacterImage.setImageResource(R.drawable.space_quasarix);
+                        case "Sigma":
+                            newCharacterImage.setImageResource(R.drawable.polar_sigma);
                             break;
-                        case "Galactron":
-                            newCharacterImage.setImageResource(R.drawable.space_galactron);
+                        case "Linux":
+                            newCharacterImage.setImageResource(R.drawable.polar_linux);
                             break;
-                        case "Vortexar":
-                            newCharacterImage.setImageResource(R.drawable.space_vortexar);
+                        case "Sirius":
+                            newCharacterImage.setImageResource(R.drawable.polar_sirius);
                             break;
-                        case "Lunarisia":
-                            newCharacterImage.setImageResource(R.drawable.space_lunarisia);
+                        case "Flippy":
+                            newCharacterImage.setImageResource(R.drawable.polar_flippy);
                             break;
                     }
                 }
@@ -195,7 +195,7 @@ public class NewCharacterFragment extends Fragment {
                     //Aggiungo il personaggio a quelli sbloccati
                     Patient.getInstance().addCharacters_unlocked(character);
                     //Salvo la modifica sul database
-                    FirebasePatientModel.updateCharactersUnlocked(character, new FirebasePatientModel.TransactionCallback() {
+                    PatientFirebaseModel.updateCharactersUnlocked(character, new PatientFirebaseModel.TransactionCallback() {
                         @Override
                         public void onTransactionSuccess() {
                             //torna al fragment dei personaggi

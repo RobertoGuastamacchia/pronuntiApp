@@ -26,76 +26,76 @@
         android:orientation="vertical">
 
 
-
         <FrameLayout
+            android:id="@+id/gameFrameLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/gameFrameLayout"
-            android:background="@color/colorBackground_primary"
-            android:layout_gravity="center_horizontal">
+            android:layout_gravity="center_horizontal"
+            android:background="#A2DEFF">
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="@dimen/marginTopCoin"
-                android:id="@+id/linearLayoutCoin"
-                android:layout_gravity="center_horizontal"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/imageView4"
-                    android:layout_width="@dimen/coin_image_dimension"
-                    android:layout_height="@dimen/coin_image_dimension"
-                    app:srcCompat="@drawable/coin_removebg_preview"/>
-
-                <TextView
-                    android:id="@+id/coin"
+                <LinearLayout
+                    android:id="@+id/linearLayoutCoin"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/quicksand_medium"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="@dimen/text_dimen"
-                    android:textStyle="bold"
-                    android:layout_marginStart="@dimen/margin_start_coin_symbol"/>
-            </LinearLayout>
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/marginTopCoin"
+                    android:orientation="horizontal">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:layout_below="@id/linearLayoutCoin"
-                android:id="@+id/principalLinearLayout">
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="@dimen/coin_image_dimension"
+                        android:layout_height="@dimen/coin_image_dimension"
+                        app:srcCompat="@drawable/coin_removebg_preview" />
 
+                    <TextView
+                        android:id="@+id/coin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_start_coin_symbol"
+                        android:fontFamily="@font/quicksand_medium"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text_dimen"
+                        android:textStyle="bold" />
+                </LinearLayout>
 
-                <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-                    android:id="@+id/swipeRefreshLayout"
-                    android:layout_marginTop="@dimen/home_page_child_margin_top_of_layout2"
+                <LinearLayout
+                    android:id="@+id/principalLinearLayout"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <ScrollView
-                        android:layout_width="match_parent"
-                        android:id="@+id/scrollView"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center_horizontal"
-                        android:scrollbars="none"
-                        tools:ignore="MissingConstraints">
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/linearLayoutCoin"
+                    android:gravity="center">
 
-                        <LinearLayout
+
+                    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                        android:id="@+id/swipeRefreshLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/home_page_child_margin_top_of_layout2">
+
+                        <ScrollView
+                            android:id="@+id/scrollView"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_gravity="center_horizontal"
-                            android:id="@+id/gameMap"
-                            android:orientation="vertical"></LinearLayout>
-                    </ScrollView>
-                </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+                            android:scrollbars="none"
+                            tools:ignore="MissingConstraints">
 
-            </LinearLayout>
-        </RelativeLayout>
+                            <LinearLayout
+                                android:id="@+id/gameMap"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:orientation="vertical"></LinearLayout>
+                        </ScrollView>
+                    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
         </FrameLayout>
 
     </LinearLayout>
@@ -103,19 +103,18 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:background="@color/transparent"
-        android:gravity="end|center_vertical">
+        android:background="#003E2B05"
+        android:gravity="end|center_vertical"
+        android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/goals"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:background="@drawable/weekly_goals_background"
-            android:id="@+id/goals"
-            android:scaleType="centerInside"
             android:padding="5dp"
-            android:src="@drawable/goals_icon"
-            ></ImageButton>
+            android:scaleType="centerInside"
+            android:src="@drawable/goals_icon"></ImageButton>
     </LinearLayout>
 
 </RelativeLayout>

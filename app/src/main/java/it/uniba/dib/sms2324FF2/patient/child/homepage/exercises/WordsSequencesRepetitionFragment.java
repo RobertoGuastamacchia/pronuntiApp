@@ -46,7 +46,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 import it.uniba.dib.sms2324FF2.R;
-import it.uniba.dib.sms2324FF2.exercises.Exercise;
+import it.uniba.dib.sms2324FF2.patient.child.exercises.Exercise;
 import it.uniba.dib.sms2324FF2.firestore.FirestoreModel;
 import it.uniba.dib.sms2324FF2.patient.Patient;
 

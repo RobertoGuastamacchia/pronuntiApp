@@ -307,10 +307,10 @@
                                 android:layout_height="wrap_content">
 
                                 <RadioButton
-                                    android:id="@+id/jungle"
+                                    android:id="@+id/mountain"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/jungle"
+                                    android:text="@string/mountain"
                                     android:textColor="@color/black"
                                     android:textSize="@dimen/settingsSize"
                                     android:theme="@style/radioButton"
@@ -327,10 +327,10 @@
                                     app:useMaterialThemeColors="false" />
 
                                 <RadioButton
-                                    android:id="@+id/space"
+                                    android:id="@+id/polar"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/space"
+                                    android:text="@string/polar"
                                     android:textColor="@color/black"
                                     android:textSize="@dimen/settingsSize"
                                     android:theme="@style/radioButton"

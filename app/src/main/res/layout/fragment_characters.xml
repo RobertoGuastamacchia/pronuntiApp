@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/charactersParent"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".patient.child.characters.CharactersFragment"
-    android:background="@color/colorBackground_primary"
-    android:id="@+id/charactersParent">
+    android:background="#A2DEFF"
+    tools:context=".patient.child.characters.CharactersFragment">
 
 
     <FrameLayout
@@ -15,549 +15,552 @@
         android:layout_height="@dimen/rankingFrameLayoutHeight"
         android:layout_gravity="center_horizontal"
         android:background="@color/childAccent">
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/quicksand_medium"
-        android:text="@string/titleCharacters"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="@dimen/margin_top_title"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:textColor="@color/colorPrimary"
-        android:textSize="@dimen/title_dimen"
-        android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin_top_title"
+            android:fontFamily="@font/quicksand_medium"
+            android:text="@string/titleCharacters"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/title_dimen"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:layout_width="@dimen/rankingAndCharactersImageDimension"
             android:layout_height="@dimen/rankingAndCharactersImageDimension"
             android:layout_gravity="bottom|right"
-            android:src="@drawable/characters_image_one"
+            android:contentDescription="image on the background"
             android:scaleType="centerCrop"
-            android:contentDescription="image on the background" />
+            android:src="@drawable/sign_lion" />
 
         <ImageView
             android:layout_width="@dimen/rankingAndCharactersImageDimension"
             android:layout_height="@dimen/rankingAndCharactersImageDimension"
             android:layout_gravity="bottom|center_horizontal"
-            android:src="@drawable/characters_image_two"
+            android:contentDescription="image on the background"
             android:scaleType="fitEnd"
-            android:contentDescription="image on the background"/>
+            android:src="@drawable/sign_zoo" />
 
         <ImageView
             android:layout_width="@dimen/rankingAndCharactersImageDimension"
             android:layout_height="@dimen/rankingAndCharactersImageDimension"
             android:layout_gravity="bottom|left"
-            android:src="@drawable/characters_image"
+            android:contentDescription="image on the background"
+            android:rotationY="180"
             android:scaleType="centerCrop"
-            android:contentDescription="image on the background"/>
+            android:src="@drawable/sign_lion" />
     </FrameLayout>
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swipeRefreshLayout"
-        android:layout_below="@id/frameLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-    <ScrollView
-        android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:scrollbars="none">
+        android:layout_below="@id/frameLayout">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:textAlignment="center"
-        android:gravity="center_horizontal"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="@dimen/margin_top_linearLayout_of_characters">
-
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="@dimen/image_characters_not_found"
-            android:layout_height="@dimen/image_characters_not_found"
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:src="@drawable/charactersnotfound"
-            android:visibility="gone"
-            android:contentDescription="@string/imageDescriptionCharacters"/>
+            android:scrollbars="none">
 
-        <ImageButton
-            android:id="@+id/jungle_Jumbojango_img"
-            app:tint="@color/characterLockedColorImage"
-            android:backgroundTint="@color/characterLockedColorTextAndBackground"
-            android:layout_width="@dimen/characters_image"
-            android:layout_height="@dimen/characters_image"
-            android:scaleType="centerInside"
-            android:background="@drawable/circle_background"
-            android:src="@drawable/jungle_jumbojango"
-            android:visibility="gone"
-            android:layout_marginVertical="@dimen/margin_image"
-            android:contentDescription="@string/imageDescriptionCharacters"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_top_linearLayout_of_characters"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:textAlignment="center">
 
-        <TextView
-            android:id="@+id/jungle_Jumbojango_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin_text"
-            android:fontFamily="@font/quicksand_medium"
-            android:text="@string/t1"
-            android:textAlignment="center"
-            android:visibility="gone"
-            android:textColor="@color/characterLockedColorTextAndBackground"
-            android:textSize="@dimen/text_dimen" />
-        <ImageButton
-            android:id="@+id/t2_img"
-            app:tint="@color/characterLockedColorImage"
-            android:backgroundTint="@color/characterLockedColorTextAndBackground"
-            android:layout_width="@dimen/characters_image"
-            android:layout_height="@dimen/characters_image"
-            android:scaleType="centerInside"
-            android:visibility="gone"
-            android:background="@drawable/circle_background"
-            android:src="@drawable/jungle_kaida"
-            android:contentDescription="@string/imageDescriptionCharacters"
-            android:layout_marginVertical="@dimen/margin_image"/>
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="@dimen/image_characters_not_found"
+                    android:layout_height="@dimen/image_characters_not_found"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/imageDescriptionCharacters"
+                    android:src="@drawable/charactersnotfound"
+                    android:visibility="gone" />
 
-        <TextView
-            android:id="@+id/t2_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin_text"
-            android:fontFamily="@font/quicksand_medium"
-            android:text="@string/t2"
-            android:visibility="gone"
-            android:textAlignment="center"
-            android:textColor="@color/characterLockedColorTextAndBackground"
-            android:textSize="@dimen/text_dimen" />
+                <ImageButton
+                    android:id="@+id/mountain_Ember_img"
+                    android:layout_width="@dimen/characters_image"
+                    android:layout_height="@dimen/characters_image"
+                    android:layout_marginVertical="@dimen/margin_image"
+                    android:background="@drawable/circle_background"
+                    android:backgroundTint="@color/characterLockedColorTextAndBackground"
+                    android:contentDescription="@string/imageDescriptionCharacters"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/mountain_ember"
+                    android:visibility="gone"
+                    app:tint="@color/characterLockedColorImage" />
 
-        <ImageButton
-            android:id="@+id/t4_img"
-            app:tint="@color/characterLockedColorImage"
-            android:backgroundTint="@color/characterLockedColorTextAndBackground"
-            android:layout_width="@dimen/characters_image"
-            android:layout_height="@dimen/characters_image"
-            android:scaleType="centerInside"
-            android:visibility="gone"
-            android:background="@drawable/circle_background"
-            android:src="@drawable/jungle_regaleon"
-            android:contentDescription="@string/imageDescriptionCharacters"
-            android:layout_marginVertical="@dimen/margin_image"/>
+                <TextView
+                    android:id="@+id/mountain_Ember_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_text"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:text="@string/t1"
+                    android:textAlignment="center"
+                    android:textColor="@color/characterLockedColorTextAndBackground"
+                    android:textSize="@dimen/text_dimen"
+                    android:visibility="gone" />
 
-        <TextView
-            android:id="@+id/t4_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin_text"
-            android:visibility="gone"
-            android:fontFamily="@font/quicksand_medium"
-            android:text="@string/t4"
-            android:textAlignment="center"
-            android:textColor="@color/characterLockedColorTextAndBackground"
-            android:textSize="@dimen/text_dimen" />
+                <ImageButton
+                    android:id="@+id/t2_img"
+                    android:layout_width="@dimen/characters_image"
+                    android:layout_height="@dimen/characters_image"
+                    android:layout_marginVertical="@dimen/margin_image"
+                    android:background="@drawable/circle_background"
+                    android:backgroundTint="@color/characterLockedColorTextAndBackground"
+                    android:contentDescription="@string/imageDescriptionCharacters"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/mountain_edvige"
+                    android:visibility="gone"
+                    app:tint="@color/characterLockedColorImage" />
 
-        <ImageButton
-            android:id="@+id/t5_img"
-            android:layout_width="@dimen/characters_image"
-            android:layout_height="@dimen/characters_image"
-            android:layout_marginVertical="@dimen/margin_image"
-            android:visibility="gone"
-            android:background="@drawable/circle_background"
-            android:backgroundTint="@color/characterLockedColorTextAndBackground"
-            android:contentDescription="@string/imageDescriptionCharacters"
-            android:scaleType="centerInside"
-            android:src="@drawable/jungle_doratall"
-            app:tint="@color/characterLockedColorImage" />
+                <TextView
+                    android:id="@+id/t2_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_text"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:text="@string/t2"
+                    android:textAlignment="center"
+                    android:textColor="@color/characterLockedColorTextAndBackground"
+                    android:textSize="@dimen/text_dimen"
+                    android:visibility="gone" />
 
-        <TextView
-            android:id="@+id/t5_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin_text"
-            android:visibility="gone"
-            android:fontFamily="@font/quicksand_medium"
-            android:text="@string/t5"
-            android:textAlignment="center"
-            android:textColor="@color/characterLockedColorTextAndBackground"
-            android:textSize="@dimen/text_dimen" />
+                <ImageButton
+                    android:id="@+id/t4_img"
+                    android:layout_width="@dimen/characters_image"
+                    android:layout_height="@dimen/characters_image"
+                    android:layout_marginVertical="@dimen/margin_image"
+                    android:background="@drawable/circle_background"
+                    android:backgroundTint="@color/characterLockedColorTextAndBackground"
+                    android:contentDescription="@string/imageDescriptionCharacters"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/mountain_nutmeg"
+                    android:visibility="gone"
+                    app:tint="@color/characterLockedColorImage" />
 
-        <ImageButton
-            android:id="@+id/t6_img"
-            android:layout_width="@dimen/characters_image"
-            android:layout_height="@dimen/characters_image"
-            android:visibility="gone"
-            android:layout_marginVertical="@dimen/margin_image"
-            android:background="@drawable/circle_background"
-            android:backgroundTint="@color/characterLockedColorTextAndBackground"
-            android:contentDescription="@string/imageDescriptionCharacters"
-            android:scaleType="centerInside"
-            android:src="@drawable/jungle_monkin"
-            app:tint="@color/characterLockedColorImage" />
+                <TextView
+                    android:id="@+id/t4_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_text"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:text="@string/t4"
+                    android:textAlignment="center"
+                    android:textColor="@color/characterLockedColorTextAndBackground"
+                    android:textSize="@dimen/text_dimen"
+                    android:visibility="gone" />
 
-        <TextView
-            android:id="@+id/t6_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:layout_marginBottom="@dimen/margin_text"
-            android:fontFamily="@font/quicksand_medium"
-            android:text="@string/t6"
-            android:textAlignment="center"
-            android:textColor="@color/characterLockedColorTextAndBackground"
-            android:textSize="@dimen/text_dimen" />
+                <ImageButton
+                    android:id="@+id/t5_img"
+                    android:layout_width="@dimen/characters_image"
+                    android:layout_height="@dimen/characters_image"
+                    android:layout_marginVertical="@dimen/margin_image"
+                    android:background="@drawable/circle_background"
+                    android:backgroundTint="@color/characterLockedColorTextAndBackground"
+                    android:contentDescription="@string/imageDescriptionCharacters"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/mountain_bambi"
+                    android:visibility="gone"
+                    app:tint="@color/characterLockedColorImage" />
 
-        <ImageButton
-            android:id="@+id/t7_img"
-            android:layout_width="@dimen/characters_image"
-            android:layout_height="@dimen/characters_image"
-            android:layout_marginVertical="@dimen/margin_image"
-            android:visibility="gone"
-            android:background="@drawable/circle_background"
-            android:backgroundTint="@color/characterLockedColorTextAndBackground"
-            android:contentDescription="@string/imageDescriptionCharacters"
-            android:scaleType="centerInside"
-            android:src="@drawable/jungle_kodalinda"
-            app:tint="@color/characterLockedColorImage" />
+                <TextView
+                    android:id="@+id/t5_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_text"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:text="@string/t5"
+                    android:textAlignment="center"
+                    android:textColor="@color/characterLockedColorTextAndBackground"
+                    android:textSize="@dimen/text_dimen"
+                    android:visibility="gone" />
 
-        <TextView
-            android:id="@+id/t7_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:layout_marginBottom="@dimen/margin_bottom_text_characters_not_found"
-            android:fontFamily="@font/quicksand_medium"
-            android:text="@string/t7"
-            android:textAlignment="center"
-            android:textColor="@color/characterLockedColorTextAndBackground"
-            android:textSize="@dimen/text_dimen" />
+                <ImageButton
+                    android:id="@+id/t6_img"
+                    android:layout_width="@dimen/characters_image"
+                    android:layout_height="@dimen/characters_image"
+                    android:layout_marginVertical="@dimen/margin_image"
+                    android:background="@drawable/circle_background"
+                    android:backgroundTint="@color/characterLockedColorTextAndBackground"
+                    android:contentDescription="@string/imageDescriptionCharacters"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/mountain_munin"
+                    android:visibility="gone"
+                    app:tint="@color/characterLockedColorImage" />
 
-        <ImageButton
-            android:id="@+id/a1_img"
-            android:layout_width="@dimen/characters_image"
-            android:layout_height="@dimen/characters_image"
-            android:layout_marginVertical="@dimen/margin_image"
-            android:visibility="gone"
-            android:background="@drawable/circle_background"
-            android:backgroundTint="@color/characterLockedColorTextAndBackground"
-            android:contentDescription="@string/imageDescriptionCharacters"
-            android:scaleType="centerInside"
-            android:src="@drawable/sea_delphy"
-            app:tint="@color/characterLockedColorImage" />
+                <TextView
+                    android:id="@+id/t6_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_text"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:text="@string/t6"
+                    android:textAlignment="center"
+                    android:textColor="@color/characterLockedColorTextAndBackground"
+                    android:textSize="@dimen/text_dimen"
+                    android:visibility="gone" />
 
-        <TextView
-            android:id="@+id/a1_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:layout_marginBottom="@dimen/margin_text"
-            android:fontFamily="@font/quicksand_medium"
-            android:text="@string/a1"
-            android:textAlignment="center"
-            android:textColor="@color/characterLockedColorTextAndBackground"
-            android:textSize="@dimen/text_dimen" />
+                <ImageButton
+                    android:id="@+id/t7_img"
+                    android:layout_width="@dimen/characters_image"
+                    android:layout_height="@dimen/characters_image"
+                    android:layout_marginVertical="@dimen/margin_image"
+                    android:background="@drawable/circle_background"
+                    android:backgroundTint="@color/characterLockedColorTextAndBackground"
+                    android:contentDescription="@string/imageDescriptionCharacters"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/mountain_bruno"
+                    android:visibility="gone"
+                    app:tint="@color/characterLockedColorImage" />
 
-        <ImageButton
-            android:id="@+id/a2_img"
-            android:layout_width="@dimen/characters_image"
-            android:layout_height="@dimen/characters_image"
-            android:layout_marginVertical="@dimen/margin_image"
-            android:visibility="gone"
-            android:background="@drawable/circle_background"
-            android:backgroundTint="@color/characterLockedColorTextAndBackground"
-            android:contentDescription="@string/imageDescriptionCharacters"
-            android:scaleType="centerInside"
-            android:src="@drawable/sea_splashes"
-            app:tint="@color/characterLockedColorImage" />
+                <TextView
+                    android:id="@+id/t7_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_bottom_text_characters_not_found"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:text="@string/t7"
+                    android:textAlignment="center"
+                    android:textColor="@color/characterLockedColorTextAndBackground"
+                    android:textSize="@dimen/text_dimen"
+                    android:visibility="gone" />
 
-        <TextView
-            android:id="@+id/a2_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin_text"
-            android:visibility="gone"
-            android:fontFamily="@font/quicksand_medium"
-            android:text="@string/a2"
-            android:textAlignment="center"
-            android:textColor="@color/characterLockedColorTextAndBackground"
-            android:textSize="@dimen/text_dimen" />
+                <ImageButton
+                    android:id="@+id/a1_img"
+                    android:layout_width="@dimen/characters_image"
+                    android:layout_height="@dimen/characters_image"
+                    android:layout_marginVertical="@dimen/margin_image"
+                    android:background="@drawable/circle_background"
+                    android:backgroundTint="@color/characterLockedColorTextAndBackground"
+                    android:contentDescription="@string/imageDescriptionCharacters"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/sea_nagini"
+                    android:visibility="gone"
+                    app:tint="@color/characterLockedColorImage" />
 
-        <ImageButton
-            android:id="@+id/a3_img"
-            android:layout_width="@dimen/characters_image"
-            android:layout_height="@dimen/characters_image"
-            android:layout_marginVertical="@dimen/margin_image"
-            android:visibility="gone"
-            android:background="@drawable/circle_background"
-            android:backgroundTint="@color/characterLockedColorTextAndBackground"
-            android:contentDescription="@string/imageDescriptionCharacters"
-            android:scaleType="centerInside"
-            android:src="@drawable/sea_chelonide"
-            app:tint="@color/characterLockedColorImage" />
+                <TextView
+                    android:id="@+id/a1_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_text"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:text="@string/a1"
+                    android:textAlignment="center"
+                    android:textColor="@color/characterLockedColorTextAndBackground"
+                    android:textSize="@dimen/text_dimen"
+                    android:visibility="gone" />
 
-        <TextView
-            android:id="@+id/a3_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin_text"
-            android:visibility="gone"
-            android:fontFamily="@font/quicksand_medium"
-            android:text="@string/a3"
-            android:textAlignment="center"
-            android:textColor="@color/characterLockedColorTextAndBackground"
-            android:textSize="@dimen/text_dimen" />
+                <ImageButton
+                    android:id="@+id/a2_img"
+                    android:layout_width="@dimen/characters_image"
+                    android:layout_height="@dimen/characters_image"
+                    android:layout_marginVertical="@dimen/margin_image"
+                    android:background="@drawable/circle_background"
+                    android:backgroundTint="@color/characterLockedColorTextAndBackground"
+                    android:contentDescription="@string/imageDescriptionCharacters"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/sea_one"
+                    android:visibility="gone"
+                    app:tint="@color/characterLockedColorImage" />
 
-        <ImageButton
-            android:id="@+id/a4_img"
-            android:layout_width="@dimen/characters_image"
-            android:layout_height="@dimen/characters_image"
-            android:layout_marginVertical="@dimen/margin_image"
-            android:visibility="gone"
-            android:background="@drawable/circle_background"
-            android:backgroundTint="@color/characterLockedColorTextAndBackground"
-            android:contentDescription="@string/imageDescriptionCharacters"
-            android:scaleType="centerInside"
-            android:src="@drawable/sea_inktonio"
-            app:tint="@color/characterLockedColorImage" />
+                <TextView
+                    android:id="@+id/a2_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_text"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:text="@string/a2"
+                    android:textAlignment="center"
+                    android:textColor="@color/characterLockedColorTextAndBackground"
+                    android:textSize="@dimen/text_dimen"
+                    android:visibility="gone" />
 
-        <TextView
-            android:id="@+id/a4_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin_text"
-            android:visibility="gone"
-            android:fontFamily="@font/quicksand_medium"
-            android:text="@string/a4"
-            android:textAlignment="center"
-            android:textColor="@color/characterLockedColorTextAndBackground"
-            android:textSize="@dimen/text_dimen" />
+                <ImageButton
+                    android:id="@+id/a3_img"
+                    android:layout_width="@dimen/characters_image"
+                    android:layout_height="@dimen/characters_image"
+                    android:layout_marginVertical="@dimen/margin_image"
+                    android:background="@drawable/circle_background"
+                    android:backgroundTint="@color/characterLockedColorTextAndBackground"
+                    android:contentDescription="@string/imageDescriptionCharacters"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/sea_aragog"
+                    android:visibility="gone"
+                    app:tint="@color/characterLockedColorImage" />
 
-        <ImageButton
-            android:id="@+id/a5_img"
-            android:layout_width="@dimen/characters_image"
-            android:layout_height="@dimen/characters_image"
-            android:layout_marginVertical="@dimen/margin_image"
-            android:visibility="gone"
-            android:background="@drawable/circle_background"
-            android:backgroundTint="@color/characterLockedColorTextAndBackground"
-            android:contentDescription="@string/imageDescriptionCharacters"
-            android:scaleType="centerInside"
-            android:src="@drawable/sea_pinchington"
-            app:tint="@color/characterLockedColorImage" />
+                <TextView
+                    android:id="@+id/a3_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_text"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:text="@string/a3"
+                    android:textAlignment="center"
+                    android:textColor="@color/characterLockedColorTextAndBackground"
+                    android:textSize="@dimen/text_dimen"
+                    android:visibility="gone" />
 
-        <TextView
-            android:id="@+id/a5_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:layout_marginBottom="@dimen/margin_bottom_text_characters_not_found"
-            android:fontFamily="@font/quicksand_medium"
-            android:text="@string/a5"
-            android:textAlignment="center"
-            android:textColor="@color/characterLockedColorTextAndBackground"
-            android:textSize="@dimen/text_dimen" />
+                <ImageButton
+                    android:id="@+id/a4_img"
+                    android:layout_width="@dimen/characters_image"
+                    android:layout_height="@dimen/characters_image"
+                    android:layout_marginVertical="@dimen/margin_image"
+                    android:background="@drawable/circle_background"
+                    android:backgroundTint="@color/characterLockedColorTextAndBackground"
+                    android:contentDescription="@string/imageDescriptionCharacters"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/sea_zephir"
+                    android:visibility="gone"
+                    app:tint="@color/characterLockedColorImage" />
 
-        <ImageButton
-            android:id="@+id/p1_img"
-            android:layout_width="@dimen/characters_image"
-            android:layout_height="@dimen/characters_image"
-            android:visibility="gone"
-            android:layout_marginVertical="@dimen/margin_image"
-            android:background="@drawable/circle_background"
-            android:backgroundTint="@color/characterLockedColorTextAndBackground"
-            android:contentDescription="@string/imageDescriptionCharacters"
-            android:scaleType="centerInside"
-            android:src="@drawable/space_zorgon"
-            app:tint="@color/characterLockedColorImage" />
+                <TextView
+                    android:id="@+id/a4_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_text"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:text="@string/a4"
+                    android:textAlignment="center"
+                    android:textColor="@color/characterLockedColorTextAndBackground"
+                    android:textSize="@dimen/text_dimen"
+                    android:visibility="gone" />
 
-        <TextView
-            android:id="@+id/p1_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin_text"
-            android:visibility="gone"
-            android:fontFamily="@font/quicksand_medium"
-            android:text="@string/p1"
-            android:textAlignment="center"
-            android:textColor="@color/characterLockedColorTextAndBackground"
-            android:textSize="@dimen/text_dimen" />
+                <ImageButton
+                    android:id="@+id/a5_img"
+                    android:layout_width="@dimen/characters_image"
+                    android:layout_height="@dimen/characters_image"
+                    android:layout_marginVertical="@dimen/margin_image"
+                    android:background="@drawable/circle_background"
+                    android:backgroundTint="@color/characterLockedColorTextAndBackground"
+                    android:contentDescription="@string/imageDescriptionCharacters"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/sea_harum"
+                    android:visibility="gone"
+                    app:tint="@color/characterLockedColorImage" />
 
-        <ImageButton
-            android:id="@+id/p2_img"
-            android:layout_width="@dimen/characters_image"
-            android:layout_height="@dimen/characters_image"
-            android:layout_marginVertical="@dimen/margin_image"
-            android:visibility="gone"
-            android:background="@drawable/circle_background"
-            android:backgroundTint="@color/characterLockedColorTextAndBackground"
-            android:contentDescription="@string/imageDescriptionCharacters"
-            android:scaleType="centerInside"
-            android:src="@drawable/space_nebulox"
-            app:tint="@color/characterLockedColorImage" />
+                <TextView
+                    android:id="@+id/a5_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_bottom_text_characters_not_found"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:text="@string/a5"
+                    android:textAlignment="center"
+                    android:textColor="@color/characterLockedColorTextAndBackground"
+                    android:textSize="@dimen/text_dimen"
+                    android:visibility="gone" />
 
-        <TextView
-            android:id="@+id/p2_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin_text"
-            android:visibility="gone"
-            android:fontFamily="@font/quicksand_medium"
-            android:text="@string/p2"
-            android:textAlignment="center"
-            android:textColor="@color/characterLockedColorTextAndBackground"
-            android:textSize="@dimen/text_dimen" />
+                <ImageButton
+                    android:id="@+id/p1_img"
+                    android:layout_width="@dimen/characters_image"
+                    android:layout_height="@dimen/characters_image"
+                    android:layout_marginVertical="@dimen/margin_image"
+                    android:background="@drawable/circle_background"
+                    android:backgroundTint="@color/characterLockedColorTextAndBackground"
+                    android:contentDescription="@string/imageDescriptionCharacters"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/polar_rost"
+                    android:visibility="gone"
+                    app:tint="@color/characterLockedColorImage" />
 
-        <ImageButton
-            android:id="@+id/p3_img"
-            android:layout_width="@dimen/characters_image"
-            android:layout_height="@dimen/characters_image"
-            android:layout_marginVertical="@dimen/margin_image"
-            android:visibility="gone"
-            android:background="@drawable/circle_background"
-            android:backgroundTint="@color/characterLockedColorTextAndBackground"
-            android:contentDescription="@string/imageDescriptionCharacters"
-            android:scaleType="centerInside"
-            android:src="@drawable/space_xytron"
-            app:tint="@color/characterLockedColorImage" />
+                <TextView
+                    android:id="@+id/p1_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_text"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:text="@string/p1"
+                    android:textAlignment="center"
+                    android:textColor="@color/characterLockedColorTextAndBackground"
+                    android:textSize="@dimen/text_dimen"
+                    android:visibility="gone" />
 
-        <TextView
-            android:id="@+id/p3_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin_text"
-            android:visibility="gone"
-            android:fontFamily="@font/quicksand_medium"
-            android:text="@string/p3"
-            android:textAlignment="center"
-            android:textColor="@color/characterLockedColorTextAndBackground"
-            android:textSize="@dimen/text_dimen" />
+                <ImageButton
+                    android:id="@+id/p2_img"
+                    android:layout_width="@dimen/characters_image"
+                    android:layout_height="@dimen/characters_image"
+                    android:layout_marginVertical="@dimen/margin_image"
+                    android:background="@drawable/circle_background"
+                    android:backgroundTint="@color/characterLockedColorTextAndBackground"
+                    android:contentDescription="@string/imageDescriptionCharacters"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/polar_wally"
+                    android:visibility="gone"
+                    app:tint="@color/characterLockedColorImage" />
 
-        <ImageButton
-            android:id="@+id/p4_img"
-            android:layout_width="@dimen/characters_image"
-            android:layout_height="@dimen/characters_image"
-            android:layout_marginVertical="@dimen/margin_image"
-            android:visibility="gone"
-            android:background="@drawable/circle_background"
-            android:backgroundTint="@color/characterLockedColorTextAndBackground"
-            android:contentDescription="@string/imageDescriptionCharacters"
-            android:scaleType="centerInside"
-            android:src="@drawable/space_quasarix"
-            app:tint="@color/characterLockedColorImage" />
+                <TextView
+                    android:id="@+id/p2_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_text"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:text="@string/p2"
+                    android:textAlignment="center"
+                    android:textColor="@color/characterLockedColorTextAndBackground"
+                    android:textSize="@dimen/text_dimen"
+                    android:visibility="gone" />
 
-        <TextView
-            android:id="@+id/p4_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin_text"
-            android:visibility="gone"
-            android:fontFamily="@font/quicksand_medium"
-            android:text="@string/p4"
-            android:textAlignment="center"
-            android:textColor="@color/characterLockedColorTextAndBackground"
-            android:textSize="@dimen/text_dimen" />
+                <ImageButton
+                    android:id="@+id/p3_img"
+                    android:layout_width="@dimen/characters_image"
+                    android:layout_height="@dimen/characters_image"
+                    android:layout_marginVertical="@dimen/margin_image"
+                    android:background="@drawable/circle_background"
+                    android:backgroundTint="@color/characterLockedColorTextAndBackground"
+                    android:contentDescription="@string/imageDescriptionCharacters"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/polar_splash"
+                    android:visibility="gone"
+                    app:tint="@color/characterLockedColorImage" />
 
-        <ImageButton
-            android:id="@+id/p5_img"
-            android:layout_width="@dimen/characters_image"
-            android:layout_height="@dimen/characters_image"
-            android:layout_marginVertical="@dimen/margin_image"
-            android:visibility="gone"
-            android:background="@drawable/circle_background"
-            android:backgroundTint="@color/characterLockedColorTextAndBackground"
-            android:contentDescription="@string/imageDescriptionCharacters"
-            android:scaleType="centerInside"
-            android:src="@drawable/space_galactron"
-            app:tint="@color/characterLockedColorImage" />
+                <TextView
+                    android:id="@+id/p3_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_text"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:text="@string/p3"
+                    android:textAlignment="center"
+                    android:textColor="@color/characterLockedColorTextAndBackground"
+                    android:textSize="@dimen/text_dimen"
+                    android:visibility="gone" />
 
-        <TextView
-            android:id="@+id/p5_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin_text"
-            android:visibility="gone"
-            android:fontFamily="@font/quicksand_medium"
-            android:text="@string/p5"
-            android:textAlignment="center"
-            android:textColor="@color/characterLockedColorTextAndBackground"
-            android:textSize="@dimen/text_dimen" />
+                <ImageButton
+                    android:id="@+id/p4_img"
+                    android:layout_width="@dimen/characters_image"
+                    android:layout_height="@dimen/characters_image"
+                    android:layout_marginVertical="@dimen/margin_image"
+                    android:background="@drawable/circle_background"
+                    android:backgroundTint="@color/characterLockedColorTextAndBackground"
+                    android:contentDescription="@string/imageDescriptionCharacters"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/polar_sigma"
+                    android:visibility="gone"
+                    app:tint="@color/characterLockedColorImage" />
 
-        <ImageButton
-            android:id="@+id/p6_img"
-            android:layout_width="@dimen/characters_image"
-            android:layout_height="@dimen/characters_image"
-            android:layout_marginVertical="@dimen/margin_image"
-            android:visibility="gone"
-            android:background="@drawable/circle_background"
-            android:backgroundTint="@color/characterLockedColorTextAndBackground"
-            android:contentDescription="@string/imageDescriptionCharacters"
-            android:scaleType="centerInside"
-            android:src="@drawable/space_vortexar"
-            app:tint="@color/characterLockedColorImage" />
+                <TextView
+                    android:id="@+id/p4_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_text"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:text="@string/p4"
+                    android:textAlignment="center"
+                    android:textColor="@color/characterLockedColorTextAndBackground"
+                    android:textSize="@dimen/text_dimen"
+                    android:visibility="gone" />
 
-        <TextView
-            android:id="@+id/p6_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:layout_marginBottom="@dimen/margin_text"
-            android:fontFamily="@font/quicksand_medium"
-            android:text="@string/p6"
-            android:textAlignment="center"
-            android:textColor="@color/characterLockedColorTextAndBackground"
-            android:textSize="@dimen/text_dimen" />
+                <ImageButton
+                    android:id="@+id/p5_img"
+                    android:layout_width="@dimen/characters_image"
+                    android:layout_height="@dimen/characters_image"
+                    android:layout_marginVertical="@dimen/margin_image"
+                    android:background="@drawable/circle_background"
+                    android:backgroundTint="@color/characterLockedColorTextAndBackground"
+                    android:contentDescription="@string/imageDescriptionCharacters"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/polar_linux"
+                    android:visibility="gone"
+                    app:tint="@color/characterLockedColorImage" />
 
-        <ImageButton
-            android:id="@+id/p7_img"
-            android:layout_width="@dimen/characters_image"
-            android:layout_height="@dimen/characters_image"
-            android:layout_marginVertical="@dimen/margin_image"
-            android:visibility="gone"
-            android:background="@drawable/circle_background"
-            android:backgroundTint="@color/characterLockedColorTextAndBackground"
-            android:contentDescription="@string/imageDescriptionCharacters"
-            android:scaleType="centerInside"
-            android:src="@drawable/space_lunarisia"
-            app:tint="@color/characterLockedColorImage" />
+                <TextView
+                    android:id="@+id/p5_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_text"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:text="@string/p5"
+                    android:textAlignment="center"
+                    android:textColor="@color/characterLockedColorTextAndBackground"
+                    android:textSize="@dimen/text_dimen"
+                    android:visibility="gone" />
 
-        <TextView
-            android:id="@+id/p7_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin_bottom_text_characters_not_found"
-            android:visibility="gone"
-            android:fontFamily="@font/quicksand_medium"
-            android:text="@string/p7"
-            android:textAlignment="center"
-            android:textColor="@color/characterLockedColorTextAndBackground"
-            android:textSize="@dimen/text_dimen" />
+                <ImageButton
+                    android:id="@+id/p6_img"
+                    android:layout_width="@dimen/characters_image"
+                    android:layout_height="@dimen/characters_image"
+                    android:layout_marginVertical="@dimen/margin_image"
+                    android:background="@drawable/circle_background"
+                    android:backgroundTint="@color/characterLockedColorTextAndBackground"
+                    android:contentDescription="@string/imageDescriptionCharacters"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/polar_sirius"
+                    android:visibility="gone"
+                    app:tint="@color/characterLockedColorImage" />
 
-        <TextView
-            android:id="@+id/charactersNotFound"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:fontFamily="@font/quicksand_medium"
-            android:text="@string/charactersNotFound"
-            android:textColor="@color/colorHintText"
-            android:textSize="@dimen/text_dimen"
-            android:textStyle="bold"
-            android:visibility="gone"
-            android:gravity="center"
-            android:layout_marginBottom="@dimen/margin_bottom_text_characters_not_found">
-        </TextView>
-    </LinearLayout>
-    </ScrollView>
+                <TextView
+                    android:id="@+id/p6_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_text"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:text="@string/p6"
+                    android:textAlignment="center"
+                    android:textColor="@color/characterLockedColorTextAndBackground"
+                    android:textSize="@dimen/text_dimen"
+                    android:visibility="gone" />
+
+                <ImageButton
+                    android:id="@+id/p7_img"
+                    android:layout_width="@dimen/characters_image"
+                    android:layout_height="@dimen/characters_image"
+                    android:layout_marginVertical="@dimen/margin_image"
+                    android:background="@drawable/circle_background"
+                    android:backgroundTint="@color/characterLockedColorTextAndBackground"
+                    android:contentDescription="@string/imageDescriptionCharacters"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/polar_flippy"
+                    android:visibility="gone"
+                    app:tint="@color/characterLockedColorImage" />
+
+                <TextView
+                    android:id="@+id/p7_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_bottom_text_characters_not_found"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:text="@string/p7"
+                    android:textAlignment="center"
+                    android:textColor="@color/characterLockedColorTextAndBackground"
+                    android:textSize="@dimen/text_dimen"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/charactersNotFound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/margin_bottom_text_characters_not_found"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:gravity="center"
+                    android:text="@string/charactersNotFound"
+                    android:textColor="@color/colorHintText"
+                    android:textSize="@dimen/text_dimen"
+                    android:textStyle="bold"
+                    android:visibility="gone"></TextView>
+            </LinearLayout>
+        </ScrollView>
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
-<ProgressBar
-    android:id="@+id/progressBar"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_centerHorizontal="true"
-    android:layout_centerVertical="true"
-    android:indeterminateTint="@color/childAccent"
-    android:visibility="visible"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:indeterminateTint="@color/childAccent"
+        android:visibility="visible" />
 </RelativeLayout>

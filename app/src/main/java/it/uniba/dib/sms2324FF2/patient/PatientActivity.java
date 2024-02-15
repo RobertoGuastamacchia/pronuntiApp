@@ -28,10 +28,10 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.TreeMap;
 
-import it.uniba.dib.sms2324FF2.appointments.Appointment;
-import it.uniba.dib.sms2324FF2.exercises.Exercise;
-import it.uniba.dib.sms2324FF2.exercises.FirebaseExerciseModel;
-import it.uniba.dib.sms2324FF2.appointments.FirebaseAppointmentsModel;
+import it.uniba.dib.sms2324FF2.therapist.appointments.TherapistAppointment;
+import it.uniba.dib.sms2324FF2.patient.child.exercises.Exercise;
+import it.uniba.dib.sms2324FF2.patient.child.exercises.FirebaseExerciseModel;
+import it.uniba.dib.sms2324FF2.therapist.appointments.TherapistFirebaseAppointmentsModel;
 import it.uniba.dib.sms2324FF2.network.NetworkError;
 import it.uniba.dib.sms2324FF2.network.NetworkUtils;
 import it.uniba.dib.sms2324FF2.R;
@@ -41,7 +41,7 @@ import it.uniba.dib.sms2324FF2.utility.SharedViewModel;
 
 public class PatientActivity extends AppCompatActivity {
     private TreeMap<ArrayList<Object>, ArrayList<Exercise>> exercises;
-    private ArrayList<Appointment> appointments;
+    private ArrayList<TherapistAppointment> therapistAppointments;
     private View layoutBambino;
     private View layoutPassword;
     private AlertDialog permissionDialog;
@@ -111,9 +111,9 @@ public class PatientActivity extends AppCompatActivity {
         FirebaseExerciseModel.getPatientExercises(Patient.getInstance().getId(), new FirebaseExerciseModel.OnAllExercisesCreatedListener() {
             @Override
             public void onExercisesCreated(TreeMap<ArrayList<Object>, ArrayList<Exercise>> exercises) {
-                FirebaseAppointmentsModel.getPatientAppointments(new FirebaseAppointmentsModel.OnReadAppointmentsListener() {
+                TherapistFirebaseAppointmentsModel.getPatientAppointments(new TherapistFirebaseAppointmentsModel.OnReadAppointmentsListener() {
                     @Override
-                    public void onAppointmentsRead(ArrayList<Appointment> appointments) {
+                    public void onAppointmentsRead(ArrayList<TherapistAppointment> therapistAppointments) {
                         //imposto i nomi degli utenti
                         TextView textParent = findViewById(R.id.textGenitore);
                         textParent.setText(Patient.getInstance().getParentName());
@@ -150,15 +150,15 @@ public class PatientActivity extends AppCompatActivity {
                                         String patientPassword = sharedPreferences.getString("password",null);
                                         if (patientPassword != null && patientPassword.equals(password.getText().toString())) {
                                             if(exercises!=null)
-                                                parentAreaEnter(exercises, appointments);
+                                                parentAreaEnter(exercises, therapistAppointments);
                                             else{
                                                 FirebaseExerciseModel.getPatientExercises(Patient.getInstance().getId(),new FirebaseExerciseModel.OnAllExercisesCreatedListener() {
                                                     @Override
                                                     public void onExercisesCreated(TreeMap<ArrayList<Object>, ArrayList<Exercise>> exercises) {
-                                                        FirebaseAppointmentsModel.getPatientAppointments(new FirebaseAppointmentsModel.OnReadAppointmentsListener() {
+                                                        TherapistFirebaseAppointmentsModel.getPatientAppointments(new TherapistFirebaseAppointmentsModel.OnReadAppointmentsListener() {
                                                             @Override
-                                                            public void onAppointmentsRead(ArrayList<Appointment> appointments) {
-                                                                parentAreaEnter(exercises,appointments);
+                                                            public void onAppointmentsRead(ArrayList<TherapistAppointment> therapistAppointments) {
+                                                                parentAreaEnter(exercises, therapistAppointments);
                                                             }
                                                             @Override
                                                             public void onAppointmentsReadFailed() {}
@@ -179,7 +179,7 @@ public class PatientActivity extends AppCompatActivity {
                                 skipButton.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View v) {
-                                        password.setText("Paziente");
+                                        password.setText("provaprova@gmail.com");
                                         accessButton.performClick();
                                     }
                                 });
@@ -294,7 +294,7 @@ public class PatientActivity extends AppCompatActivity {
                 switch(rule) {
                     case "parent":
                         //aggiornamento token genitore
-                        FirebasePatientModel.updateParentToken();
+                        PatientFirebaseModel.updateParentToken();
                         //entro nell'area genitore
                         intent = new Intent(PatientActivity.this, ParentActivity.class);
                         startActivity(intent);
@@ -303,7 +303,7 @@ public class PatientActivity extends AppCompatActivity {
 
                     case "child":
                         //aggiornamento token bambino
-                        FirebasePatientModel.updateChildToken();
+                        PatientFirebaseModel.updateChildToken();
                         //entro nell'area bambino
                         intent = new Intent(PatientActivity.this, ChildActivity.class);
                         startActivity(intent);
@@ -345,13 +345,13 @@ public class PatientActivity extends AppCompatActivity {
 
 
     //metodo per effettuare il normale login all'area genitore
-    void parentAreaEnter(TreeMap<ArrayList<Object>, ArrayList<Exercise>> exercises, ArrayList<Appointment> appointments){
+    void parentAreaEnter(TreeMap<ArrayList<Object>, ArrayList<Exercise>> exercises, ArrayList<TherapistAppointment> therapistAppointments){
         //salvo la scelta del profilo
         SharedPreferences sharedPreferences = getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString("profile", "parent").apply();
         //Controllo il token
-        FirebasePatientModel.checkParentToken(new FirebasePatientModel.UpdateTokenListener() {
+        PatientFirebaseModel.checkParentToken(new PatientFirebaseModel.UpdateTokenListener() {
             @Override
             public void onTokenChecked(boolean isTokenDifferent) {
                 if(isTokenDifferent){
@@ -361,7 +361,7 @@ public class PatientActivity extends AppCompatActivity {
                     //entro nell'area genitore
                     Intent intent = new Intent(PatientActivity.this, ParentActivity.class);
                     SharedViewModel.getInstance().setExercises(exercises);
-                    SharedViewModel.getInstance().setAppointments(appointments);
+                    SharedViewModel.getInstance().setAppointments(therapistAppointments);
                     startActivity(intent);
                     finish();
                 }
@@ -380,7 +380,7 @@ public class PatientActivity extends AppCompatActivity {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString("profile","child").apply();
         //Controllo il token
-        FirebasePatientModel.checkChildToken(new FirebasePatientModel.UpdateTokenListener() {
+        PatientFirebaseModel.checkChildToken(new PatientFirebaseModel.UpdateTokenListener() {
             @Override
             public void onTokenChecked(boolean isTokenDifferent) {
                 if(isTokenDifferent){

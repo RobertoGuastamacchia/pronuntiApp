@@ -79,25 +79,25 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="logout_title">Conferma logout</string>
     <string name="logoutQuestion">Sei sicuro di voler uscire?</string>
-    <string name="yes">Si</string>
-    <string name="t1">Jumbojango</string>
-    <string name="t2">Kaida</string>
-    <string name="t4">Regaleon</string>
-    <string name="t5">Doratall</string>
-    <string name="t6">Monkin</string>
-    <string name="t7">Koalinda</string>
-    <string name="a1">Delphy</string>
-    <string name="a2">Splashes</string>
-    <string name="a3">Chelonide</string>
-    <string name="a4">Inktonio</string>
-    <string name="a5">Pinchington</string>
-    <string name="p1">Zorgon</string>
-    <string name="p2">Nebulox</string>
-    <string name="p3">Xytron</string>
-    <string name="p4">Quasarix</string>
-    <string name="p5">Galactron</string>
-    <string name="p6">Vortexar</string>
-    <string name="p7">Lunarisia</string>
+    <string name="yes">Sì</string>
+    <string name="t1">Ember</string>
+    <string name="t2">Edvige</string>
+    <string name="t4">Nutmeg</string>
+    <string name="t5">Bambi</string>
+    <string name="t6">Munin</string>
+    <string name="t7">Bruno</string>
+    <string name="a1">Nagini</string>
+    <string name="a2">BeepBeep</string>
+    <string name="a3">Aragog</string>
+    <string name="a4">Zephir</string>
+    <string name="a5">Harum</string>
+    <string name="p1">Rost</string>
+    <string name="p2">Wally</string>
+    <string name="p3">Splash</string>
+    <string name="p4">Sigma</string>
+    <string name="p5">Linux</string>
+    <string name="p6">Sirius</string>
+    <string name="p7">Flippy</string>
     <string name="imageDescriptionCharacters">Immagine del personaggio</string>
     <string name="InsertPassword">Inserisci password\nper continuare</string>
     <string name="defaultProfileAccess">Accedi automaticamente</string>
@@ -183,9 +183,9 @@
     <string name="ExerciseCreatedDescription">Un nuovo esercizio è stato creato!</string>
 
 
-    <string name="jungle_story">Chi ha lasciato questa impronta misteriosa? \nManda il tuo personaggio ad investigare!</string>
+    <string name="mountain_story">Chi ha lasciato questa impronta misteriosa? \nManda il tuo personaggio ad investigare!</string>
     <string name="sea_story">A tutti gli abitanti del mare piacciono le conchiglie! \nAiuta il tuo personaggio a raccoglierle!</string>
-    <string name="space_story">Chi ci sarà su questo pianeta? \nManda il tuo personaggio a controllare!</string>
+    <string name="polar_story">Chi ci sarà su questo pianeta? \nManda il tuo personaggio a controllare!</string>
 
     <string name="appointmentPast">Passati</string>
     <string name="appointmentFuture">Prossimi</string>
@@ -199,15 +199,15 @@
     <string name="change">Modifica</string>
     <string name="theme">Tema</string>
 
-    <string name="jungle">Giungla</string>
+    <string name="mountain">Montagna</string>
     <string name="sea">Mare</string>
-    <string name="space">Spazio</string>
+    <string name="polar">Polare</string>
     <string name="save">Salva</string>
     <string name="resetPassword">Invia email di ripristino password</string>
     <string name="profileTitle">Profilo</string>
     <string name="createTheme">Carica sfondo</string>
 
-    <string name="appointment">Appuntamenti</string>
+    <string name="therapistAppointment">Appuntamenti</string>
     <string name="right">Corretto</string>
     <string name="wrong">Sbagliato</string>
 
