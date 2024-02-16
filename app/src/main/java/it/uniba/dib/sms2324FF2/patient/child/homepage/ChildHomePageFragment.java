@@ -41,6 +41,7 @@ import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
@@ -74,7 +75,7 @@ public class ChildHomePageFragment extends Fragment {
     Exercise ExerciseToDo;
     int chapterExerciseToDo;
     LinearLayout.LayoutParams layoutExerciseToDo;
-
+    TextView coinTxt;
     private int num_chapter, currentChapter;
     private boolean isPulsating = false;
     private PathPulseAnimation pathPulseAnimation;
@@ -159,7 +160,7 @@ public class ChildHomePageFragment extends Fragment {
 
             //inserisco nello schermo i coin del bambino
             int coin = Patient.getInstance().getCoin(); // = prendo dal DB i coin
-            TextView coinTxt = view.findViewById(R.id.coin);
+            coinTxt = view.findViewById(R.id.coin);
             coinTxt.setText(String.valueOf(coin));
 
             if (exercises != null) {
@@ -969,36 +970,31 @@ public class ChildHomePageFragment extends Fragment {
             switch (theme) {
                 case "mountain":
 
+                    frameLayout.setBackgroundColor(Color.parseColor("#A2DEFF"));
+
                     //Creare un RelativeLayout
                     relativeLayout = new RelativeLayout(context);
                     relativeLayout.setLayoutParams(new RelativeLayout.LayoutParams(
                             RelativeLayout.LayoutParams.MATCH_PARENT,
                             RelativeLayout.LayoutParams.MATCH_PARENT));
 
+
                     // Terza immagine in basso a sinistra
                     thirdThemeImage = new ImageView(context);
                     thirdThemeImage.setImageResource(R.drawable.mountain_three);
-                    params3 = new RelativeLayout.LayoutParams(400, 400);
+                    params3 = new RelativeLayout.LayoutParams(1500, 410);
                     params3.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
                     params3.addRule(RelativeLayout.ALIGN_PARENT_START);
                     thirdThemeImage.setLayoutParams(params3);
                     relativeLayout.addView(thirdThemeImage);
 
-                    // Quarta immagine in basso a destra
-                    fourthThemeImage = new ImageView(context);
-                    fourthThemeImage.setImageResource(R.drawable.mountain_four);
-                    params4 = new RelativeLayout.LayoutParams(384, 342);
-                    params4.addRule(RelativeLayout.ALIGN_PARENT_END);
-                    params4.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
-                    fourthThemeImage.setLayoutParams(params4);
-                    relativeLayout.addView(fourthThemeImage);
 
                     // Prima immagine in alto a sinistra
                     firstThemeImage = new ImageView(context);
                     firstThemeImage.setImageResource(R.drawable.mountain_one);
                     params1 = new RelativeLayout.LayoutParams(350, 350);
                     params1.addRule(RelativeLayout.ALIGN_PARENT_START);
-                    params1.addRule(RelativeLayout.ABOVE, fourthThemeImage.getId());
+                    params1.addRule(RelativeLayout.ABOVE, thirdThemeImage.getId());
                     firstThemeImage.setLayoutParams(params1);
                     relativeLayout.addView(firstThemeImage);
 
@@ -1007,7 +1003,9 @@ public class ChildHomePageFragment extends Fragment {
                     frameLayout.postInvalidate();
                     break;
 
-                case "sea":
+                case "desert":
+
+                    frameLayout.setBackgroundColor(Color.parseColor("#F0DC82"));
 
                     //Creare un RelativeLayout
                     relativeLayout = new RelativeLayout(context);
@@ -1017,64 +1015,54 @@ public class ChildHomePageFragment extends Fragment {
 
                     // Terza immagine in basso a sinistra
                     thirdThemeImage = new ImageView(context);
-                    thirdThemeImage.setImageResource(R.drawable.sea_three);
-                    params3 = new RelativeLayout.LayoutParams(300, 300);
+                    thirdThemeImage.setImageResource(R.drawable.desert_three);
+                    params3 = new RelativeLayout.LayoutParams(1500, 355);
                     params3.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
                     params3.addRule(RelativeLayout.ALIGN_PARENT_START);
                     thirdThemeImage.setLayoutParams(params3);
                     relativeLayout.addView(thirdThemeImage);
 
-                    // Quarta immagine in basso a destra
-                    fourthThemeImage = new ImageView(context);
-                    fourthThemeImage.setImageResource(R.drawable.sea_four);
-                    params4 = new RelativeLayout.LayoutParams(300, 300);
-                    params4.addRule(RelativeLayout.ALIGN_PARENT_END);
-                    params4.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
-                    fourthThemeImage.setLayoutParams(params4);
-                    relativeLayout.addView(fourthThemeImage);
 
                     // Prima immagine in alto a sinistra
                     firstThemeImage = new ImageView(context);
-                    firstThemeImage.setImageResource(R.drawable.sea_beepbeep);
+                    firstThemeImage.setImageResource(R.drawable.desert_one);
                     params1 = new RelativeLayout.LayoutParams(300, 300);
                     params1.addRule(RelativeLayout.ALIGN_PARENT_START);
-                    params1.addRule(RelativeLayout.ABOVE, fourthThemeImage.getId());
+                    params1.addRule(RelativeLayout.ABOVE, thirdThemeImage.getId());
                     firstThemeImage.setLayoutParams(params1);
                     relativeLayout.addView(firstThemeImage);
 
-                    // Seconda immagine in alto a destra
-                    secondThemeImage = new ImageView(context);
-                    secondThemeImage.setImageResource(R.drawable.sea_two);
-                    params2 = new RelativeLayout.LayoutParams(300, 300);
-                    params2.addRule(RelativeLayout.ALIGN_PARENT_END);
-                    params2.addRule(RelativeLayout.ABOVE, fourthThemeImage.getId());
-                    secondThemeImage.setLayoutParams(params2);
-                    relativeLayout.addView(secondThemeImage);
                     // Aggiungi il RelativeLayout al tuo layout principale
                     frameLayout.addView(relativeLayout);
                     frameLayout.postInvalidate();
                     break;
                 case "polar":
 
+                    frameLayout.setBackgroundColor(Color.parseColor("#1E213D"));
+                    coinTxt.setTextColor(Color.WHITE);
+
                     //Creare un RelativeLayout
                     relativeLayout = new RelativeLayout(context);
                     relativeLayout.setLayoutParams(new RelativeLayout.LayoutParams(
                             RelativeLayout.LayoutParams.MATCH_PARENT,
                             RelativeLayout.LayoutParams.MATCH_PARENT));
 
-                    // Terza immagine in basso a sinistra
-                    thirdThemeImage = new ImageView(context);
-                    thirdThemeImage.setImageResource(R.drawable.polar_third);
-                    params3 = new RelativeLayout.LayoutParams(300, 300);
-                    params3.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
-                    params3.addRule(RelativeLayout.ALIGN_PARENT_START);
-                    thirdThemeImage.setLayoutParams(params3);
-                    relativeLayout.addView(thirdThemeImage);
+                    // Gif neve
+                    secondThemeImage = new ImageView(context);
+                    secondThemeImage.findViewById(R.id.gif_view);
+                    Glide.with(this).load(R.drawable.polar_two).override(1200, 4000)
+                            .into(secondThemeImage);
 
-                    // Quarta immagine in basso a destra
+                    params2 = new RelativeLayout.LayoutParams(1200, 4000);
+                    params2.addRule(RelativeLayout.ALIGN_PARENT_END);
+                    secondThemeImage.setLayoutParams(params2);
+                    relativeLayout.addView(secondThemeImage);
+
+
+                    // Immagine in basso
                     fourthThemeImage = new ImageView(context);
-                    fourthThemeImage.setImageResource(R.drawable.polar_fourth);
-                    params4 = new RelativeLayout.LayoutParams(300, 300);
+                    fourthThemeImage.setImageResource(R.drawable.polar_three);
+                    params4 = new RelativeLayout.LayoutParams(1500, 540);
                     params4.addRule(RelativeLayout.ALIGN_PARENT_END);
                     params4.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
                     fourthThemeImage.setLayoutParams(params4);
@@ -1083,20 +1071,22 @@ public class ChildHomePageFragment extends Fragment {
                     // Prima immagine in alto a sinistra
                     firstThemeImage = new ImageView(context);
                     firstThemeImage.setImageResource(R.drawable.polar_one);
-                    params1 = new RelativeLayout.LayoutParams(300, 300);
+                    params1 = new RelativeLayout.LayoutParams(500, 300);
                     params1.addRule(RelativeLayout.ALIGN_PARENT_START);
                     params1.addRule(RelativeLayout.ABOVE, fourthThemeImage.getId());
                     firstThemeImage.setLayoutParams(params1);
                     relativeLayout.addView(firstThemeImage);
 
-                    // Seconda immagine in alto a destra
-                    secondThemeImage = new ImageView(context);
-                    secondThemeImage.setImageResource(R.drawable.polar_two);
-                    params2 = new RelativeLayout.LayoutParams(300, 300);
-                    params2.addRule(RelativeLayout.ALIGN_PARENT_END);
+                    // Prima immagine in alto a sinistra
+                    firstThemeImage = new ImageView(context);
+                    firstThemeImage.setScaleX(-1);
+                    firstThemeImage.setImageResource(R.drawable.polar_one);
+                    params1 = new RelativeLayout.LayoutParams(500, 300);
+                    params1.addRule(RelativeLayout.ALIGN_PARENT_END);
                     params2.addRule(RelativeLayout.ABOVE, fourthThemeImage.getId());
-                    secondThemeImage.setLayoutParams(params2);
-                    relativeLayout.addView(secondThemeImage);
+                    firstThemeImage.setLayoutParams(params1);
+                    relativeLayout.addView(firstThemeImage);
+
                     // Aggiungi il RelativeLayout al tuo layout principale
                     frameLayout.addView(relativeLayout);
                     frameLayout.postInvalidate();
@@ -1111,7 +1101,7 @@ public class ChildHomePageFragment extends Fragment {
                 public void onImageDownloaded(Uri imageUri) {
                     switch (themePersonalized) {
                         case "mountain_personalized":
-                        case "sea_personalized":
+                        case "desert_personalized":
                         case "polar_personalized":
 
                             //imposto lo sfondo

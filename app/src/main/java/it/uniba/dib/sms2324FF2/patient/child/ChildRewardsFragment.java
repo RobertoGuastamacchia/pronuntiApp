@@ -102,7 +102,7 @@ public class ChildRewardsFragment extends Fragment {
             //mi assicuro che non sia visibile la bottom bar
             mCallback.hideBottomBar();
 
-            treasure = view.findViewById(R.id.treasure);
+            treasure = view.findViewById(R.id.treasure_closed);
             openTreasure = view.findViewById(R.id.openTreasure);
             rewardsDescription = view.findViewById(R.id.rewardsDescription);
             characters = view.findViewById(R.id.characters);

@@ -31,7 +31,7 @@ import it.uniba.dib.sms2324FF2.patient.Patient;
 public class NewCharacterFragment extends Fragment {
 
     private String character;
-    private ImageButton egg;
+    private ImageButton cage;
     private ImageView newCharacterImage;
     private TextView newCharacterName;
     private TextView newCharacterDescription;
@@ -99,7 +99,7 @@ public class NewCharacterFragment extends Fragment {
 
             Animation shakeAnimation = AnimationUtils.loadAnimation(context, R.anim.shake_animation);
 
-            egg = view.findViewById(R.id.egg);
+            cage = view.findViewById(R.id.cage);
             newCharacterImage = view.findViewById(R.id.newCharacter);
             newCharacterName = view.findViewById(R.id.newCharacterName);
             newCharacterDescription = view.findViewById(R.id.newCharacterDescription);
@@ -107,19 +107,19 @@ public class NewCharacterFragment extends Fragment {
             newCharacterTitle = view.findViewById(R.id.newCharacterTitle);
             linearLayout = view.findViewById(R.id.linearLayout);
 
-            egg.startAnimation(shakeAnimation);
+            cage.startAnimation(shakeAnimation);
 
-            egg.setOnClickListener(new View.OnClickListener() {
+            cage.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     //ferma animazione di shake
-                    egg.clearAnimation();
+                    cage.clearAnimation();
 
                     //riproduco suono quando compare il nuovo personaggio
                     MediaPlayer.create(getActivity(), R.raw.win_sound).start();
 
                     //cambia elementi sullo schermo visibili
-                    egg.setVisibility(View.GONE);
+                    cage.setVisibility(View.GONE);
                     newCharacterDescription.setVisibility(View.GONE);
                     newCharacterImage.setVisibility(View.VISIBLE);
                     newCharacterName.setVisibility(View.VISIBLE);
@@ -149,19 +149,19 @@ public class NewCharacterFragment extends Fragment {
                             newCharacterImage.setImageResource(R.drawable.mountain_bruno);
                             break;
                         case "Nagini":
-                            newCharacterImage.setImageResource(R.drawable.sea_nagini);
+                            newCharacterImage.setImageResource(R.drawable.desert_nagini);
                             break;
                         case "BeepBeep":
-                            newCharacterImage.setImageResource(R.drawable.sea_beepbeep);
+                            newCharacterImage.setImageResource(R.drawable.desert_beepbeep);
                             break;
                         case "Aragog":
-                            newCharacterImage.setImageResource(R.drawable.sea_aragog);
+                            newCharacterImage.setImageResource(R.drawable.desert_aragog);
                             break;
                         case "Zephir":
-                            newCharacterImage.setImageResource(R.drawable.sea_zephir);
+                            newCharacterImage.setImageResource(R.drawable.desert_zephir);
                             break;
                         case "Harum":
-                            newCharacterImage.setImageResource(R.drawable.sea_harum);
+                            newCharacterImage.setImageResource(R.drawable.desert_harum);
                             break;
                         case "Rost":
                             newCharacterImage.setImageResource(R.drawable.polar_rost);

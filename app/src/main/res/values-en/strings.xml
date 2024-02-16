@@ -137,7 +137,7 @@
     <string name="principalDeviceDescription">Do you want to set this device as your primary device? You will receive all notifications on this device.</string>
     <string name="principalDeviceTitle">Principal device configuration</string>
     <string name="infoCoinCharacters">Coins required: </string>
-    <string name="newCharacterDescription">Click and find out who is hiding in the egg!</string>
+    <string name="newCharacterDescription">Click and find out who is hiding in the cage!</string>
     <string name="newCharacterPopupTitle">Character available</string>
     <string name="newCharacterPopupDescription">Do you want to unlock this character?</string>
     <string name="newCharacterTitle">You have unlocked a new character!</string>
@@ -185,7 +185,7 @@
 
 
     <string name="mountain_story">Who left this mysterious footprint? \nSend your character in investigation!</string>
-    <string name="sea_story">Every sea dweller loves seashells! \nHelp your character to collect them!</string>
+    <string name="desert_story">Every sea dweller loves seashells! \nHelp your character to collect them!</string>
     <string name="polar_story">Who lives on this planet? \nSend your character in investigation!</string>
 
     <string name="appointmentPast">Past</string>
@@ -201,7 +201,7 @@
     <string name="theme">Theme</string>
 
     <string name="mountain">Mountain</string>
-    <string name="sea">Sea</string>
+    <string name="desert">Desert</string>
     <string name="polar">Polar</string>
     <string name="save">Save</string>
     <string name="resetPassword">Invia email di ripristino password</string>

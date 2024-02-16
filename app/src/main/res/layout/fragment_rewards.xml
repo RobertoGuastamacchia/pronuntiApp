@@ -15,10 +15,10 @@
         android:gravity="center">
 
         <ImageButton
-            android:id="@+id/treasure"
+            android:id="@+id/treasure_closed"
             android:layout_width="@dimen/treasureDimension"
             android:layout_height="@dimen/treasureDimension"
-            android:src="@drawable/treasure"
+            android:src="@drawable/treasure_closed"
             android:scaleType="centerInside"
             android:background="@color/transparent"
             android:layout_gravity="center"
@@ -29,7 +29,7 @@
             android:layout_height="@dimen/treasureDimension"
             android:id="@+id/openTreasure"
             android:visibility="gone"
-            android:src="@drawable/open_treasure"
+            android:src="@drawable/treasure_opened"
             android:scaleType="centerInside"
             android:background="@color/transparent"
             android:layout_gravity="center"></ImageView>

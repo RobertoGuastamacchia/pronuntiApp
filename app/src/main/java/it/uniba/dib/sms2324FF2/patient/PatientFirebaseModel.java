@@ -468,7 +468,7 @@ public class PatientFirebaseModel {
 
         HashMap<String, String> principalCharacters = new HashMap<>();
         principalCharacters.put("mountain","Ember");
-        principalCharacters.put("sea","Nagini");
+        principalCharacters.put("desert","Nagini");
         principalCharacters.put("polar","Rost");
 
         String childToken = "", parentToken = "";

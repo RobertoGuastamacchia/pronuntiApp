@@ -52,13 +52,12 @@
                     android:layout_alignParentEnd="true"/>
 
                 <ImageView
+                    android:id="@+id/listen_audio_icon"
                     android:layout_width="@dimen/centralTopIconExercisesDimension"
                     android:layout_height="@dimen/centralTopIconExercisesDimension"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="@dimen/marginTopTopButtonExercises"
-                    android:id="@+id/listen_audio_icon"
-                    android:src="@drawable/listen_audio"
-                    ></ImageView>
+                    android:src="@drawable/listen_audio" />
 
                 <ImageButton
                     android:id="@+id/refresh"

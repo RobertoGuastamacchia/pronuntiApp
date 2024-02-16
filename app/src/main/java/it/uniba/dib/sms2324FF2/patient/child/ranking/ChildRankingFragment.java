@@ -71,6 +71,7 @@ public class ChildRankingFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View view;
+
         if(isPortrait){
             view = inflater.inflate(R.layout.fragment_ranking, container, false);
             mCallback.showBottomBar();

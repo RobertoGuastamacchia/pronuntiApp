@@ -317,10 +317,10 @@
                                     app:useMaterialThemeColors="false" />
 
                                 <RadioButton
-                                    android:id="@+id/sea"
+                                    android:id="@+id/desert"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/sea"
+                                    android:text="@string/desert"
                                     android:textColor="@color/black"
                                     android:textSize="@dimen/settingsSize"
                                     android:theme="@style/radioButton"

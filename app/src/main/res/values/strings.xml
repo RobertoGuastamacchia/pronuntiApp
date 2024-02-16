@@ -70,7 +70,7 @@
     <string name="descriptionMinimalPairs">Date due immagini e la riproduzione audio di una parola, il bambino deve riconoscere l’immagine giusta a cui la parola si riferisce.</string>
 
 
-    <string name="chapter">Capitolo</string>
+    <string name="chapter">Livello</string>
     <string name="defaultAccess">Accedi con account di default</string>
     <string name="settings">Impostazioni tema</string>
     <string name="settingsMenu">Impostazioni</string>
@@ -110,13 +110,13 @@
     <string name="record_audio">Registra audio</string>
     <string name="stop_audio">Fine registrazione</string>
     <string name="continueEs">Continua</string>
-    <string name="audio_done">Audio salvato con successo. Se vuoi, riascolta la tua risposta!</string>
-    <string name="exerciseDescription2">Ascolta l\'audio e seleziona l\'immagine corretta.</string>
+    <string name="audio_done">Audio salvato con successo. Se vuoi, puoi riascoltare la tua risposta!</string>
+    <string name="exerciseDescription2">Ascolta l\'audio e seleziona la seguente immagine corretta.</string>
     <string name="exerciseDescription3">Pronuncia cosa vedi nell\'immagine. Hai a disposizione 3 aiuti!</string>
     <string name="permissionTitle">Richiesta permesso</string>
     <string name="permissionDescription">Per svolgere questo esercizio, abbiamo bisogno del tuo permesso per accedere al microfono del tuo dispositivo.</string>
     <string name="permissionDescriptionTherapist">Per creare questo esercizio, abbiamo bisogno del tuo permesso per accedere al microfono del tuo dispositivo.</string>
-    <string name="permissionDescription3">Per rimanere sempre aggiornato attiva le notifiche di PronuntiApp</string>
+    <string name="permissionDescription3">Per rimanere sempre aggiornato attiva le notifiche di PronuntiApp!</string>
     <string name="continuePermission">Continua</string>
     <string name="permissionUploadThemeBackgroundDescription">Per personalizzare questo tema e caricare un nuovo sfondo, abbiamo bisogno del tuo permesso per accedere alla galleria del tuo dispositivo.</string>
     <string name="uploadAudioDescription">Carica il tuo audio</string>
@@ -136,8 +136,8 @@
     <string name="rewardsDescription">Abbiamo trovato un tesoro! Clicca per aprire e riscattare la ricompensa!</string>
     <string name="principalDeviceDescription">Desideri impostare questo dispositivo come principale? Riceverai tutte le notifiche su questo dispositivo.</string>
     <string name="principalDeviceTitle">Configurazione dispositivo principale</string>
-    <string name="infoCoinCharacters">Coin richiesti: </string>
-    <string name="newCharacterDescription">Clicca e scopri chi si nasconde nell\'uovo!</string>
+    <string name="infoCoinCharacters">Monete richieste: </string>
+    <string name="newCharacterDescription">Tocca e libera l\'animale rinchiuso!</string>
     <string name="newCharacterPopupTitle">Personaggio disponibile</string>
     <string name="newCharacterPopupDescription">Vuoi sbloccare questo personaggio?</string>
     <string name="newCharacterTitle">Hai sbloccato un nuovo personaggio!</string>
@@ -145,7 +145,7 @@
 
     <!--Frasi motivazionali per il bambino-->
     <string name="birthday_description">Sei un vero campione! Continua così!</string>
-    <string name="computer_description">Sto cercando su internet se esiste un bambino migliore di te...non credo proprio!</string>
+    <string name="computer_description">Sto cercando su internet se esiste un bambino migliore di te… non credo proprio!</string>
     <string name="cooker_description">Sei stato così bravo che adesso cucino il tuo piatto preferito!</string>
     <string name="exercise_description">Bravissimo! Continuiamo ad allenarci insieme!</string>
     <string name="guitar_player_description">Con ogni esercizio, diventi più forte. Non mollare mai!</string>
@@ -155,10 +155,10 @@
     <string name="love_description">Mi fai emozionare!</string>
     <string name="music_description">Sto ballando perchè sono felice che tu stia lavorando!</string>
     <string name="phone_call_description">Sto ordinando una pizza per te, sei stato fantastico!</string>
-    <string name="reading_description">Mhh...vedo che stai lavorando veramente molto bene!</string>
+    <string name="reading_description">Mhh… vedo che stai lavorando veramente molto bene!</string>
     <string name="scared_description">Wow! Sei veramente eccezionale!</string>
     <string name="surprised_description">Wow! Sei unico!</string>
-    <string name="thinking_description">Chissà se esiste qualcuno migliore di te...non credo proprio!</string>
+    <string name="thinking_description">Chissà se esiste qualcuno migliore di te… non credo proprio!</string>
 
 
     <string name="helpWindowDialogTitle">Aiuto #</string>
@@ -183,8 +183,8 @@
     <string name="ExerciseCreatedDescription">Un nuovo esercizio è stato creato!</string>
 
 
-    <string name="mountain_story">Chi ha lasciato questa impronta misteriosa? \nManda il tuo personaggio ad investigare!</string>
-    <string name="sea_story">A tutti gli abitanti del mare piacciono le conchiglie! \nAiuta il tuo personaggio a raccoglierle!</string>
+    <string name="mountain_story">Chi si nasconde dietro quel cespuglio? \nChi sarà mai? Andiamo a vedere!</string>
+    <string name="desert_story">A tutti gli abitanti del mare piacciono le conchiglie! \nAiuta il tuo personaggio a raccoglierle!</string>
     <string name="polar_story">Chi ci sarà su questo pianeta? \nManda il tuo personaggio a controllare!</string>
 
     <string name="appointmentPast">Passati</string>
@@ -192,7 +192,7 @@
 
     <string name="correct">Correggi</string>
     <string name="doctor">Dott. </string>
-    <string name="chapterParent">Capitolo</string>
+    <string name="chapterParent">Livello</string>
     <string name="ex">Esercizio</string>
 
     <string name="nameParent">Nome utente</string>
@@ -200,7 +200,7 @@
     <string name="theme">Tema</string>
 
     <string name="mountain">Montagna</string>
-    <string name="sea">Mare</string>
+    <string name="desert">Deserto</string>
     <string name="polar">Polare</string>
     <string name="save">Salva</string>
     <string name="resetPassword">Invia email di ripristino password</string>

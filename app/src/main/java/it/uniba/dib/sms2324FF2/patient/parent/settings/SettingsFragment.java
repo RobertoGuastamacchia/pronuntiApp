@@ -71,7 +71,7 @@ public class SettingsFragment extends Fragment {
     private MaterialButton saveTheme;
     private MaterialButton resetPassword;
     private RadioGroup themeGroup;
-    RadioButton mountain, sea, polar;
+    RadioButton mountain, desert, polar;
     private String parentNameDB;
     private String childNameDB;
     SwipeRefreshLayout swipeRefreshLayout;
@@ -156,7 +156,7 @@ public class SettingsFragment extends Fragment {
 
             themeGroup = view.findViewById(R.id.themeGroup);
             mountain = view.findViewById(R.id.mountain);
-            sea = view.findViewById(R.id.sea);
+            desert = view.findViewById(R.id.desert);
             polar = view.findViewById(R.id.polar);
 
 
@@ -185,8 +185,8 @@ public class SettingsFragment extends Fragment {
             case "mountain":
                 mountain.setTextColor(getActivity().getColor(R.color.colorAccent));
                 break;
-            case "sea":
-                sea.setTextColor(getActivity().getColor(R.color.colorAccent));
+            case "desert":
+                desert.setTextColor(getActivity().getColor(R.color.colorAccent));
                 break;
             case "polar":
                 polar.setTextColor(getActivity().getColor(R.color.colorAccent));
@@ -387,7 +387,7 @@ public class SettingsFragment extends Fragment {
                             newTheme = "polar_personalized"; //Tema da gestire con lo sfondo personalizzato
                             break;
                         case "mare":
-                            newTheme = "sea_personalized"; //Tema da gestire con lo sfondo personalizzato
+                            newTheme = "desert_personalized"; //Tema da gestire con lo sfondo personalizzato
                             break;
                         default : //se nessuna delle precedenti, è in lingua inglese, posso direttamente salvare
                                 newTheme += "_personalized";
@@ -403,7 +403,7 @@ public class SettingsFragment extends Fragment {
                             newTheme = "polar";
                             break;
                         case "mare":
-                            newTheme = "sea";
+                            newTheme = "desert";
                             break;
                     }
 

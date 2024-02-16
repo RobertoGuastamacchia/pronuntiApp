@@ -247,7 +247,7 @@
                     android:backgroundTint="@color/characterLockedColorTextAndBackground"
                     android:contentDescription="@string/imageDescriptionCharacters"
                     android:scaleType="centerInside"
-                    android:src="@drawable/sea_nagini"
+                    android:src="@drawable/desert_nagini"
                     android:visibility="gone"
                     app:tint="@color/characterLockedColorImage" />
 
@@ -272,7 +272,7 @@
                     android:backgroundTint="@color/characterLockedColorTextAndBackground"
                     android:contentDescription="@string/imageDescriptionCharacters"
                     android:scaleType="centerInside"
-                    android:src="@drawable/sea_one"
+                    android:src="@drawable/desert_beepbeep"
                     android:visibility="gone"
                     app:tint="@color/characterLockedColorImage" />
 
@@ -297,7 +297,7 @@
                     android:backgroundTint="@color/characterLockedColorTextAndBackground"
                     android:contentDescription="@string/imageDescriptionCharacters"
                     android:scaleType="centerInside"
-                    android:src="@drawable/sea_aragog"
+                    android:src="@drawable/desert_aragog"
                     android:visibility="gone"
                     app:tint="@color/characterLockedColorImage" />
 
@@ -322,7 +322,7 @@
                     android:backgroundTint="@color/characterLockedColorTextAndBackground"
                     android:contentDescription="@string/imageDescriptionCharacters"
                     android:scaleType="centerInside"
-                    android:src="@drawable/sea_zephir"
+                    android:src="@drawable/desert_zephir"
                     android:visibility="gone"
                     app:tint="@color/characterLockedColorImage" />
 
@@ -347,7 +347,7 @@
                     android:backgroundTint="@color/characterLockedColorTextAndBackground"
                     android:contentDescription="@string/imageDescriptionCharacters"
                     android:scaleType="centerInside"
-                    android:src="@drawable/sea_harum"
+                    android:src="@drawable/desert_harum"
                     android:visibility="gone"
                     app:tint="@color/characterLockedColorImage" />
 

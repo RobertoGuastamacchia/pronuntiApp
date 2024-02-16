@@ -136,8 +136,9 @@ public class CharactersFragment extends Fragment {
                     idstext.add(R.id.t7_name);
 
                     selectCharactersFromTheme(idsimg, idstext, view);
+                    view.setBackgroundColor(Color.parseColor("#A2DEFF"));
                     break;
-                case "sea":
+                case "desert":
                     idsimg.add(R.id.a1_img);
                     idsimg.add(R.id.a2_img);
                     idsimg.add(R.id.a3_img);
@@ -149,7 +150,9 @@ public class CharactersFragment extends Fragment {
                     idstext.add(R.id.a3_name);
                     idstext.add(R.id.a4_name);
                     idstext.add(R.id.a5_name);
+
                     selectCharactersFromTheme(idsimg, idstext, view);
+                    view.setBackgroundColor(Color.parseColor("#F0DC82"));
                     break;
                 case "polar":
                     idsimg.add(R.id.p1_img);
@@ -167,7 +170,9 @@ public class CharactersFragment extends Fragment {
                     idstext.add(R.id.p5_name);
                     idstext.add(R.id.p6_name);
                     idstext.add(R.id.p7_name);
+
                     selectCharactersFromTheme(idsimg, idstext, view);
+                    view.setBackgroundColor(Color.parseColor("#1E213D"));
                     break;
             }
         //prendo i personaggi dal firestore su firebase
