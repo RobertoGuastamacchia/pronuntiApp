@@ -12,7 +12,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginBottom="@dimen/logoutTextTitleMarginBottom"
-        android:fontFamily="@font/quicksand_medium"
         android:text="@string/characterNotAvaibleTitle"
         android:textAlignment="center"
         android:textColor="@color/black"
@@ -26,7 +25,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:textSize="@dimen/popupTextDimension"
-        android:fontFamily="@font/quicksand_medium"
         android:textColor="@color/colorPrimary"
         android:text="@string/infoCoinCharacters"
         android:textAlignment="center"/>
@@ -43,8 +41,7 @@
             android:layout_height="wrap_content"
             android:textSize="@dimen/popupTextDimension"
             android:layout_gravity="center"
-            android:fontFamily="@font/quicksand_medium"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/black"
             android:textAlignment="center"/>
 
         <ImageView
@@ -57,7 +54,6 @@
     <com.google.android.material.button.MaterialButton
         android:layout_width="wrap_content"
         android:id="@+id/closeButton"
-        android:fontFamily="@font/quicksand_medium"
         app:cornerRadius="8dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"

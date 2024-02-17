@@ -12,7 +12,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginBottom="@dimen/logoutTextTitleMarginBottom"
-        android:fontFamily="@font/quicksand_medium"
         android:text="@string/newCharacterPopupTitle"
         android:textAlignment="center"
         android:textColor="@color/black"
@@ -21,7 +20,6 @@
 
     <TextView
         android:id="@+id/custom_message"
-        android:fontFamily="@font/quicksand_medium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/newCharacterPopupDescription"
@@ -40,7 +38,6 @@
             app:cornerRadius="8dp"
             android:id="@+id/custom_positive_button"
             android:textColor="@color/white"
-            android:fontFamily="@font/quicksand_medium"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/greenCompleted"
@@ -51,7 +48,6 @@
 
         <com.google.android.material.button.MaterialButton
             app:cornerRadius="8dp"
-            android:fontFamily="@font/quicksand_medium"
             android:textColor="@color/white"
             android:id="@+id/custom_negative_button"
             android:backgroundTint="@color/red"

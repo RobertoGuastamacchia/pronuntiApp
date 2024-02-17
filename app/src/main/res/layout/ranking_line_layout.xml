@@ -4,76 +4,82 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/colorBackground_primary">
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+    android:background="@color/colorBackground"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
         <TextView
             android:id="@+id/position"
-            android:fontFamily="@font/quicksand_medium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/text_dimen"
-            android:textColor="@color/white"
-            android:text="1"
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
-            android:layout_marginHorizontal="@dimen/marginTextRanking"/>
+            android:layout_marginHorizontal="@dimen/marginTextRanking"
+            android:text="1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_dimen" />
+
         <ImageView
             android:id="@+id/firstplace"
             android:layout_width="@dimen/symbol_dimension_for_ranking"
             android:layout_height="@dimen/symbol_dimension_for_ranking"
-            android:src="@drawable/firstplace"
             android:layout_centerVertical="true"
             android:layout_marginStart="@dimen/marginMedalRanking"
-            android:visibility="gone"/>
+            android:src="@drawable/firstplace"
+            android:visibility="gone" />
+
         <ImageView
             android:id="@+id/secondplace"
             android:layout_width="@dimen/symbol_dimension_for_ranking"
             android:layout_height="@dimen/symbol_dimension_for_ranking"
-            android:src="@drawable/secondplace"
             android:layout_centerVertical="true"
             android:layout_marginStart="@dimen/marginMedalRanking"
-            android:visibility="gone"/>
+            android:src="@drawable/secondplace"
+            android:visibility="gone" />
+
         <ImageView
             android:id="@+id/thirdplace"
             android:layout_width="@dimen/symbol_dimension_for_ranking"
             android:layout_height="@dimen/symbol_dimension_for_ranking"
-            android:src="@drawable/thirdplace"
             android:layout_centerVertical="true"
             android:layout_marginStart="@dimen/marginMedalRanking"
-            android:visibility="gone"/>
+            android:src="@drawable/thirdplace"
+            android:visibility="gone" />
+
         <TextView
             android:id="@+id/name"
-            android:fontFamily="@font/quicksand_medium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/text_dimen"
-            android:textColor="@color/white"
             android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/marginNameRanking"
             android:text="Nome"
-            android:layout_marginStart="@dimen/marginNameRanking"/>
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_dimen" />
+
         <TextView
             android:id="@+id/coin"
-            android:fontFamily="@font/quicksand_medium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/text_dimen"
-            android:textColor="@color/white"
             android:layout_centerVertical="true"
             android:layout_toStartOf="@+id/symbol_coin"
-            android:text="1000" />
+            android:text="1000"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_dimen" />
+
         <ImageView
             android:id="@+id/symbol_coin"
             android:layout_width="@dimen/symbol_dimension_for_ranking"
             android:layout_height="@dimen/symbol_dimension_for_ranking"
-            android:src="@drawable/coin_removebg_preview"
-            android:layout_centerVertical="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginHorizontal="@dimen/marginCoinRanking" />
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="@dimen/marginCoinRanking"
+            android:src="@drawable/coin_removebg_preview" />
     </RelativeLayout>
-        <TextView
-            android:layout_width="@dimen/emptyLine"
-            android:layout_height="@dimen/emptyLine" />
-    </LinearLayout>
+
+    <TextView
+        android:layout_width="@dimen/emptyLine"
+        android:layout_height="@dimen/emptyLine" />
+</LinearLayout>

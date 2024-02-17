@@ -22,7 +22,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="@dimen/logoutTextTitleMarginBottom"
-            android:fontFamily="@font/quicksand_medium"
             android:text="@string/infoDialogTitle"
             android:textAlignment="center"
             android:textColor="@color/black"
@@ -41,7 +40,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:fontFamily="@font/quicksand_medium"
                 android:gravity="center_horizontal"
                 android:text="@string/infoDialogDescription"
                 android:textColor="@color/colorPrimary"
@@ -60,22 +58,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:fontFamily="@font/quicksand_medium"
                 android:gravity="center_horizontal"
                 android:text="@string/docIdentity"
                 android:textColor="@color/colorPrimary"
                 android:textSize="@dimen/textDimensionOfCreateAppointment" />
 
             <TextView
-            android:id="@+id/certification"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:fontFamily="@font/quicksand_medium"
-            android:gravity="center_horizontal"
-            android:text="@string/certification"
-            android:textColor="@color/colorPrimary"
-            android:textSize="@dimen/textDimensionOfCreateAppointment" />
+                android:id="@+id/certification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:text="@string/certification"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/textDimensionOfCreateAppointment" />
 
         </LinearLayout>
 
@@ -87,15 +83,15 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="@dimen/marginTopBetweenCreateAppointmentSections">
+
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/close"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
                 android:backgroundTint="@color/red"
-                android:fontFamily="@font/quicksand_medium"
                 android:text="@string/closePopupButton"
                 android:textColor="@color/white"
-                android:layout_centerHorizontal="true"
                 android:textSize="@dimen/closeButtonOrContinueButtonMarginTop"
                 app:cornerRadius="8dp" />
         </RelativeLayout>

@@ -35,28 +35,30 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/marginTopBetweenGoals">
+
                 <TextView
                     android:id="@+id/firstGoalText"
-                    android:fontFamily="@font/quicksand_medium"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/textDimenWeeklyGoals"
-                    android:textColor="@color/white"
-                    android:text="@string/firstGoal"
                     android:layout_alignParentStart="true"
                     android:layout_centerVertical="true"
-                    android:layout_marginHorizontal="@dimen/marginTextWeeklyGoals"/>
+                    android:layout_marginHorizontal="@dimen/marginTextWeeklyGoals"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:text="@string/firstGoal"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textDimenWeeklyGoals" />
+
                 <TextView
                     android:id="@+id/firstGoalCoin"
-                    android:fontFamily="@font/quicksand_medium"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/textDimenWeeklyGoals"
-                    android:textColor="@color/white"
                     android:layout_centerVertical="true"
-                    android:layout_toStartOf="@+id/firstGoalSymbolCoin"
                     android:layout_marginEnd="@dimen/marginCoinWeeklyGoals"
-                    android:text="@string/firstGoalCoinValue" />
+                    android:layout_toStartOf="@+id/firstGoalSymbolCoin"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:text="@string/firstGoalCoinValue"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textDimenWeeklyGoals" />
                 <ImageView
                     android:id="@+id/firstGoalSymbolCoin"
                     android:layout_width="@dimen/symbolCoinWeeklyGoals"
@@ -87,28 +89,29 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/marginTopBetweenGoals">
+
                 <TextView
                     android:id="@+id/secondGoalText"
-                    android:fontFamily="@font/quicksand_medium"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/textDimenWeeklyGoals"
-                    android:textColor="@color/white"
-                    android:text="@string/secondGoal"
                     android:layout_alignParentStart="true"
                     android:layout_centerVertical="true"
-                    android:layout_marginHorizontal="@dimen/marginTextWeeklyGoals"/>
+                    android:layout_marginHorizontal="@dimen/marginTextWeeklyGoals"
+                    android:text="@string/secondGoal"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textDimenWeeklyGoals" />
+
                 <TextView
                     android:id="@+id/secondGoalCoin"
-                    android:fontFamily="@font/quicksand_medium"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/textDimenWeeklyGoals"
-                    android:textColor="@color/white"
                     android:layout_centerVertical="true"
-                    android:layout_toStartOf="@+id/secondGoalSymbolCoin"
                     android:layout_marginEnd="@dimen/marginCoinWeeklyGoals"
-                    android:text="@string/secondGoalCoinValue" />
+                    android:layout_toStartOf="@+id/secondGoalSymbolCoin"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:text="@string/secondGoalCoinValue"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textDimenWeeklyGoals" />
                 <ImageView
                     android:id="@+id/secondGoalSymbolCoin"
                     android:layout_width="@dimen/symbolCoinWeeklyGoals"
@@ -139,28 +142,29 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/marginTopBetweenGoals">
+
                 <TextView
                     android:id="@+id/thirdGoalText"
-                    android:fontFamily="@font/quicksand_medium"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/textDimenWeeklyGoals"
-                    android:textColor="@color/white"
-                    android:text="@string/thirdGoal"
                     android:layout_alignParentStart="true"
                     android:layout_centerVertical="true"
-                    android:layout_marginHorizontal="@dimen/marginTextWeeklyGoals"/>
+                    android:layout_marginHorizontal="@dimen/marginTextWeeklyGoals"
+                    android:text="@string/thirdGoal"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textDimenWeeklyGoals" />
+
                 <TextView
                     android:id="@+id/thirdGoalCoin"
-                    android:fontFamily="@font/quicksand_medium"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/textDimenWeeklyGoals"
-                    android:textColor="@color/white"
                     android:layout_centerVertical="true"
-                    android:layout_toStartOf="@+id/thirdGoalSymbolCoin"
                     android:layout_marginEnd="@dimen/marginCoinWeeklyGoals"
-                    android:text="@string/thirdGoalCoinValue" />
+                    android:layout_toStartOf="@+id/thirdGoalSymbolCoin"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:text="@string/thirdGoalCoinValue"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textDimenWeeklyGoals" />
                 <ImageView
                     android:id="@+id/thirdGoalSymbolCoin"
                     android:layout_width="@dimen/symbolCoinWeeklyGoals"
@@ -191,28 +195,29 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/marginTopBetweenGoals">
+
                 <TextView
                     android:id="@+id/fourthGoalText"
-                    android:fontFamily="@font/quicksand_medium"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/textDimenWeeklyGoals"
-                    android:textColor="@color/white"
-                    android:text="@string/fourthGoal"
                     android:layout_alignParentStart="true"
                     android:layout_centerVertical="true"
-                    android:layout_marginHorizontal="@dimen/marginTextWeeklyGoals"/>
+                    android:layout_marginHorizontal="@dimen/marginTextWeeklyGoals"
+                    android:text="@string/fourthGoal"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textDimenWeeklyGoals" />
+
                 <TextView
                     android:id="@+id/fourthGoalCoin"
-                    android:fontFamily="@font/quicksand_medium"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/textDimenWeeklyGoals"
-                    android:textColor="@color/white"
                     android:layout_centerVertical="true"
-                    android:layout_toStartOf="@+id/fourthGoalSymbolCoin"
                     android:layout_marginEnd="@dimen/marginCoinWeeklyGoals"
-                    android:text="@string/fourthGoalCoinValue" />
+                    android:layout_toStartOf="@+id/fourthGoalSymbolCoin"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:text="@string/fourthGoalCoinValue"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textDimenWeeklyGoals" />
                 <ImageView
                     android:id="@+id/fourthGoalSymbolCoin"
                     android:layout_width="@dimen/symbolCoinWeeklyGoals"
@@ -243,28 +248,30 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/marginTopBetweenGoals">
+
                 <TextView
                     android:id="@+id/fifthGoalText"
-                    android:fontFamily="@font/quicksand_medium"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/textDimenWeeklyGoals"
-                    android:textColor="@color/white"
-                    android:text="@string/fifthGoal"
                     android:layout_alignParentStart="true"
                     android:layout_centerVertical="true"
-                    android:layout_marginHorizontal="@dimen/marginTextWeeklyGoals"/>
+                    android:layout_marginHorizontal="@dimen/marginTextWeeklyGoals"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:text="@string/fifthGoal"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textDimenWeeklyGoals" />
+
                 <TextView
                     android:id="@+id/fifthGoalCoin"
-                    android:fontFamily="@font/quicksand_medium"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/textDimenWeeklyGoals"
-                    android:textColor="@color/white"
                     android:layout_centerVertical="true"
-                    android:layout_toStartOf="@+id/fifthGoalSymbolCoin"
                     android:layout_marginEnd="@dimen/marginCoinWeeklyGoals"
-                    android:text="@string/fifthGoalCoinValue" />
+                    android:layout_toStartOf="@+id/fifthGoalSymbolCoin"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:text="@string/fifthGoalCoinValue"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textDimenWeeklyGoals" />
                 <ImageView
                     android:id="@+id/fifthGoalSymbolCoin"
                     android:layout_width="@dimen/symbolCoinWeeklyGoals"
