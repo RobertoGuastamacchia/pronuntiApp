@@ -37,21 +37,21 @@ import java.util.TreeMap;
 
 import it.uniba.dib.sms2324FF2.login.FirebaseAuthenticationModel;
 import it.uniba.dib.sms2324FF2.login.LoginActivity;
-import it.uniba.dib.sms2324FF2.patient.FirebasePatientModel;
+import it.uniba.dib.sms2324FF2.patient.PatientFirebaseModel;
 import it.uniba.dib.sms2324FF2.patient.Patient;
 import it.uniba.dib.sms2324FF2.patient.PatientActivity;
 import it.uniba.dib.sms2324FF2.patient.child.characters.CharactersFragment;
-import it.uniba.dib.sms2324FF2.exercises.Exercise;
-import it.uniba.dib.sms2324FF2.exercises.FirebaseExerciseModel;
+import it.uniba.dib.sms2324FF2.patient.child.exercises.Exercise;
+import it.uniba.dib.sms2324FF2.patient.child.exercises.FirebaseExerciseModel;
 import it.uniba.dib.sms2324FF2.patient.child.characters.NewCharacterFragment;
-import it.uniba.dib.sms2324FF2.patient.child.homepage.HomePageChildFragment;
+import it.uniba.dib.sms2324FF2.patient.child.homepage.ChildHomePageFragment;
 import it.uniba.dib.sms2324FF2.patient.child.homepage.exercises.ImageDenominationFragment;
 import it.uniba.dib.sms2324FF2.patient.child.homepage.exercises.LoadingPostExerciseFragment;
 import it.uniba.dib.sms2324FF2.patient.child.homepage.exercises.MinimalPairsRecognitionFragment;
 import it.uniba.dib.sms2324FF2.patient.child.homepage.exercises.WordsSequencesRepetitionFragment;
 import it.uniba.dib.sms2324FF2.patient.child.ranking.FirebaseRankingModel;
 import it.uniba.dib.sms2324FF2.patient.child.ranking.Ranking;
-import it.uniba.dib.sms2324FF2.patient.child.ranking.RankingFragment;
+import it.uniba.dib.sms2324FF2.patient.child.ranking.ChildRankingFragment;
 import it.uniba.dib.sms2324FF2.network.NetworkError;
 import it.uniba.dib.sms2324FF2.network.NetworkUtils;
 import it.uniba.dib.sms2324FF2.R;
@@ -60,14 +60,14 @@ import it.uniba.dib.sms2324FF2.utility.SharedViewModel;
 
 public class ChildActivity extends AppCompatActivity implements
         CharactersFragment.onCharactersListener,
-        RankingFragment.onRankingListener,
-        HomePageChildFragment.onHomePageListener,
+        ChildRankingFragment.onRankingListener,
+        ChildHomePageFragment.onHomePageListener,
         ImageDenominationFragment.OnExerciseListener,
         WordsSequencesRepetitionFragment.OnExerciseListener,
         MinimalPairsRecognitionFragment.OnExerciseListener,
         LoadingPostExerciseFragment.OnExerciseListener,
         NewCharacterFragment.OnCharactersListener,
-        RewardsFragment.onRewardsListener {
+        ChildRewardsFragment.onRewardsListener {
 
     private BottomNavigationView bottomBar;
     private MenuItem lastUsedItem; //ultimo item usato che va disattivato
@@ -174,7 +174,7 @@ public class ChildActivity extends AppCompatActivity implements
 
                 //gestisco gli eventi nella bottom bar per la navigazione
                 if(item.getItemId() == R.id.home && !isFirstTimeUsed && lastUsedItem != item) {
-                    getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new HomePageChildFragment(exercises)).commit();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new ChildHomePageFragment(exercises)).commit();
                     isFirstTimeUsed = false;
                     lastUsedItem = item;
                 }else if (item.getItemId() == R.id.characters && lastUsedItem != item) {
@@ -183,7 +183,7 @@ public class ChildActivity extends AppCompatActivity implements
                     isFirstTimeUsed = false;
                     lastUsedItem = item;
                 }else if(item.getItemId() == R.id.ranking && lastUsedItem != item) {
-                    getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new RankingFragment(rankingList)).commit();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new ChildRankingFragment(rankingList)).commit();
                     isFirstTimeUsed = false;
                     lastUsedItem = item;
                 }
@@ -202,12 +202,12 @@ public class ChildActivity extends AppCompatActivity implements
 
                     if (rewardCoins != 0) {
                         //aggiungo il fragment del riscatto premi
-                        ft.add(R.id.frameLayout, new RewardsFragment(rewardCoins, exercises)).commit();
+                        ft.add(R.id.frameLayout, new ChildRewardsFragment(rewardCoins, exercises)).commit();
                         //nascondo la bottom bar
                         hideBottomBar();
                     } else {
                         //aggiungo il fragment dell'home page del bambino/adulto
-                        ft.add(R.id.frameLayout, new HomePageChildFragment(exercises)).commit();
+                        ft.add(R.id.frameLayout, new ChildHomePageFragment(exercises)).commit();
                     }
                 }
 
@@ -217,7 +217,7 @@ public class ChildActivity extends AppCompatActivity implements
             });
         } else{
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            ft.add(R.id.frameLayout, new HomePageChildFragment(exercises)).commit();
+            ft.add(R.id.frameLayout, new ChildHomePageFragment(exercises)).commit();
         }
 
     }
@@ -241,10 +241,10 @@ public class ChildActivity extends AppCompatActivity implements
 
     public void refreshCharactersData(){
         //Aggiorno il paziente
-        FirebasePatientModel.updatePatientData(new FirebasePatientModel.OnPatientUpdateListener() {
+        PatientFirebaseModel.updatePatientData(new PatientFirebaseModel.OnPatientUpdateListener() {
             @Override
             public void onPatientUpdate(boolean result) {
-                FirebasePatientModel.getPatientCharactersUnlocked(new FirebasePatientModel.OnCharactersListener<ArrayList<String>>() {
+                PatientFirebaseModel.getPatientCharactersUnlocked(new PatientFirebaseModel.OnCharactersListener<ArrayList<String>>() {
                     @Override
                     public void onCharactersRead(ArrayList<String> newCharactersUnlocked) {
                         getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new CharactersFragment(newCharactersUnlocked)).commit();
@@ -262,10 +262,10 @@ public class ChildActivity extends AppCompatActivity implements
             @Override
             public void onExercisesCreated(TreeMap<ArrayList<Object>, ArrayList<Exercise>> newExercises) {
                 exercises = newExercises;
-                FirebasePatientModel.updatePatientData(new FirebasePatientModel.OnPatientUpdateListener() {
+                PatientFirebaseModel.updatePatientData(new PatientFirebaseModel.OnPatientUpdateListener() {
                     @Override
                     public void onPatientUpdate(boolean result) {
-                        getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new HomePageChildFragment(newExercises)).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new ChildHomePageFragment(newExercises)).commit();
                     }
                 });
             }
@@ -277,7 +277,7 @@ public class ChildActivity extends AppCompatActivity implements
         FirebaseRankingModel.getRankingList(new FirebaseRankingModel.RankingCallback() {
             @Override
             public void onSuccess(ArrayList<Ranking> rankingList) {
-                getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new RankingFragment(rankingList)).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new ChildRankingFragment(rankingList)).commit();
             }
             @Override
             public void onFailure() {}

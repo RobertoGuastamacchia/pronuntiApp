@@ -10,11 +10,11 @@ import com.google.firebase.auth.FirebaseAuth;
 import java.util.ArrayList;
 import java.util.TreeMap;
 
-import it.uniba.dib.sms2324FF2.appointments.Appointment;
-import it.uniba.dib.sms2324FF2.appointments.FirebaseAppointmentsModel;
-import it.uniba.dib.sms2324FF2.exercises.Exercise;
-import it.uniba.dib.sms2324FF2.exercises.FirebaseExerciseModel;
-import it.uniba.dib.sms2324FF2.patient.FirebasePatientModel;
+import it.uniba.dib.sms2324FF2.therapist.appointments.TherapistAppointment;
+import it.uniba.dib.sms2324FF2.therapist.appointments.TherapistFirebaseAppointmentsModel;
+import it.uniba.dib.sms2324FF2.patient.child.exercises.Exercise;
+import it.uniba.dib.sms2324FF2.patient.child.exercises.FirebaseExerciseModel;
+import it.uniba.dib.sms2324FF2.patient.PatientFirebaseModel;
 import it.uniba.dib.sms2324FF2.patient.Patient;
 import it.uniba.dib.sms2324FF2.patient.child.ranking.FirebaseRankingModel;
 import it.uniba.dib.sms2324FF2.patient.child.ranking.Ranking;
@@ -30,9 +30,9 @@ public class FirebaseAuthenticationModel {
     public interface OnAutoLoginListener {
         void onAutoLoginChildSuccess(TreeMap<ArrayList<Object>, ArrayList<Exercise>> exercises, ArrayList<Ranking> rankingList);
 
-        void onAutoLoginParentSuccess(TreeMap<ArrayList<Object>, ArrayList<Exercise>> exercises, ArrayList<Appointment> appointments);
+        void onAutoLoginParentSuccess(TreeMap<ArrayList<Object>, ArrayList<Exercise>> exercises, ArrayList<TherapistAppointment> therapistAppointments);
 
-        void onAutoLoginTherapistSuccess(ArrayList<Appointment> appointments, ArrayList<String> patients, ArrayList<String> patientsId);
+        void onAutoLoginTherapistSuccess(ArrayList<TherapistAppointment> therapistAppointments, ArrayList<String> patients, ArrayList<String> patientsId);
 
         void onAutoLoginFailure();
     }
@@ -75,7 +75,7 @@ public class FirebaseAuthenticationModel {
             public void onLoginSuccess() {
                 if(role.equals("patient")) {
                     //Creo il paziente
-                    FirebasePatientModel.createPatient(new FirebasePatientModel.OnUserCreatedListener() {
+                    PatientFirebaseModel.createPatient(new PatientFirebaseModel.OnUserCreatedListener() {
                         @Override
                         public void onUserCreated(Patient patient) {
                             //Ottengo gli esercizi dopo averli aggiornati
@@ -102,10 +102,10 @@ public class FirebaseAuthenticationModel {
                                                 });
 
                                             } else {
-                                                FirebaseAppointmentsModel.getPatientAppointments(new FirebaseAppointmentsModel.OnReadAppointmentsListener() {
+                                                TherapistFirebaseAppointmentsModel.getPatientAppointments(new TherapistFirebaseAppointmentsModel.OnReadAppointmentsListener() {
                                                     @Override
-                                                    public void onAppointmentsRead(ArrayList<Appointment> appointments) {
-                                                        listener.onAutoLoginParentSuccess(exercises, appointments);
+                                                    public void onAppointmentsRead(ArrayList<TherapistAppointment> therapistAppointments) {
+                                                        listener.onAutoLoginParentSuccess(exercises, therapistAppointments);
 
                                                     }
 
@@ -141,13 +141,13 @@ public class FirebaseAuthenticationModel {
                         }
                     });
                 } else if(role.equals("therapist")){
-                    FirebaseAppointmentsModel.getDoctorAppointments(new FirebaseAppointmentsModel.OnReadAppointmentsListener() {
+                    TherapistFirebaseAppointmentsModel.getDoctorAppointments(new TherapistFirebaseAppointmentsModel.OnReadAppointmentsListener() {
                         @Override
-                        public void onAppointmentsRead(ArrayList<Appointment> appointments) {
+                        public void onAppointmentsRead(ArrayList<TherapistAppointment> therapistAppointments) {
                             FirebaseUserModel.getPatientsListforDoctor(new FirebaseUserModel.OnPatientsListListener() {
                                 @Override
                                 public void onPatientsListRead(ArrayList<String> patients, ArrayList<String> patientsId,ArrayList<String> emailList) {
-                                    listener.onAutoLoginTherapistSuccess(appointments, patients, patientsId);
+                                    listener.onAutoLoginTherapistSuccess(therapistAppointments, patients, patientsId);
 
                                 }
 
@@ -185,7 +185,7 @@ public class FirebaseAuthenticationModel {
     }
 
     public static void addPatient(String email, OnPatientAddedListener listener){
-        FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, email)
+        FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, email.split("@")[0])
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {

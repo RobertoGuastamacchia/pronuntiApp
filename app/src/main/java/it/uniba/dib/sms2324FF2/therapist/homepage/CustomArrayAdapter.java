@@ -15,7 +15,7 @@ import it.uniba.dib.sms2324FF2.R;
 
 public class CustomArrayAdapter extends ArrayAdapter<String> {
 
-    private Typeface typeface;
+    private final Typeface typeface;
 
     public CustomArrayAdapter(@NonNull Context context, int resource, @NonNull String[] objects) {
         super(context, resource, objects);

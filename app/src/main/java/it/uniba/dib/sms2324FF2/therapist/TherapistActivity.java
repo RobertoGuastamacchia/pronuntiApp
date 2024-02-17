@@ -1,20 +1,6 @@
 package it.uniba.dib.sms2324FF2.therapist;
 
-import static android.app.PendingIntent.getActivity;
-
-import androidx.activity.result.ActivityResult;
-import androidx.activity.result.ActivityResultCallback;
-import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.core.content.res.ResourcesCompat;
-import androidx.core.view.MenuProvider;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -42,34 +28,48 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.res.ResourcesCompat;
+import androidx.core.view.MenuProvider;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.button.MaterialButton;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 import it.uniba.dib.sms2324FF2.R;
-import it.uniba.dib.sms2324FF2.appointments.Appointment;
-import it.uniba.dib.sms2324FF2.appointments.FirebaseAppointmentsModel;
 import it.uniba.dib.sms2324FF2.login.FirebaseAuthenticationModel;
 import it.uniba.dib.sms2324FF2.login.LoginActivity;
-import it.uniba.dib.sms2324FF2.therapist.patients.exercises.ImageDenominationFragment;
-import it.uniba.dib.sms2324FF2.therapist.patients.exercises.ImageDenominationHelpsFragment;
-import it.uniba.dib.sms2324FF2.therapist.patients.exercises.AddAudioToExerciseFragment;
-import it.uniba.dib.sms2324FF2.therapist.patients.exercises.MinimalPairsRecognitionFragment;
-import it.uniba.dib.sms2324FF2.user.FirebaseUserModel;
-import it.uniba.dib.sms2324FF2.therapist.patients.PatientsManagementFragment;
-import it.uniba.dib.sms2324FF2.therapist.homepage.HomePageTherapistFragment;
-import it.uniba.dib.sms2324FF2.therapist.settings.SettingsTherapist;
 import it.uniba.dib.sms2324FF2.network.NetworkError;
 import it.uniba.dib.sms2324FF2.network.NetworkUtils;
+import it.uniba.dib.sms2324FF2.therapist.appointments.TherapistAppointment;
+import it.uniba.dib.sms2324FF2.therapist.appointments.TherapistFirebaseAppointmentsModel;
+import it.uniba.dib.sms2324FF2.therapist.homepage.TherapistHomePageFragment;
+import it.uniba.dib.sms2324FF2.therapist.management_patients.TherapistPatientsManagementFragment;
+import it.uniba.dib.sms2324FF2.therapist.management_patients.exercises.AddAudioToExerciseFragment;
+import it.uniba.dib.sms2324FF2.therapist.management_patients.exercises.ImageDenominationFragment;
+import it.uniba.dib.sms2324FF2.therapist.management_patients.exercises.ImageDenominationHelpsFragment;
+import it.uniba.dib.sms2324FF2.therapist.management_patients.exercises.MinimalPairsRecognitionFragment;
+import it.uniba.dib.sms2324FF2.therapist.settings.TherapistSettings;
+import it.uniba.dib.sms2324FF2.user.FirebaseUserModel;
 import it.uniba.dib.sms2324FF2.user.User;
 import it.uniba.dib.sms2324FF2.utility.SharedViewModel;
 
 
 public class TherapistActivity extends AppCompatActivity implements
-        HomePageTherapistFragment.onHomePageListener,
-        PatientsManagementFragment.onPatientsListener,
-        SettingsTherapist.onSettingsListener,
+        TherapistHomePageFragment.onHomePageListener,
+        TherapistPatientsManagementFragment.onPatientsListener,
+        TherapistSettings.onSettingsListener,
         ImageDenominationFragment.onImageDenominationListener,
         ImageDenominationHelpsFragment.onImageDenominationListener,
         MinimalPairsRecognitionFragment.onMinimalPairsRecognition,
@@ -78,12 +78,10 @@ public class TherapistActivity extends AppCompatActivity implements
     private MenuItem lastUsedItem; //ultimo item usato che va disattivato
     private boolean isFirstTimeUsed = true; //booleana che mi serve per capire se è la prima volta che viene usata la bottom bar
     private ActivityResultLauncher<Intent> emailLauncher;
-    private ArrayList<Appointment> appointments;
+    private ArrayList<TherapistAppointment> therapistAppointments;
     private ArrayList<String> patients, patientsId;
     private NetworkUtils networkUtils;
-    private IntentFilter intentFilter;
     private BottomNavigationView bottomBar;
-    private boolean isAdded = false;
 
 
     @Override
@@ -98,7 +96,7 @@ public class TherapistActivity extends AppCompatActivity implements
         //verifico se il device è connesso ad internet utilizzando un listener
         //per catturare cambi di stato di connessione
         networkUtils = new NetworkUtils();
-        intentFilter = new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION);
+        IntentFilter intentFilter = new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION);
 
         //verifico a priori se c'è connessione o meno
         if (networkUtils.isConnected(this)) {
@@ -109,15 +107,12 @@ public class TherapistActivity extends AppCompatActivity implements
 
         //verifico se il device è connesso ad internet utilizzando un listener
         //per catturare cambi di stato di connessione
-        networkUtils.setNetworkChangeListener(new NetworkUtils.NetworkChangeListener() {
-            @Override
-            public void onNetworkChange(boolean isConnected) {
-                //verifico di che tipo di cambio di rete si tratta
-                if (isConnected) {
-                    isConnectedIsTrue();
-                } else {
-                    isConnectedIsFalse();
-                }
+        networkUtils.setNetworkChangeListener(isConnected -> {
+            //verifico di che tipo di cambio di rete si tratta
+            if (isConnected) {
+                isConnectedIsTrue();
+            } else {
+                isConnectedIsFalse();
             }
         });
 
@@ -125,31 +120,25 @@ public class TherapistActivity extends AppCompatActivity implements
         registerReceiver(networkUtils, intentFilter);
 
         // Aggiungi il listener per i cambiamenti di configurazione
-        getSupportFragmentManager().addOnBackStackChangedListener(new FragmentManager.OnBackStackChangedListener() {
-            @Override
-            public void onBackStackChanged() {
-                Configuration newConfig = getResources().getConfiguration();
-                // Esegui azioni necessarie quando cambia la configurazione
-                // Puoi passare l'evento ai tuoi fragment se necessario
-                for (Fragment fragment : getSupportFragmentManager().getFragments()) {
-                    if (fragment.isAdded()) {
-                        fragment.onConfigurationChanged(newConfig);
-                    }
+        getSupportFragmentManager().addOnBackStackChangedListener(() -> {
+            Configuration newConfig = getResources().getConfiguration();
+            // Esegui azioni necessarie quando cambia la configurazione
+            // Puoi passare l'evento ai tuoi fragment se necessario
+            for (Fragment fragment : getSupportFragmentManager().getFragments()) {
+                if (fragment.isAdded()) {
+                    fragment.onConfigurationChanged(newConfig);
                 }
             }
         });
 
-        emailLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
-                    @Override
-                    public void onActivityResult(ActivityResult result) {
-                        // L'invio dell'email è stato completato con successo
-                        // Puoi gestire le azioni post-invio qui
-                        if (dialogEmail != null)
-                            dialogEmail.dismiss();
+        emailLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
+            // L'invio dell'email è stato completato con successo
+            // Puoi gestire le azioni post-invio qui
+            if (dialogEmail != null)
+                dialogEmail.dismiss();
 
 
-                    }
-                }
+        }
         );
     }
 
@@ -164,7 +153,7 @@ public class TherapistActivity extends AppCompatActivity implements
     //caso di presenza di connessione
     private void isConnectedIsTrue() {
 
-        appointments = SharedViewModel.getInstance().getAppointments();
+        therapistAppointments = SharedViewModel.getInstance().getAppointments();
         patients = SharedViewModel.getInstance().getPatients();
         patientsId = SharedViewModel.getInstance().getPatientsId();
 
@@ -175,31 +164,28 @@ public class TherapistActivity extends AppCompatActivity implements
         bottomBar.setItemIconTintList(null);
 
         //gestione della bottom bar
-        bottomBar.setOnItemSelectedListener(new BottomNavigationView.OnItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        bottomBar.setOnItemSelectedListener(item -> {
 
-                //gestisco la navigazione con la bottom bar
-                if (item.getItemId() == R.id.home && !isFirstTimeUsed && lastUsedItem != item) {
-                    getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new HomePageTherapistFragment(true, appointments, patients, patientsId)).commit();
-                    isFirstTimeUsed = false;
-                    lastUsedItem = item;
-                } else if (item.getItemId() == R.id.patients && !isFirstTimeUsed && lastUsedItem != item) {
-                    getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new PatientsManagementFragment(true, patients, patientsId)).commit();
-                    isFirstTimeUsed = false;
-                    lastUsedItem = item;
-                } else if (item.getItemId() == R.id.settings && !isFirstTimeUsed && lastUsedItem != item) {
-                    getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new SettingsTherapist(true)).commit();
-                    isFirstTimeUsed = false;
-                    lastUsedItem = item;
-                }
-                return true;
+            //gestisco la navigazione con la bottom bar
+            if (item.getItemId() == R.id.home && !isFirstTimeUsed && lastUsedItem != item) {
+                getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new TherapistHomePageFragment(true, therapistAppointments, patients, patientsId)).commit();
+                isFirstTimeUsed = false;
+                lastUsedItem = item;
+            } else if (item.getItemId() == R.id.patients && !isFirstTimeUsed && lastUsedItem != item) {
+                getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new TherapistPatientsManagementFragment(true, patients, patientsId)).commit();
+                isFirstTimeUsed = false;
+                lastUsedItem = item;
+            } else if (item.getItemId() == R.id.settings && !isFirstTimeUsed && lastUsedItem != item) {
+                getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new TherapistSettings(true)).commit();
+                isFirstTimeUsed = false;
+                lastUsedItem = item;
             }
+            return true;
         });
 
         //aggiungo il fragment dell'home page del logopedista
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        ft.add(R.id.frameLayout, new HomePageTherapistFragment(true, appointments, patients, patientsId));
+        ft.add(R.id.frameLayout, new TherapistHomePageFragment(true, therapistAppointments, patients, patientsId));
         ft.commit();
         isFirstTimeUsed=false;
 
@@ -210,17 +196,18 @@ public class TherapistActivity extends AppCompatActivity implements
     @Override
     public void onBackPressed() {
         //disattivazione tasto back
+        super.onBackPressed();
     }
 
     @Override
     public void refreshHomePageData() {
-        FirebaseAppointmentsModel.getDoctorAppointments(new FirebaseAppointmentsModel.OnReadAppointmentsListener() {
+        TherapistFirebaseAppointmentsModel.getDoctorAppointments(new TherapistFirebaseAppointmentsModel.OnReadAppointmentsListener() {
             @Override
-            public void onAppointmentsRead(ArrayList<Appointment> appointments) {
+            public void onAppointmentsRead(ArrayList<TherapistAppointment> therapistAppointments) {
                 FirebaseUserModel.getPatientsListforDoctor(new FirebaseUserModel.OnPatientsListListener() {
                     @Override
                     public void onPatientsListRead(ArrayList<String> patients, ArrayList<String> patientsId, ArrayList<String> emailList) {
-                        getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new HomePageTherapistFragment(true, appointments, patients, patientsId)).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new TherapistHomePageFragment(true, therapistAppointments, patients, patientsId)).commit();
 
                     }
 
@@ -243,7 +230,7 @@ public class TherapistActivity extends AppCompatActivity implements
         FirebaseUserModel.getPatientsListforDoctor(new FirebaseUserModel.OnPatientsListListener() {
             @Override
             public void onPatientsListRead(ArrayList<String> patients, ArrayList<String> patientsId, ArrayList<String> emailList) {
-                getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new PatientsManagementFragment(true, patients, patientsId)).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new TherapistPatientsManagementFragment(true, patients, patientsId)).commit();
 
             }
 
@@ -271,7 +258,7 @@ public class TherapistActivity extends AppCompatActivity implements
         FirebaseUserModel.refreshUser(new FirebaseUserModel.OnRefreshListener() {
             @Override
             public void onRefreshSuccess() {
-                getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new SettingsTherapist()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new TherapistSettings()).commit();
             }
 
             @Override
@@ -307,6 +294,7 @@ public class TherapistActivity extends AppCompatActivity implements
                 menuInflater.inflate(R.menu.menu_toolbar_therapist, menu);
             }
 
+            @SuppressLint("UseCompatLoadingForDrawables")
             @Override
             public boolean onMenuItemSelected(@NonNull MenuItem menuItem) {
                 if (menuItem.getItemId() == R.id.logoutItem) {
@@ -321,40 +309,34 @@ public class TherapistActivity extends AppCompatActivity implements
                     // Blocca l'orientamento in portrait quando la finestra di dialogo è aperta
                     setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
                     dialog.setCanceledOnTouchOutside(false);
-                    dialog.getWindow().setBackgroundDrawable(getResources().getDrawable(R.drawable.dialog_rounded_corner_gray));
+                    Objects.requireNonNull(dialog.getWindow()).setBackgroundDrawable(getResources().getDrawable(R.drawable.dialog_rounded_corner_gray));
 
                     Button positiveButton = customView.findViewById(R.id.custom_positive_button);
                     Button negativeButton = customView.findViewById(R.id.custom_negative_button);
 
-                    positiveButton.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            // Azioni per il pulsante "Sì"
-                            SharedPreferences sharedPreferences = context.getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);
-                            SharedPreferences.Editor editor = sharedPreferences.edit();
-                            editor.putBoolean("isLoggedIn", false);
-                            editor.apply();
+                    positiveButton.setOnClickListener(v -> {
+                        // Azioni per il pulsante "Sì"
+                        SharedPreferences sharedPreferences = context.getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.putBoolean("isLoggedIn", false);
+                        editor.apply();
 
-                            //Effettuo il logout
-                            FirebaseAuthenticationModel.logout(User.getInstance());
-                            //Reindirizzamento
-                            Intent intent = new Intent(TherapistActivity.this, LoginActivity.class);
-                            startActivity(intent);
-                            finish();
-                            // Ripristina l'orientamento predefinito
-                            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
-                        }
+                        //Effettuo il logout
+                        FirebaseAuthenticationModel.logout(User.getInstance());
+                        //Reindirizzamento
+                        Intent intent = new Intent(TherapistActivity.this, LoginActivity.class);
+                        startActivity(intent);
+                        finish();
+                        // Ripristina l'orientamento predefinito
+                        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
                     });
 
-                    negativeButton.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            // Azioni per il pulsante "No"
-                            // Chiudi la finestra di dialogo
-                            dialog.dismiss();
-                            // Ripristina l'orientamento predefinito
-                            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
-                        }
+                    negativeButton.setOnClickListener(v -> {
+                        // Azioni per il pulsante "No"
+                        // Chiudi la finestra di dialogo
+                        dialog.dismiss();
+                        // Ripristina l'orientamento predefinito
+                        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
                     });
 
                     dialog.show();
@@ -376,7 +358,7 @@ public class TherapistActivity extends AppCompatActivity implements
                     // Blocca l'orientamento in portrait quando la finestra di dialogo è aperta
                     setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
                     dialogEmail.setCanceledOnTouchOutside(false);
-                    dialogEmail.getWindow().setBackgroundDrawable(getResources().getDrawable(R.drawable.dialog_rounded_corner_gray));
+                    Objects.requireNonNull(dialogEmail.getWindow()).setBackgroundDrawable(getResources().getDrawable(R.drawable.dialog_rounded_corner_gray));
 
                     dialogEmail.show();
 
@@ -384,13 +366,10 @@ public class TherapistActivity extends AppCompatActivity implements
                     MaterialButton send = dialogView.findViewById(R.id.send);
                     MaterialButton cancel = dialogView.findViewById(R.id.cancel);
 
-                    cancel.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            dialogEmail.dismiss();
-                            // Ripristina l'orientamento predefinito
-                            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
-                        }
+                    cancel.setOnClickListener(v -> {
+                        dialogEmail.dismiss();
+                        // Ripristina l'orientamento predefinito
+                        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
                     });
 
                     //invio nuova password
@@ -402,7 +381,7 @@ public class TherapistActivity extends AppCompatActivity implements
                             String email = emailTxtView.getText().toString();
 
                             //controllo correttezza email
-                            if (email == null || email.isEmpty()) {
+                            if (email.isEmpty()) {
                                 Toast.makeText(context, getString(R.string.emptyText), Toast.LENGTH_SHORT).show();
                                 return;
                             }

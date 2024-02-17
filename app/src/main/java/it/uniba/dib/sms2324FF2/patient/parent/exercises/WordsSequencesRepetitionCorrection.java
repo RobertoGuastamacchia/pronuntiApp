@@ -26,13 +26,13 @@ import com.google.firebase.storage.StorageReference;
 import java.io.IOException;
 
 import it.uniba.dib.sms2324FF2.R;
-import it.uniba.dib.sms2324FF2.exercises.Exercise;
-import it.uniba.dib.sms2324FF2.exercises.FirebaseExerciseModel;
+import it.uniba.dib.sms2324FF2.patient.child.exercises.Exercise;
+import it.uniba.dib.sms2324FF2.patient.child.exercises.FirebaseExerciseModel;
 import it.uniba.dib.sms2324FF2.firestore.FirestoreModel;
 import it.uniba.dib.sms2324FF2.notifications.FCMClient;
 import it.uniba.dib.sms2324FF2.notifications.FCMNotification;
 import it.uniba.dib.sms2324FF2.notifications.FCMRequest;
-import it.uniba.dib.sms2324FF2.patient.FirebasePatientModel;
+import it.uniba.dib.sms2324FF2.patient.PatientFirebaseModel;
 import it.uniba.dib.sms2324FF2.patient.Patient;
 
 public class WordsSequencesRepetitionCorrection extends Fragment {
@@ -442,7 +442,7 @@ public class WordsSequencesRepetitionCorrection extends Fragment {
 
 
     private void sendNotification(){
-        FirebasePatientModel.getChildToken(Patient.getInstance().getId(),new FirebasePatientModel.TokenListener() {
+        PatientFirebaseModel.getChildToken(Patient.getInstance().getId(),new PatientFirebaseModel.TokenListener() {
             @Override
             public void onTokenReceived(String parentToken) {
                 FCMClient fcmClient = new FCMClient();

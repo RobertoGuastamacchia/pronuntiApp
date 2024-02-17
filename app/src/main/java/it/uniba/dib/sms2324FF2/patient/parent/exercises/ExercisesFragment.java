@@ -22,8 +22,8 @@ import java.util.Map;
 import java.util.TreeMap;
 
 import it.uniba.dib.sms2324FF2.R;
-import it.uniba.dib.sms2324FF2.exercises.Exercise;
-import it.uniba.dib.sms2324FF2.exercises.FirebaseExerciseModel;
+import it.uniba.dib.sms2324FF2.patient.child.exercises.Exercise;
+import it.uniba.dib.sms2324FF2.patient.child.exercises.FirebaseExerciseModel;
 import it.uniba.dib.sms2324FF2.patient.Patient;
 
 public class ExercisesFragment extends Fragment {

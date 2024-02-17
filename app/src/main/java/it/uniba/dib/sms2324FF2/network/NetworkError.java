@@ -14,8 +14,8 @@ import java.util.ArrayList;
 import java.util.TreeMap;
 
 import it.uniba.dib.sms2324FF2.R;
-import it.uniba.dib.sms2324FF2.appointments.Appointment;
-import it.uniba.dib.sms2324FF2.exercises.Exercise;
+import it.uniba.dib.sms2324FF2.therapist.appointments.TherapistAppointment;
+import it.uniba.dib.sms2324FF2.patient.child.exercises.Exercise;
 import it.uniba.dib.sms2324FF2.login.FirebaseAuthenticationModel;
 import it.uniba.dib.sms2324FF2.patient.child.ChildActivity;
 import it.uniba.dib.sms2324FF2.login.LoginActivity;
@@ -88,18 +88,18 @@ public class NetworkError extends AppCompatActivity {
                         }
 
                         @Override
-                        public void onAutoLoginParentSuccess(TreeMap<ArrayList<Object>, ArrayList<Exercise>> exercises, ArrayList<Appointment> appointments) {
+                        public void onAutoLoginParentSuccess(TreeMap<ArrayList<Object>, ArrayList<Exercise>> exercises, ArrayList<TherapistAppointment> therapistAppointments) {
                             // Avvia l'activity del genitore
                                 if(!getIntent().hasExtra("firstAccess")) {
                                     Intent intent = new Intent(NetworkError.this, PatientActivity.class);
                                     SharedViewModel.getInstance().setExercises(exercises);
-                                    SharedViewModel.getInstance().setAppointments(appointments);
+                                    SharedViewModel.getInstance().setAppointments(therapistAppointments);
                                     startActivity(intent);
                                     finish();
                                 } else{
                                     Intent intent = new Intent(NetworkError.this, ParentActivity.class);
                                     SharedViewModel.getInstance().setExercises(exercises);
-                                    SharedViewModel.getInstance().setAppointments(appointments);
+                                    SharedViewModel.getInstance().setAppointments(therapistAppointments);
                                     startActivity(intent);
                                     finish();
                                 }
@@ -107,10 +107,10 @@ public class NetworkError extends AppCompatActivity {
                         }
 
                         @Override
-                        public void onAutoLoginTherapistSuccess(ArrayList<Appointment> appointments, ArrayList<String> patients,ArrayList<String> patientsId ) {
+                        public void onAutoLoginTherapistSuccess(ArrayList<TherapistAppointment> therapistAppointments, ArrayList<String> patients, ArrayList<String> patientsId ) {
                             // Avvia l'activity del dottore
                             Intent intent = new Intent(NetworkError.this, TherapistActivity.class);
-                            SharedViewModel.getInstance().setAppointments(appointments);
+                            SharedViewModel.getInstance().setAppointments(therapistAppointments);
                             SharedViewModel.getInstance().setPatients(patients);
                             SharedViewModel.getInstance().setPatientsId(patientsId);
                             startActivity(intent);

@@ -2,8 +2,8 @@ package it.uniba.dib.sms2324FF2.utility;
 
 import java.util.ArrayList;
 import java.util.TreeMap;
-import it.uniba.dib.sms2324FF2.appointments.Appointment;
-import it.uniba.dib.sms2324FF2.exercises.Exercise;
+import it.uniba.dib.sms2324FF2.therapist.appointments.TherapistAppointment;
+import it.uniba.dib.sms2324FF2.patient.child.exercises.Exercise;
 import it.uniba.dib.sms2324FF2.patient.child.ranking.Ranking;
 
 public class SharedViewModel {
@@ -11,7 +11,7 @@ public class SharedViewModel {
 
     private TreeMap<ArrayList<Object>, ArrayList<Exercise>> exercises;
     private ArrayList<Ranking> rankingList;
-    private ArrayList<Appointment> appointments;
+    private ArrayList<TherapistAppointment> therapistAppointments;
     private ArrayList<String> patients;
     private ArrayList<String> patientsId;
 
@@ -47,12 +47,12 @@ public class SharedViewModel {
     }
 
     // Metodi getter e setter per appointments
-    public ArrayList<Appointment> getAppointments() {
-        return appointments;
+    public ArrayList<TherapistAppointment> getAppointments() {
+        return therapistAppointments;
     }
 
-    public void setAppointments(ArrayList<Appointment> appointments) {
-        this.appointments = appointments;
+    public void setAppointments(ArrayList<TherapistAppointment> therapistAppointments) {
+        this.therapistAppointments = therapistAppointments;
     }
 
     // Metodi getter e setter per patients

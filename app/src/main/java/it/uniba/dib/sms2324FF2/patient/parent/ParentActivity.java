@@ -37,20 +37,20 @@ import java.util.ArrayList;
 import java.util.TreeMap;
 
 import it.uniba.dib.sms2324FF2.R;
-import it.uniba.dib.sms2324FF2.appointments.Appointment;
-import it.uniba.dib.sms2324FF2.exercises.Exercise;
-import it.uniba.dib.sms2324FF2.exercises.FirebaseExerciseModel;
+import it.uniba.dib.sms2324FF2.therapist.appointments.TherapistAppointment;
+import it.uniba.dib.sms2324FF2.patient.child.exercises.Exercise;
+import it.uniba.dib.sms2324FF2.patient.child.exercises.FirebaseExerciseModel;
 import it.uniba.dib.sms2324FF2.login.FirebaseAuthenticationModel;
 import it.uniba.dib.sms2324FF2.login.LoginActivity;
-import it.uniba.dib.sms2324FF2.patient.FirebasePatientModel;
+import it.uniba.dib.sms2324FF2.patient.PatientFirebaseModel;
 import it.uniba.dib.sms2324FF2.patient.Patient;
 import it.uniba.dib.sms2324FF2.patient.PatientActivity;
 import it.uniba.dib.sms2324FF2.patient.parent.exercises.ExercisesFragment;
-import it.uniba.dib.sms2324FF2.appointments.FirebaseAppointmentsModel;
+import it.uniba.dib.sms2324FF2.therapist.appointments.TherapistFirebaseAppointmentsModel;
 import it.uniba.dib.sms2324FF2.patient.parent.exercises.ImageDenominationCorrection;
 import it.uniba.dib.sms2324FF2.patient.parent.exercises.MinimalPairsRecognitionCorrection;
 import it.uniba.dib.sms2324FF2.patient.parent.exercises.WordsSequencesRepetitionCorrection;
-import it.uniba.dib.sms2324FF2.patient.parent.homepage.HomePageParentFragment;
+import it.uniba.dib.sms2324FF2.patient.parent.homepage.ParentHomePageFragment;
 import it.uniba.dib.sms2324FF2.patient.parent.settings.SettingsFragment;
 import it.uniba.dib.sms2324FF2.network.NetworkError;
 import it.uniba.dib.sms2324FF2.network.NetworkUtils;
@@ -58,14 +58,14 @@ import it.uniba.dib.sms2324FF2.utility.SharedViewModel;
 
 
 public class ParentActivity extends AppCompatActivity implements
-        HomePageParentFragment.onHomePageListener,
+        ParentHomePageFragment.onHomePageListener,
         ExercisesFragment.onExercisesListener,
         ImageDenominationCorrection.OnExerciseListener,
         WordsSequencesRepetitionCorrection.OnExerciseListener,
         MinimalPairsRecognitionCorrection.OnExerciseListener,
         SettingsFragment.onSettingsListener{
     private TreeMap<ArrayList<Object>, ArrayList<Exercise>> exercises;
-    private ArrayList<Appointment> appointments;
+    private ArrayList<TherapistAppointment> therapistAppointments;
     private BottomNavigationView bottomBar;
     MenuItem lastUsedItem; //ultimo item usato che va disattivato
     boolean isFirstTimeUsed = true; //booleana che mi serve per capire se è la prima volta che viene usata la bottom bar
@@ -79,7 +79,7 @@ public class ParentActivity extends AppCompatActivity implements
         super.onCreate(savedInstanceState);
 
         exercises = SharedViewModel.getInstance().getExercises();
-        appointments = SharedViewModel.getInstance().getAppointments();
+        therapistAppointments = SharedViewModel.getInstance().getAppointments();
 
         // Imposta la modalità a schermo intero
         requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -146,7 +146,7 @@ public class ParentActivity extends AppCompatActivity implements
 
                     //gestisco gli eventi nella bottom bar per la navigazione
                     if (item.getItemId() == R.id.home && !isFirstTimeUsed && lastUsedItem != item) {
-                        getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new HomePageParentFragment(appointments)).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new ParentHomePageFragment(therapistAppointments)).commit();
                         isFirstTimeUsed = false;
                         lastUsedItem = item;
                     } else if (item.getItemId() == R.id.exercises && lastUsedItem != item) {
@@ -169,7 +169,7 @@ public class ParentActivity extends AppCompatActivity implements
 
             //aggiungo il fragment dell'home page del bambino/adulto
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            ft.add(R.id.frameLayout, new HomePageParentFragment(appointments));
+            ft.add(R.id.frameLayout, new ParentHomePageFragment(therapistAppointments));
             ft.commit();
     }
 
@@ -188,10 +188,10 @@ public class ParentActivity extends AppCompatActivity implements
 
 
     public void refreshHomePageData() {
-        FirebaseAppointmentsModel.getPatientAppointments(new FirebaseAppointmentsModel.OnReadAppointmentsListener() {
+        TherapistFirebaseAppointmentsModel.getPatientAppointments(new TherapistFirebaseAppointmentsModel.OnReadAppointmentsListener() {
             @Override
-            public void onAppointmentsRead(ArrayList<Appointment> appointments) {
-                getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new HomePageParentFragment(appointments)).commit();
+            public void onAppointmentsRead(ArrayList<TherapistAppointment> therapistAppointments) {
+                getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new ParentHomePageFragment(therapistAppointments)).commit();
             }
             @Override
             public void onAppointmentsReadFailed() {}
@@ -210,7 +210,7 @@ public class ParentActivity extends AppCompatActivity implements
     }
 
     public void refreshSettingsData() {
-        FirebasePatientModel.refreshPatient(new FirebasePatientModel.OnRefreshListener() {
+        PatientFirebaseModel.refreshPatient(new PatientFirebaseModel.OnRefreshListener() {
             @Override
             public void onRefreshSuccess() {
                 getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new SettingsFragment()).commit();

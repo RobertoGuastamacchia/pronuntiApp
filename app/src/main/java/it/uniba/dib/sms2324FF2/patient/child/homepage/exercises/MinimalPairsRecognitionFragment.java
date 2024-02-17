@@ -25,7 +25,7 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import java.io.IOException;
 import it.uniba.dib.sms2324FF2.R;
-import it.uniba.dib.sms2324FF2.exercises.Exercise;
+import it.uniba.dib.sms2324FF2.patient.child.exercises.Exercise;
 import it.uniba.dib.sms2324FF2.firestore.FirestoreModel;
 import it.uniba.dib.sms2324FF2.patient.Patient;
 

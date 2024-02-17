@@ -1,7 +1,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/characters"
-        android:icon="@drawable/characters_image"
+        android:icon="@drawable/sign_zoo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:title="@string/titleCharacters" />

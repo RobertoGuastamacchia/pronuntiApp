@@ -28,11 +28,11 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.ArrayList;
 import java.util.TreeMap;
 
-import it.uniba.dib.sms2324FF2.appointments.Appointment;
-import it.uniba.dib.sms2324FF2.exercises.Exercise;
-import it.uniba.dib.sms2324FF2.exercises.FirebaseExerciseModel;
-import it.uniba.dib.sms2324FF2.appointments.FirebaseAppointmentsModel;
-import it.uniba.dib.sms2324FF2.patient.FirebasePatientModel;
+import it.uniba.dib.sms2324FF2.therapist.appointments.TherapistAppointment;
+import it.uniba.dib.sms2324FF2.patient.child.exercises.Exercise;
+import it.uniba.dib.sms2324FF2.patient.child.exercises.FirebaseExerciseModel;
+import it.uniba.dib.sms2324FF2.therapist.appointments.TherapistFirebaseAppointmentsModel;
+import it.uniba.dib.sms2324FF2.patient.PatientFirebaseModel;
 import it.uniba.dib.sms2324FF2.therapist.TherapistActivity;
 import it.uniba.dib.sms2324FF2.user.FirebaseUserModel;
 import it.uniba.dib.sms2324FF2.user.User;
@@ -217,11 +217,11 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                     if(role.equals(PATIENT)) {
-                        email.setText("paziente@gmail.com");
-                        password.setText("Paziente");
+                        email.setText("provaprova@gmail.com");
+                        password.setText("provaprova@gmail.com");
                     }else{
                         email.setText("logopedista@gmail.com");
-                        password.setText("Logopedista");
+                        password.setText("logopedista");
                     }
                     buttonLogin.performClick();
             }
@@ -275,7 +275,7 @@ public class LoginActivity extends AppCompatActivity {
             editor.apply();
 
             //Creo il paziente
-            FirebasePatientModel.createPatient(new FirebasePatientModel.OnUserCreatedListener() {
+            PatientFirebaseModel.createPatient(new PatientFirebaseModel.OnUserCreatedListener() {
                 @Override
                 public void onUserCreated(Patient patient) {
                     FirebaseExerciseModel.checkExercisesState(new FirebaseExerciseModel.OnExercisesStateCheckedListener() {
@@ -286,15 +286,15 @@ public class LoginActivity extends AppCompatActivity {
                                 @Override
                                 public void onExercisesCreated(TreeMap<ArrayList<Object>, ArrayList<Exercise>> exercises) {
                                     //Ottengo gli appuntamenti
-                                    FirebaseAppointmentsModel.getPatientAppointments(new FirebaseAppointmentsModel.OnReadAppointmentsListener() {
+                                    TherapistFirebaseAppointmentsModel.getPatientAppointments(new TherapistFirebaseAppointmentsModel.OnReadAppointmentsListener() {
                                         @Override
-                                        public void onAppointmentsRead(ArrayList<Appointment> appointments) {
+                                        public void onAppointmentsRead(ArrayList<TherapistAppointment> therapistAppointments) {
                                             //Nascondo la progress bar
                                             progressBar.setVisibility(View.GONE);
                                             //Creo l'intent per l'activity del paziente
                                             Intent intent = new Intent(getApplicationContext(), PatientActivity.class);
                                             SharedViewModel.getInstance().setExercises(exercises);
-                                            SharedViewModel.getInstance().setAppointments(appointments);
+                                            SharedViewModel.getInstance().setAppointments(therapistAppointments);
                                             startActivity(intent);
                                             finish();
                                         }
@@ -334,14 +334,14 @@ public class LoginActivity extends AppCompatActivity {
             editor.apply();
 
             //Creo l'intent per l'activity del logopedista
-            FirebaseAppointmentsModel.getDoctorAppointments(new FirebaseAppointmentsModel.OnReadAppointmentsListener() {
+            TherapistFirebaseAppointmentsModel.getDoctorAppointments(new TherapistFirebaseAppointmentsModel.OnReadAppointmentsListener() {
                 @Override
-                public void onAppointmentsRead(ArrayList<Appointment> appointments) {
+                public void onAppointmentsRead(ArrayList<TherapistAppointment> therapistAppointments) {
                     FirebaseUserModel.getPatientsListforDoctor(new FirebaseUserModel.OnPatientsListListener() {
                         @Override
                         public void onPatientsListRead(ArrayList<String> patients, ArrayList<String> patientsId,ArrayList<String> emailList) {
                             Intent intent = new Intent(getApplicationContext(), TherapistActivity.class);
-                            SharedViewModel.getInstance().setAppointments(appointments);
+                            SharedViewModel.getInstance().setAppointments(therapistAppointments);
                             SharedViewModel.getInstance().setPatients(patients);
                             SharedViewModel.getInstance().setPatientsId(patientsId);
                             startActivity(intent);

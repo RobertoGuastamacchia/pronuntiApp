@@ -45,7 +45,7 @@ import it.uniba.dib.sms2324FF2.R;
 import it.uniba.dib.sms2324FF2.firestore.FirestoreModel;
 import it.uniba.dib.sms2324FF2.user.FirebaseUserModel;
 import it.uniba.dib.sms2324FF2.user.User;
-import it.uniba.dib.sms2324FF2.patient.FirebasePatientModel;
+import it.uniba.dib.sms2324FF2.patient.PatientFirebaseModel;
 import it.uniba.dib.sms2324FF2.patient.Patient;
 
 
@@ -71,7 +71,7 @@ public class SettingsFragment extends Fragment {
     private MaterialButton saveTheme;
     private MaterialButton resetPassword;
     private RadioGroup themeGroup;
-    RadioButton jungle, sea, space;
+    RadioButton mountain, desert, polar;
     private String parentNameDB;
     private String childNameDB;
     SwipeRefreshLayout swipeRefreshLayout;
@@ -155,9 +155,9 @@ public class SettingsFragment extends Fragment {
             saveTheme = view.findViewById(R.id.save);
 
             themeGroup = view.findViewById(R.id.themeGroup);
-            jungle = view.findViewById(R.id.jungle);
-            sea = view.findViewById(R.id.sea);
-            space = view.findViewById(R.id.space);
+            mountain = view.findViewById(R.id.mountain);
+            desert = view.findViewById(R.id.desert);
+            polar = view.findViewById(R.id.polar);
 
 
             //prendo i dati attualmente impostati
@@ -182,14 +182,14 @@ public class SettingsFragment extends Fragment {
             oldTheme = oldTheme.replace("_personalized", "");
 
         switch (oldTheme){
-            case "jungle":
-                jungle.setTextColor(getActivity().getColor(R.color.colorAccent));
+            case "mountain":
+                mountain.setTextColor(getActivity().getColor(R.color.colorAccent));
                 break;
-            case "sea":
-                sea.setTextColor(getActivity().getColor(R.color.colorAccent));
+            case "desert":
+                desert.setTextColor(getActivity().getColor(R.color.colorAccent));
                 break;
-            case "space":
-                space.setTextColor(getActivity().getColor(R.color.colorAccent));
+            case "polar":
+                polar.setTextColor(getActivity().getColor(R.color.colorAccent));
                 break;
         }
 
@@ -293,7 +293,7 @@ public class SettingsFragment extends Fragment {
             public void onClick(View v) {
                 //è cambiato il nome del bambino, cambiare
                 if(!childNameDB.equals(childName.getText().toString())){
-                    FirebasePatientModel.changeChildUsername(childName.getText().toString(), new FirebasePatientModel.OnPatientUpdateListener() {
+                    PatientFirebaseModel.changeChildUsername(childName.getText().toString(), new PatientFirebaseModel.OnPatientUpdateListener() {
                         @Override
                         public void onPatientUpdate(boolean result) {
                             if(result) {
@@ -308,7 +308,7 @@ public class SettingsFragment extends Fragment {
                 }else{
                     //se è cambiato il nome del genitore, cambiare
                     if(!parentNameDB.equals(parentName.getText().toString())){
-                        FirebasePatientModel.changeParentUsername(parentName.getText().toString(), new FirebasePatientModel.OnPatientUpdateListener() {
+                        PatientFirebaseModel.changeParentUsername(parentName.getText().toString(), new PatientFirebaseModel.OnPatientUpdateListener() {
                             @Override
                             public void onPatientUpdate(boolean result) {
                                 if(result) {
@@ -381,13 +381,13 @@ public class SettingsFragment extends Fragment {
                 if(themeCreated && !newTheme.contains("_personalized")) {
                     switch (newTheme){
                         case "giungla":
-                            newTheme = "jungle_personalized"; //Tema da gestire con lo sfondo personalizzato
+                            newTheme = "mountain_personalized"; //Tema da gestire con lo sfondo personalizzato
                             break;
                         case "spazio":
-                            newTheme = "space_personalized"; //Tema da gestire con lo sfondo personalizzato
+                            newTheme = "polar_personalized"; //Tema da gestire con lo sfondo personalizzato
                             break;
                         case "mare":
-                            newTheme = "sea_personalized"; //Tema da gestire con lo sfondo personalizzato
+                            newTheme = "desert_personalized"; //Tema da gestire con lo sfondo personalizzato
                             break;
                         default : //se nessuna delle precedenti, è in lingua inglese, posso direttamente salvare
                                 newTheme += "_personalized";
@@ -397,18 +397,18 @@ public class SettingsFragment extends Fragment {
 
                     switch (newTheme){
                         case "giungla":
-                            newTheme = "jungle";
+                            newTheme = "mountain";
                             break;
-                        case "spazio":
-                            newTheme = "space";
+                        case "polare":
+                            newTheme = "polar";
                             break;
                         case "mare":
-                            newTheme = "sea";
+                            newTheme = "desert";
                             break;
                     }
 
                 }
-                FirebasePatientModel.updateTheme(newTheme, new FirebasePatientModel.OnPatientUpdateListener() {
+                PatientFirebaseModel.updateTheme(newTheme, new PatientFirebaseModel.OnPatientUpdateListener() {
                     @Override
                     public void onPatientUpdate(boolean result) {
                         if(result)
