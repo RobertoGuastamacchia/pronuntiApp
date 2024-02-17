@@ -641,9 +641,9 @@ public class ChildHomePageFragment extends Fragment {
                         switch (event.getAction()) {
                             case MotionEvent.ACTION_DOWN:
                                 stopPulsating();
-                                if (imageExerciseToDo != null)
+                                if (imageExerciseToDo != null) {
                                     startPulsating(imageExerciseToDo);
-
+                                }
                                 // Salva le coordinate iniziali del tocco
                                 dX = view.getX() - event.getRawX();
                                 dY = view.getY() - event.getRawY();
@@ -671,13 +671,14 @@ public class ChildHomePageFragment extends Fragment {
                                         .start();
                                 // Controlla la collisione con gli ImageButton
                                 if (imageExerciseToDo != null)
-                                    checkCollisionWithButtons(view);
+                                    checkCollisionWithButtons(view,false);
+
                                 break;
 
                             case MotionEvent.ACTION_UP:
                                 // Gestisci l'evento di rilascio qui
                                 if (imageExerciseToDo != null)
-                                    handleRelease();
+                                    checkCollisionWithButtons(view,true);
                                 break;
 
                             default:
@@ -695,7 +696,7 @@ public class ChildHomePageFragment extends Fragment {
     }
 
     // Funzione per controllare la collisione con gli ImageButton
-    private void checkCollisionWithButtons(View characterView) {
+    private void checkCollisionWithButtons(View characterView,boolean run) {
         Rect characterRect = new Rect();
         characterView.getHitRect(characterRect);
 
@@ -704,15 +705,19 @@ public class ChildHomePageFragment extends Fragment {
         imageExerciseToDo.getHitRect(buttonRect);
 
         float density = getResources().getDisplayMetrics().density;
-        int margin = (int) (100 * density); // Imposta il valore del margine
+        int margin = (int) (200 * density); // Imposta il valore del margine
         buttonRect.top += margin;
+        margin = (int) (120 * density); // Imposta il valore del margine
         buttonRect.bottom += margin;
-
+       // margin = (int) (80 * density); // Imposta il valore del margine
+        //buttonRect.right += margin;
         // Controlla la collisione
         if (Rect.intersects(characterRect, buttonRect)) {
             // Sovrapposizione tra il personaggio e il pulsante
             // Esegui l'azione desiderata
             handleCollisionWithButton(imageExerciseToDo);
+            if(run)
+                handleRelease();
         } else {
             // Non c'è collisione
             handleNonCollisionWithButton(imageExerciseToDo);
@@ -758,7 +763,6 @@ public class ChildHomePageFragment extends Fragment {
 
     private void handleRelease() {
         // Controlla se c'è una collisione con l'immagine della collisione
-        if (isCollision(principalCharacterImg, imageExerciseToDo)) {
             //riproduco suono
             MediaPlayer startExcercise = MediaPlayer.create(getActivity(), R.raw.start_excercise);
             startExcercise.start();
@@ -785,7 +789,6 @@ public class ChildHomePageFragment extends Fragment {
             }
 
             ft.commit();
-        }
     }
 
     //metodo per mostrare popup degli esercizi ancora bloccati
