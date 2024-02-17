@@ -100,7 +100,7 @@
                 android:labelFor="@+id/startAudio"
                 android:text="@string/record_audio"
                 android:textAlignment="center"
-                android:textColor="@color/blacks"
+                android:textColor="@color/black"
                 android:textSize="@dimen/playButtonLabelDimension"
                 android:textStyle="bold" />
 
