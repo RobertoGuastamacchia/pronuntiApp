@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/rankingFrameLayoutHeight"
         android:layout_gravity="center_horizontal"
-        android:background="@color/childAccent">
+        android:background="@color/primary">
 
         <TextView
             android:id="@+id/title"
@@ -76,7 +76,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:indeterminateTint="@color/childAccent"
+        android:indeterminateTint="@color/primary"
         android:visibility="visible" />
 
 </RelativeLayout>

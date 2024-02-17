@@ -230,7 +230,7 @@
             android:textSize="@dimen/text_dimen"
             android:textStyle="bold"
             android:visibility="gone"
-            app:backgroundTint="@color/childAccent"
+            app:backgroundTint="@color/primary"
             app:cornerRadius="8dp" />
 
     </LinearLayout>

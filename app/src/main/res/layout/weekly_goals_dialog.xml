@@ -82,7 +82,7 @@
                 android:layout_height="wrap_content"
                 android:max="100"
                 android:progress="0"
-                android:progressTint="@color/childAccent"/>
+                android:progressTint="@color/primary"/>
 
             <RelativeLayout
                 android:id="@+id/secondGoalRelativeLayout"
@@ -135,7 +135,7 @@
                 android:layout_height="wrap_content"
                 android:max="100"
                 android:progress="0"
-                android:progressTint="@color/childAccent"/>
+                android:progressTint="@color/primary"/>
 
             <RelativeLayout
                 android:id="@+id/thirdGoalRelativeLayout"
@@ -188,7 +188,7 @@
                 android:layout_height="wrap_content"
                 android:max="100"
                 android:progress="0"
-                android:progressTint="@color/childAccent"/>
+                android:progressTint="@color/primary"/>
 
             <RelativeLayout
                 android:id="@+id/fourthGoalRelativeLayout"
@@ -241,7 +241,7 @@
                 android:layout_height="wrap_content"
                 android:max="100"
                 android:progress="0"
-                android:progressTint="@color/childAccent"/>
+                android:progressTint="@color/primary"/>
 
             <RelativeLayout
                 android:id="@+id/fifthGoalRelativeLayout"
@@ -295,7 +295,7 @@
                 android:layout_height="wrap_content"
                 android:max="100"
                 android:progress="0"
-                android:progressTint="@color/childAccent"/>
+                android:progressTint="@color/primary"/>
 
         </LinearLayout>
     </ScrollView>
@@ -305,7 +305,7 @@
         android:id="@+id/closeButton"
         android:fontFamily="@font/quicksand_medium"
         app:cornerRadius="8dp"
-        android:backgroundTint="@color/childAccent"
+        android:backgroundTint="@color/primary"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/closeButtonWeeklyGoalsMarginTop"

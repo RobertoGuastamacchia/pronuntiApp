@@ -140,7 +140,7 @@
             android:textSize="@dimen/text_dimen"
             android:textStyle="bold"
             android:fontFamily="@font/quicksand_medium"
-            app:backgroundTint="@color/childAccent"
+            app:backgroundTint="@color/primary"
             android:layout_marginTop="@dimen/marginTopDone"
             app:cornerRadius="8dp"/>
 
