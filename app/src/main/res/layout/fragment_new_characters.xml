@@ -19,7 +19,7 @@
             android:layout_height="@dimen/treasureDimension"
             android:layout_gravity="center"
             android:background="@color/transparent"
-            android:scaleType="centerInside"
+            android:scaleType="fitCenter"
             android:src="@drawable/cage_close" />
 
         <LinearLayout
@@ -87,7 +87,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/newCharacterDescription"
-            android:fontFamily="@font/quicksand_medium"
             android:layout_marginStart="@dimen/speechBubbleMarginStartAndEnd"
             android:layout_marginEnd="@dimen/speechBubbleMarginStartAndEnd"
             android:layout_marginBottom="@dimen/speechBubbleMarginBottom"

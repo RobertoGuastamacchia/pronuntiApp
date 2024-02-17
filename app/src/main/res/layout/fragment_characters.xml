@@ -22,7 +22,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="@dimen/margin_top_title"
-            android:fontFamily="@font/quicksand_medium"
             android:text="@string/titleCharacters"
             android:textColor="@color/colorPrimary"
             android:textSize="@dimen/title_dimen"

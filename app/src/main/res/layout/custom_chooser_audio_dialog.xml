@@ -10,7 +10,6 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/quicksand_medium"
         android:gravity="center"
         android:paddingBottom="16dp"
         android:text="@string/chooseAnOption"
@@ -24,7 +23,6 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/marginTopBetweenButton"
         android:backgroundTint="@color/primary"
-        android:fontFamily="@font/quicksand_medium"
         android:text="@string/uploadAudio"
         android:textSize="@dimen/chooserTextButtonDimension"
         app:cornerRadius="8dp" />
@@ -36,7 +34,6 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/marginTopBetweenButton"
         android:backgroundTint="@color/primary"
-        android:fontFamily="@font/quicksand_medium"
         android:text="@string/registerAudio"
         android:textSize="@dimen/chooserTextButtonDimension"
         app:cornerRadius="8dp" />
@@ -47,7 +44,6 @@
         app:cornerRadius="8dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/quicksand_medium"
         android:layout_gravity="center_horizontal"
         android:backgroundTint="@color/red"
         android:textSize="@dimen/chooserTextButtonDimension"

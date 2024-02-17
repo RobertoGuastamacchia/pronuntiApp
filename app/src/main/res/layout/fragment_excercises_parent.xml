@@ -33,7 +33,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_top_title"
             android:layout_marginEnd="10dp"
-            android:fontFamily="@font/quicksand_medium"
             android:text="@string/TitleExerciseParent"
             android:textAlignment="textEnd"
             android:textColor="@color/white"

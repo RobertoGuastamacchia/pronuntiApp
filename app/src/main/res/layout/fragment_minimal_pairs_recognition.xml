@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".patient.child.homepage.exercises.WordsSequencesRepetitionFragment"
-    android:background="@color/colorBackground_primary">
+    android:background="@color/colorBackground">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -62,9 +62,8 @@
             android:textAlignment="center"
             android:ellipsize="none"
             android:singleLine="false"
-            android:fontFamily="@font/quicksand_medium"
             android:textSize="@dimen/exerciseDescriptionSize"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:text="@string/exerciseDescription2"
             android:textStyle="bold"
             android:layout_marginTop="@dimen/marginTopExerciseDescription"
@@ -95,9 +94,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:textAlignment="center"
-            android:fontFamily="@font/quicksand_medium"
             android:textSize="@dimen/playButtonLabelDimension"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textStyle="bold"
             android:labelFor="@+id/playButton"
             android:id="@+id/playButtonDescription"></TextView>
@@ -139,7 +137,6 @@
             android:visibility="gone"
             android:textSize="@dimen/text_dimen"
             android:textStyle="bold"
-            android:fontFamily="@font/quicksand_medium"
             app:backgroundTint="@color/primary"
             android:layout_marginTop="@dimen/marginTopDone"
             app:cornerRadius="8dp"/>

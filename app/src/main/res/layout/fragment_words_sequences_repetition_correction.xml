@@ -103,10 +103,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:fontFamily="@font/quicksand_medium"
             android:labelFor="@+id/playButton"
             android:textAlignment="center"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="@dimen/playButtonLabelDimension"
             android:textStyle="bold"></TextView>
 
@@ -148,7 +147,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:fontFamily="@font/quicksand_medium"
             android:labelFor="@+id/stopAudioChild"
             android:text="@string/stopButtonLabel"
             android:textAlignment="center"

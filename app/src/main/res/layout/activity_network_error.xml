@@ -26,7 +26,6 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginStart="@dimen/imageDescriptionPostExerciseMarginStartAndEnd"
             android:layout_marginEnd="@dimen/imageDescriptionPostExerciseMarginStartAndEnd"
-            android:fontFamily="@font/quicksand_medium"
             android:singleLine="false"
             android:text="@string/networErrorString"
             android:textAlignment="center"

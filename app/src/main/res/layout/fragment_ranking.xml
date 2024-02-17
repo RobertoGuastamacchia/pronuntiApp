@@ -20,7 +20,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="@dimen/margin_top_title"
-            android:fontFamily="@font/quicksand_medium"
             android:gravity="center_horizontal"
             android:text="@string/titleRanking"
             android:textAlignment="center"

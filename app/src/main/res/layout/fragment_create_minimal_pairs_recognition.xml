@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".patient.child.homepage.exercises.WordsSequencesRepetitionFragment"
-    android:background="@color/colorBackground_primary">
+    android:background="@color/colorBackground"
+    tools:context=".patient.child.homepage.exercises.WordsSequencesRepetitionFragment">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -58,18 +58,17 @@
                     android:id="@+id/title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_below="@+id/exit"
                     android:layout_centerHorizontal="true"
                     android:layout_gravity="center_horizontal"
-                    android:layout_below="@+id/exit"
-                    android:ellipsize="none"
-                    android:fontFamily="@font/quicksand_medium"
-                    android:singleLine="false"
                     android:layout_marginTop="@dimen/marginTopExerciseTitleInTherapist"
+                    android:ellipsize="none"
+                    android:singleLine="false"
                     android:text="@string/MinimalPairsRecognition"
                     android:textAlignment="center"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="@dimen/exerciseDescriptionSize"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
 
                 <ImageButton
@@ -95,22 +94,21 @@
             android:layout_height="@dimen/uploadImageTherapist"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="@dimen/imageDenominationImageTherapistMarginTop"
-            android:src="@drawable/upload_image_therapist"
             android:background="@color/transparent"
-            android:scaleType="centerCrop"/>
+            android:scaleType="centerCrop"
+            android:src="@drawable/upload_image_therapist" />
 
         <TextView
             android:id="@+id/upload_image_description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:fontFamily="@font/quicksand_medium"
             android:labelFor="@+id/startAudio"
             android:text=""
             android:textAlignment="center"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="@dimen/recordButtonLabelDimension"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
 
         <com.google.android.material.button.MaterialButton
@@ -119,7 +117,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="@dimen/marginTopDone"
-            android:fontFamily="@font/quicksand_medium"
             android:gravity="center"
             android:text="@string/continueEs"
             android:textAlignment="center"
@@ -128,13 +125,14 @@
             android:visibility="gone"
             app:backgroundTint="@color/primary"
             app:cornerRadius="8dp" />
+
         <ImageView
             android:id="@+id/imageChosen"
             android:layout_width="@dimen/image_characters_not_found"
             android:layout_height="@dimen/image_characters_not_found"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="@dimen/coinTextDimension"
-            android:visibility="invisible"/>
+            android:visibility="invisible" />
 
     </LinearLayout>
 
