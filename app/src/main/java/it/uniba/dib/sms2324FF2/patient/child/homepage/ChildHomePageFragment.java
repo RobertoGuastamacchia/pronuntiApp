@@ -697,18 +697,16 @@ public class ChildHomePageFragment extends Fragment {
 
     // Funzione per controllare la collisione con gli ImageButton
     private void checkCollisionWithButtons(View characterView,boolean run) {
-        Rect characterRect = new Rect();
-        characterView.getHitRect(characterRect);
 
-        // Loop attraverso gli ImageButton
-        Rect buttonRect = new Rect();
-        imageExerciseToDo.getHitRect(buttonRect);
+        int[] location1 = new int[2];
+        int[] location2 = new int[2];
 
-        float density = getResources().getDisplayMetrics().density;
-        int margin = (int) (200 * density); // Imposta il valore del margine
-        buttonRect.top += margin;
-        margin = (int) (120 * density); // Imposta il valore del margine
-        buttonRect.bottom += margin;
+        characterView.getLocationOnScreen(location1);
+        imageExerciseToDo.getLocationOnScreen(location2);
+
+        Rect characterRect = new Rect(location1[0], location1[1], location1[0] + characterView.getWidth(), location1[1] + characterView.getHeight());
+        Rect buttonRect = new Rect(location2[0], location2[1], location2[0] + imageExerciseToDo.getWidth(), location2[1] + imageExerciseToDo.getHeight());
+
        // margin = (int) (80 * density); // Imposta il valore del margine
         //buttonRect.right += margin;
         // Controlla la collisione
