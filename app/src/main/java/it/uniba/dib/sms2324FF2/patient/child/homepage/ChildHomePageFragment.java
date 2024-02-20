@@ -762,8 +762,8 @@ public class ChildHomePageFragment extends Fragment {
     private void handleRelease() {
         // Controlla se c'è una collisione con l'immagine della collisione
             //riproduco suono
-            MediaPlayer startExcercise = MediaPlayer.create(getActivity(), R.raw.start_exercise);
-            startExcercise.start();
+            MediaPlayer startexercise = MediaPlayer.create(getActivity(), R.raw.start_exercise);
+            startexercise.start();
 
             //nascondo la bottom bar
             mCallback.hideBottomBar();

@@ -113,7 +113,7 @@ public class SettingsFragment extends Fragment {
 
         View view;
         if(isPortrait){
-            view = inflater.inflate(R.layout.fragment_settings, container, false);
+            view = inflater.inflate(R.layout.settings_patient, container, false);
             mCallback.showBottomBar();
         }else{
             view = inflater.inflate(R.layout.landscape_layout, container, false);

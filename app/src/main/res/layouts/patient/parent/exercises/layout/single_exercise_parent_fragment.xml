@@ -33,7 +33,7 @@
                     android:textAlignment="center"
                     android:textColor="@color/black"
                     android:textSize="@dimen/appointmentAndExerciseDetails"
-                    android:textStyle="bold"></TextView>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -41,7 +41,7 @@
                     android:fontFamily="@font/bubblegum_sans"
                     android:text=" - "
                     android:textColor="@color/black"
-                    android:textStyle="bold"></TextView>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/numOfExercise"
@@ -51,7 +51,7 @@
                     android:textAlignment="center"
                     android:textColor="@color/black"
                     android:textSize="@dimen/appointmentAndExerciseDetails"
-                    android:textStyle="bold"></TextView>
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
@@ -66,9 +66,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/exerciseType"
+                    android:fontFamily="@font/bubblegum_sans"
                     android:textAlignment="center"
                     android:textSize="@dimen/appointmentAndExerciseDetails"
-                    android:textColor="@color/black"></TextView>
+                    android:textColor="@color/black" />
             </LinearLayout>
 
             <com.google.android.material.button.MaterialButton
@@ -76,12 +77,13 @@
                 android:layout_height="wrap_content"
                 app:cornerRadius="8dp"
                 android:id="@+id/correct"
+                android:fontFamily="@font/bubblegum_sans"
                 android:layout_marginTop="@dimen/marginTopCorrectButton"
                 android:textColor="@color/white"
                 android:backgroundTint="@color/primary"
                 android:text="@string/correct"
                 android:textAlignment="center"
-                android:textSize="@dimen/correctTextSize"></com.google.android.material.button.MaterialButton>
+                android:textSize="@dimen/correctTextSize" />
         </LinearLayout>
     </FrameLayout>
 

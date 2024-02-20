@@ -31,13 +31,13 @@
     <string name="homepageTitleTherapist">Welcome Therapist</string>
 
     <!--Therapist-->
-    <string name="excerciseType">Type Of Exercises:</string>
-    <string name="excerciseOne">Image naming</string>
-    <string name="excerciseTwo">Repetition of sequences of words</string>
-    <string name="excerciseThree">Recognition of minimal pairs</string>
-    <string name="createExcercise1">Create</string>
-    <string name="createExcercise2">Create</string>
-    <string name="createExcercise3">Create</string>
+    <string name="exerciseType">Type Of Exercises:</string>
+    <string name="exerciseOne">Image naming</string>
+    <string name="exerciseTwo">Repetition of sequences of words</string>
+    <string name="exerciseThree">Recognition of minimal pairs</string>
+    <string name="createexercise1">Create</string>
+    <string name="createexercise2">Create</string>
+    <string name="createexercise3">Create</string>
     <string name="logout">Logout</string>
     <string name="insert">Insert</string>
     <string name="imageButton">Image</string>
@@ -46,9 +46,9 @@
     <string name="tipThree">Tip 3:</string>
     <string name="correctAnswer">Correct Answer:</string>
     <string name="pointForCorrectAnswer">Correct Answer Score:</string>
-    <string name="addExcercise1">Add</string>
-    <string name="addExcercise2">Add</string>
-    <string name="addExcercise3">Add</string>
+    <string name="addexercise1">Add</string>
+    <string name="addexercise2">Add</string>
+    <string name="addexercise3">Add</string>
     <string name="exTwoWordOne">Word One</string>
     <string name="exTwoWordTwo">Word Two</string>
     <string name="exTwoWordThree">Word Three</string>
@@ -74,7 +74,7 @@
     <string name="chapter">Chapter</string>
     <string name="defaultAccess">Login with the default account</string>
     <string name="settings">Theme settings</string>
-    <string name="excercisesViewer">Excercises</string>
+    <string name="exercisesViewer">exercises</string>
     <string name="patientsViewer">Patients</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="logout_title">Confirm logout</string>
@@ -131,7 +131,7 @@
     <string name="wrongSection">Wrong section for this account</string>
     <string name="infoLockedExercise">Complete the previous exercises to unlock this exercise!</string>
     <string name="closePopupButton">Close</string>
-    <string name="infoWaitingForCorrection">Exercise awaiting correction...</string>
+    <string name="infoWaitingForCorrection">Exercise awaiting correction…</string>
     <string name="networErrorString">You are not connected to the Internet. Please check your connection and try again.</string>
     <string name="rewardsDescription">We found a treasure! Click to open and redeem the reward!</string>
     <string name="principalDeviceDescription">Do you want to set this device as your primary device? You will receive all notifications on this device.</string>

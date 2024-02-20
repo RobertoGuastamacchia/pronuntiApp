@@ -100,7 +100,7 @@ public class TherapistHomePageFragment extends Fragment {
 
         View view;
         if (isPortrait) {
-            view = inflater.inflate(R.layout.fragment_homepage_therapist, container, false);
+            view = inflater.inflate(R.layout.therapist_homepage_fragment, container, false);
             mCallback.showBottomBar();
         } else {
             view = inflater.inflate(R.layout.landscape_layout, container, false);

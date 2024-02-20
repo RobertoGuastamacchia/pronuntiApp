@@ -74,7 +74,7 @@ public class ExercisesFragment extends Fragment {
 
         View view;
         if(isPortrait){
-            view = inflater.inflate(R.layout.fragment_excercises_parent, container, false);
+            view = inflater.inflate(R.layout.fragment_exercises_parent, container, false);
             mCallback.showBottomBar();
         }else{
             view = inflater.inflate(R.layout.landscape_layout, container, false);

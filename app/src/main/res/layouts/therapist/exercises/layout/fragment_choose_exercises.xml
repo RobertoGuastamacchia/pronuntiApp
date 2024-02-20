@@ -15,7 +15,7 @@
         android:layout_marginTop="@dimen/closeButtonOrContinueButtonMarginTop"
         android:gravity="center"
         android:fontFamily="@font/bubblegum_sans"
-        android:text="@string/excerciseType"
+        android:text="@string/exerciseType"
         android:textColor="@color/colorPrimary"
         android:textSize="@dimen/title_dimen" />
 
@@ -54,7 +54,7 @@
                         android:layout_marginTop="@dimen/margin_text"
                         android:gravity="center"
                         android:fontFamily="@font/bubblegum_sans"
-                        android:text="@string/excerciseOne"
+                        android:text="@string/exerciseOne"
                         android:textColor="@color/colorPrimary"
                         android:textSize="@dimen/text_dimen_ranking" />
 
@@ -76,7 +76,7 @@
                         android:layout_gravity="center"
                         android:layout_marginTop="@dimen/margin_text"
                         android:backgroundTint="@color/primary"
-                        android:text="@string/createExcercise1"
+                        android:text="@string/createexercise1"
                         android:textSize="@dimen/text_dimen" />
 
                 </LinearLayout>
@@ -101,7 +101,7 @@
                         android:layout_marginTop="@dimen/margin_text"
                         android:gravity="center"
                         android:fontFamily="@font/bubblegum_sans"
-                        android:text="@string/excerciseTwo"
+                        android:text="@string/exerciseTwo"
                         android:textColor="@color/colorPrimary"
                         android:textSize="@dimen/text_dimen_ranking" />
 
@@ -123,7 +123,7 @@
                         android:layout_gravity="center"
                         android:layout_marginTop="@dimen/closeButtonOrContinueButtonMarginTop"
                         android:backgroundTint="@color/primary"
-                        android:text="@string/createExcercise2"
+                        android:text="@string/createexercise2"
                         android:textSize="@dimen/text_dimen" />
 
                 </LinearLayout>
@@ -147,7 +147,7 @@
                         android:layout_marginTop="@dimen/closeButtonOrContinueButtonMarginTop"
                         android:gravity="center"
                         android:fontFamily="@font/bubblegum_sans"
-                        android:text="@string/excerciseThree"
+                        android:text="@string/exerciseThree"
                         android:textColor="@color/colorPrimary"
                         android:textSize="@dimen/text_dimen_ranking" />
 
@@ -169,7 +169,7 @@
                         android:layout_gravity="center"
                         android:layout_marginTop="@dimen/closeButtonOrContinueButtonMarginTop"
                         android:backgroundTint="@color/primary"
-                        android:text="@string/createExcercise3"
+                        android:text="@string/createexercise3"
                         android:textSize="@dimen/text_dimen" />
                 </LinearLayout>
             </RelativeLayout>

@@ -6,7 +6,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/bubblegum_sans"
-        android:title="@string/excercisesViewer" />
+        android:title="@string/exercisesViewer" />
 
     <item
         android:id="@+id/home"

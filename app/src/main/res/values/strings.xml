@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <string name="default_notification_channel_id">default_channel_id</string>
     <string name="welcome">Benvenuto</string>
     <string name="insertYourData">Per favore inserisci i tuoi dati.</string>
@@ -31,13 +31,13 @@
     <string name="delete">Cancella</string>
 
     <!-- Terapista-->
-    <string name="excerciseType">Tipologia Esercizi:</string>
-    <string name="excerciseOne">Denominazione immagini</string>
-    <string name="excerciseTwo">Ripetizione di sequenze di parole</string>
-    <string name="excerciseThree">Riconoscimento di coppie minime</string>
-    <string name="createExcercise1">Crea</string>
-    <string name="createExcercise2">Crea</string>
-    <string name="createExcercise3">Crea</string>
+    <string name="exerciseType">Tipologia Esercizi:</string>
+    <string name="exerciseOne">Denominazione immagini</string>
+    <string name="exerciseTwo">Ripetizione di sequenze di parole</string>
+    <string name="exerciseThree">Riconoscimento di coppie minime</string>
+    <string name="createexercise1">Crea</string>
+    <string name="createexercise2">Crea</string>
+    <string name="createexercise3">Crea</string>
     <string name="logout">Esci</string>
     <string name="insert">Inserisci:</string>
     <string name="imageButton">Immagine</string>
@@ -46,9 +46,9 @@
     <string name="tipThree">Suggerimento 3:</string>
     <string name="correctAnswer">Risposta Corretta:</string>
     <string name="pointForCorrectAnswer">Punteggio Risposta Esatta:</string>
-    <string name="addExcercise1">Aggiungi</string>
-    <string name="addExcercise2">Aggiungi</string>
-    <string name="addExcercise3">Aggiungi</string>
+    <string name="addexercise1">Aggiungi</string>
+    <string name="addexercise2">Aggiungi</string>
+    <string name="addexercise3">Aggiungi</string>
     <string name="exTwoWordOne">Prima Parola:</string>
     <string name="exTwoWordTwo">Seconda Parola:</string>
     <string name="exTwoWordThree">Terza Parola:</string>
@@ -74,7 +74,7 @@
     <string name="defaultAccess">Accedi con account di default</string>
     <string name="settings">Impostazioni tema</string>
     <string name="settingsMenu">Impostazioni</string>
-    <string name="excercisesViewer">Esercizi</string>
+    <string name="exercisesViewer">Esercizi</string>
     <string name="patientsViewer">Pazienti</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="logout_title">Conferma logout</string>
@@ -131,7 +131,7 @@
     <string name="wrongSection">Sezione errata per questo account</string>
     <string name="infoLockedExercise">Completa gli esercizi precedenti per sbloccare questo esercizio!</string>
     <string name="closePopupButton">Chiudi</string>
-    <string name="infoWaitingForCorrection">Esercizio in attesa di correzione...</string>
+    <string name="infoWaitingForCorrection">Esercizio in attesa di correzione…</string>
     <string name="networErrorString">Non sei connesso a Internet. Verifica la tua connessione e riprova.</string>
     <string name="rewardsDescription">Abbiamo trovato un tesoro! Clicca per aprire e riscattare la ricompensa!</string>
     <string name="principalDeviceDescription">Desideri impostare questo dispositivo come principale? Riceverai tutte le notifiche su questo dispositivo.</string>

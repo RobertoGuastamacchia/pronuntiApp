@@ -30,6 +30,31 @@ android {
     buildFeatures {
         viewBinding true
     }
+    sourceSets {
+        main {
+            manifest.srcFile 'src/main/AndroidManifest.xml'
+            java.srcDirs = ['src/main/java', 'apt-generated']
+            res.srcDirs =
+                    [
+                            'src/main/res/layouts/therapist/patient',
+                            'src/main/res/layouts/therapist/exercises',
+                            'src/main/res/layouts/therapist/appointments',
+                            'src/main/res/layouts/therapist',
+                            'src/main/res/layouts/patient/parent/exercises',
+                            'src/main/res/layouts/patient/parent',
+                            'src/main/res/layouts/patient/child/ranking',
+                            'src/main/res/layouts/patient/child/exercises',
+                            'src/main/res/layouts/patient/child/characters',
+                            'src/main/res/layouts/patient/child',
+                            'src/main/res/layouts/patient',
+                            'src/main/res/layouts/messages/popup',
+                            'src/main/res/layouts/messages/dialog',
+                            'src/main/res/layouts/messages',
+                            'src/main/res/layouts',
+                            'src/main/res'
+                    ]
+        }
+    }
 }
 
 dependencies {
