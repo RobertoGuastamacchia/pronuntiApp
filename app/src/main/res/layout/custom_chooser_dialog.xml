@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:paddingBottom="16dp"
+        android:fontFamily="@font/bubblegum_sans"
         android:text="@string/chooseAnOption"
         android:textColor="@android:color/black"
         android:textSize="@dimen/chooserTitleDimension" />
@@ -22,6 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/marginTopBetweenButton"
+        android:fontFamily="@font/bubblegum_sans"
         android:backgroundTint="@color/primary"
         android:text="@string/gallery"
         android:textSize="@dimen/chooserTextButtonDimension"
@@ -33,6 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/marginTopBetweenButton"
+        android:fontFamily="@font/bubblegum_sans"
         android:backgroundTint="@color/primary"
         android:text="@string/camera"
         android:textSize="@dimen/chooserTextButtonDimension"
@@ -45,6 +48,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/bubblegum_sans"
         android:backgroundTint="@color/red"
         android:textSize="@dimen/chooserTextButtonDimension"
         android:text="@string/cancel" />

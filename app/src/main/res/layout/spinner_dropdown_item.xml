@@ -6,6 +6,6 @@
     android:textAlignment="center"
     android:textSize="@dimen/spinnerTextDimension"
     android:padding="8dp"
-    android:fontFamily="@font/quicksand_medium"
+    android:fontFamily="@font/bubblegum_sans"
     android:background="@color/primary"
     android:textColor="@color/white"/>

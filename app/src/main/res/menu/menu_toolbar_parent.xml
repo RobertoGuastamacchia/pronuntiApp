@@ -7,6 +7,7 @@
             android:icon="@drawable/baseline_characters_24"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/bubblegum_sans"
             android:title="@string/profileTitle"
             app:showAsAction="ifRoom"/>
 
@@ -15,6 +16,7 @@
             android:icon="@drawable/logout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/bubblegum_sans"
             android:title="@string/logout"
             app:showAsAction="ifRoom"/>
 

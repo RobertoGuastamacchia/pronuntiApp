@@ -19,7 +19,7 @@ public class CustomArrayAdapter extends ArrayAdapter<String> {
 
     public CustomArrayAdapter(@NonNull Context context, int resource, @NonNull String[] objects) {
         super(context, resource, objects);
-        typeface = ResourcesCompat.getFont(context, R.font.quicksand_medium);
+        typeface = ResourcesCompat.getFont(context, R.font.bubblegum_sans);
     }
 
     @Override

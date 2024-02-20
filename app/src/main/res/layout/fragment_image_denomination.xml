@@ -63,7 +63,7 @@
                     android:checkable="true"
                     android:clickable="true"
                     android:focusable="true"
-                    android:src="@drawable/speak_icon"></ImageView>
+                    android:src="@drawable/speak_icon" />
 
                 <ImageButton
                     android:id="@+id/refresh"
@@ -89,11 +89,12 @@
             android:layout_marginTop="@dimen/marginTopExerciseDescription"
             android:ellipsize="none"
             android:singleLine="false"
+            android:fontFamily="@font/bubblegum_sans"
             android:text="@string/exerciseDescription3"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="@dimen/exerciseDescriptionSize"
-            android:textStyle="bold"></TextView>
+            android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/image"
@@ -102,7 +103,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="@dimen/imageDenominationMarginTop"
             android:background="@color/transparent"
-            android:scaleType="centerCrop"></ImageView>
+            android:scaleType="centerCrop" />
 
         <ImageButton
             android:id="@+id/startAudio"
@@ -112,7 +113,7 @@
             android:layout_marginTop="@dimen/marginTopRecordAudioButton"
             android:background="@color/transparent"
             android:scaleType="centerInside"
-            android:src="@drawable/microphone"></ImageButton>
+            android:src="@drawable/microphone" />
 
         <TextView
             android:id="@+id/startAudioButtonDescription"
@@ -120,11 +121,12 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:labelFor="@+id/startAudio"
+            android:fontFamily="@font/bubblegum_sans"
             android:text="@string/record_audio"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="@dimen/recordButtonLabelDimension"
-            android:textStyle="bold"></TextView>
+            android:textStyle="bold" />
 
         <ImageButton
             android:id="@+id/stopAudio"
@@ -135,7 +137,7 @@
             android:background="@color/transparent"
             android:scaleType="centerInside"
             android:src="@drawable/stop_audio"
-            android:visibility="gone"></ImageButton>
+            android:visibility="gone" />
 
         <TextView
             android:id="@+id/stopAudioButtonDescription"
@@ -143,12 +145,13 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:labelFor="@+id/stopAudio"
+            android:fontFamily="@font/bubblegum_sans"
             android:text="@string/stop_audio"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="@dimen/stopButtonLabelDimension"
             android:textStyle="bold"
-            android:visibility="gone"></TextView>
+            android:visibility="gone" />
 
         <ImageButton
             android:id="@+id/listenYourAudio"
@@ -159,7 +162,7 @@
             android:background="@color/transparent"
             android:scaleType="centerInside"
             android:src="@drawable/listen_your_audio"
-            android:visibility="gone"></ImageButton>
+            android:visibility="gone" />
 
         <ImageButton
             android:id="@+id/stopYourAudio"
@@ -170,7 +173,7 @@
             android:background="@color/transparent"
             android:scaleType="centerInside"
             android:src="@drawable/stop_audio"
-            android:visibility="gone"></ImageButton>
+            android:visibility="gone" />
 
         <TextView
             android:id="@+id/audioDoneDescription"
@@ -180,12 +183,13 @@
             android:layout_marginStart="@dimen/marginStartEndOfAudioDoneDescription"
             android:layout_marginEnd="@dimen/marginStartEndOfAudioDoneDescription"
             android:labelFor="@+id/audioDone"
+            android:fontFamily="@font/bubblegum_sans"
             android:text="@string/audio_done"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="@dimen/doneLabelDimension"
             android:textStyle="bold"
-            android:visibility="gone"></TextView>
+            android:visibility="gone" />
 
         <ImageView
             android:id="@+id/sound_wave"
@@ -195,7 +199,7 @@
             android:layout_marginTop="@dimen/marginTopDoneAndSoundWave"
             android:background="@color/transparent"
             android:src="@drawable/sound_wave"
-            android:visibility="gone"></ImageView>
+            android:visibility="gone" />
 
         <ImageButton
             android:id="@+id/upload_audio"
@@ -206,7 +210,7 @@
             android:background="@color/transparent"
             android:scaleType="centerInside"
             android:src="@drawable/upload_audio"
-            android:visibility="gone"></ImageButton>
+            android:visibility="gone" />
 
         <TextView
             android:id="@+id/upload_audio_description"
@@ -214,12 +218,13 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:labelFor="@+id/upload_audio"
+            android:fontFamily="@font/bubblegum_sans"
             android:text="@string/uploadAudioDescription"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="@dimen/stopButtonLabelDimension"
             android:textStyle="bold"
-            android:visibility="gone"></TextView>
+            android:visibility="gone" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/finish"
@@ -228,6 +233,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="@dimen/marginTopDone"
             android:gravity="center"
+            android:fontFamily="@font/bubblegum_sans"
             android:text="@string/finishExercises"
             android:textAlignment="center"
             android:textSize="@dimen/text_dimen"

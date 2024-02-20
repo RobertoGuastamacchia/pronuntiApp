@@ -27,6 +27,7 @@
                 android:text="@string/settingsMenu"
                 android:textAlignment="center"
                 android:textColor="@color/white"
+                android:fontFamily="@font/bubblegum_sans"
                 android:textSize="@dimen/title_dimen"
                 android:textStyle="bold" />
 
@@ -69,6 +70,7 @@
                     android:text="@string/credentials"
                     android:textAlignment="center"
                     android:textColor="@color/black"
+                    android:fontFamily="@font/bubblegum_sans"
                     android:textSize="@dimen/settingsTitle"
                     android:textStyle="bold" />
 
@@ -96,6 +98,7 @@
                             android:gravity="start"
                             android:text="Email"
                             android:textColor="@color/black"
+                            android:fontFamily="@font/bubblegum_sans"
                             android:textSize="@dimen/settingsSize"
                             android:textStyle="bold" />
 
@@ -108,6 +111,7 @@
                             android:enabled="false"
                             android:singleLine="true"
                             android:textColor="@color/black"
+                            android:fontFamily="@font/bubblegum_sans"
                             android:textSize="@dimen/settingsSize" />
 
                     </LinearLayout>
@@ -121,6 +125,7 @@
                         android:layout_marginTop="@dimen/marginTopSaveButton"
                         android:layout_marginBottom="@dimen/marginBottomOfSendEmailButton"
                         android:backgroundTint="@color/primary"
+                        android:fontFamily="@font/bubblegum_sans"
                         android:text="@string/resetPassword"
                         android:textColor="@color/white"
                         android:textSize="18dp"
@@ -136,6 +141,7 @@
                     android:text="@string/profileTitle"
                     android:textAlignment="center"
                     android:textColor="@color/black"
+                    android:fontFamily="@font/bubblegum_sans"
                     android:textSize="@dimen/settingsTitle"
                     android:textStyle="bold" />
 
@@ -178,6 +184,7 @@
                             android:singleLine="true"
                             android:text="@string/childName"
                             android:textColor="@color/black"
+                            android:fontFamily="@font/bubblegum_sans"
                             android:textSize="@dimen/settingsSize" />
 
                         <ImageButton
@@ -223,6 +230,7 @@
                             android:singleLine="true"
                             android:text="@string/childName"
                             android:textColor="@color/black"
+                            android:fontFamily="@font/bubblegum_sans"
                             android:textSize="@dimen/settingsSize" />
 
                         <ImageButton
@@ -248,6 +256,7 @@
                         android:layout_marginTop="@dimen/marginTopSaveButton"
                         android:layout_marginBottom="@dimen/marginBottomOfSendEmailButton"
                         android:backgroundTint="@color/greenCompleted"
+                        android:fontFamily="@font/bubblegum_sans"
                         android:text="@string/save"
                         android:textColor="@color/white"
                         android:textSize="@dimen/sendEmailForPasswordRecovery"
@@ -263,6 +272,7 @@
                     android:text="@string/settings"
                     android:textAlignment="center"
                     android:textColor="@color/black"
+                    android:fontFamily="@font/bubblegum_sans"
                     android:textSize="@dimen/settingsTitle"
                     android:textStyle="bold" />
 
@@ -292,6 +302,7 @@
                             android:text="@string/theme"
                             android:textAlignment="center"
                             android:textColor="@color/black"
+                            android:fontFamily="@font/bubblegum_sans"
                             android:textSize="@dimen/settingsSize"
                             android:textStyle="bold" />
 
@@ -310,6 +321,7 @@
                                     android:id="@+id/mountain"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:fontFamily="@font/bubblegum_sans"
                                     android:text="@string/mountain"
                                     android:textColor="@color/black"
                                     android:textSize="@dimen/settingsSize"
@@ -320,6 +332,7 @@
                                     android:id="@+id/desert"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:fontFamily="@font/bubblegum_sans"
                                     android:text="@string/desert"
                                     android:textColor="@color/black"
                                     android:textSize="@dimen/settingsSize"
@@ -330,6 +343,7 @@
                                     android:id="@+id/polar"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:fontFamily="@font/bubblegum_sans"
                                     android:text="@string/polar"
                                     android:textColor="@color/black"
                                     android:textSize="@dimen/settingsSize"
@@ -351,6 +365,7 @@
                             android:layout_marginStart="80dp"
                             android:layout_marginEnd="@dimen/uploadAndSaveButtonOfThemeSectionMarginEnd"
                             android:backgroundTint="@color/primary"
+                            android:fontFamily="@font/bubblegum_sans"
                             android:text="@string/createTheme"
                             android:textColor="@color/white"
                             android:textSize="@dimen/themeButtonDimension"
@@ -363,6 +378,7 @@
                             android:layout_marginStart="80dp"
                             android:layout_marginEnd="@dimen/uploadAndSaveButtonOfThemeSectionMarginEnd"
                             android:backgroundTint="@color/greenCompleted"
+                            android:fontFamily="@font/bubblegum_sans"
                             android:text="@string/save"
                             android:textColor="@color/white"
                             android:textSize="@dimen/themeButtonDimension"

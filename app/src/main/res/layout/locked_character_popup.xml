@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginBottom="@dimen/logoutTextTitleMarginBottom"
+        android:fontFamily="@font/bubblegum_sans"
         android:text="@string/characterNotAvaibleTitle"
         android:textAlignment="center"
         android:textColor="@color/black"
@@ -26,6 +27,7 @@
         android:layout_gravity="center"
         android:textSize="@dimen/popupTextDimension"
         android:textColor="@color/colorPrimary"
+        android:fontFamily="@font/bubblegum_sans"
         android:text="@string/infoCoinCharacters"
         android:textAlignment="center"/>
 
@@ -39,6 +41,7 @@
             android:id="@+id/coin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/bubblegum_sans"
             android:textSize="@dimen/popupTextDimension"
             android:layout_gravity="center"
             android:textColor="@color/black"
@@ -59,6 +62,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/closeButtonOrContinueButtonMarginTop"
         android:elevation="10dp"
+        android:fontFamily="@font/bubblegum_sans"
         android:textSize="@dimen/closeButtonOrContinueButtonMarginTop"
         android:backgroundTint="@color/red"
         android:textAlignment="center"

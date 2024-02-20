@@ -33,7 +33,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginStart="@dimen/patientInTheListMarginStart"
                 android:layout_marginEnd="8dp"
-                android:fontFamily="@font/quicksand_medium"
+                android:fontFamily="@font/bubblegum_sans"
                 android:textColor="@color/black"
                 android:textSize="@dimen/patientNameInTheListSize"
                 android:textStyle="bold" />
@@ -53,7 +53,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginEnd="@dimen/patientInTheListMarginStart"
                     android:backgroundTint="@color/primary"
-                    android:fontFamily="@font/quicksand_medium"
+                    android:fontFamily="@font/bubblegum_sans"
                     android:text="@string/addExercise"
                     android:textAlignment="center"
                     android:textColor="@color/white"

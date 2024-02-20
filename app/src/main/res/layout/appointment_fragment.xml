@@ -45,7 +45,7 @@
                     android:textStyle="bold"
                     android:textAlignment="center"
                     android:textSize="@dimen/appointmentAndExerciseDetails"
-                    android:fontFamily="@font/quicksand_medium"
+                    android:fontFamily="@font/bubblegum_sans"
                     android:textColor="@color/black"/>
             </LinearLayout>
 

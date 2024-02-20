@@ -11,6 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAlignment="center"
+        android:fontFamily="@font/bubblegum_sans"
         android:text="@string/appointmentDeleteTitle"
         android:textSize="@dimen/popupTextDimension"
         android:textStyle="bold"
@@ -23,6 +24,7 @@
         android:layout_width="wrap_content"
         android:textAlignment="center"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/bubblegum_sans"
         android:text="@string/appointmentDeleteDescription"
         android:textSize="@dimen/popupTextDimension"
         android:textColor="@color/black"
@@ -44,6 +46,7 @@
             android:layout_weight="1"
             android:textSize="@dimen/closeButtonOrContinueButtonMarginTop"
             android:text="@string/yes"
+            android:fontFamily="@font/bubblegum_sans"
             android:layout_marginEnd="@dimen/logoutButtonDimension"/>
 
         <com.google.android.material.button.MaterialButton
@@ -54,6 +57,7 @@
             android:backgroundTint="@color/red"
             android:layout_height="wrap_content"
             android:textSize="@dimen/closeButtonOrContinueButtonMarginTop"
+            android:fontFamily="@font/bubblegum_sans"
             android:layout_weight="1"
             android:text="No" />
     </LinearLayout>

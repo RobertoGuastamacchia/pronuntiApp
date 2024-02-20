@@ -144,21 +144,21 @@
     <string name="weeklyGoals">Incarichi settimanali</string>
 
     <!--Frasi motivazionali per il bambino-->
-    <string name="birthday_description">Sei un vero campione! Continua così!</string>
-    <string name="computer_description">Sto cercando su internet se esiste un bambino migliore di te… non credo proprio!</string>
-    <string name="cooker_description">Sei stato così bravo che adesso cucino il tuo piatto preferito!</string>
-    <string name="exercise_description">Bravissimo! Continuiamo ad allenarci insieme!</string>
-    <string name="guitar_player_description">Con ogni esercizio, diventi più forte. Non mollare mai!</string>
-    <string name="happy_description">Sei più forte di quanto pensi!</string>
-    <string name="hello_description">Ciao! Sono tornato per dirti che sei fantastico!</string>
-    <string name="kiss_description">Sono veramente fiero di te!</string>
-    <string name="love_description">Mi fai emozionare!</string>
-    <string name="music_description">Sto ballando perchè sono felice che tu stia lavorando!</string>
-    <string name="phone_call_description">Sto ordinando una pizza per te, sei stato fantastico!</string>
-    <string name="reading_description">Mhh… vedo che stai lavorando veramente molto bene!</string>
-    <string name="scared_description">Wow! Sei veramente eccezionale!</string>
-    <string name="surprised_description">Wow! Sei unico!</string>
-    <string name="thinking_description">Chissà se esiste qualcuno migliore di te… non credo proprio!</string>
+    <string name="confused_description">Sono ipnotizzato dalla tua bravura!</string>
+    <string name="crown_description">Come un vero re, hai conquistato il tuo successo!</string>
+    <string name="drums_description">Con ogni successo, aggiungi un nuovo battito al ritmo della tua crescita!</string>
+    <string name="explorer_description">Bravo piccolo esploratore! Hai dimostrato che con impegno e dedizione si possono raggiungere grandi traguardi.</string>
+    <string name="firefighter_description">Il tuo successo è come un fuoco ardente, impossibile da spegnere!</string>
+    <string name="glasses_description">Vederti studiare è davvero fantastico!</string>
+    <string name="hello_description">Un caloroso saluto al campione di oggi! Il tuo successo è meraviglioso!</string>
+    <string name="hiding_description">La tua bravura mi manda tra le nuvole!</string>
+    <string name="no_word_description">Il tuo successo è così grande che anche le parole non riescono a descriverlo!</string>
+    <string name="love_description">La tua bravura è come un incantesimo che affascina e conquista tutti intorno a te!</string>
+    <string name="party_description">Hai dimostrato di essere un vero leader. Continua a brillare! </string>
+    <string name="singing_description">«Sii audace, piccolo guerrierooooooo!»</string>
+    <string name="sleeping_description">Ho perso il conto dei tuoi successi… zzz…</string>
+    <string name="surprised_description">Oh mio dio! Ce l\'hai fatta davvero?!</string>
+    <string name="wink_description">Un occhiolino di successo! Continua a brillare e a sorridere, il mondo è tuo!</string>
 
 
     <string name="helpWindowDialogTitle">Aiuto #</string>
@@ -308,4 +308,5 @@
     <string name="certification">-Titolo di studio</string>
     <string name="un_nuovo_appuntamento_stato_fissato">Un nuovo appuntamento è stato fissato!</string>
     <string name="un_appuntamento_stato_annullato">Un appuntamento è stato annullato!</string>
+    <string name="default_profile">Profilo Default</string>
 </resources>

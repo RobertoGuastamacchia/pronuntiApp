@@ -28,6 +28,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/bubblegum_sans"
             android:text="PronuntiApp"
             android:textColor="@color/white"
             android:textSize="40dp"
@@ -67,6 +68,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/bubblegum_sans"
                 android:text="@string/welcome"
                 android:textColor="@color/black"
                 android:textSize="32sp"
@@ -77,6 +79,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/bubblegum_sans"
                 android:text="@string/insertYourData"
                 android:textColor="@color/black" />
 
@@ -101,6 +104,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:elevation="10dp"
+                        android:fontFamily="@font/bubblegum_sans"
                         android:text="@string/loginDoctor"
                         android:backgroundTint="@color/primary"
                         android:textColor="@android:color/white"
@@ -112,6 +116,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:elevation="10dp"
+                        android:fontFamily="@font/bubblegum_sans"
                         android:text="@string/loginPatient"
                         android:backgroundTint="@color/primary"
                         android:textColor="@android:color/white"
@@ -137,6 +142,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/bubblegum_sans"
                 android:text="@string/email"
                 android:textStyle="bold" />
 
@@ -144,6 +150,7 @@
                 android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/bubblegum_sans"
                 android:inputType="textEmailAddress" />
 
             <View
@@ -153,6 +160,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/bubblegum_sans"
                 android:text="Password"
                 android:textStyle="bold" />
 
@@ -160,6 +168,7 @@
                 android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/bubblegum_sans"
                 android:inputType="textPassword" />
 
             <View
@@ -170,6 +179,7 @@
                 android:id="@+id/loginBtn"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
+                android:fontFamily="@font/bubblegum_sans"
                 android:text="Login"
                 android:backgroundTint="@color/primary"
                 android:textSize="30dp"
@@ -188,8 +198,9 @@
                 android:textStyle="bold"
                 android:backgroundTint="@color/primary"
                 android:layout_marginVertical="@dimen/margin_top_title"
-                android:text="Profilo Default"
-                android:textSize="20dp"></com.google.android.material.button.MaterialButton>
+                android:fontFamily="@font/bubblegum_sans"
+                android:text="@string/default_profile"
+                android:textSize="20dp" />
 
         </LinearLayout>
         <ProgressBar

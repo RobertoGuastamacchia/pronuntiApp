@@ -39,19 +39,19 @@
     <style name="MyDatePicker" parent="android:Widget.DatePicker">
         <item name="android:textColorPrimary">@android:color/white</item>
         <item name="android:textColorSecondary">@android:color/white</item>
-        <item name="android:fontFamily">@font/quicksand_medium</item>
+        <item name="android:fontFamily">@font/bubblegum_sans</item>
     </style>
 
     <style name="MyTimePicker" parent="android:Widget.Material.TimePicker">
         <item name="android:textColorPrimary">@android:color/white</item>
         <item name="android:textColorSecondary">@android:color/white</item>
-        <item name="android:fontFamily">@font/quicksand_medium</item>
+        <item name="android:fontFamily">@font/bubblegum_sans</item>
     </style>
 
     <!-- Stile del testo per gli elementi non selezionati -->
     <style name="BottomNavigationTextInactive">
         <item name="android:textSize">@dimen/textBottomNavNotChecked</item>
-        <item name="android:fontFamily">@font/quicksand_medium</item>
+        <item name="android:fontFamily">@font/bubblegum_sans</item>
     </style>
 
     <!-- Stile del testo per gli elementi selezionati -->

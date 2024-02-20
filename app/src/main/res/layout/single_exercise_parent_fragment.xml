@@ -29,7 +29,7 @@
                     android:id="@+id/chapter"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/quicksand_medium"
+                    android:fontFamily="@font/bubblegum_sans"
                     android:textAlignment="center"
                     android:textColor="@color/black"
                     android:textSize="@dimen/appointmentAndExerciseDetails"
@@ -38,7 +38,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/quicksand_medium"
+                    android:fontFamily="@font/bubblegum_sans"
                     android:text=" - "
                     android:textColor="@color/black"
                     android:textStyle="bold"></TextView>
@@ -47,7 +47,7 @@
                     android:id="@+id/numOfExercise"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/quicksand_medium"
+                    android:fontFamily="@font/bubblegum_sans"
                     android:textAlignment="center"
                     android:textColor="@color/black"
                     android:textSize="@dimen/appointmentAndExerciseDetails"

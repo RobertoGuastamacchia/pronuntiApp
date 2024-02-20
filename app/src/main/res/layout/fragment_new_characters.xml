@@ -41,7 +41,7 @@
                 android:text="@string/newCharacterTitle"
                 android:textSize="@dimen/newCharacterTitleSize"
                 android:textColor="@color/white"
-                android:fontFamily="@font/quicksand_medium"></TextView>
+                android:fontFamily="@font/bubblegum_sans"></TextView>
 
             <ImageView
             android:layout_width="@dimen/treasureDimension"
@@ -64,7 +64,7 @@
                 android:textStyle="bold"
                 android:textSize="@dimen/newCharacterNameSize"
                 android:textColor="@color/white"
-                android:fontFamily="@font/quicksand_medium"></TextView>
+                android:fontFamily="@font/bubblegum_sans"></TextView>
 
             <com.google.android.material.button.MaterialButton
                 android:layout_width="wrap_content"
@@ -74,7 +74,7 @@
                 app:cornerRadius="8dp"
                 android:layout_gravity="center_horizontal"
                 android:text="@string/closePopupButton"
-                android:fontFamily="@font/quicksand_medium"
+                android:fontFamily="@font/bubblegum_sans"
                 android:id="@+id/closeButton"
                 android:visibility="gone"
                 android:textStyle="bold"

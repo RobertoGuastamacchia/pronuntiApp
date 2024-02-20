@@ -8,6 +8,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:showAsAction="ifRoom"
+        android:fontFamily="@font/bubblegum_sans"
         android:title="@string/profileTitle" />
 
     <item
@@ -16,6 +17,7 @@
         app:showAsAction="ifRoom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/bubblegum_sans"
         android:title="@string/logout" />
 
 </menu>

@@ -238,8 +238,8 @@ public class ParentActivity extends AppCompatActivity implements
         customTitle.setText(toolbar.getTitle());
         customTitle.setTextColor(getColor(R.color.white));
         customTitle.setTextSize(TypedValue.COMPLEX_UNIT_PX, getResources().getDimension(R.dimen.text_dimen));  // Imposta la dimensione del testo in sp
-        Typeface quicksandMediumTypeface = ResourcesCompat.getFont(context, R.font.quicksand_medium); //imposta il font
-        customTitle.setTypeface(quicksandMediumTypeface, Typeface.BOLD);
+        Typeface bubblegumSansTypeface = ResourcesCompat.getFont(context, R.font.bubblegum_sans); //imposta il font
+        customTitle.setTypeface(bubblegumSansTypeface, Typeface.BOLD);
         toolbar.setTitle(null);
         toolbar.addView(customTitle, new Toolbar.LayoutParams(Gravity.START));
 

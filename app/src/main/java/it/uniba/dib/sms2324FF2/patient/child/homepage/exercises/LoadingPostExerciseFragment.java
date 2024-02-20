@@ -118,64 +118,64 @@ public class LoadingPostExerciseFragment extends Fragment {
 
             switch (randomNumber) {
                 case 1:
-                    img.setImageResource(R.drawable.happy);
-                    txt.setText(R.string.happy_description);
+                    img.setImageResource(R.drawable.crown);
+                    txt.setText(R.string.crown_description);
                     break;
                 case 2:
-                    img.setImageResource(R.drawable.reading);
-                    txt.setText(R.string.reading_description);
+                    img.setImageResource(R.drawable.glasses);
+                    txt.setText(R.string.glasses_description);
                     break;
                 case 3:
-                    img.setImageResource(R.drawable.guitar_player);
-                    txt.setText(R.string.guitar_player_description);
+                    img.setImageResource(R.drawable.drums);
+                    txt.setText(R.string.drums_description);
                     break;
                 case 4:
                     img.setImageResource(R.drawable.love);
                     txt.setText(R.string.love_description);
                     break;
                 case 5:
-                    img.setImageResource(R.drawable.scared);
-                    txt.setText(R.string.scared_description);
+                    img.setImageResource(R.drawable.confused);
+                    txt.setText(R.string.confused_description);
                     break;
                 case 6:
-                    img.setImageResource(R.drawable.computer);
-                    txt.setText(R.string.computer_description);
+                    img.setImageResource(R.drawable.firefighter);
+                    txt.setText(R.string.firefighter_description);
                     break;
                 case 7:
                     img.setImageResource(R.drawable.surprised);
                     txt.setText(R.string.surprised_description);
                     break;
                 case 8:
-                    img.setImageResource(R.drawable.music);
-                    txt.setText(R.string.music_description);
+                    img.setImageResource(R.drawable.singing);
+                    txt.setText(R.string.singing_description);
                     break;
                 case 9:
-                    img.setImageResource(R.drawable.phone_call);
-                    txt.setText(R.string.phone_call_description);
+                    img.setImageResource(R.drawable.hiding);
+                    txt.setText(R.string.hiding_description);
                     break;
                 case 10:
-                    img.setImageResource(R.drawable.kiss);
-                    txt.setText(R.string.kiss_description);
+                    img.setImageResource(R.drawable.no_word);
+                    txt.setText(R.string.no_word_description);
                     break;
                 case 11:
-                    img.setImageResource(R.drawable.thinking);
-                    txt.setText(R.string.thinking_description);
+                    img.setImageResource(R.drawable.sleeping);
+                    txt.setText(R.string.sleeping_description);
                     break;
                 case 12:
-                    img.setImageResource(R.drawable.cooker);
-                    txt.setText(R.string.cooker_description);
+                    img.setImageResource(R.drawable.party);
+                    txt.setText(R.string.party_description);
                     break;
                 case 13:
-                    img.setImageResource(R.drawable.birthday);
-                    txt.setText(R.string.birthday_description);
+                    img.setImageResource(R.drawable.wink);
+                    txt.setText(R.string.wink_description);
                     break;
                 case 14:
                     img.setImageResource(R.drawable.hello);
                     txt.setText(R.string.hello_description);
                     break;
                 case 15:
-                    img.setImageResource(R.drawable.exercise);
-                    txt.setText(R.string.exercise_description);
+                    img.setImageResource(R.drawable.explorer);
+                    txt.setText(R.string.explorer_description);
                     break;
 
             }

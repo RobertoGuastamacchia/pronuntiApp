@@ -48,7 +48,7 @@
                 android:textStyle="bold"
                 android:textSize="@dimen/coinDimension"
                 android:textColor="@color/white"
-                android:fontFamily="@font/quicksand_medium"></TextView>
+                android:fontFamily="@font/bubblegum_sans"></TextView>
 
             <ImageView
                 android:layout_width="@dimen/coinTextDimension"
@@ -90,7 +90,7 @@
             android:layout_width="@dimen/charactersRewardsFragmentDimension"
             android:layout_height="@dimen/charactersRewardsFragmentDimension"
             android:id="@+id/characters"
-            android:src="@drawable/pirate"
+            android:src="@drawable/shiny"
             android:layout_marginStart="@dimen/charactersMarginStart"
             android:layout_gravity="bottom|start" />
     </LinearLayout>

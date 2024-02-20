@@ -17,7 +17,7 @@
             android:layout_width="@dimen/imagePostExerciseDimension"
             android:layout_height="@dimen/imagePostExerciseDimension"
             android:layout_gravity="center_horizontal"
-            android:src="@drawable/network_error_icon"></ImageView>
+            android:src="@drawable/network_error_icon" />
 
         <TextView
             android:id="@+id/imageDescription"
@@ -27,10 +27,11 @@
             android:layout_marginStart="@dimen/imageDescriptionPostExerciseMarginStartAndEnd"
             android:layout_marginEnd="@dimen/imageDescriptionPostExerciseMarginStartAndEnd"
             android:singleLine="false"
+            android:fontFamily="@font/bubblegum_sans"
             android:text="@string/networErrorString"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="@dimen/imageDescriptionPostExercise"></TextView>
+            android:textSize="@dimen/imageDescriptionPostExercise" />
 
     </LinearLayout>
 

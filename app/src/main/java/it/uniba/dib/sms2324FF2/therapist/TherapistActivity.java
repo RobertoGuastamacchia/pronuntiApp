@@ -28,8 +28,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.activity.result.ActivityResult;
-import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
@@ -38,7 +36,6 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.res.ResourcesCompat;
 import androidx.core.view.MenuProvider;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -188,9 +185,6 @@ public class TherapistActivity extends AppCompatActivity implements
         ft.add(R.id.frameLayout, new TherapistHomePageFragment(true, therapistAppointments, patients, patientsId));
         ft.commit();
         isFirstTimeUsed=false;
-
-
-
     }
 
     @Override
@@ -282,8 +276,8 @@ public class TherapistActivity extends AppCompatActivity implements
         customTitle.setText(toolbar.getTitle());
         customTitle.setTextColor(getColor(R.color.white));
         customTitle.setTextSize(TypedValue.COMPLEX_UNIT_PX, getResources().getDimension(R.dimen.text_dimen));  // Imposta la dimensione del testo in sp
-        Typeface quicksandMediumTypeface = ResourcesCompat.getFont(getApplicationContext(), R.font.quicksand_medium); //imposta il font
-        customTitle.setTypeface(quicksandMediumTypeface, Typeface.BOLD);
+        Typeface bubblegumSansTypeface = ResourcesCompat.getFont(getApplicationContext(), R.font.bubblegum_sans); // Imposta il font
+        customTitle.setTypeface(bubblegumSansTypeface, Typeface.BOLD);
         toolbar.setTitle(null);
         toolbar.addView(customTitle, new Toolbar.LayoutParams(Gravity.START));
         addMenuProvider(new MenuProvider() {
@@ -386,9 +380,7 @@ public class TherapistActivity extends AppCompatActivity implements
                                 return;
                             }
 
-                            //TODO per Giuseppe : inviare email
                             sendEmails(email, context);
-
 
                             // Ripristina l'orientamento predefinito
                             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);

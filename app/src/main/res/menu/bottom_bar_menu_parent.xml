@@ -5,6 +5,7 @@
         android:icon="@drawable/exercises_menu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/bubblegum_sans"
         android:title="@string/excercisesViewer" />
 
     <item
@@ -12,6 +13,7 @@
         android:icon="@drawable/home_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/bubblegum_sans"
         android:title="@string/titleHome" />
 
     <item
@@ -19,5 +21,6 @@
         android:icon="@drawable/settings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/bubblegum_sans"
         android:title="@string/settingsMenu" />
 </menu>

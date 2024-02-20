@@ -83,11 +83,12 @@
             android:layout_marginTop="@dimen/marginTopExerciseDescription"
             android:ellipsize="none"
             android:singleLine="false"
+            android:fontFamily="@font/bubblegum_sans"
             android:text="@string/WordsSequenceRepetition"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="@dimen/exerciseDescriptionSize"
-            android:textStyle="bold"></TextView>
+            android:textStyle="bold" />
 
         <ImageButton
             android:id="@+id/playButton"
@@ -96,7 +97,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="@dimen/marginTopPlayAudioButton"
             android:background="@color/transparent"
-            android:scaleType="centerInside"></ImageButton>
+            android:scaleType="centerInside" />
 
         <TextView
             android:id="@+id/playButtonDescription"
@@ -104,10 +105,11 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:labelFor="@+id/playButton"
+            android:fontFamily="@font/bubblegum_sans"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="@dimen/playButtonLabelDimension"
-            android:textStyle="bold"></TextView>
+            android:textStyle="bold" />
 
         <ImageButton
             android:id="@+id/startAudioChild"
@@ -117,7 +119,7 @@
             android:layout_marginTop="@dimen/marginTopRecordAudioButton"
             android:background="@color/transparent"
             android:scaleType="centerInside"
-            android:src="@drawable/play_button"></ImageButton>
+            android:src="@drawable/play_button" />
 
         <TextView
             android:id="@+id/startAudioChildDescription"
@@ -125,11 +127,12 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:labelFor="@+id/startAudioChild"
+            android:fontFamily="@font/bubblegum_sans"
             android:text="@string/playButtonLabelAnswer"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="@dimen/recordButtonLabelDimension"
-            android:textStyle="bold"></TextView>
+            android:textStyle="bold" />
 
         <ImageButton
             android:id="@+id/stopAudioChild"
@@ -140,7 +143,7 @@
             android:background="@color/transparent"
             android:scaleType="centerInside"
             android:src="@drawable/stop_audio"
-            android:visibility="gone"></ImageButton>
+            android:visibility="gone" />
 
         <TextView
             android:id="@+id/stopAudioChildDescription"
@@ -148,12 +151,13 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:labelFor="@+id/stopAudioChild"
+            android:fontFamily="@font/bubblegum_sans"
             android:text="@string/stopButtonLabel"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="@dimen/stopButtonLabelDimension"
             android:textStyle="bold"
-            android:visibility="gone"></TextView>
+            android:visibility="gone" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -169,6 +173,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginRight="@dimen/marginBetweenCorrectWrongButton"
                 android:gravity="center"
+                android:fontFamily="@font/bubblegum_sans"
                 android:text="@string/right"
                 android:textAlignment="center"
                 android:textSize="@dimen/text_dimen"
@@ -183,6 +188,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginLeft="@dimen/marginBetweenCorrectWrongButton"
                 android:gravity="center"
+                android:fontFamily="@font/bubblegum_sans"
                 android:text="@string/wrong"
                 android:textAlignment="center"
                 android:textSize="@dimen/text_dimen"

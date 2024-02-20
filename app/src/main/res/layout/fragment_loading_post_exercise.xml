@@ -16,20 +16,20 @@
             android:id="@+id/image"
             android:layout_width="@dimen/imagePostExerciseDimension"
             android:layout_height="@dimen/imagePostExerciseDimension"
-            android:layout_gravity="center_horizontal"></ImageView>
+            android:layout_gravity="center_horizontal" />
 
         <TextView
             android:id="@+id/imageDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/bubblegum_sans"
             android:layout_marginStart="@dimen/imageDescriptionPostExerciseMarginStartAndEnd"
             android:layout_marginEnd="@dimen/imageDescriptionPostExerciseMarginStartAndEnd"
             android:singleLine="false"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="@dimen/imageDescriptionPostExercise"></TextView>
-
+            android:textSize="@dimen/imageDescriptionPostExercise" />
 
     </LinearLayout>
 

@@ -14,6 +14,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="@dimen/closeButtonOrContinueButtonMarginTop"
         android:gravity="center"
+        android:fontFamily="@font/bubblegum_sans"
         android:text="@string/excerciseType"
         android:textColor="@color/colorPrimary"
         android:textSize="@dimen/title_dimen" />
@@ -52,6 +53,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/margin_text"
                         android:gravity="center"
+                        android:fontFamily="@font/bubblegum_sans"
                         android:text="@string/excerciseOne"
                         android:textColor="@color/colorPrimary"
                         android:textSize="@dimen/text_dimen_ranking" />
@@ -61,6 +63,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/margin_image"
+                        android:fontFamily="@font/bubblegum_sans"
                         android:text="@string/descriptionImage"
                         android:textAlignment="center"
                         android:textColor="@color/colorPrimary"
@@ -97,6 +100,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/margin_text"
                         android:gravity="center"
+                        android:fontFamily="@font/bubblegum_sans"
                         android:text="@string/excerciseTwo"
                         android:textColor="@color/colorPrimary"
                         android:textSize="@dimen/text_dimen_ranking" />
@@ -106,6 +110,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/margin_image"
+                        android:fontFamily="@font/bubblegum_sans"
                         android:text="@string/descriptionWordsInSequence"
                         android:textAlignment="center"
                         android:textColor="@color/colorPrimary"
@@ -141,6 +146,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/closeButtonOrContinueButtonMarginTop"
                         android:gravity="center"
+                        android:fontFamily="@font/bubblegum_sans"
                         android:text="@string/excerciseThree"
                         android:textColor="@color/colorPrimary"
                         android:textSize="@dimen/text_dimen_ranking" />
@@ -150,6 +156,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/margin_image"
+                        android:fontFamily="@font/bubblegum_sans"
                         android:text="@string/descriptionMinimalPairs"
                         android:textAlignment="center"
                         android:textColor="@color/colorPrimary"

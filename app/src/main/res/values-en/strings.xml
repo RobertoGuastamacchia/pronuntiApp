@@ -145,21 +145,21 @@
 
 
     <!-- Frasi motivazionali per il bambino -->
-    <string name="birthday_description">You are a true champion! Keep it up!</string>
-    <string name="computer_description">I\'m looking on the internet to see if there is a better child than you... I don\'t think so!</string>
-    <string name="cooker_description">You were so good that now I\'m cooking your favorite dish!</string>
-    <string name="exercise_description">Excellent! Let\'s keep training together!</string>
-    <string name="guitar_player_description">With each exercise, you get stronger. Never give up!</string>
-    <string name="happy_description">You are stronger than you think!</string>
-    <string name="hello_description">HI! I\'m back to tell you that you are amazing!</string>
-    <string name="kiss_description">I\'m really proud of you!</string>
-    <string name="love_description">You make me emotional!</string>
-    <string name="music_description">I\'m dancing because I\'m happy you\'re working!</string>
-    <string name="phone_call_description">I\'m ordering a pizza for you, you were amazing!</string>
-    <string name="reading_description">Mhh...I see you\'re working really well!</string>
-    <string name="scared_description">Wow! You are truly exceptional!</string>
-    <string name="surprised_description">Wow! You are unique!</string>
-    <string name="thinking_description">Who knows if there is anyone better than you… I don\'t think so!</string>
+    <string name="confused_description">I\'m mesmerized by your skill!</string>
+    <string name="crown_description">Like a true king, you\'ve conquered your success!</string>
+    <string name="drums_description">With every success, add a new beat to the rhythm of your growth!</string>
+    <string name="explorer_description">Well done little explorer! You\'ve shown that with effort and dedication, great achievements can be reached.</string>
+    <string name="firefighter_description">Your success is like a blazing fire, impossible to extinguish!</string>
+    <string name="glasses_description">Watching you study is truly fantastic!</string>
+    <string name="hello_description">A warm greeting to today\'s champion! Your success is marvelous!</string>
+    <string name="hiding_description">Your bravery sends me soaring!</string>
+    <string name="no_word_description">Your success is so great that even words fail to describe it!</string>
+    <string name="love_description">Your bravery is like a captivating spell that enchants and conquers all around you!</string>
+    <string name="party_description">You\'ve proven yourself to be a true leader. Keep shining!</string>
+    <string name="singing_description">"Be bold, little warriooooooor!"</string>
+    <string name="sleeping_description">I\'ve lost count of your successes… zzz…</string>
+    <string name="surprised_description">Oh my god! Did you really make it?!</string>
+    <string name="wink_description">A successful wink! Keep shining and smiling, the world is yours!</string>
 
 
     <string name="helpWindowDialogTitle">Help #</string>
@@ -299,7 +299,7 @@
     <string name="patientDeleteDescription">Are you sure that you want to delete this patient?</string>
 
     <string name="appointmentDeleteTitle">Appointment elimination</string>
-    <string name="appointmentDeleteDescription">Are you sure that you want to delete this therapistAppointment?</string>
+    <string name="appointmentDeleteDescription">Are you sure that you want to delete this therapist appointment?</string>
 
     <string name="sendEmailTitle">Send email to your patients</string>
     <string name="sendEmailDescription">Write the communication you want to send to all your patients below</string>
@@ -312,5 +312,6 @@
     <string name="certification">-Qualification</string>
     <string name="un_nuovo_appuntamento_stato_fissato">A new therapistAppointment has been scheduled!</string>
     <string name="un_appuntamento_stato_annullato">An therapistAppointment has been canceled!</string>
+    <string name="default_profile">Default Profile</string>
 
 </resources>

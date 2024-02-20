@@ -180,7 +180,7 @@
                 android:textAlignment="center"
                 android:textSize="@dimen/text_dimen"
                 android:textStyle="bold"
-                android:fontFamily="@font/quicksand_medium"
+                android:fontFamily="@font/bubblegum_sans"
                 app:backgroundTint="@color/greenCompleted"
                 app:cornerRadius="8dp"/>
 
@@ -195,7 +195,7 @@
                 android:textAlignment="center"
                 android:textSize="@dimen/text_dimen"
                 android:textStyle="bold"
-                android:fontFamily="@font/quicksand_medium"
+                android:fontFamily="@font/bubblegum_sans"
                 app:backgroundTint="@color/red"
                 app:cornerRadius="8dp"/>
 

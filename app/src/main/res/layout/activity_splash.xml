@@ -43,6 +43,7 @@
             android:textColor="@android:color/white"
             android:textSize="@dimen/splashTextSize"
             android:textStyle="bold"
+            android:fontFamily="@font/bubblegum_sans"
             android:visibility="visible" />
 
     </LinearLayout>

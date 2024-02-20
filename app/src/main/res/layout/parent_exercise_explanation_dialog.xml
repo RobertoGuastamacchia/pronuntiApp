@@ -11,6 +11,7 @@
         android:layout_height="wrap_content"
         android:textSize="@dimen/popupTextDimension"
         android:id="@+id/description"
+        android:fontFamily="@font/bubblegum_sans"
         android:textStyle="bold"
         android:textColor="@color/colorPrimary"
         android:textAlignment="center"/>
@@ -22,6 +23,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/closeButtonOrContinueButtonMarginTop"
         android:backgroundTint="@color/red"
+        android:fontFamily="@font/bubblegum_sans"
         android:elevation="10dp"
         android:text="@string/closePopupButton"
         android:textAlignment="center"

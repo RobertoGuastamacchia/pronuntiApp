@@ -42,7 +42,7 @@
                     android:layout_alignParentStart="true"
                     android:layout_centerVertical="true"
                     android:layout_marginHorizontal="@dimen/marginTextWeeklyGoals"
-                    android:fontFamily="@font/quicksand_medium"
+                    android:fontFamily="@font/bubblegum_sans"
                     android:text="@string/firstGoal"
                     android:textColor="@color/black"
                     android:textSize="@dimen/textDimenWeeklyGoals" />
@@ -54,7 +54,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginEnd="@dimen/marginCoinWeeklyGoals"
                     android:layout_toStartOf="@+id/firstGoalSymbolCoin"
-                    android:fontFamily="@font/quicksand_medium"
+                    android:fontFamily="@font/bubblegum_sans"
                     android:text="@string/firstGoalCoinValue"
                     android:textColor="@color/black"
                     android:textSize="@dimen/textDimenWeeklyGoals" />
@@ -107,7 +107,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginEnd="@dimen/marginCoinWeeklyGoals"
                     android:layout_toStartOf="@+id/secondGoalSymbolCoin"
-                    android:fontFamily="@font/quicksand_medium"
+                    android:fontFamily="@font/bubblegum_sans"
                     android:text="@string/secondGoalCoinValue"
                     android:textColor="@color/black"
                     android:textSize="@dimen/textDimenWeeklyGoals" />
@@ -160,7 +160,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginEnd="@dimen/marginCoinWeeklyGoals"
                     android:layout_toStartOf="@+id/thirdGoalSymbolCoin"
-                    android:fontFamily="@font/quicksand_medium"
+                    android:fontFamily="@font/bubblegum_sans"
                     android:text="@string/thirdGoalCoinValue"
                     android:textColor="@color/black"
                     android:textSize="@dimen/textDimenWeeklyGoals" />
@@ -213,7 +213,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginEnd="@dimen/marginCoinWeeklyGoals"
                     android:layout_toStartOf="@+id/fourthGoalSymbolCoin"
-                    android:fontFamily="@font/quicksand_medium"
+                    android:fontFamily="@font/bubblegum_sans"
                     android:text="@string/fourthGoalCoinValue"
                     android:textColor="@color/black"
                     android:textSize="@dimen/textDimenWeeklyGoals" />
@@ -255,7 +255,7 @@
                     android:layout_alignParentStart="true"
                     android:layout_centerVertical="true"
                     android:layout_marginHorizontal="@dimen/marginTextWeeklyGoals"
-                    android:fontFamily="@font/quicksand_medium"
+                    android:fontFamily="@font/bubblegum_sans"
                     android:text="@string/fifthGoal"
                     android:textColor="@color/black"
                     android:textSize="@dimen/textDimenWeeklyGoals" />
@@ -267,7 +267,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginEnd="@dimen/marginCoinWeeklyGoals"
                     android:layout_toStartOf="@+id/fifthGoalSymbolCoin"
-                    android:fontFamily="@font/quicksand_medium"
+                    android:fontFamily="@font/bubblegum_sans"
                     android:text="@string/fifthGoalCoinValue"
                     android:textColor="@color/black"
                     android:textSize="@dimen/textDimenWeeklyGoals" />

@@ -513,8 +513,8 @@ public class ChildHomePageFragment extends Fragment {
                     TextView title = new TextView(context);
                     title.setText(new StringBuilder().append(getString(R.string.chapter)).append(" ").append(String.valueOf(num_chapter)).toString());
                     title.setTextSize(TypedValue.COMPLEX_UNIT_PX, getResources().getDimension(R.dimen.title_dimen)); // Imposta la dimensione del testo
-                    Typeface quicksandMediumTypeface = ResourcesCompat.getFont(requireContext(), R.font.quicksand_medium); //imposta il font
-                    title.setTypeface(quicksandMediumTypeface, Typeface.BOLD);
+                    Typeface bubblegumSansTypeface = ResourcesCompat.getFont(requireContext(), R.font.bubblegum_sans); //imposta il font
+                    title.setTypeface(bubblegumSansTypeface, Typeface.BOLD);
                     // Setta il colore
                     title.setTextColor(getActivity().getColor(R.color.characterLockedColorTextAndBackground));
                     // Setta l'allineamento del testo
@@ -762,7 +762,7 @@ public class ChildHomePageFragment extends Fragment {
     private void handleRelease() {
         // Controlla se c'è una collisione con l'immagine della collisione
             //riproduco suono
-            MediaPlayer startExcercise = MediaPlayer.create(getActivity(), R.raw.start_excercise);
+            MediaPlayer startExcercise = MediaPlayer.create(getActivity(), R.raw.start_exercise);
             startExcercise.start();
 
             //nascondo la bottom bar

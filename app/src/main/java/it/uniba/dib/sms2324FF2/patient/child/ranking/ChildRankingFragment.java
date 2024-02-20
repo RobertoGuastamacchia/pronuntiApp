@@ -143,7 +143,7 @@ public class ChildRankingFragment extends Fragment {
                     TextView coinNumber = childView.findViewById(R.id.coin);
 
                     //ottengo il font da impostare per i testi
-                    Typeface customTypeface = ResourcesCompat.getFont(getContext(), R.font.quicksand_medium);
+                    Typeface customTypeface = ResourcesCompat.getFont(getContext(), R.font.bubblegum_sans);
 
                     //aggiungo i testi
                     position.setText(new StringBuilder().append("").append(rankingList.size() - i).append("").toString());
