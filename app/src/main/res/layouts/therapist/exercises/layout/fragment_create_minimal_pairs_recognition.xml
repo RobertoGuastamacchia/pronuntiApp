@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBackground"
+    android:background="@color/primary"
     tools:context=".patient.child.homepage.exercises.WordsSequencesRepetitionFragment">
 
     <LinearLayout
@@ -67,7 +67,7 @@
                     android:fontFamily="@font/bubblegum_sans"
                     android:text="@string/MinimalPairsRecognition"
                     android:textAlignment="center"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="@dimen/exerciseDescriptionSize"
                     android:textStyle="bold" />
 
@@ -108,7 +108,7 @@
             android:labelFor="@+id/startAudio"
             android:text=""
             android:textAlignment="center"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="@dimen/recordButtonLabelDimension"
             android:textStyle="bold" />
 
@@ -125,7 +125,7 @@
             android:textSize="@dimen/text_dimen"
             android:textStyle="bold"
             android:visibility="gone"
-            app:backgroundTint="@color/primary"
+            app:backgroundTint="@color/red"
             app:cornerRadius="8dp" />
 
         <ImageView

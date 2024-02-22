@@ -82,7 +82,8 @@
             android:singleLine="false"
             android:text="@string/ImageDenomination"
             android:textAlignment="center"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
+            android:fontFamily="@font/bubblegum_sans"
             android:textSize="@dimen/exerciseDescriptionSize"
             android:textStyle="bold"></TextView>
 
@@ -106,8 +107,9 @@
                 android:singleLine="false"
                 android:text="@string/helpWindowDialogTitle"
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="@dimen/exerciseDescriptionSize"
+                android:fontFamily="@font/bubblegum_sans"
                 android:textStyle="bold"></TextView>
 
 
@@ -130,7 +132,8 @@
                 android:labelFor="@+id/startAudio"
                 android:text="@string/record_audio"
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
+                android:fontFamily="@font/bubblegum_sans"
                 android:textSize="@dimen/recordButtonLabelDimension"
                 android:textStyle="bold"></TextView>
 
@@ -545,7 +548,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:indeterminateTint="@color/primary"
+            android:indeterminateTint="@color/colorBackground"
             android:visibility="gone" />
 
         <com.google.android.material.button.MaterialButton
@@ -561,7 +564,7 @@
             android:textSize="@dimen/text_dimen"
             android:textStyle="bold"
             android:visibility="gone"
-            app:backgroundTint="@color/primary"
+            app:backgroundTint="@color/red"
             app:cornerRadius="8dp" />
 
 

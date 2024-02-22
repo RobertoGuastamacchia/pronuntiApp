@@ -352,6 +352,7 @@ public class AddAudioToExerciseFragment extends Fragment {
                 public void onClick(View v) {
                     //cambio icone
                     stopRecordingButtonDescription.setVisibility(View.GONE);
+                    help.setVisibility(View.GONE);
                     stopAudio.setVisibility(View.GONE);
                     audioDoneDescription.setVisibility(View.VISIBLE);
                     soundWave.setVisibility(View.GONE);
