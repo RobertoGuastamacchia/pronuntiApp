@@ -8,7 +8,7 @@ import retrofit2.http.POST;
 public interface FCMService {
     @Headers({
             "Content-Type: application/json",
-            "Authorization: key=AAAA6pLX2-s:APA91bHrKcn21aj6cYBJhNl7Ih06y9HCCN8GREaK1F_-glzTRDW4k6aaHjCnw5iEOsRqZlhATPT7dNnaxVxD7fCtFd5eUvoIb5ZU7Sw2ri6Hub0DE1XyVSzwLVefdGUC3FentS5s43n7" // Sostituire con il tuo server key
+            "Authorization: key=AAAAz6RPts8:APA91bGi0oQOpha9HRQQjsr-fhurMDFrAtAJ1thIOPa-IOaWljH0DqHEZhbmQTNXZ7Ic9h-gwJ-gq0xNjK75fI1IKmwjxuQ_nB6tBmLJQDVFtck0S31uUjbMIQqNnjG8qHPq55fPHtWl" // Sostituire con il tuo server key
     })
 
     @POST("fcm/send")
