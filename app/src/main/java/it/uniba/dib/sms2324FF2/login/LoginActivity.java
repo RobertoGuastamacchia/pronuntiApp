@@ -149,7 +149,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 //mostro un button informativo per i logopedisti
-                info.setVisibility(View.VISIBLE);
+                info.setVisibility(View.GONE);
                 //click su pannello informativo
                 info.setOnClickListener(new View.OnClickListener() {
                     @Override
