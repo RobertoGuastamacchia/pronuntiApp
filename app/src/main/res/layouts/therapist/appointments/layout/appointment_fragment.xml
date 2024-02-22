@@ -91,7 +91,7 @@
                 android:textSize="@dimen/appointmentAndExerciseDetails"
                 android:textColor="@color/black"/>
             <com.google.android.material.button.MaterialButton
-                android:layout_width="match_parent"
+                android:layout_width="100dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="@dimen/marginTopDeleteAppointment"
                 android:fontFamily="@font/bubblegum_sans"

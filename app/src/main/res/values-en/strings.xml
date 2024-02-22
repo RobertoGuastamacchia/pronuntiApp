@@ -1,84 +1,83 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="default_notification_channel_id">default_channel_id</string>
-
     <string name="welcome">Welcome</string>
     <string name="insertYourData">Please insert your data.</string>
-    <string name="email">Mail Address</string>
+    <string name="email">Email Address</string>
+    <string name="loginNoAccountAlert">Not Registered?</string>
     <string name="signUp">Sign Up</string>
-    <string name="loginNoAccountAlert">You don\'t have an account?</string>
     <string name="app_name">PronuntiApp</string>
-    <string name="TitoloAccesso">Login</string>
-    <string name="labelGenitore">Parent :</string>
-    <string name="labelBambino">Child :</string>
-    <string name="labelLogopedista">Therapist</string>
-    <string name="titoloLogin">Enter your credentials</string>
+    <string name="TitoloAccesso">Access</string>
+    <string name="labelGenitore">Parent</string>
+    <string name="labelBambino">Child</string>
+    <string name="labelLogopedista">Speech Therapist</string>
+    <string name="titoloLogin">Credentials Insertion</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
-    <string name="labelAccediButton">Login</string>
+    <string name="labelAccediButton">Access</string>
     <string name="PersonaggiButton">CHARACTERS</string>
     <string name="ClassificaButton">RANKING</string>
-    <string name="ErrMsg">Empty or invalid credentials, please try again.</string>
+    <string name="ErrMsg">Access Denied</string>
     <string name="titleRanking">Ranking</string>
     <string name="titleCharacters">Characters</string>
     <string name="titleHome">Home</string>
-    <string name="charactersNotFound">Oops! You don\'t have any characters yet, keep playing!</string>
+    <string name="charactersNotFound">You don\'t have any characters unlocked, play to unlock them!</string>
     <string name="position">Position</string>
     <string name="name">User</string>
-    <string name="loginDoctor">Therapist</string>
+    <string name="loginDoctor">Speech Therapist</string>
     <string name="loginPatient">Patient</string>
     <string name="patientAccess">Welcome Patient!</string>
-    <string name="doctorAccess">Welcome Doctor!</string>
-    <string name="homepageTitleTherapist">Welcome Therapist</string>
+    <string name="doctorAccess">Welcome Speech Therapist!</string>
+    <string name="homepageTitleTherapist">Welcome Speech Therapist</string>
+    <string name="delete">Deletion</string>
 
-    <!--Therapist-->
-    <string name="exerciseType">Type Of Exercises:</string>
-    <string name="exerciseOne">Image naming</string>
-    <string name="exerciseTwo">Repetition of sequences of words</string>
-    <string name="exerciseThree">Recognition of minimal pairs</string>
+    <!-- Therapist -->
+    <string name="exerciseType">Exercise Type:</string>
+    <string name="exerciseOne">Image Naming</string>
+    <string name="exerciseTwo">Word Sequence Repetition</string>
+    <string name="exerciseThree">Minimal Pair Recognition</string>
     <string name="createexercise1">Create</string>
     <string name="createexercise2">Create</string>
     <string name="createexercise3">Create</string>
     <string name="logout">Logout</string>
-    <string name="insert">Insert</string>
+    <string name="insert">Insertion:</string>
     <string name="imageButton">Image</string>
-    <string name="tipOne">Tip 1:</string>
-    <string name="tipTwo">Tip 2:</string>
-    <string name="tipThree">Tip 3:</string>
+    <string name="tipOne">Hint 1:</string>
+    <string name="tipTwo">Hint 2:</string>
+    <string name="tipThree">Hint 3:</string>
     <string name="correctAnswer">Correct Answer:</string>
-    <string name="pointForCorrectAnswer">Correct Answer Score:</string>
+    <string name="pointForCorrectAnswer">Score for Correct Answer:</string>
     <string name="addexercise1">Add</string>
     <string name="addexercise2">Add</string>
     <string name="addexercise3">Add</string>
-    <string name="exTwoWordOne">Word One</string>
-    <string name="exTwoWordTwo">Word Two</string>
-    <string name="exTwoWordThree">Word Three</string>
-    <string name="register">Register</string>
-    <string name="addAppointment">Add Appointment</string>
-    <string name="parentNameText">Genitore</string>
-    <string name="kidNameText">Bambino</string>
+    <string name="exTwoWordOne">First Word:</string>
+    <string name="exTwoWordTwo">Second Word:</string>
+    <string name="exTwoWordThree">Third Word:</string>
+    <string name="register">Registration</string>
+    <string name="addAppointment">New Appointment</string>
+    <string name="parentNameText">Parent</string>
+    <string name="kidNameText">Child</string>
     <string name="cancel">Cancel</string>
     <string name="city">City</string>
     <string name="address">Address</string>
-    <string name="Address">Address</string>
-    <string name="City">City</string>
-    <string name="addExercise">Add Exercise</string>
     <string name="date">Date</string>
     <string name="time">Time</string>
-    <string name="descriptionImage">Given an image, the child must recognize the associated word to the image.</string>
-    <string name="helpsForTherapist">Record three help audios for the child.</string>
-    <string name="descriptionWordsInSequence">Given an audio that plays 3 words in sequence, the child will have to record audio repeating the words in the correct sequence.</string>
-    <string name="descriptionMinimalPairs">Give two pictures and an audio playback of one word, the child must recognize the right image to which the word refers.</string>
+    <string name="Address">Address</string>
+    <string name="City">City</string>
+    <string name="addExercise">New Exercise</string>
+    <string name="descriptionImage">Identify the word corresponding to a given image.</string>
+    <string name="helpsForTherapist">To help the child, record three audios.</string>
+    <string name="descriptionWordsInSequence">After listening to the three words in the audio, the child records their own audio repeating them in the order they heard them.</string>
+    <string name="descriptionMinimalPairs">The child will be shown two images and will hear a word. Their task is to correctly associate the word with the image that best represents it.</string>
 
-
-
-    <string name="chapter">Chapter</string>
-    <string name="defaultAccess">Login with the default account</string>
-    <string name="settings">Theme settings</string>
-    <string name="exercisesViewer">exercises</string>
+    <string name="chapter">Level</string>
+    <string name="defaultAccess">Access with default account</string>
+    <string name="settings">Theme Settings</string>
+    <string name="settingsMenu">Settings</string>
+    <string name="exercisesViewer">Exercises</string>
     <string name="patientsViewer">Patients</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="logout_title">Confirm logout</string>
-    <string name="logoutQuestion">Are you sure you want to quit?</string>
+    <string name="logout_title">Confirm Logout</string>
+    <string name="logoutQuestion">Confirm exit?</string>
     <string name="yes">Yes</string>
     <string name="t1">Ember</string>
     <string name="t2">Edvige</string>
@@ -98,50 +97,50 @@
     <string name="p5">Linux</string>
     <string name="p6">Sirius</string>
     <string name="p7">Flippy</string>
-    <string name="imageDescriptionCharacters">Image of the character</string>
-    <string name="InsertPassword">Please insert password\nto continue</string>
-    <string name="defaultProfileAccess">Auto-login</string>
+    <string name="imageDescriptionCharacters">Character Image</string>
+    <string name="InsertPassword">Enter password\nto continue</string>
+    <string name="defaultProfileAccess">Automatic access</string>
     <string name="exerciseDescription">Listen to the 3 words in sequence and repeat.</string>
-    <string name="playButtonLabel">Listen</string>
+    <string name="playButtonLabel">Play</string>
     <string name="stopButtonLabel">Stop</string>
     <string name="finishExercises">Done</string>
-    <string name="exitQuestion">Your saved data will be deleted, are you sure you want to exit?</string>
+    <string name="exitQuestion">If you exit, saved data will be deleted. Confirm exit?</string>
     <string name="exit_title">Confirm exit</string>
-    <string name="record_audio">Record audio</string>
-    <string name="stop_audio">Finish recording</string>
+    <string name="record_audio">Record Audio</string>
+    <string name="stop_audio">Stop Recording</string>
     <string name="continueEs">Continue</string>
-    <string name="audio_done">Audio saved successfully. If you want, listen to your answer!</string>
-    <string name="exerciseDescription2">Listen to the audio and select the correct image.</string>
-    <string name="exerciseDescription3">Say what you see in the image. You have 3 hints available!</string>
-    <string name="permissionTitle">Permission request</string>
-    <string name="permissionDescription">To perform this exercise, we need your permission to access your device\'s microphone.</string>
-    <string name="permissionDescriptionTherapist">To create this exercise, we need your permission to access your device\'s microphone.</string>
+    <string name="audio_done">Audio saved successfully. You can replay the response!</string>
+    <string name="exerciseDescription2">To select the correct image, listen to the audio.</string>
+    <string name="exerciseDescription3">Expose what you see in the image. You have three chances to receive help.</string>
+    <string name="permissionTitle">Permission Request</string>
+    <string name="permissionDescription">Please grant permission to use your device\'s microphone to complete the exercise.</string>
+    <string name="permissionDescriptionTherapist">Please grant permission to use your device\'s microphone to create the exercise.</string>
+    <string name="permissionDescription3">We suggest enabling PronuntiApp notifications to stay updated!</string>
     <string name="continuePermission">Continue</string>
-    <string name="permissionUploadThemeBackgroundDescription">To customize this theme and upload a new wallpaper, we need your permission to access your device\'s gallery.</string>
-    <string name="uploadAudioDescription">Upload your audio</string>
-    <string name="permissionDescription2">To carry out this exercise, we need your permission to access your audio files.</string>
-    <string name="permissionDescription2Therapist">To create this exercise, we need your permission to access your audio files.</string>
-    <string name="permissionDescription3">To stay up to date, activate PronuntiApp notifications</string>
-    <string name="errorPermission">Change the permissions in your device\'s Settings to perform this exercise.</string>
-    <string name="errorPermissionTherapist">hange the permissions in your device\'s Settings to create this exercise.</string>
-    <string name="infoPermission">Alternatively, you can upload an audio directly here!</string>
+    <string name="permissionUploadThemeBackgroundDescription">Please grant permission to access your device\'s gallery to customize this theme.</string>
+    <string name="uploadAudioDescription">Upload Your Audio</string>
+    <string name="permissionDescription2">Please grant permission to access audio files on your device to complete the exercise.</string>
+    <string name="permissionDescription2Therapist">Please grant permission to access audio files on your device to create the exercise.</string>
+    <string name="errorPermission">You need to change permissions in your device settings to complete this exercise.</string>
+    <string name="errorPermissionTherapist">You need to change permissions in your device settings to create this exercise.</string>
+    <string name="infoPermission">You can also upload an audio directly here!</string>
     <string name="emptyEmail">Enter email</string>
     <string name="emptyPassword">Enter password</string>
     <string name="loginFail">Authentication failed</string>
     <string name="wrongSection">Wrong section for this account</string>
-    <string name="infoLockedExercise">Complete the previous exercises to unlock this exercise!</string>
+    <string name="infoLockedExercise">You need to complete the previous exercises!</string>
     <string name="closePopupButton">Close</string>
-    <string name="infoWaitingForCorrection">Exercise awaiting correction…</string>
-    <string name="networErrorString">You are not connected to the Internet. Please check your connection and try again.</string>
-    <string name="rewardsDescription">We found a treasure! Click to open and redeem the reward!</string>
-    <string name="principalDeviceDescription">Do you want to set this device as your primary device? You will receive all notifications on this device.</string>
-    <string name="principalDeviceTitle">Principal device configuration</string>
-    <string name="infoCoinCharacters">Coins required: </string>
-    <string name="newCharacterDescription">Click and find out who is hiding in the cage!</string>
-    <string name="newCharacterPopupTitle">Character available</string>
+    <string name="infoWaitingForCorrection">Exercise waiting for correction...</string>
+    <string name="networErrorString">Check your internet connection.</string>
+    <string name="rewardsDescription">Here\'s your reward! Click to open and redeem it!</string>
+    <string name="principalDeviceDescription">To receive all notifications on this device, set it as primary</string>
+    <string name="principalDeviceTitle">Primary Device Configuration</string>
+    <string name="infoCoinCharacters">Coins needed: </string>
+    <string name="newCharacterDescription">Tap and release the enclosed animal!</string>
+    <string name="newCharacterPopupTitle">Available Character</string>
     <string name="newCharacterPopupDescription">Do you want to unlock this character?</string>
-    <string name="newCharacterTitle">You have unlocked a new character!</string>
-    <string name="weeklyGoals">Weekly assignments</string>
+    <string name="newCharacterTitle">Character Unlocked!</string>
+    <string name="weeklyGoals">Weekly Goals</string>
 
 
     <!-- Frasi motivazionali per il bambino -->
@@ -164,36 +163,35 @@
 
     <string name="helpWindowDialogTitle">Help #</string>
     <string name="helpWindowDialogMessage">Listen to the help audio</string>
-    <string name="TitleExerciseParent">Exercise not verified</string>
+    <string name="TitleExerciseParent">Exercises to correct</string>
     <string name="firstGoal">Complete 1 exercise</string>
-    <string name="secondGoal">Do 1 exercise correctly</string>
-    <string name="thirdGoal">Do 3 exercise correctly</string>
-    <string name="fourthGoal">Do 5 exercise correctly</string>
-    <string name="fifthGoal">Do all the exercises \ncorrectly</string>
+    <string name="secondGoal">Perform correctly\n1 exercise</string>
+    <string name="thirdGoal">Perform correctly\n3 exercises</string>
+    <string name="fourthGoal">Perform correctly\n5 exercises</string>
+    <string name="fifthGoal">Perform correctly\nall exercises</string>
     <string name="firstGoalCoinValue">5</string>
     <string name="secondGoalCoinValue">15</string>
     <string name="thirdGoalCoinValue">45</string>
     <string name="fourthGoalCoinValue">75</string>
     <string name="fifthGoalCoinValue">100</string>
-    <string name="setPrincipalCharacterTitle">Set principal character</string>
-    <string name="setPrincipalCharacterDescription">Do you want to set this character as the principal character?</string>
-    <string name="characterNotAvaibleTitle">Character blocked</string>
-    <string name="Notification">News on the way!</string>
-    <string name="ExerciseCompleteDescription">An exercise has been completed. Touch here to correct it!</string>
+    <string name="setPrincipalCharacterTitle">Set main character</string>
+    <string name="setPrincipalCharacterDescription">Do you want to set this character as main?</string>
+    <string name="characterNotAvaibleTitle">Locked Character</string>
+    <string name="Notification">There are some updates!</string>
+    <string name="ExerciseCompleteDescription">An exercise has been completed.</string>
     <string name="ExerciseCorrectedDescription">An exercise has been corrected!</string>
     <string name="ExerciseCreatedDescription">A new exercise has been created!</string>
 
-
-    <string name="mountain_story">Who left this mysterious footprint? \nSend your character in investigation!</string>
-    <string name="desert_story">Every sea dweller loves seashells! \nHelp your character to collect them!</string>
-    <string name="polar_story">Who lives on this planet? \nSend your character in investigation!</string>
+    <string name="mountain_story">Who\'s hiding behind that bush? \nWho could it be? Let\'s go see!</string>
+    <string name="desert_story">Help your character discover what\'s hidden in the pyramid!</string>
+    <string name="polar_story">Quick! Let\'s do the exercise before the snowflake melts!</string>
 
     <string name="appointmentPast">Past</string>
-    <string name="appointmentFuture">Upcoming</string>
+    <string name="appointmentFuture">Future</string>
 
-    <string name="correct">Correct</string>
-    <string name="doctor">Doct. </string>
-    <string name="chapterParent">Chapter</string>
+    <string name="correct">Correction</string>
+    <string name="doctor">Dr. </string>
+    <string name="chapterParent">Level</string>
     <string name="ex">Exercise</string>
 
     <string name="nameParent">Username</string>
@@ -204,56 +202,52 @@
     <string name="desert">Desert</string>
     <string name="polar">Polar</string>
     <string name="save">Save</string>
-    <string name="resetPassword">Invia email di ripristino password</string>
+    <string name="resetPassword">Reset Password</string>
     <string name="profileTitle">Profile</string>
-    <string name="createTheme">Upload background</string>
+    <string name="createTheme">Upload Background</string>
 
     <string name="therapistAppointment">Appointments</string>
     <string name="right">Correct</string>
-    <string name="wrong">Wrong</string>
+    <string name="wrong">Incorrect</string>
 
-    <string name="ImageDenomination">Image denomination</string>
-    <string name="MinimalPairsRecognition">Minimal pairs recognition</string>
-    <string name="WordsSequenceRepetition">Words sequences repetition</string>
+    <string name="ImageDenomination">Image Denomination</string>
+    <string name="MinimalPairsRecognition">Minimal Pairs Recognition</string>
+    <string name="WordsSequenceRepetition">Words Sequence Repetition</string>
 
-    <string name="helpsUsed">Helps used :</string>
+    <string name="helpsUsed">Helps used:</string>
 
-    <string name="playButtonLabelAnswer">Listen answer</string>
+    <string name="playButtonLabelAnswer">Listen to answer</string>
 
-    <string name="listenTherapistAudio">Listen to the speech therapist\'s audio</string>
+    <string name="listenTherapistAudio">Listen to therapist\'s audio</string>
 
-    <string name="exitExerciseParent">Are you sure you want to exit the exercise correction?</string>
+    <string name="exitExerciseParent">Confirm exit</string>
 
-    <string name="imageDenominationExplanation">Listen to the audio of the child\'s response and select the exercise as Correct if the spoken word was correctly associated with the image, otherwise select Wrong.</string>
-    <string name="minimalPairsRecognitionExplanation">Listen to the speech therapist\'s audio and select the exercise as Correct if the child has correctly associated the image with the word in the audio, otherwise select Wrong.</string>
-    <string name="wordsSequencesRepetitionCorrection">Listen to the three words of the speech therapist\'s audio and select the exercise as Correct if the child has repeated the sequence of three words correctly, otherwise select Wrong.</string>
+    <string name="imageDenominationExplanation">Based on the child\'s audio, select Incorrect or Correct accordingly</string>
+    <string name="minimalPairsRecognitionExplanation">Based on the therapist\'s audio, select Incorrect or Correct according to the child\'s response</string>
+    <string name="wordsSequencesRepetitionCorrection">Based on the therapist\'s audio, select Incorrect or Correct according to the child\'s response</string>
 
     <string name="credentials">Credentials</string>
 
-    <string name="childName">Child name</string>
-    <string name="parentName">Parent name</string>
+    <string name="childName">Child\'s Name</string>
+    <string name="parentName">Parent\'s Name</string>
 
-    <string name="settingsMenu">Settings</string>
-    <string name="delete">Delete</string>
-
-    <!--Toast message-->
-    <string name="nameSaved">Name saved successfully!</string>
-    <string name="tema_cambiato">Theme changed successfully!</string>
-    <string name="wrong_password">Wrong password.</string>
-    <string name="errore_durante_il_download_del_file_audio">Error while downloading the audio</string>
-    <string name="errore_durante_il_download_dell_immagine">Error while downloading the image</string>
-    <string name="errore_durante_lo_sblocco_del_personaggio">Error while unlocking the character</string>
-    <string name="errore_durante_il_download_del_primo_aiuto">Error while downloading the first hint</string>
-    <string name="errore_durante_il_download_del_secondo_aiuto">Error while downloading the second hint</string>
-    <string name="errore_durante_il_download_del_terzo_aiuto">Error while downloading the third hint</string>
-    <string name="errore_durante_il_caricamento_della_risposta">Error while uploading the answer</string>
-    <string name="tema_non_cambiato">Theme not changed</string>
+    <string name="nameSaved">Name saved!</string>
+    <string name="tema_cambiato">Theme changed!</string>
+    <string name="wrong_password">Incorrect password</string>
+    <string name="errore_durante_il_download_del_file_audio">Error during audio file download</string>
+    <string name="errore_durante_il_download_dell_immagine">Error during image download</string>
+    <string name="errore_durante_lo_sblocco_del_personaggio">Error while unlocking character</string>
+    <string name="errore_durante_il_download_del_primo_aiuto">Error during first help download</string>
+    <string name="errore_durante_il_download_del_secondo_aiuto">Error during second help download</string>
+    <string name="errore_durante_il_download_del_terzo_aiuto">Error during third help download</string>
+    <string name="errore_durante_il_caricamento_della_risposta">Error during answer loading</string>
+    <string name="tema_non_cambiato">Failed to change theme!</string>
     <string name="email_inviata">Email sent</string>
-    <string name="errore_durante_l_invio">Error while sending the email</string>
+    <string name="errore_durante_l_invio">Error during sending</string>
 
-    <string name="crea_tema_personalizzato">Create personalized theme</string>
-    <string name="upload_background_image">Upload an image to use as the home background.</string>
-    <string name="screenOrientation">To continue, rotate the device vertically.</string>
+    <string name="crea_tema_personalizzato">Create a custom theme</string>
+    <string name="upload_background_image">Upload an image to use as the home screen background.</string>
+    <string name="screenOrientation">Rotate the device to portrait mode.</string>
 
     <string name="back">Cancel</string>
     <string name="gallery">Gallery</string>
@@ -261,57 +255,56 @@
     <string name="chooseAnOption">Choose an option</string>
 
     <string name="exercise">Exercises</string>
-    <string name="creazione_dell_appuntamento_fallita_riprova">Failure while creating the therapistAppointment, retry.</string>
-    <string name="foto_non_caricata_riprova">Failure while uploading the picture, retry</string>
-    <string name="inserisci_il_paziente">Add the patient</string>
+    <string name="creazione_dell_appuntamento_fallita_riprova">Failed to create appointment. Please try again.</string>
+    <string name="foto_non_caricata_riprova">Failed to upload photo. Please try again.</string>
+    <string name="inserisci_il_paziente">Insert the patient</string>
     <string name="seleziona_data_e_ora">Select date and time</string>
 
-    <string name="createAppointmentTitle">Create therapistAppointment</string>
+    <string name="createAppointmentTitle">Create Appointment</string>
     <string name="patient">Patient</string>
-    <string name="impossibile_effettuare_la_modifica">Error while modifying the data</string>
+    <string name="impossibile_effettuare_la_modifica">Failed to make the modification!</string>
 
-    <string name="addressTherapist">Place of work</string>
+    <string name="addressTherapist">Location</string>
 
-    <string name="addressError">Address changed successfully!</string>
-    <string name="cityError">City successfully changed!</string>
+    <string name="addressError">Address modified!</string>
+    <string name="cityError">City modified!</string>
 
-    <string name="saveErrorData">Invalid data, try again.</string>
-    <string name="paziente_creato_correttamente">Patient created!</string>
-    <string name="uploadImageTherapist">Upload image</string>
+    <string name="saveErrorData">Invalid data!</string>
+    <string name="uploadImageTherapist">Upload Image</string>
+    <string name="paziente_creato_correttamente">Patient created successfully</string>
 
-    <string name="uploadFirstImage">Upload the \nfirst image</string>
-    <string name="uploadSecondImage">Upload the \nsecond image</string>
-    <string name="registerAudio">Register the audio</string>
-    <string name="uploadAudio">Upload the audio</string>
+    <string name="uploadFirstImage">Upload the\nfirst image</string>
+    <string name="uploadSecondImage">Upload the\nsecond image</string>
+    <string name="registerAudio">Record audio</string>
+    <string name="uploadAudio">Upload audio</string>
 
-    <string name="dateAndCoinDialogTitle">Create exercise</string>
+    <string name="dateAndCoinDialogTitle">Create Exercise</string>
 
     <string name="selectAValidDate">Select a valid date</string>
-    <string name="selectValidCoin">Select valid coin</string>
+    <string name="selectValidCoin">Select valid coins</string>
 
-    <string name="forgotYourPassword">Forgot your password?</string>
-
-    <string name="passwordRecoverytitle">Password recovery</string>
-    <string name="passwordRecoveryDescription">To recover your password, enter your email</string>
+    <string name="forgotYourPassword">Forgot Your Password?</string>
+    <string name="passwordRecoverytitle">Password Recovery</string>
+    <string name="passwordRecoveryDescription">Enter your email</string>
     <string name="send">Send</string>
 
-    <string name="patientDeleteTitle">Patient elimination</string>
-    <string name="patientDeleteDescription">Are you sure that you want to delete this patient?</string>
+    <string name="patientDeleteTitle">Delete Patient</string>
+    <string name="patientDeleteDescription">Confirm deletion</string>
 
-    <string name="appointmentDeleteTitle">Appointment elimination</string>
-    <string name="appointmentDeleteDescription">Are you sure that you want to delete this therapist appointment?</string>
+    <string name="appointmentDeleteTitle">Delete Appointment</string>
+    <string name="appointmentDeleteDescription">Confirm deletion</string>
 
-    <string name="sendEmailTitle">Send email to your patients</string>
-    <string name="sendEmailDescription">Write the communication you want to send to all your patients below</string>
+    <string name="sendEmailTitle">Send Email</string>
+    <string name="sendEmailDescription">Enter message to send to patients: </string>
 
-    <string name="emptyText">Empty email text</string>
+    <string name="emptyText">Empty email body</string>
 
-    <string name="infoDialogTitle">Do you want to join our community?</string>
-    <string name="infoDialogDescription">Send an email to pronuntiapp@gmail.com entering the following information:</string>
-    <string name="docIdentity">-Photo of an identity document (double-sided)</string>
-    <string name="certification">-Qualification</string>
-    <string name="un_nuovo_appuntamento_stato_fissato">A new therapistAppointment has been scheduled!</string>
-    <string name="un_appuntamento_stato_annullato">An therapistAppointment has been canceled!</string>
+    <string name="infoDialogTitle">Are you a speech therapist and want to use our app?</string>
+    <string name="infoDialogDescription">To ensure your eligibility for the role, we request you to send an email to logopedisti.pronuntiapp@info.com with the following information:</string>
+    <string name="docIdentity">-Identity document scan</string>
+    <string name="certification">-Educational qualification along with any certifications</string>
+    <string name="un_nuovo_appuntamento_stato_fissato">New appointment set!</string>
+    <string name="un_appuntamento_stato_annullato">Appointment canceled!</string>
     <string name="default_profile">Default Profile</string>
 
 </resources>

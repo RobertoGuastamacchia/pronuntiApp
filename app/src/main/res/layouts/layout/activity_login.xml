@@ -134,7 +134,6 @@
                     android:layout_marginEnd="0dp"
                     android:background="@android:color/transparent"
                     android:scaleType="centerInside"
-                    android:visibility="gone"
                     android:src="@drawable/baseline_info_24" />
 
             </RelativeLayout>

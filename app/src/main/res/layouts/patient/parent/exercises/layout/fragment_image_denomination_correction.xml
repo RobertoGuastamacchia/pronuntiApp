@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".patient.child.homepage.exercises.WordsSequencesRepetitionFragment"
-    android:background="@color/colorBackground">
+    android:background="@color/primary">
 
     <LinearLayout
         android:id="@+id/linearLayout"
