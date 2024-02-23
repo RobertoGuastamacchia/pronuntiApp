@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBackground"
+    android:background="@color/primary"
     tools:context=".patient.child.homepage.exercises.WordsSequencesRepetitionFragment">
 
     <LinearLayout
@@ -82,11 +82,11 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="@dimen/marginTopExerciseDescription"
             android:ellipsize="none"
-            android:singleLine="false"
             android:fontFamily="@font/bubblegum_sans"
+            android:singleLine="false"
             android:text="@string/WordsSequenceRepetition"
             android:textAlignment="center"
-            android:textColor="@color/black"
+            android:textColor="@color/colorBackground"
             android:textSize="@dimen/exerciseDescriptionSize"
             android:textStyle="bold" />
 
@@ -104,10 +104,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:labelFor="@+id/playButton"
             android:fontFamily="@font/bubblegum_sans"
+            android:labelFor="@+id/playButton"
             android:textAlignment="center"
-            android:textColor="@color/black"
+            android:textColor="@color/colorBackground"
             android:textSize="@dimen/playButtonLabelDimension"
             android:textStyle="bold" />
 
@@ -126,11 +126,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:labelFor="@+id/startAudioChild"
             android:fontFamily="@font/bubblegum_sans"
+            android:labelFor="@+id/startAudioChild"
             android:text="@string/playButtonLabelAnswer"
             android:textAlignment="center"
-            android:textColor="@color/black"
+            android:textColor="@color/colorBackground"
             android:textSize="@dimen/recordButtonLabelDimension"
             android:textStyle="bold" />
 
