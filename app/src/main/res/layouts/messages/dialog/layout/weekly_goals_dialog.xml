@@ -97,6 +97,7 @@
                     android:layout_alignParentStart="true"
                     android:layout_centerVertical="true"
                     android:layout_marginHorizontal="@dimen/marginTextWeeklyGoals"
+                    android:fontFamily="@font/bubblegum_sans"
                     android:text="@string/secondGoal"
                     android:textColor="@color/black"
                     android:textSize="@dimen/textDimenWeeklyGoals" />
@@ -150,6 +151,7 @@
                     android:layout_alignParentStart="true"
                     android:layout_centerVertical="true"
                     android:layout_marginHorizontal="@dimen/marginTextWeeklyGoals"
+                    android:fontFamily="@font/bubblegum_sans"
                     android:text="@string/thirdGoal"
                     android:textColor="@color/black"
                     android:textSize="@dimen/textDimenWeeklyGoals" />
@@ -203,6 +205,7 @@
                     android:layout_alignParentStart="true"
                     android:layout_centerVertical="true"
                     android:layout_marginHorizontal="@dimen/marginTextWeeklyGoals"
+                    android:fontFamily="@font/bubblegum_sans"
                     android:text="@string/fourthGoal"
                     android:textColor="@color/black"
                     android:textSize="@dimen/textDimenWeeklyGoals" />
