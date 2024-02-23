@@ -171,9 +171,11 @@ public class ChildRankingFragment extends Fragment {
                 podium.setVisibility(View.VISIBLE);
             }
 
-            //modifico colori per utente loggato
             if(Patient.getInstance().getId().equals(rankingList.get(i).getId())) {
                 newLinearLayout.setBackgroundColor(getActivity().getColor(R.color.childAccent));
+            } else {
+                // Imposta il colore di sfondo di default per gli altri utenti
+                newLinearLayout.setBackgroundColor(getActivity().getColor(R.color.switchOffColor));
             }
 
             // Imposta il colore del testo su bianco per tutti i TextView
