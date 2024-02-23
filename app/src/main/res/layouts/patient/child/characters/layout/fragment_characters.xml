@@ -24,7 +24,7 @@
             android:layout_marginTop="@dimen/margin_top_title"
             android:fontFamily="@font/bubblegum_sans"
             android:text="@string/titleCharacters"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/colorBackground"
             android:textSize="@dimen/title_dimen"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"

@@ -28,7 +28,7 @@
     <string name="patientAccess">Benvenuto Paziente!</string>
     <string name="doctorAccess">Benvenuto Logopedista!</string>
     <string name="homepageTitleTherapist">Benvenuto Logopedista</string>
-    <string name="delete">Cancellazione</string>
+    <string name="delete">Cancella</string>
 
     <!-- Terapista-->
     <string name="exerciseType">Tipologia Esercizi:</string>
@@ -56,7 +56,7 @@
     <string name="addAppointment">Nuovo Appuntamento</string>
     <string name="parentNameText">Genitore</string>
     <string name="kidNameText">Bambino</string>
-    <string name="cancel">Annullamento</string>
+    <string name="cancel">Annulla</string>
     <string name="city">Città</string>
     <string name="address">Indirizzo</string>
     <string name="date">Data</string>
