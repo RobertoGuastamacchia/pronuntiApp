@@ -26,6 +26,8 @@
         android:background="@color/primary"
         android:fontFamily="@font/bubblegum_sans"
         app:itemTextColor="@color/white"
+        app:itemTextAppearanceActive="@style/BottomNavigationTextActive"
+        app:itemTextAppearanceInactive="@style/BottomNavigationTextInactive"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
