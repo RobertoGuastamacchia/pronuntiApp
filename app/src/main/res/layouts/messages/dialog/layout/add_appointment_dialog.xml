@@ -133,7 +133,8 @@
                 android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingStart="60dp"
+                android:paddingStart="45dp"
+                android:layout_gravity="center_horizontal"
                 android:layout_marginTop="@dimen/marginTopBetweenCreateAppointmentSections">
 
                 <com.google.android.material.button.MaterialButton
