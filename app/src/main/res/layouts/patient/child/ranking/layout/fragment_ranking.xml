@@ -20,11 +20,11 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="@dimen/margin_top_title"
-            android:gravity="center_horizontal"
             android:fontFamily="@font/bubblegum_sans"
+            android:gravity="center_horizontal"
             android:text="@string/titleRanking"
             android:textAlignment="center"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/colorBackground"
             android:textSize="@dimen/title_dimen"
             android:textStyle="bold" />
 
@@ -76,7 +76,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:indeterminateTint="@color/primary"
+        android:indeterminateTint="@color/colorBackground"
         android:visibility="visible" />
 
 </RelativeLayout>

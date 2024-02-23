@@ -124,62 +124,68 @@ public class ChildRankingFragment extends Fragment {
     //metodo per leggere la classifica e settarla
     public void setRanking(ArrayList<Ranking> rankingList){
 
-                progressBar.setVisibility(View.GONE);
-                // Ordino la lista in base ai valori
+        progressBar.setVisibility(View.GONE);
+        // Ordino la lista in base ai valori
 
-                Collections.sort(rankingList, Comparator.comparing(Ranking::getCoin));
+        Collections.sort(rankingList, Comparator.comparing(Ranking::getCoin));
 
-                for (int i = rankingList.size() -1 ; i >= 0 ; i--) {
+        for (int i = rankingList.size() -1 ; i >= 0 ; i--) {
 
-                    //Creo un nuovo RelativeLayout per ogni iterazione
-                    //facendone inflate
-                    LayoutInflater layoutInflater=(LayoutInflater) getActivity().getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                    View childView = layoutInflater.inflate(R.layout.ranking_line_layout, null);
+            //Creo un nuovo RelativeLayout per ogni iterazione
+            //facendone inflate
+            LayoutInflater layoutInflater=(LayoutInflater) getActivity().getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            View childView = layoutInflater.inflate(R.layout.ranking_line_layout, null);
 
-                    //ottengo i riferimenti alle view del layout
-                    LinearLayout newLinearLayout = childView.findViewById(R.id.container);
-                    TextView position = childView.findViewById(R.id.position);
-                    TextView name = childView.findViewById(R.id.name);
-                    TextView coinNumber = childView.findViewById(R.id.coin);
+            //ottengo i riferimenti alle view del layout
+            LinearLayout newLinearLayout = childView.findViewById(R.id.container);
+            TextView position = childView.findViewById(R.id.position);
+            TextView name = childView.findViewById(R.id.name);
+            TextView coinNumber = childView.findViewById(R.id.coin);
 
-                    //ottengo il font da impostare per i testi
-                    Typeface customTypeface = ResourcesCompat.getFont(getContext(), R.font.bubblegum_sans);
+            //ottengo il font da impostare per i testi
+            Typeface customTypeface = ResourcesCompat.getFont(getContext(), R.font.bubblegum_sans);
 
-                    //aggiungo i testi
-                    position.setText(new StringBuilder().append("").append(rankingList.size() - i).append("").toString());
-                    position.setTypeface(customTypeface);
-                    //particolare attenzione alla gestione della lunghezza dei nomi degl utenti
-                    if(rankingList.get(i).getName().length() <= 13) {
-                        name.setText(new StringBuilder().append("").append(rankingList.get(i).getName()).append("").toString());
-                    }else{
-                        name.setText(new StringBuilder().append("").append(rankingList.get(i).getName().substring(0,12)).append("...").append("").toString());
-                    }
-                    name.setTypeface(customTypeface);
-                    coinNumber.setText(new StringBuilder().append("").append(rankingList.get(i).getCoin()).append("").toString());
-                    coinNumber.setTypeface(customTypeface);
+            //aggiungo i testi
+            position.setText(new StringBuilder().append("").append(rankingList.size() - i).append("").toString());
+            position.setTypeface(customTypeface);
+            //particolare attenzione alla gestione della lunghezza dei nomi degl utenti
+            if(rankingList.get(i).getName().length() <= 13) {
+                name.setText(new StringBuilder().append("").append(rankingList.get(i).getName()).append("").toString());
+            }else{
+                name.setText(new StringBuilder().append("").append(rankingList.get(i).getName().substring(0,12)).append("...").append("").toString());
+            }
+            name.setTypeface(customTypeface);
+            coinNumber.setText(new StringBuilder().append("").append(rankingList.get(i).getCoin()).append("").toString());
+            coinNumber.setTypeface(customTypeface);
 
-                    //controllo se è il podio, quindi mostro la medaglia
-                    ImageView podium;
-                    if(i == rankingList.size()-1){
-                        podium = childView.findViewById(R.id.firstplace);
-                        podium.setVisibility(View.VISIBLE);
-                    } else if (i == rankingList.size()-2) {
-                        podium = childView.findViewById(R.id.secondplace);
-                        podium.setVisibility(View.VISIBLE);
-                    } else if (i == rankingList.size()-3) {
-                        podium = childView.findViewById(R.id.thirdplace);
-                        podium.setVisibility(View.VISIBLE);
-                    }
+            //controllo se è il podio, quindi mostro la medaglia
+            ImageView podium;
+            if(i == rankingList.size()-1){
+                podium = childView.findViewById(R.id.firstplace);
+                podium.setVisibility(View.VISIBLE);
+            } else if (i == rankingList.size()-2) {
+                podium = childView.findViewById(R.id.secondplace);
+                podium.setVisibility(View.VISIBLE);
+            } else if (i == rankingList.size()-3) {
+                podium = childView.findViewById(R.id.thirdplace);
+                podium.setVisibility(View.VISIBLE);
+            }
 
-                    //modifico colori per utente loggato
-                    if(Patient.getInstance().getId().equals(rankingList.get(i).getId())) {
-                        newLinearLayout.setBackgroundColor(getActivity().getColor(R.color.childAccent));
-                    }
+            //modifico colori per utente loggato
+            if(Patient.getInstance().getId().equals(rankingList.get(i).getId())) {
+                newLinearLayout.setBackgroundColor(getActivity().getColor(R.color.childAccent));
+            }
 
-                    //aggiungo il nuovo linearlayout al parent
-                    linearLayout.addView(newLinearLayout);
-                }
+            // Imposta il colore del testo su bianco per tutti i TextView
+            position.setTextColor(getResources().getColor(android.R.color.white));
+            name.setTextColor(getResources().getColor(android.R.color.white));
+            coinNumber.setTextColor(getResources().getColor(android.R.color.white));
+
+            //aggiungo il nuovo linearlayout al parent
+            linearLayout.addView(newLinearLayout);
+        }
     }
+
 
 
     @Override
