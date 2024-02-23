@@ -63,7 +63,7 @@
                     android:checkable="true"
                     android:clickable="true"
                     android:focusable="true"
-                    android:src="@drawable/listen_audio"></ImageView>
+                    android:src="@drawable/listen_audio" />
 
             </RelativeLayout>
 
@@ -77,11 +77,12 @@
             android:layout_marginTop="@dimen/marginTopExerciseDescription"
             android:ellipsize="none"
             android:singleLine="false"
+            android:fontFamily="@font/bubblegum_sans"
             android:text="@string/MinimalPairsRecognition"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="@dimen/exerciseDescriptionSize"
-            android:textStyle="bold"></TextView>
+            android:textStyle="bold" />
 
         <ImageButton
             android:id="@+id/playButton"
@@ -91,7 +92,7 @@
             android:layout_marginTop="@dimen/marginTopPlayAudioButton"
             android:background="@color/transparent"
             android:scaleType="centerInside"
-            android:src="@drawable/play_button"></ImageButton>
+            android:src="@drawable/play_button" />
 
         <ImageButton
             android:id="@+id/stopButton"
@@ -102,7 +103,7 @@
             android:background="@color/transparent"
             android:scaleType="centerInside"
             android:src="@drawable/stop_audio"
-            android:visibility="gone"></ImageButton>
+            android:visibility="gone" />
 
         <TextView
             android:id="@+id/playButtonDescription"
@@ -112,9 +113,10 @@
             android:labelFor="@+id/playButton"
             android:textAlignment="center"
             android:textColor="@color/black"
+            android:fontFamily="@font/bubblegum_sans"
             android:textSize="@dimen/playButtonLabelDimension"
             android:textStyle="bold"
-            android:visibility="visible"></TextView>
+            android:visibility="visible" />
 
         <LinearLayout
             android:id="@+id/linearLayoutTwoImage"
