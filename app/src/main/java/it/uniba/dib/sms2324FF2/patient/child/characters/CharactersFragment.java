@@ -333,14 +333,14 @@ public class CharactersFragment extends Fragment {
     }
 
     //metodo per mostrare popup per acquistare il personaggio
-    private void showPopupSetPrincipalCharacter(View ancorView, String character) {
+    private void showPopupSetPrincipalCharacter(View anchorView, String character) {
         View popupView = getLayoutInflater().inflate(R.layout.set_principal_character_popup, null);
 
         PopupWindow popupWindow = new PopupWindow(popupView, ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT, true);
         popupWindow.setTouchable(true);
         popupWindow.setFocusable(true);
         // Mostra il popup attaccato al pulsante
-        popupWindow.showAsDropDown(ancorView, 0, -ancorView.getHeight());
+        popupWindow.showAsDropDown(anchorView, -anchorView.getWidth()/2, -anchorView.getHeight());
 
         Button positiveButton = popupView.findViewById(R.id.custom_positive_button);
         Button negativeButton = popupView.findViewById(R.id.custom_negative_button);
@@ -375,14 +375,14 @@ public class CharactersFragment extends Fragment {
     }
 
     //metodo per mostrare popup per acquistare il personaggio
-    private void showPopupToUnlockCharacter(View ancorView, String character) {
+    private void showPopupToUnlockCharacter(View anchorView, String character) {
         View popupView = getLayoutInflater().inflate(R.layout.unlock_character_popup, null);
 
         PopupWindow popupWindow = new PopupWindow(popupView, ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT, true);
         popupWindow.setTouchable(true);
         popupWindow.setFocusable(true);
         // Mostra il popup attaccato al pulsante
-        popupWindow.showAsDropDown(ancorView, 0, -ancorView.getHeight());
+        popupWindow.showAsDropDown(anchorView, -anchorView.getWidth()/2, -anchorView.getHeight());
 
         Button positiveButton = popupView.findViewById(R.id.custom_positive_button);
         Button negativeButton = popupView.findViewById(R.id.custom_negative_button);
@@ -410,7 +410,7 @@ public class CharactersFragment extends Fragment {
     }
 
     //metodo per mostrare popup in cui viene mostrato il prezzo dei personaggi in termini di coin
-    private void showPopupLockedCharacter(View ancorView, String character) {
+    private void showPopupLockedCharacter(View anchorView, String character) {
         FirebaseCharactersModel.getCost(character, new FirebaseCharactersModel.OnCharacterCostListener() {
             @Override
             public void onCostRead(int cost) {
@@ -419,8 +419,8 @@ public class CharactersFragment extends Fragment {
                 PopupWindow popupWindow = new PopupWindow(popupView, ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT, true);
                 popupWindow.setTouchable(true);
                 popupWindow.setFocusable(true);
-                // Mostra il popup attaccato al pulsante
-                popupWindow.showAsDropDown(ancorView, 0, -ancorView.getHeight());
+
+                popupWindow.showAsDropDown(anchorView, -anchorView.getWidth()/2, -anchorView.getHeight());
 
                 TextView coinTxt = popupView.findViewById(R.id.coin);
                 coinTxt.setText(String.valueOf(cost));

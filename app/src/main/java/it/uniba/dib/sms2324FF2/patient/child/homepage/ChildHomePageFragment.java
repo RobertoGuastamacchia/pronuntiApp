@@ -797,7 +797,7 @@ public class ChildHomePageFragment extends Fragment {
         popupWindow.setTouchable(true);
         popupWindow.setFocusable(true);
         // Mostra il popup attaccato al pulsante
-        popupWindow.showAsDropDown(anchorView, 0, -anchorView.getHeight());
+        popupWindow.showAsDropDown(anchorView, -anchorView.getWidth()/2, -anchorView.getHeight());
 
         Button closeButton = popupView.findViewById(R.id.closeButton);
         closeButton.setOnClickListener(new View.OnClickListener() {
@@ -822,7 +822,7 @@ public class ChildHomePageFragment extends Fragment {
         popupWindow.setTouchable(true);
         popupWindow.setFocusable(true);
         // Mostra il popup attaccato al pulsante
-        popupWindow.showAsDropDown(anchorView, 0, -anchorView.getHeight());
+        popupWindow.showAsDropDown(anchorView, -anchorView.getWidth()/2, -anchorView.getHeight());
 
         @SuppressLint({"MissingInflatedId", "LocalSuppress"}) Button closeButton = popupView.findViewById(R.id.closeButton);
 
@@ -835,14 +835,14 @@ public class ChildHomePageFragment extends Fragment {
     }
 
     //mostro un popup per informare l'utente che l'esercizio è in attesa di correzione
-    private void showPopupWaitForCorrection(View ancorView) {
+    private void showPopupWaitForCorrection(View anchorView) {
         View popupView = getLayoutInflater().inflate(R.layout.waiting_for_correction_popup_dialog, null);
 
         PopupWindow popupWindow = new PopupWindow(popupView, ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT, true);
         popupWindow.setTouchable(true);
         popupWindow.setFocusable(true);
         // Mostra il popup attaccato al pulsante
-        popupWindow.showAsDropDown(ancorView, 0, -ancorView.getHeight());
+        popupWindow.showAsDropDown(anchorView, -anchorView.getWidth()/2, -anchorView.getHeight());
 
 
         Button closeButton = popupView.findViewById(R.id.closeButton);

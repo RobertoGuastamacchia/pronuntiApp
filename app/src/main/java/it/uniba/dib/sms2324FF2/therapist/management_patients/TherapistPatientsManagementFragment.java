@@ -133,7 +133,7 @@ public class TherapistPatientsManagementFragment extends Fragment {
 
                     AlertDialog.Builder builder = new AlertDialog.Builder(requireContext());
                     LayoutInflater inflater = requireActivity().getLayoutInflater();
-                    View customView = inflater.inflate(R.layout.new_patient_dialog, null);
+                    View customView = inflater.inflate(R.layout.add_patient_dialog, null);
 
                     builder.setView(customView);
                     AlertDialog newPatientDialog = builder.create();
@@ -363,7 +363,7 @@ public class TherapistPatientsManagementFragment extends Fragment {
         LayoutInflater inflater = LayoutInflater.from(getContext());
 
         // Carica il layout del tuo dialog personalizzato
-        View dialogView = inflater.inflate(R.layout.date_and_coin_dialog, null);
+        View dialogView = inflater.inflate(R.layout.add_exercise_dialog, null);
 
         // Crea un AlertDialog
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getContext());
