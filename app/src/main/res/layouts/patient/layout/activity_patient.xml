@@ -110,18 +110,6 @@
                 app:backgroundTint="@color/primary"
                 app:cornerRadius="8dp" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/passwordRecovery"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:fontFamily="@font/bubblegum_sans"
-                android:text="@string/forgotYourPassword"
-                android:textAlignment="center"
-                android:textSize="@dimen/forgotPasswordTextDimension"
-                app:backgroundTint="@color/transparent"
-                app:cornerRadius="8dp" />
-
         </LinearLayout>
     </LinearLayout>
 
