@@ -155,7 +155,7 @@ public class TherapistFirebaseAppointmentsModel {
             // Combinare la data e l'ora in una stringa nel formato "yyyy-MM-dd HH:mm:ss"
             String combinedDateTimeString = new StringBuilder().append(therapistAppointment.getDate()).append(" ").append(therapistAppointment.getHour()).append(":00").toString();
             // Formattare la data combinata
-            SimpleDateFormat combinedDateTimeFormat = new SimpleDateFormat("yyyy-MM-dd h:mm a:ss", Locale.getDefault());
+            SimpleDateFormat combinedDateTimeFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss", Locale.getDefault());
             Date combinedDateTime = null;
             try {
                 combinedDateTime = combinedDateTimeFormat.parse(combinedDateTimeString);

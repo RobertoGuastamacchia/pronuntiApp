@@ -233,89 +233,91 @@ public class ParentActivity extends AppCompatActivity implements
     }
 
     public void setToolbar(Context context, Toolbar toolbar){
-        setSupportActionBar(toolbar);
-        TextView customTitle = new TextView(this);
-        customTitle.setText(toolbar.getTitle());
-        customTitle.setTextColor(getColor(R.color.white));
-        customTitle.setTextSize(TypedValue.COMPLEX_UNIT_PX, getResources().getDimension(R.dimen.text_dimen));  // Imposta la dimensione del testo in sp
-        Typeface bubblegumSansTypeface = ResourcesCompat.getFont(context, R.font.bubblegum_sans); //imposta il font
-        customTitle.setTypeface(bubblegumSansTypeface, Typeface.BOLD);
-        toolbar.setTitle(null);
-        toolbar.addView(customTitle, new Toolbar.LayoutParams(Gravity.START));
+        if(toolbar!=null) {
+            setSupportActionBar(toolbar);
+            TextView customTitle = new TextView(this);
+            customTitle.setText(toolbar.getTitle());
+            customTitle.setTextColor(getColor(R.color.white));
+            customTitle.setTextSize(TypedValue.COMPLEX_UNIT_PX, getResources().getDimension(R.dimen.text_dimen));  // Imposta la dimensione del testo in sp
+            Typeface bubblegumSansTypeface = ResourcesCompat.getFont(context, R.font.bubblegum_sans); //imposta il font
+            customTitle.setTypeface(bubblegumSansTypeface, Typeface.BOLD);
+            toolbar.setTitle(null);
+            toolbar.addView(customTitle, new Toolbar.LayoutParams(Gravity.START));
 
-        addMenuProvider(new MenuProvider() {
+            addMenuProvider(new MenuProvider() {
 
-            @Override
-            public void onCreateMenu(@NonNull Menu menu, @NonNull MenuInflater menuInflater) {
-                menu.clear();
-                menuInflater.inflate(R.menu.menu_toolbar_parent, menu);
-            }
-
-            @Override
-            public boolean onMenuItemSelected(@NonNull MenuItem menuItem) {
-                if(menuItem.getItemId() == R.id.profileItem){
-                    SharedPreferences sharedPreferences = context.getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);
-                    SharedPreferences.Editor editor = sharedPreferences.edit();
-                    editor.putString("profile", "").apply();
-                    //torno alla schermata del profilo
-                    Intent intent = new Intent(context, PatientActivity.class);
-                    startActivity(intent);
-                    finish();
-                    return true;
-                } else if (menuItem.getItemId() == R.id.logoutItem){
-                    AlertDialog dialog;
-                    AlertDialog.Builder builder = new AlertDialog.Builder(context);
-
-                    LayoutInflater inflater = getLayoutInflater();
-                    View customView = inflater.inflate(R.layout.logout_dialog, null);
-
-                    builder.setView(customView);
-                    dialog = builder.create();
-                    // Blocca l'orientamento in portrait quando la finestra di dialogo è aperta
-                    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-                    dialog.setCanceledOnTouchOutside(false);
-                    dialog.getWindow().setBackgroundDrawable(getResources().getDrawable(R.drawable.dialog_rounded_corner_gray));
-
-                    Button positiveButton = customView.findViewById(R.id.custom_positive_button);
-                    Button negativeButton = customView.findViewById(R.id.custom_negative_button);
-
-                    positiveButton.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            // Azioni per il pulsante "Sì"
-                            SharedPreferences sharedPreferences = context.getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);
-                            SharedPreferences.Editor editor = sharedPreferences.edit();
-                            editor.putBoolean("isLoggedIn", false);
-                            editor.apply();
-
-                            //Effettuo il logout
-                            FirebaseAuthenticationModel.logout(Patient.getInstance());
-                            //Reindirizzamento
-                            Intent intent = new Intent(ParentActivity.this, LoginActivity.class);
-                            startActivity(intent);
-                            finish();
-                            // Ripristina l'orientamento predefinito
-                            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
-                        }
-                    });
-
-                    negativeButton.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            // Azioni per il pulsante "No"
-                            // Chiudi la finestra di dialogo
-                            dialog.dismiss();
-                            // Ripristina l'orientamento predefinito
-                            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
-                        }
-                    });
-
-                    dialog.show();
-                    return true;
+                @Override
+                public void onCreateMenu(@NonNull Menu menu, @NonNull MenuInflater menuInflater) {
+                    menu.clear();
+                    menuInflater.inflate(R.menu.menu_toolbar_parent, menu);
                 }
-                return false;
-            }
-        });
+
+                @Override
+                public boolean onMenuItemSelected(@NonNull MenuItem menuItem) {
+                    if (menuItem.getItemId() == R.id.profileItem) {
+                        SharedPreferences sharedPreferences = context.getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.putString("profile", "").apply();
+                        //torno alla schermata del profilo
+                        Intent intent = new Intent(context, PatientActivity.class);
+                        startActivity(intent);
+                        finish();
+                        return true;
+                    } else if (menuItem.getItemId() == R.id.logoutItem) {
+                        AlertDialog dialog;
+                        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+
+                        LayoutInflater inflater = getLayoutInflater();
+                        View customView = inflater.inflate(R.layout.logout_dialog, null);
+
+                        builder.setView(customView);
+                        dialog = builder.create();
+                        // Blocca l'orientamento in portrait quando la finestra di dialogo è aperta
+                        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+                        dialog.setCanceledOnTouchOutside(false);
+                        dialog.getWindow().setBackgroundDrawable(getResources().getDrawable(R.drawable.dialog_rounded_corner_gray));
+
+                        Button positiveButton = customView.findViewById(R.id.custom_positive_button);
+                        Button negativeButton = customView.findViewById(R.id.custom_negative_button);
+
+                        positiveButton.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                // Azioni per il pulsante "Sì"
+                                SharedPreferences sharedPreferences = context.getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);
+                                SharedPreferences.Editor editor = sharedPreferences.edit();
+                                editor.putBoolean("isLoggedIn", false);
+                                editor.apply();
+
+                                //Effettuo il logout
+                                FirebaseAuthenticationModel.logout(Patient.getInstance());
+                                //Reindirizzamento
+                                Intent intent = new Intent(ParentActivity.this, LoginActivity.class);
+                                startActivity(intent);
+                                finish();
+                                // Ripristina l'orientamento predefinito
+                                setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
+                            }
+                        });
+
+                        negativeButton.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                // Azioni per il pulsante "No"
+                                // Chiudi la finestra di dialogo
+                                dialog.dismiss();
+                                // Ripristina l'orientamento predefinito
+                                setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
+                            }
+                        });
+
+                        dialog.show();
+                        return true;
+                    }
+                    return false;
+                }
+            });
+        }
     }
 
 }

@@ -270,169 +270,170 @@ public class TherapistActivity extends AppCompatActivity implements
     }
 
     public void setToolbar(Context context, Toolbar toolbar) {
-        setSupportActionBar(toolbar);
+        if(toolbar!=null) {
+            setSupportActionBar(toolbar);
 
-        TextView customTitle = new TextView(this);
-        customTitle.setText(toolbar.getTitle());
-        customTitle.setTextColor(getColor(R.color.white));
-        customTitle.setTextSize(TypedValue.COMPLEX_UNIT_PX, getResources().getDimension(R.dimen.text_dimen));  // Imposta la dimensione del testo in sp
-        Typeface bubblegumSansTypeface = ResourcesCompat.getFont(getApplicationContext(), R.font.bubblegum_sans); // Imposta il font
-        customTitle.setTypeface(bubblegumSansTypeface, Typeface.BOLD);
-        toolbar.setTitle(null);
-        toolbar.addView(customTitle, new Toolbar.LayoutParams(Gravity.START));
-        addMenuProvider(new MenuProvider() {
+            TextView customTitle = new TextView(this);
+            customTitle.setText(toolbar.getTitle());
+            customTitle.setTextColor(getColor(R.color.white));
+            customTitle.setTextSize(TypedValue.COMPLEX_UNIT_PX, getResources().getDimension(R.dimen.text_dimen));  // Imposta la dimensione del testo in sp
+            Typeface bubblegumSansTypeface = ResourcesCompat.getFont(getApplicationContext(), R.font.bubblegum_sans); // Imposta il font
+            customTitle.setTypeface(bubblegumSansTypeface, Typeface.BOLD);
+            toolbar.setTitle(null);
+            toolbar.addView(customTitle, new Toolbar.LayoutParams(Gravity.START));
+            addMenuProvider(new MenuProvider() {
 
-            @Override
-            public void onCreateMenu(@NonNull Menu menu, @NonNull MenuInflater menuInflater) {
-                menu.clear();
-                menuInflater.inflate(R.menu.menu_toolbar_therapist, menu);
-            }
+                @Override
+                public void onCreateMenu(@NonNull Menu menu, @NonNull MenuInflater menuInflater) {
+                    menu.clear();
+                    menuInflater.inflate(R.menu.menu_toolbar_therapist, menu);
+                }
 
-            @SuppressLint("UseCompatLoadingForDrawables")
-            @Override
-            public boolean onMenuItemSelected(@NonNull MenuItem menuItem) {
-                if (menuItem.getItemId() == R.id.logoutItem) {
-                    AlertDialog dialog;
-                    AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                @SuppressLint("UseCompatLoadingForDrawables")
+                @Override
+                public boolean onMenuItemSelected(@NonNull MenuItem menuItem) {
+                    if (menuItem.getItemId() == R.id.logoutItem) {
+                        AlertDialog dialog;
+                        AlertDialog.Builder builder = new AlertDialog.Builder(context);
 
-                    LayoutInflater inflater = getLayoutInflater();
-                    View customView = inflater.inflate(R.layout.logout_dialog, null);
+                        LayoutInflater inflater = getLayoutInflater();
+                        View customView = inflater.inflate(R.layout.logout_dialog, null);
 
-                    builder.setView(customView);
-                    dialog = builder.create();
-                    // Blocca l'orientamento in portrait quando la finestra di dialogo è aperta
-                    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-                    dialog.setCanceledOnTouchOutside(false);
-                    Objects.requireNonNull(dialog.getWindow()).setBackgroundDrawable(getResources().getDrawable(R.drawable.dialog_rounded_corner_gray));
+                        builder.setView(customView);
+                        dialog = builder.create();
+                        // Blocca l'orientamento in portrait quando la finestra di dialogo è aperta
+                        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+                        dialog.setCanceledOnTouchOutside(false);
+                        Objects.requireNonNull(dialog.getWindow()).setBackgroundDrawable(getResources().getDrawable(R.drawable.dialog_rounded_corner_gray));
 
-                    Button positiveButton = customView.findViewById(R.id.custom_positive_button);
-                    Button negativeButton = customView.findViewById(R.id.custom_negative_button);
+                        Button positiveButton = customView.findViewById(R.id.custom_positive_button);
+                        Button negativeButton = customView.findViewById(R.id.custom_negative_button);
 
-                    positiveButton.setOnClickListener(v -> {
-                        // Azioni per il pulsante "Sì"
-                        SharedPreferences sharedPreferences = context.getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);
-                        SharedPreferences.Editor editor = sharedPreferences.edit();
-                        editor.putBoolean("isLoggedIn", false);
-                        editor.apply();
+                        positiveButton.setOnClickListener(v -> {
+                            // Azioni per il pulsante "Sì"
+                            SharedPreferences sharedPreferences = context.getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);
+                            SharedPreferences.Editor editor = sharedPreferences.edit();
+                            editor.putBoolean("isLoggedIn", false);
+                            editor.apply();
 
-                        //Effettuo il logout
-                        FirebaseAuthenticationModel.logout(User.getInstance());
-                        //Reindirizzamento
-                        Intent intent = new Intent(TherapistActivity.this, LoginActivity.class);
-                        startActivity(intent);
-                        finish();
-                        // Ripristina l'orientamento predefinito
-                        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
-                    });
-
-                    negativeButton.setOnClickListener(v -> {
-                        // Azioni per il pulsante "No"
-                        // Chiudi la finestra di dialogo
-                        dialog.dismiss();
-                        // Ripristina l'orientamento predefinito
-                        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
-                    });
-
-                    dialog.show();
-                    return true;
-                } else if (menuItem.getItemId() == R.id.sendEmailItem) {
-                    // Ottieni l'oggetto LayoutInflater
-                    LayoutInflater inflater = LayoutInflater.from(context);
-
-                    // Carica il layout del tuo dialog personalizzato
-                    View dialogView = inflater.inflate(R.layout.send_email_dialog, null);
-
-                    // Crea un AlertDialog
-                    AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
-                    alertDialogBuilder.setView(dialogView);
-
-
-                    // Mostra il tuo AlertDialog
-                    dialogEmail = alertDialogBuilder.create();
-                    // Blocca l'orientamento in portrait quando la finestra di dialogo è aperta
-                    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-                    dialogEmail.setCanceledOnTouchOutside(false);
-                    Objects.requireNonNull(dialogEmail.getWindow()).setBackgroundDrawable(getResources().getDrawable(R.drawable.dialog_rounded_corner_gray));
-
-                    dialogEmail.show();
-
-                    // Ottieni le referenze agli elementi UI all'interno del layout del dialog
-                    MaterialButton send = dialogView.findViewById(R.id.send);
-                    MaterialButton cancel = dialogView.findViewById(R.id.cancel);
-
-                    cancel.setOnClickListener(v -> {
-                        dialogEmail.dismiss();
-                        // Ripristina l'orientamento predefinito
-                        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
-                    });
-
-                    //invio nuova password
-                    send.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-
-                            EditText emailTxtView = dialogView.findViewById(R.id.email);
-                            String email = emailTxtView.getText().toString();
-
-                            //controllo correttezza email
-                            if (email.isEmpty()) {
-                                Toast.makeText(context, getString(R.string.emptyText), Toast.LENGTH_SHORT).show();
-                                return;
-                            }
-
-                            sendEmails(email, context);
-
+                            //Effettuo il logout
+                            FirebaseAuthenticationModel.logout(User.getInstance());
+                            //Reindirizzamento
+                            Intent intent = new Intent(TherapistActivity.this, LoginActivity.class);
+                            startActivity(intent);
+                            finish();
                             // Ripristina l'orientamento predefinito
                             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
-                        }
+                        });
 
-                    });
+                        negativeButton.setOnClickListener(v -> {
+                            // Azioni per il pulsante "No"
+                            // Chiudi la finestra di dialogo
+                            dialog.dismiss();
+                            // Ripristina l'orientamento predefinito
+                            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
+                        });
 
-                    EditText emailTxtView = dialogView.findViewById(R.id.email);
-                    final int maxLength = 3001;
+                        dialog.show();
+                        return true;
+                    } else if (menuItem.getItemId() == R.id.sendEmailItem) {
+                        // Ottieni l'oggetto LayoutInflater
+                        LayoutInflater inflater = LayoutInflater.from(context);
 
-                    // Imposta il limite massimo
-                    InputFilter[] filters = new InputFilter[1];
-                    filters[0] = new InputFilter.LengthFilter(maxLength);
-                    emailTxtView.setFilters(filters);
+                        // Carica il layout del tuo dialog personalizzato
+                        View dialogView = inflater.inflate(R.layout.send_email_dialog, null);
 
-                    TextView characterCountTextView = dialogView.findViewById(R.id.characterCountTextView);
-                    // Monitora le modifiche al testo
-                    emailTxtView.addTextChangedListener(new TextWatcher() {
-                        @Override
-                        public void beforeTextChanged(CharSequence charSequence, int start, int count, int after) {
-                            // Non necessario implementare
-                        }
+                        // Crea un AlertDialog
+                        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
+                        alertDialogBuilder.setView(dialogView);
 
-                        @Override
-                        public void onTextChanged(CharSequence charSequence, int start, int before, int count) {
-                            // Non necessario implementare
-                        }
 
-                        @Override
-                        public void afterTextChanged(Editable editable) {
-                            int currentLength = editable.length();
-                            int maxLength = 3000;
+                        // Mostra il tuo AlertDialog
+                        dialogEmail = alertDialogBuilder.create();
+                        // Blocca l'orientamento in portrait quando la finestra di dialogo è aperta
+                        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+                        dialogEmail.setCanceledOnTouchOutside(false);
+                        Objects.requireNonNull(dialogEmail.getWindow()).setBackgroundDrawable(getResources().getDrawable(R.drawable.dialog_rounded_corner_gray));
 
-                            if (editable.length() > maxLength) {
-                                // Se il testo supera il limite, rimuovi i caratteri in eccesso
-                                emailTxtView.setText(editable.subSequence(0, maxLength));
-                                emailTxtView.setSelection(maxLength);
+                        dialogEmail.show();
 
-                                String countText = maxLength + "/" + maxLength;
-                                characterCountTextView.setText(countText);
-                            } else {
-                                String countText = currentLength + "/" + maxLength;
-                                characterCountTextView.setText(countText);
+                        // Ottieni le referenze agli elementi UI all'interno del layout del dialog
+                        MaterialButton send = dialogView.findViewById(R.id.send);
+                        MaterialButton cancel = dialogView.findViewById(R.id.cancel);
+
+                        cancel.setOnClickListener(v -> {
+                            dialogEmail.dismiss();
+                            // Ripristina l'orientamento predefinito
+                            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
+                        });
+
+                        //invio nuova password
+                        send.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+
+                                EditText emailTxtView = dialogView.findViewById(R.id.email);
+                                String email = emailTxtView.getText().toString();
+
+                                //controllo correttezza email
+                                if (email.isEmpty()) {
+                                    Toast.makeText(context, getString(R.string.emptyText), Toast.LENGTH_SHORT).show();
+                                    return;
+                                }
+
+                                sendEmails(email, context);
+
+                                // Ripristina l'orientamento predefinito
+                                setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
                             }
-                        }
-                    });
-                    return true;
-                }
-                return false;
-            }
-        });
 
+                        });
+
+                        EditText emailTxtView = dialogView.findViewById(R.id.email);
+                        final int maxLength = 3001;
+
+                        // Imposta il limite massimo
+                        InputFilter[] filters = new InputFilter[1];
+                        filters[0] = new InputFilter.LengthFilter(maxLength);
+                        emailTxtView.setFilters(filters);
+
+                        TextView characterCountTextView = dialogView.findViewById(R.id.characterCountTextView);
+                        // Monitora le modifiche al testo
+                        emailTxtView.addTextChangedListener(new TextWatcher() {
+                            @Override
+                            public void beforeTextChanged(CharSequence charSequence, int start, int count, int after) {
+                                // Non necessario implementare
+                            }
+
+                            @Override
+                            public void onTextChanged(CharSequence charSequence, int start, int before, int count) {
+                                // Non necessario implementare
+                            }
+
+                            @Override
+                            public void afterTextChanged(Editable editable) {
+                                int currentLength = editable.length();
+                                int maxLength = 3000;
+
+                                if (editable.length() > maxLength) {
+                                    // Se il testo supera il limite, rimuovi i caratteri in eccesso
+                                    emailTxtView.setText(editable.subSequence(0, maxLength));
+                                    emailTxtView.setSelection(maxLength);
+
+                                    String countText = maxLength + "/" + maxLength;
+                                    characterCountTextView.setText(countText);
+                                } else {
+                                    String countText = currentLength + "/" + maxLength;
+                                    characterCountTextView.setText(countText);
+                                }
+                            }
+                        });
+                        return true;
+                    }
+                    return false;
+                }
+            });
+        }
     }
 
     private void sendEmails(String content, Context context) {

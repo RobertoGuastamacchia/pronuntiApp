@@ -220,7 +220,7 @@ public class ParentHomePageFragment extends Fragment {
             appointmentDate = String.valueOf(therapistAppointment.getDate());
             appointmentHour = String.valueOf(therapistAppointment.getHour());
 
-            View frameLayoutView = inflater.inflate(R.layout.appointment_fragment, null);
+            View frameLayoutView = inflater.inflate(R.layout.appointment_fragment_parent, null);
             FrameLayout frameLayout = new FrameLayout(context);
             frameLayout.addView(frameLayoutView);
 
